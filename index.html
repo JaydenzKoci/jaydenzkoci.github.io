@@ -18,7 +18,7 @@
 <body>
     <header class="header">
         <div class="container">
-            <img id="logo" src="" alt="Jaydenz Projects" draggable="false">
+            <img id="logo" src="Jaydenz Projects" draggable="false">
             <div class="search-wrapper">
                 <input type="search" id="searchInput" placeholder="Search tracks..." aria-label="Search Tracks">
             </div>
@@ -32,6 +32,20 @@
             <span id="trackCount" class="track-count"></span>
         </div>
     </div>
+    <main>
+        <div class="container">
+            <div class="filter-wrapper">
+                <select id="filterSelect" class="custom-select">
+                    <option value="all">All Tracks</option>
+                    <option value="featured">Currently Featured</option>
+                    <option value="rotated">Recently Rotated</option>
+                    <option value="new">Recently Added</option>
+                </select>
+            </div>
+            <div class="content">
+                <!-- Jam tracks will be added dynamically here -->
+            </div>
+        </div>
     </main>
     <div id="trackModal" class="modal">
         <span class="modal-close">&times;</span>
