@@ -1,24 +1,23 @@
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
     <meta name="theme-color" content="#000000">
     <meta name="description" content="Explore daily and generally available Jam Tracks for the Fortnite Festival mode.">
-    <meta property="og:title" content="Fortnite Festival">
+    <meta property="og:title" content="Jaydenz Projects">
     <meta property="og:description" content="Explore daily and generally available Jam Tracks for the Fortnite Festival mode.">
     <meta property="og:type" content="website">
     <meta property="og:image" content="https://github.com/FNFestival.png">
     <title>Jaydenz Projects</title>
     <link rel="icon" type="image/png" href="assets/images/favicon.png">
-    <link rel="preconnect" href="https://cdn2.unrealengine.com" crossorigin>
-    <link rel="preconnect" href="https://p.scdn.co" crossorigin>
     <link rel="stylesheet" href="assets/css/styles.css?v10">
     <script type="module" src="assets/js/scripts.js?v10"></script>
 </head>
 <body>
     <header class="header">
         <div class="container">
-            <a href="https://github.com/JaydenzKoci/song-projects" target="_blank">Jaydenz Projects</a>
+            <img id="logo" src="assets/images/logo.png" alt="Encore Songs" draggable="false">
             <div class="search-wrapper">
                 <input type="search" id="searchInput" placeholder="Search tracks..." aria-label="Search Tracks">
             </div>
@@ -37,7 +36,9 @@
         <div class="container">
             <div class="filter-wrapper">
                 <select id="filterSelect" class="custom-select">
-                    <option value="all">All Tracks</option>
+                    <option value="all">All Tracks</option>S
+                    <option value="featured">WIP Tracks</option>
+                    <option value="rotated">Finished Tracks</option>
                     <option value="new">Recently Updated</option>
                 </select>
             </div>
@@ -45,7 +46,7 @@
                 <!-- Jam tracks will be added dynamically here -->
             </div>
         </div>
-     </main>
+    </main>
     <div id="trackModal" class="modal">
         <span class="modal-close">&times;</span>
         <button class="modal-nav modal-prev">

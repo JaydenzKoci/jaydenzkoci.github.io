@@ -1,120 +1,108 @@
 {
-  "butterbarnhoedown": {
-    "title": "Butter Barn Hoedown",
-    "artist": "Epic Games",
-    "releaseYear": 2021,
-    "cover": "https://cdn2.unrealengine.com/8trfqm9nofp8xeoj-512x512-4d008e153456.jpg",
-    "bpm": 98,
-    "duration": "2m 37s",
-    "difficulties": {
-      "vocals": 4,
-      "guitar": 4,
-      "bass": 1,
-      "drums": 2,
-      "plastic-bass": 2,
-      "plastic-drums": 1,
-      "plastic-guitar": 4
-    },
-    "createdAt": "2024-12-26T04:08:19.834Z",
-    "lastFeatured": null,
-    "previewUrl": null
-  },
-  "ogfutureremix": {
-    "title": "OG (Future Remix)",
-    "artist": "Epic Games",
-    "releaseYear": 2020,
-    "cover": "https://cdn2.unrealengine.com/gkorhaajfhipqtmv-512x512-ec70a3de1b54.jpg",
-    "bpm": 150,
-    "duration": "2m 41s",
+  "unsure": {
+    "title": "Unsure",
+    "artist": "Alan Walker & Kylie Cantrall",
+    "releaseYear": 2024,
+    "cover": "https://github.com/JaydenzKoci/song-projects/blob/main/Images/Unsure.png?raw=true",
+    "bpm": 130,
+    "duration": "2m 49s",
     "difficulties": {
       "vocals": 3,
       "guitar": 4,
-      "bass": 3,
-      "drums": 4,
-      "plastic-bass": 3,
-      "plastic-drums": 3,
-      "plastic-guitar": 4
+      "bass": -1,
+      "drums": -1,
+      "plastic-bass": -1,
+      "plastic-drums": -1,
+      "plastic-guitar": -1
     },
-    "createdAt": "2024-12-26T04:08:19.835Z",
-    "lastFeatured": null,
-    "previewUrl": null
+    "createdAt": "2025-01-11T04:08:19.834Z",
+    "lastFeatured": "2/26/2025, 12:08:19 PM",
+    "complete": "50% Complete",
+    "previewUrl":"https://p.scdn.co/mp3-preview/0fa590f4f9fb1c7d852ede53de59699a219a2d52",
+    "download": "https://github.com/JaydenzKoci/song-projects/blob/main/Images/Encore.png"
   },
-  "switchup": {
-    "title": "Switch Up",
-    "artist": "Epic Games",
-    "releaseYear": 2020,
-    "cover": "https://cdn2.unrealengine.com/kdoxeyxx2ke0ky1m-512x512-597ff171a6ef.jpg",
+  "spotafake": {
+    "title": "Spot A Fake",
+    "artist": "Ava Max",
+    "releaseYear": 2024,
+    "cover": "https://github.com/JaydenzKoci/song-projects/raw/main/Images/SpotAFake.png?raw=true",
+    "bpm": 143,
+    "duration": "2m 48s",
+    "difficulties": {
+      "vocals": 5,
+      "guitar": 3,
+      "bass": -1,
+      "drums": -1,
+      "plastic-bass": -1,
+      "plastic-drums": -1,
+      "plastic-guitar": -1
+    },
+    "createdAt": "2024-11-18T01:40:19.835Z",
+    "lastFeatured": "12/16/2024, 11:51:32 AM",
+    "complete": "43% Complete",
+    "previewUrl": "https://p.scdn.co/mp3-preview/f2fb7a2b1f0a602d0fa21194bdf2780a178c1450"
+  },
+  "lostyourfaith": {
+    "title": "Lost Your Faith",
+    "artist": "Ava Max",
+    "releaseYear": 2025,
+    "cover": "https://github.com/JaydenzKoci/song-projects/raw/main/Images/LostYourFaith.png",
+    "bpm": 125,
+    "duration": "3m 14s",
+    "difficulties": {
+      "vocals": -1,
+      "guitar": 5,
+      "bass": -1,
+      "drums": -1,
+      "plastic-bass": -1,
+      "plastic-drums": -1,
+      "plastic-guitar": -1
+    },
+    "createdAt": "2025-02-09T12:08:19.835Z",
+    "lastFeatured": "2/11/2025, 4:50:19 AM",
+    "complete": "25% Complete",
+    "previewUrl": "https://p.scdn.co/mp3-preview/3564f9445e53690decad7b57d5b6c18f6b712f4a"
+  },
+  "foreveryoung": {
+    "title": "Forever Young",
+    "artist": "David Guetta, Alphaville & Ava Max",
+    "releaseYear": 2024,
+    "cover": "https://github.com/JaydenzKoci/song-projects/raw/main/Images/ForeverYoung.png",
     "bpm": 130,
-    "duration": "2m 59s",
+    "duration": "2m 37s",
     "difficulties": {
       "vocals": 2,
       "guitar": 3,
-      "bass": 1,
-      "drums": 2,
-      "plastic-bass": 1,
-      "plastic-drums": 2,
-      "plastic-guitar": 3
+      "bass": -1,
+      "drums": -1,
+      "plastic-bass": -1,
+      "plastic-drums": -1,
+      "plastic-guitar": -1
     },
-    "createdAt": "2024-12-26T04:08:19.835Z",
-    "lastFeatured": null,
-    "previewUrl": null
+    "createdAt": "2024-11-28T04:08:14.835Z",
+    "lastFeatured": "12/18/2024, 2:40:14 PM",
+    "complete": "40% Complete",
+    "previewUrl": "https://p.scdn.co/mp3-preview/a47b1ab8552acc16146597026a45aa53806dbd1f"
   },
-  "showthemwhoweare": {
-    "title": "Show Them Who We Are",
-    "artist": "Epic Games",
-    "releaseYear": 2022,
-    "cover": "https://cdn2.unrealengine.com/egonfini0m8fhg1d-512x512-437df0c224f1.jpg",
-    "bpm": 86,
-    "duration": "3m 11s",
+  "breakyourheart": {
+    "title": "Break Your Heart",
+    "artist": "Taio Cruz",
+    "releaseYear": 2010,
+    "cover": "https://github.com/JaydenzKoci/song-projects/raw/main/Images/BreakYourHeart.png",
+    "bpm": 122,
+    "duration": "3m 22s",
     "difficulties": {
       "vocals": 4,
-      "bass": 2,
-      "drums": 4,
-      "plastic-bass": 2,
-      "plastic-drums": 4
+      "guitar": 5,
+      "bass": -1,
+      "drums": -1,
+      "plastic-bass": -1,
+      "plastic-drums": -1,
+      "plastic-guitar": -1
     },
-    "createdAt": "2024-12-26T04:08:19.835Z",
-    "lastFeatured": null,
-    "previewUrl": null
-  },
-  "takemehigher": {
-    "title": "Take Me Higher",
-    "artist": "Epic Games",
-    "releaseYear": 2022,
-    "cover": "https://cdn2.unrealengine.com/t5uuxqhudwkgz7qv-512x512-506845b63fd3.jpg",
-    "bpm": 156,
-    "duration": "3m 13s",
-    "difficulties": {
-      "vocals": 3,
-      "guitar": 3,
-      "bass": 1,
-      "drums": 4,
-      "plastic-bass": 1,
-      "plastic-drums": 3,
-      "plastic-guitar": 3
-    },
-    "createdAt": "2024-12-26T04:08:19.835Z",
-    "lastFeatured": null,
-    "previewUrl": null
-  },
-  "braceforchaos": {
-    "title": "Brace for Chaos",
-    "artist": "Epic Games",
-    "releaseYear": 2023,
-    "cover": "https://cdn2.unrealengine.com/mhet5l0ccsrhjf6c-512x512-117780a9063e.jpg",
-    "bpm": 120,
-    "duration": "3m 55s",
-    "difficulties": {
-      "vocals": 4,
-      "guitar": 3,
-      "bass": 2,
-      "drums": 4,
-      "plastic-bass": 2,
-      "plastic-drums": 5,
-      "plastic-guitar": 3
-    },
-    "createdAt": "2024-12-26T04:08:19.835Z",
-    "lastFeatured": null,
-    "previewUrl": null
+    "createdAt": "2024-12-05T06:08:19.835Z",
+    "lastFeatured": "12/15/2024, 9:11:39 PM",
+    "complete": "40% Complete",
+    "previewUrl": "https://p.scdn.co/mp3-preview/c6363106816b05ddd83a0467c0e17591ecafcadd"
   }
 }

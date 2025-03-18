@@ -26,6 +26,7 @@ export function generateTrackObject(trackData, previewUrl, createdAt, lastFeatur
         },
         createdAt: createdAt || new Date().toISOString(),
         lastFeatured,
-        previewUrl
+        previewUrl,
+        download
     };
 }

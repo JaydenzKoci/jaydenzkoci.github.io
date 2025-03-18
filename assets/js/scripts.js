@@ -60,7 +60,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     function renderModal(track) {
-        const { title, artist, releaseYear, cover, bpm, duration, difficulties, createdAt, lastFeatured, previewUrl } = track;
+        const { title, artist, releaseYear, cover, bpm, duration, difficulties, createdAt, lastFeatured, previewUrl, download, complete } = track;
 
         modal.querySelector('#modalCover').src = cover;
         modal.querySelector('#modalTitle').textContent = title;
@@ -70,7 +70,8 @@ document.addEventListener('DOMContentLoaded', () => {
             <p>BPM: ${bpm}</p>
             <p>Duration: ${duration}</p>
             <p>Created At: ${new Date(createdAt).toLocaleString()}</p>
-            <p>Last Featured: ${lastFeatured ? new Date(lastFeatured).toLocaleString() : 'N/A'}</p>
+            <p>Last Updated: ${lastFeatured}</p>
+            <p>Progress: ${complete}</p>
         `;
         generateDifficultyBars(difficulties, modal.querySelector('#modalDifficulties'));
 
@@ -337,7 +338,7 @@ document.addEventListener('DOMContentLoaded', () => {
         updateEnd.setUTCMinutes(2);
 
         if (now >= updateStart && now <= updateEnd) {
-            document.getElementById('countdown').textContent = 'Updating tracks, this may take up to 2 minutes...';
+            document.getElementById('countdown').textContent = '';
             sawUpdateMessage = true;
             return;
         }
@@ -362,7 +363,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const hours = Math.floor(diff / (1000 * 60 * 60));
         const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
         const seconds = Math.floor((diff % (1000 * 60)) / 1000);
-        document.getElementById('countdown').textContent = `Next update in: ${hours}h ${minutes}m ${seconds}s`;
+        document.getElementById('countdown').textContent = ``;
     }
 
     // Initialize countdown timer
