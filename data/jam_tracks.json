@@ -306,7 +306,8 @@
     "lastFeatured": "3/18/2024, 2:08:53 AM",
     "complete": "2% Complete",
     "previewUrl": "https://p.scdn.co/mp3-preview/60f31c477e494d379c3eb8e6ff15d8007d0cbe0b",
-    "featured": true
+    "featured": true,
+    "rotated": true
   },
   "kingsandqueens": {
     "title": "Kings & Queens",
