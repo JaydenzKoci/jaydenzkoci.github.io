@@ -14,9 +14,29 @@
         "plastic-bass": 0,
         "plastic-drums": 0,
         "plastic-guitar": 0
+    },
+    "createdAt": "2024-12-26T04:08:19.834Z",
+    "lastFeatured": null,
+    "previewUrl": null
       },
-      "createdAt": "2025-03-10T08:38:24.834Z",
-      "lastFeatured": null,
-      "previewUrl": null
-    }
+  "ogfutureremix": {
+    "title": "Spot A Fake",
+    "artist": "Ava Max",
+    "releaseYear": 2024,
+    "cover": "https://github.com/JaydenzKoci/song-projects/blob/main/Images/SpotAFake.png?raw=true",
+    "bpm": 150,
+    "duration": "2m 41s",
+    "difficulties": {
+      "vocals": 3,
+      "guitar": 4,
+      "bass": 3,
+      "drums": 4,
+      "plastic-bass": 3,
+      "plastic-drums": 3,
+      "plastic-guitar": 4
+    },
+    "createdAt": "2024-12-26T04:08:19.834Z",
+    "lastFeatured": null,
+    "previewUrl": null
+  }
 }
