@@ -1,29 +1,29 @@
 {
-    "unsure": {
-      "title": "Unsure",
-      "artist": "Alan Walker & Kylie Cantrall",
-      "releaseYear": 2024,
-      "cover": "https://github.com/JaydenzKoci/song-projects/blob/main/Images/Unsure.png",
-      "bpm": 130,
-      "duration": "2m 49s",
-      "difficulties": {
-        "vocals": 4,
-        "guitar": 5,
-        "bass": 0,
-        "drums": 0,
-        "plastic-bass": 0,
-        "plastic-drums": 0,
-        "plastic-guitar": 0
+  "butterbarnhoedown": {
+    "title": "Butter Barn Hoedown",
+    "artist": "Epic Games",
+    "releaseYear": 2021,
+    "cover": "https://cdn2.unrealengine.com/8trfqm9nofp8xeoj-512x512-4d008e153456.jpg",
+    "bpm": 98,
+    "duration": "2m 37s",
+    "difficulties": {
+      "vocals": 4,
+      "guitar": 4,
+      "bass": 1,
+      "drums": 2,
+      "plastic-bass": 2,
+      "plastic-drums": 1,
+      "plastic-guitar": 4
     },
     "createdAt": "2024-12-26T04:08:19.834Z",
     "lastFeatured": null,
     "previewUrl": null
-      },
+  },
   "ogfutureremix": {
-    "title": "Spot A Fake",
-    "artist": "Ava Max",
-    "releaseYear": 2024,
-    "cover": "https://github.com/JaydenzKoci/song-projects/blob/main/Images/SpotAFake.png?raw=true",
+    "title": "OG (Future Remix)",
+    "artist": "Epic Games",
+    "releaseYear": 2020,
+    "cover": "https://cdn2.unrealengine.com/gkorhaajfhipqtmv-512x512-ec70a3de1b54.jpg",
     "bpm": 150,
     "duration": "2m 41s",
     "difficulties": {
@@ -35,7 +35,85 @@
       "plastic-drums": 3,
       "plastic-guitar": 4
     },
-    "createdAt": "2024-12-26T04:08:19.834Z",
+    "createdAt": "2024-12-26T04:08:19.835Z",
+    "lastFeatured": null,
+    "previewUrl": null
+  },
+  "switchup": {
+    "title": "Switch Up",
+    "artist": "Epic Games",
+    "releaseYear": 2020,
+    "cover": "https://cdn2.unrealengine.com/kdoxeyxx2ke0ky1m-512x512-597ff171a6ef.jpg",
+    "bpm": 130,
+    "duration": "2m 59s",
+    "difficulties": {
+      "vocals": 2,
+      "guitar": 3,
+      "bass": 1,
+      "drums": 2,
+      "plastic-bass": 1,
+      "plastic-drums": 2,
+      "plastic-guitar": 3
+    },
+    "createdAt": "2024-12-26T04:08:19.835Z",
+    "lastFeatured": null,
+    "previewUrl": null
+  },
+  "showthemwhoweare": {
+    "title": "Show Them Who We Are",
+    "artist": "Epic Games",
+    "releaseYear": 2022,
+    "cover": "https://cdn2.unrealengine.com/egonfini0m8fhg1d-512x512-437df0c224f1.jpg",
+    "bpm": 86,
+    "duration": "3m 11s",
+    "difficulties": {
+      "vocals": 4,
+      "bass": 2,
+      "drums": 4,
+      "plastic-bass": 2,
+      "plastic-drums": 4
+    },
+    "createdAt": "2024-12-26T04:08:19.835Z",
+    "lastFeatured": null,
+    "previewUrl": null
+  },
+  "takemehigher": {
+    "title": "Take Me Higher",
+    "artist": "Epic Games",
+    "releaseYear": 2022,
+    "cover": "https://cdn2.unrealengine.com/t5uuxqhudwkgz7qv-512x512-506845b63fd3.jpg",
+    "bpm": 156,
+    "duration": "3m 13s",
+    "difficulties": {
+      "vocals": 3,
+      "guitar": 3,
+      "bass": 1,
+      "drums": 4,
+      "plastic-bass": 1,
+      "plastic-drums": 3,
+      "plastic-guitar": 3
+    },
+    "createdAt": "2024-12-26T04:08:19.835Z",
+    "lastFeatured": null,
+    "previewUrl": null
+  },
+  "braceforchaos": {
+    "title": "Brace for Chaos",
+    "artist": "Epic Games",
+    "releaseYear": 2023,
+    "cover": "https://cdn2.unrealengine.com/mhet5l0ccsrhjf6c-512x512-117780a9063e.jpg",
+    "bpm": 120,
+    "duration": "3m 55s",
+    "difficulties": {
+      "vocals": 4,
+      "guitar": 3,
+      "bass": 2,
+      "drums": 4,
+      "plastic-bass": 2,
+      "plastic-drums": 5,
+      "plastic-guitar": 3
+    },
+    "createdAt": "2024-12-26T04:08:19.835Z",
     "lastFeatured": null,
     "previewUrl": null
   }
