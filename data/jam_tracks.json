@@ -1,0 +1,22 @@
+{
+    "butterbarnhoedown": {
+      "title": "Test",
+      "artist": "Epic Games",
+      "releaseYear": 2021,
+      "cover": "https://cdn2.unrealengine.com/8trfqm9nofp8xeoj-512x512-4d008e153456.jpg",
+      "bpm": 98,
+      "duration": "2m 37s",
+      "difficulties": {
+        "vocals": 4,
+        "guitar": 4,
+        "bass": 1,
+        "drums": 2,
+        "plastic-bass": 2,
+        "plastic-drums": 1,
+        "plastic-guitar": 4
+      },
+      "createdAt": "2024-12-26T04:08:19.834Z",
+      "lastFeatured": null,
+      "previewUrl": null
+    }
+}
