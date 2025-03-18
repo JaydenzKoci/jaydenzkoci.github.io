@@ -152,17 +152,9 @@ document.addEventListener('DOMContentLoaded', () => {
                 case 'featured':
                     return track.featured;
                 case 'rotated':
-                    const oneDayAgo = new Date();
-                    oneDayAgo.setUTCHours(0, 0, 0, 0);
-                    const twoDaysAgo = new Date(oneDayAgo);
-                    twoDaysAgo.setDate(twoDaysAgo.getDate() - 1);
-                    return track.lastFeatured &&
-                           new Date(track.lastFeatured) >= twoDaysAgo &&
-                           new Date(track.lastFeatured) < oneDayAgo &&
-                           !track.featured;
+                    return track.rotated;
                 case 'new':
-                    const sevenDaysAgo = new Date(Date.now() - 7 * 24 * 60 * 60 * 1000);
-                    return new Date(track.createdAt) > sevenDaysAgo;
+                    return track.new;
                 default:
                     return true;
             }
