@@ -325,6 +325,50 @@ document.addEventListener('DOMContentLoaded', () => {
                 filterTracks(); // This will handle all sorting and initial rendering
             });
     }
+
+    function updateCountdown() {
+        const now = new Date();
+        const nextUpdate = new Date();
+        nextUpdate.setUTCHours(0, 0, 0, 0);
+
+        // Check if we're in the update window (00:00-00:02 UTC)
+        const updateStart = new Date(nextUpdate);
+        const updateEnd = new Date(nextUpdate);
+        updateEnd.setUTCMinutes(2);
+
+        if (now >= updateStart && now <= updateEnd) {
+            document.getElementById('countdown').textContent = 'Updating tracks, this may take up to 2 minutes...';
+            sawUpdateMessage = true;
+            return;
+        }
+
+        // If we just left the update window and saw the message, reload the page
+        if (sawUpdateMessage && now > updateEnd) {
+            window.location.reload();
+            return;
+        }
+
+        // Reset the flag if we're past the update window
+        if (now > updateEnd) {
+            sawUpdateMessage = false;
+        }
+
+        // If we're past today's update window, set next update to tomorrow
+        if (now > updateEnd) {
+            nextUpdate.setUTCDate(nextUpdate.getUTCDate() + 1);
+        }
+
+        const diff = nextUpdate - now;
+        const hours = Math.floor(diff / (1000 * 60 * 60));
+        const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+        const seconds = Math.floor((diff % (1000 * 60)) / 1000);
+        document.getElementById('countdown').textContent = `Next update in: ${hours}h ${minutes}m ${seconds}s`;
+    }
+
+    // Initialize countdown timer
+    setInterval(updateCountdown, 1000);
+    updateCountdown();
+
     // Modal event listeners
     const modalEvents = {
         close: () => {
