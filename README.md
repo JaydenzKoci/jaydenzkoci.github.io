@@ -1,4 +1,4 @@
 # Jaydenz Projects
-This is a repository for the jaydenzkoci.github.io website. Credit to FNFestival.co for the framework.
+This is a repository for the jaydenzkoci.github.io website. Credit to FNFestival.co for the source code.
 ## What is this?
 This is a website that has information about my modded Fortnite Festival Tracks. Anything updated in https://github.com/JaydenzKoci/song-projects. Will be put here for easier viewing.
