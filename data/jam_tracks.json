@@ -20,7 +20,7 @@
     "complete": "20% Complete",
     "previewUrl":"https://p.scdn.co/mp3-preview/0fa590f4f9fb1c7d852ede53de59699a219a2d52",
     "download": "https://github.com/JaydenzKoci/song-projects/blob/main/Images/Encore.png",
-    "featured": true
+    "new": true
   },
   "spotafake": {
     "title": "Spot A Fake",
@@ -42,7 +42,7 @@
     "lastFeatured": "12/16/2024, 11:51:32 AM",
     "complete": "25% Complete",
     "previewUrl": "https://p.scdn.co/mp3-preview/f2fb7a2b1f0a602d0fa21194bdf2780a178c1450",
-    "featured": true
+    "new": true
   },
   "lostyourfaith": {
     "title": "Lost Your Faith",
@@ -64,7 +64,7 @@
     "lastFeatured": "2/11/2025, 4:50:19 AM",
     "complete": "10% Complete",
     "previewUrl": "https://p.scdn.co/mp3-preview/3564f9445e53690decad7b57d5b6c18f6b712f4a",
-    "featured": true
+    "new": true
   },
   "foreveryoung": {
     "title": "Forever Young",
@@ -86,7 +86,7 @@
     "lastFeatured": "12/18/2024, 2:40:14 PM",
     "complete": "20% Complete",
     "previewUrl": "https://p.scdn.co/mp3-preview/a47b1ab8552acc16146597026a45aa53806dbd1f",
-    "featured": true
+    "new": true
   },
   "breakyourheart": {
     "title": "Break Your Heart",
@@ -108,7 +108,7 @@
     "lastFeatured": "12/15/2024, 9:11:39 PM",
     "complete": "20% Complete",
     "previewUrl": "https://p.scdn.co/mp3-preview/c6363106816b05ddd83a0467c0e17591ecafcadd",
-    "featured": true
+    "new": true
   },
   "niney": {
     "title": "1999",
@@ -304,10 +304,9 @@
     },
     "createdAt": "2024-03-19T06:08:19.835Z",
     "lastFeatured": "3/18/2024, 2:08:53 AM",
-    "complete": "0% Complete",
+    "complete": "2% Complete",
     "previewUrl": "",
-    "rotated": true,
-    "new": true
+    "featured": true
   },
   "kingsandqueens": {
     "title": "Kings & Queens",
