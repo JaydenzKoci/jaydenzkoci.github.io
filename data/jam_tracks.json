@@ -815,6 +815,50 @@
     "previewUrl": "https://p.scdn.co/mp3-preview/3010d17f854dad67cb0133a5687d871366d67882",
     "rotated": true
   },
+  "whistle": {
+    "title": "Whistle",
+    "artist": "Flo Rida",
+    "releaseYear": 0,
+    "cover": "https://github.com/JaydenzKoci/song-projects/blob/main/Images/Whistle.png?raw=true",
+    "bpm": 0,
+    "duration": "0m 00s",
+    "difficulties": {
+      "vocals": -1,
+      "guitar": -1,
+      "bass": -1,
+      "drums": -1,
+      "plastic-bass": -1,
+      "plastic-drums": -1,
+      "plastic-guitar": -1
+    },
+    "createdAt": "2024-03-19T06:08:19.835Z",
+    "lastFeatured": "TBA",
+    "complete": "0% Complete",
+    "previewUrl": "https://p.scdn.co/mp3-preview/ea7012e8d63798a9bd4ec40e566cb81c5955d18f",
+    "rotated": true
+  },
+  "miss": {
+    "title": "Miss possessive",
+    "artist": "Tate McRae",
+    "releaseYear": 0,
+    "cover": "https://github.com/JaydenzKoci/song-projects/blob/main/Images/SoCloseToWhat.png?raw=true",
+    "bpm": 0,
+    "duration": "0m 00s",
+    "difficulties": {
+      "vocals": -1,
+      "guitar": -1,
+      "bass": -1,
+      "drums": -1,
+      "plastic-bass": -1,
+      "plastic-drums": -1,
+      "plastic-guitar": -1
+    },
+    "createdAt": "2024-03-19T06:08:19.835Z",
+    "lastFeatured": "TBA",
+    "complete": "0% Complete",
+    "previewUrl": "https://p.scdn.co/mp3-preview/87700c1b053161dcd2ed4545d1773e2f5c304be0",
+    "rotated": true
+  },
   "planet": {
     "title": "Planet Of The Bass",
     "artist": "Kyle Gordon",
