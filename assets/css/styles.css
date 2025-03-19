@@ -18,7 +18,7 @@ body {
     font-family: 'HeadingNowVariable', Arial, sans-serif;
     font-variation-settings: "wdth" 668, "wght" 500;
     background-color: #121212;
-    color: #fff;
+    color: #dfdddd;
     overflow-x: hidden;
     user-select: none;
 }
@@ -226,7 +226,7 @@ main {
 }
 
 .jam-track:hover {
-    outline: .15rem solid #fffc;
+    outline: .15rem solid rgba(255, 255, 255, 0.8);
     outline-offset: .1875rem;
 }
 
@@ -246,7 +246,7 @@ main {
 /* Labels */
 .featured-label,
 .new-label {
-    background-color: rgba(255, 215, 0, 0.9);
+    background-color: rgba(229, 255, 0, 0.932);
     padding: 2px 6px;
     border-radius: 8px;
     transform: skewX(-14deg);
@@ -262,7 +262,7 @@ main {
 }
 
 .new-label {
-    background-color: rgba(0, 150, 255, 0.9);
+    background-color: rgb(0, 162, 255);
 }
 
 /* Mobile */

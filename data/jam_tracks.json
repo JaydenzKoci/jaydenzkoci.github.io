@@ -705,6 +705,116 @@
     "previewUrl": "https://p.scdn.co/mp3-preview/8f97f8f287090ae5bff2615a07dc05d8b3e50bf3",
     "rotated": true
   },
+  "1035": {
+    "title": "10:35",
+    "artist": "Tiësto",
+    "releaseYear": 0,
+    "cover": "https://github.com/JaydenzKoci/song-projects/blob/main/Images/1035.png?raw=true",
+    "bpm": 0,
+    "duration": "0m 00s",
+    "difficulties": {
+      "vocals": -1,
+      "guitar": -1,
+      "bass": -1,
+      "drums": -1,
+      "plastic-bass": -1,
+      "plastic-drums": -1,
+      "plastic-guitar": -1
+    },
+    "createdAt": "2024-03-19T06:08:19.835Z",
+    "lastFeatured": "TBA",
+    "complete": "0% Complete",
+    "previewUrl": "https://p.scdn.co/mp3-preview/6e88ed9108e2c0c493903a7d280183d6d6855272",
+    "rotated": true
+  },
+  "goodtime": {
+    "title": "Good Time",
+    "artist": "Owl City",
+    "releaseYear": 0,
+    "cover": "https://github.com/JaydenzKoci/song-projects/blob/main/Images/GoodTime.png?raw=true",
+    "bpm": 0,
+    "duration": "0m 00s",
+    "difficulties": {
+      "vocals": -1,
+      "guitar": -1,
+      "bass": -1,
+      "drums": -1,
+      "plastic-bass": -1,
+      "plastic-drums": -1,
+      "plastic-guitar": -1
+    },
+    "createdAt": "2024-03-19T06:08:19.835Z",
+    "lastFeatured": "TBA",
+    "complete": "0% Complete",
+    "previewUrl": "https://p.scdn.co/mp3-preview/948112ba8bf947a429389e2dd71c990989027a7e",
+    "rotated": true
+  },
+  "goodbye": {
+    "title": "Good In Goodbye",
+    "artist": "Madison Beer",
+    "releaseYear": 0,
+    "cover": "https://github.com/JaydenzKoci/song-projects/blob/main/Images/GoodInGoodbye.png?raw=true",
+    "bpm": 0,
+    "duration": "0m 00s",
+    "difficulties": {
+      "vocals": -1,
+      "guitar": -1,
+      "bass": -1,
+      "drums": -1,
+      "plastic-bass": -1,
+      "plastic-drums": -1,
+      "plastic-guitar": -1
+    },
+    "createdAt": "2024-03-19T06:08:19.835Z",
+    "lastFeatured": "TBA",
+    "complete": "0% Complete",
+    "previewUrl": "https://p.scdn.co/mp3-preview/6498f9b96b03bccdee0496c309770676c744fe57",
+    "rotated": true
+  },
+  "goodones": {
+    "title": "Good Ones",
+    "artist": "Charli xcx",
+    "releaseYear": 0,
+    "cover": "https://github.com/JaydenzKoci/song-projects/blob/main/Images/GoodOnes.png?raw=true",
+    "bpm": 0,
+    "duration": "0m 00s",
+    "difficulties": {
+      "vocals": -1,
+      "guitar": -1,
+      "bass": -1,
+      "drums": -1,
+      "plastic-bass": -1,
+      "plastic-drums": -1,
+      "plastic-guitar": -1
+    },
+    "createdAt": "2024-03-19T06:08:19.835Z",
+    "lastFeatured": "TBA",
+    "complete": "0% Complete",
+    "previewUrl": "https://p.scdn.co/mp3-preview/afe171188865b9dbfbfa6b9a5e6f30a64ef5226e",
+    "rotated": true
+  },
+  "gone": {
+    "title": "Since U Been Gone",
+    "artist": "Kelly Clarkson",
+    "releaseYear": 0,
+    "cover": "https://github.com/JaydenzKoci/song-projects/blob/main/Images/SinceUBeenGone.png?raw=true",
+    "bpm": 0,
+    "duration": "0m 00s",
+    "difficulties": {
+      "vocals": -1,
+      "guitar": -1,
+      "bass": -1,
+      "drums": -1,
+      "plastic-bass": -1,
+      "plastic-drums": -1,
+      "plastic-guitar": -1
+    },
+    "createdAt": "2024-03-19T06:08:19.835Z",
+    "lastFeatured": "TBA",
+    "complete": "0% Complete",
+    "previewUrl": "https://p.scdn.co/mp3-preview/3010d17f854dad67cb0133a5687d871366d67882",
+    "rotated": true
+  },
   "planet": {
     "title": "Planet Of The Bass",
     "artist": "Kyle Gordon",
