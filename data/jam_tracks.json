@@ -881,6 +881,94 @@
     "previewUrl": "https://p.scdn.co/mp3-preview/857b312ba89079f65a60491247ce2dc5f01ab70b",
     "rotated": true
   },
+  "dutch": {
+    "title": "Von dutch",
+    "artist": "Charli xcx",
+    "releaseYear": 0,
+    "cover": "https://github.com/JaydenzKoci/song-projects/blob/main/Images/brat.png?raw=true",
+    "bpm": 0,
+    "duration": "0m 00s",
+    "difficulties": {
+      "vocals": -1,
+      "guitar": -1,
+      "bass": -1,
+      "drums": -1,
+      "plastic-bass": -1,
+      "plastic-drums": -1,
+      "plastic-guitar": -1
+    },
+    "createdAt": "2024-03-19T06:08:19.835Z",
+    "lastFeatured": "TBA",
+    "complete": "0% Complete",
+    "previewUrl": "https://p.scdn.co/mp3-preview/7faf86e041f0fc977545aadc2b4f852eb5f145d4",
+    "rotated": true
+  },
+  "ok": {
+    "title": "It's ok i'm ok",
+    "artist": "Tate McRae",
+    "releaseYear": 0,
+    "cover": "https://github.com/JaydenzKoci/song-projects/blob/main/Images/SoCloseToWhat.png?raw=true",
+    "bpm": 0,
+    "duration": "0m 00s",
+    "difficulties": {
+      "vocals": -1,
+      "guitar": -1,
+      "bass": -1,
+      "drums": -1,
+      "plastic-bass": -1,
+      "plastic-drums": -1,
+      "plastic-guitar": -1
+    },
+    "createdAt": "2024-03-19T06:08:19.835Z",
+    "lastFeatured": "TBA",
+    "complete": "0% Complete",
+    "previewUrl": "https://p.scdn.co/mp3-preview/96aa2c1dd971e1c27d3a9c92ceb8393e357a73bd",
+    "rotated": true
+  },
+  "gold": {
+    "title": "Gold Rush",
+    "artist": "Emma Stevens",
+    "releaseYear": 0,
+    "cover": "https://github.com/JaydenzKoci/song-projects/blob/main/Images/GoldRush.png?raw=true",
+    "bpm": 0,
+    "duration": "0m 00s",
+    "difficulties": {
+      "vocals": -1,
+      "guitar": -1,
+      "bass": -1,
+      "drums": -1,
+      "plastic-bass": -1,
+      "plastic-drums": -1,
+      "plastic-guitar": -1
+    },
+    "createdAt": "2024-03-19T06:08:19.835Z",
+    "lastFeatured": "TBA",
+    "complete": "0% Complete",
+    "previewUrl": "https://p.scdn.co/mp3-preview/143b7b2717f2cc10fb3e30cc5cbd3d60dd0abe3e",
+    "rotated": true
+  },
+  "dance": {
+    "title": "Shut Up and Dance",
+    "artist": "Walk The Moon",
+    "releaseYear": 0,
+    "cover": "https://github.com/JaydenzKoci/song-projects/blob/main/Images/ShutUpAndDance.png?raw=true",
+    "bpm": 0,
+    "duration": "0m 00s",
+    "difficulties": {
+      "vocals": -1,
+      "guitar": -1,
+      "bass": -1,
+      "drums": -1,
+      "plastic-bass": -1,
+      "plastic-drums": -1,
+      "plastic-guitar": -1
+    },
+    "createdAt": "2024-03-19T06:08:19.835Z",
+    "lastFeatured": "TBA",
+    "complete": "0% Complete",
+    "previewUrl": "https://p.scdn.co/mp3-preview/4309fadd9a0d573c1fafcca507e024b3bb51266b",
+    "rotated": true
+  },
   "planet": {
     "title": "Planet Of The Bass",
     "artist": "Kyle Gordon (feat. DJ Crazy Times & Ms. Biljana Electronica)",
