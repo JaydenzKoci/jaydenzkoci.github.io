@@ -683,6 +683,28 @@
     "previewUrl": "https://p.scdn.co/mp3-preview/1a782e33f0c910129167914a89fc7b53edc52264",
     "rotated": true
   },
+  "american": {
+    "title": "all-american bitch",
+    "artist": "Olivia Rodrigo",
+    "releaseYear": 0,
+    "cover": "https://github.com/JaydenzKoci/song-projects/blob/main/Images/GUTS.png?raw=true",
+    "bpm": 0,
+    "duration": "0m 00s",
+    "difficulties": {
+      "vocals": -1,
+      "guitar": -1,
+      "bass": -1,
+      "drums": -1,
+      "plastic-bass": -1,
+      "plastic-drums": -1,
+      "plastic-guitar": -1
+    },
+    "createdAt": "2024-03-19T06:08:19.835Z",
+    "lastFeatured": "TBA",
+    "complete": "0% Complete",
+    "previewUrl": "https://p.scdn.co/mp3-preview/8f97f8f287090ae5bff2615a07dc05d8b3e50bf3",
+    "rotated": true
+  },
   "planet": {
     "title": "Planet Of The Bass",
     "artist": "Kyle Gordon",
