@@ -303,7 +303,7 @@
       "plastic-guitar": -1
     },
     "createdAt": "2025-03-19T06:08:19.835Z",
-    "lastFeatured": "3/20/2024, 12:12:18 AM",
+    "lastFeatured": "3/20/2025, 12:12:18 AM",
     "complete": "10% Complete",
     "previewUrl": "https://p.scdn.co/mp3-preview/60f31c477e494d379c3eb8e6ff15d8007d0cbe0b",
     "new": true
@@ -619,25 +619,24 @@
   "whatever": {
     "title": "Whatever",
     "artist": "Kygo & Ava Max",
-    "releaseYear": 0,
+    "releaseYear": 2024,
     "cover": "https://github.com/JaydenzKoci/song-projects/blob/main/Images/Whatever.png?raw=true",
-    "bpm": 0,
-    "duration": "0m 00s",
+    "bpm": 108,
+    "duration": "2m 58s",
     "difficulties": {
       "vocals": -1,
-      "guitar": -1,
+      "guitar": 3,
       "bass": -1,
       "drums": -1,
       "plastic-bass": -1,
       "plastic-drums": -1,
       "plastic-guitar": -1
     },
-    "createdAt": "2024-03-19T06:08:19.835Z",
-    "lastFeatured": "TBA",
-    "complete": "0% Complete",
+    "createdAt": "2025-03-19T08:21:19.835Z",
+    "lastFeatured": "3/20/2025, 4:17:44PM",
+    "complete": "10% Complete",
     "previewUrl": "https://p.scdn.co/mp3-preview/03bbf447d8f0101cff90c78b3ab0c4757c3bf27b",
-    "rotated": true,
-    "featured": true
+    "new": true
   },
   "see": {
     "title": "When Can I See You Again",
