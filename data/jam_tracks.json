@@ -636,7 +636,8 @@
     "lastFeatured": "TBA",
     "complete": "0% Complete",
     "previewUrl": "https://p.scdn.co/mp3-preview/03bbf447d8f0101cff90c78b3ab0c4757c3bf27b",
-    "rotated": true
+    "rotated": true,
+    "featured": true
   },
   "see": {
     "title": "When Can I See You Again",
