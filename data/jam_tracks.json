@@ -1,14 +1,14 @@
 {
   "unsure": {
     "title": "Unsure",
-    "artist": "Alan Walker & Kylie Cantrall",
+    "artist": "Alan Walker & Kyile Cantrall",
     "releaseYear": 2024,
     "cover": "https://github.com/JaydenzKoci/song-projects/blob/main/Images/Unsure.png?raw=true",
     "bpm": 130,
     "duration": "2m 49s",
     "difficulties": {
       "vocals": 3,
-      "guitar": 4,
+      "guitar": 3,
       "bass": -1,
       "drums": -1,
       "plastic-bass": -1,
@@ -30,8 +30,8 @@
     "bpm": 143,
     "duration": "2m 48s",
     "difficulties": {
-      "vocals": 5,
-      "guitar": 3,
+      "vocals": 3,
+      "guitar": 2,
       "bass": -1,
       "drums": -1,
       "plastic-bass": -1,
@@ -53,7 +53,7 @@
     "duration": "3m 14s",
     "difficulties": {
       "vocals": -1,
-      "guitar": 5,
+      "guitar": 3,
       "bass": -1,
       "drums": -1,
       "plastic-bass": -1,
@@ -75,7 +75,7 @@
     "duration": "2m 37s",
     "difficulties": {
       "vocals": 2,
-      "guitar": 3,
+      "guitar": 2,
       "bass": -1,
       "drums": -1,
       "plastic-bass": -1,
@@ -96,8 +96,8 @@
     "bpm": 122,
     "duration": "3m 22s",
     "difficulties": {
-      "vocals": 4,
-      "guitar": 5,
+      "vocals": 3,
+      "guitar": 4,
       "bass": -1,
       "drums": -1,
       "plastic-bass": -1,
