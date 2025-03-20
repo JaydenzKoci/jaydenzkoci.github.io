@@ -289,25 +289,24 @@
   "myheadandmyheart": {
     "title": "My Head & My Heart",
     "artist": "Ava Max",
-    "releaseYear": 0,
+    "releaseYear": 2020,
     "cover": "https://github.com/JaydenzKoci/song-projects/blob/main/Images/HeavenandHell.png?raw=true",
-    "bpm": 0,
-    "duration": "0m 00s",
+    "bpm": 116,
+    "duration": "2m 55s",
     "difficulties": {
       "vocals": -1,
-      "guitar": -1,
+      "guitar": 4,
       "bass": -1,
       "drums": -1,
       "plastic-bass": -1,
       "plastic-drums": -1,
       "plastic-guitar": -1
     },
-    "createdAt": "2024-03-19T06:08:19.835Z",
-    "lastFeatured": "3/18/2024, 2:08:53 AM",
-    "complete": "2% Complete",
+    "createdAt": "2025-03-19T06:08:19.835Z",
+    "lastFeatured": "3/20/2024, 12:12:18 AM",
+    "complete": "10% Complete",
     "previewUrl": "https://p.scdn.co/mp3-preview/60f31c477e494d379c3eb8e6ff15d8007d0cbe0b",
-    "featured": true,
-    "rotated": true
+    "new": true
   },
   "kingsandqueens": {
     "title": "Kings & Queens",
