@@ -1143,5 +1143,181 @@
     "complete": "0% Complete",
     "previewUrl": "https://p.scdn.co/mp3-preview/bf90fcfe66c0843e2e567d4b4dc343727f8d160a",
     "rotated": true
+  },
+  "grow": {
+    "title": "When I Grow Up",
+    "artist": "NF",
+    "releaseYear": 0,
+    "cover": "https://github.com/JaydenzKoci/song-projects/blob/main/Images/TheSearch.png?raw=true",
+    "bpm": 0,
+    "duration": "0m 00s",
+    "difficulties": {
+      "vocals": -1,
+      "guitar": -1,
+      "bass": -1,
+      "drums": -1,
+      "plastic-bass": -1,
+      "plastic-drums": -1,
+      "plastic-guitar": -1
+    },
+    "createdAt": "2024-03-19T06:08:19.835Z",
+    "lastFeatured": "TBA",
+    "complete": "0% Complete",
+    "previewUrl": "https://p.scdn.co/mp3-preview/7d1204813ea6f3163b5520f84a02615a330d426e",
+    "rotated": true
+  },
+  "hell": {
+    "title": "Take You To Hell",
+    "artist": "Ava Max",
+    "releaseYear": 0,
+    "cover": "https://github.com/JaydenzKoci/song-projects/blob/main/Images/HeavenandHell.png?raw=true",
+    "bpm": 0,
+    "duration": "0m 00s",
+    "difficulties": {
+      "vocals": -1,
+      "guitar": -1,
+      "bass": -1,
+      "drums": -1,
+      "plastic-bass": -1,
+      "plastic-drums": -1,
+      "plastic-guitar": -1
+    },
+    "createdAt": "2024-03-19T06:08:19.835Z",
+    "lastFeatured": "TBA",
+    "complete": "0% Complete",
+    "previewUrl": "https://p.scdn.co/mp3-preview/12a9e91a07a8812b896504d5d782dab454114194",
+    "rotated": true
+  },
+  "keys": {
+    "title": "Car Keys (Ayla)",
+    "artist": "Alok & Ava Max",
+    "releaseYear": 0,
+    "cover": "https://github.com/JaydenzKoci/song-projects/blob/main/Images/CarKeys.png?raw=true",
+    "bpm": 0,
+    "duration": "0m 00s",
+    "difficulties": {
+      "vocals": -1,
+      "guitar": -1,
+      "bass": -1,
+      "drums": -1,
+      "plastic-bass": -1,
+      "plastic-drums": -1,
+      "plastic-guitar": -1
+    },
+    "createdAt": "2024-03-19T06:08:19.835Z",
+    "lastFeatured": "TBA",
+    "complete": "0% Complete",
+    "previewUrl": "https://p.scdn.co/mp3-preview/ef40d2697f0281f1fb27a213aac89790a7b4d9d6",
+    "rotated": true
+  },
+  "door": {
+    "title": "Revolving door",
+    "artist": "Tate McRae",
+    "releaseYear": 0,
+    "cover": "https://github.com/JaydenzKoci/song-projects/blob/main/Images/SoCloseToWhat.png?raw=true",
+    "bpm": 0,
+    "duration": "0m 00s",
+    "difficulties": {
+      "vocals": -1,
+      "guitar": -1,
+      "bass": -1,
+      "drums": -1,
+      "plastic-bass": -1,
+      "plastic-drums": -1,
+      "plastic-guitar": -1
+    },
+    "createdAt": "2024-03-19T06:08:19.835Z",
+    "lastFeatured": "TBA",
+    "complete": "0% Complete",
+    "previewUrl": "https://p.scdn.co/mp3-preview/efd77f6c2fbde8140f851e69237f66c1ad7bf152",
+    "rotated": true
+  },
+  "rewind": {
+    "title": "Rewind",
+    "artist": "Charli xcx",
+    "releaseYear": 0,
+    "cover": "https://github.com/JaydenzKoci/song-projects/blob/main/Images/brat.png?raw=true",
+    "bpm": 0,
+    "duration": "0m 00s",
+    "difficulties": {
+      "vocals": -1,
+      "guitar": -1,
+      "bass": -1,
+      "drums": -1,
+      "plastic-bass": -1,
+      "plastic-drums": -1,
+      "plastic-guitar": -1
+    },
+    "createdAt": "2024-03-19T06:08:19.835Z",
+    "lastFeatured": "TBA",
+    "complete": "0% Complete",
+    "previewUrl": "https://p.scdn.co/mp3-preview/559ebf2f3d0f42be978363adae4c42d603c535d2",
+    "rotated": true
+  },
+  "live": {
+    "title": "Live It Up",
+    "artist": "Owl City",
+    "releaseYear": 0,
+    "cover": "https://github.com/JaydenzKoci/song-projects/blob/main/Images/LiveItUp.png?raw=true",
+    "bpm": 0,
+    "duration": "0m 00s",
+    "difficulties": {
+      "vocals": -1,
+      "guitar": -1,
+      "bass": -1,
+      "drums": -1,
+      "plastic-bass": -1,
+      "plastic-drums": -1,
+      "plastic-guitar": -1
+    },
+    "createdAt": "2024-03-19T06:08:19.835Z",
+    "lastFeatured": "TBA",
+    "complete": "0% Complete",
+    "previewUrl": "https://p.scdn.co/mp3-preview/88f958c9675895415e783f46251b4ce78fb467d3",
+    "rotated": true
+  },
+  "breakmyheart": {
+    "title": "Break My Heart",
+    "artist": "Dua Lipa",
+    "releaseYear": 0,
+    "cover": "https://github.com/JaydenzKoci/song-projects/blob/main/Images/Physical.png?raw=true",
+    "bpm": 0,
+    "duration": "0m 00s",
+    "difficulties": {
+      "vocals": -1,
+      "guitar": -1,
+      "bass": -1,
+      "drums": -1,
+      "plastic-bass": -1,
+      "plastic-drums": -1,
+      "plastic-guitar": -1
+    },
+    "createdAt": "2024-03-19T06:08:19.835Z",
+    "lastFeatured": "TBA",
+    "complete": "0% Complete",
+    "previewUrl": "https://p.scdn.co/mp3-preview/a0078bbdb4351ec221eb7f330bd01856636601b5",
+    "rotated": true
+  },
+  "green": {
+    "title": "Greenlight",
+    "artist": "Tate McRae",
+    "releaseYear": 0,
+    "cover": "https://github.com/JaydenzKoci/song-projects/blob/main/Images/SoCloseToWhat.png?raw=true",
+    "bpm": 0,
+    "duration": "0m 00s",
+    "difficulties": {
+      "vocals": -1,
+      "guitar": -1,
+      "bass": -1,
+      "drums": -1,
+      "plastic-bass": -1,
+      "plastic-drums": -1,
+      "plastic-guitar": -1
+    },
+    "createdAt": "2024-03-19T06:08:19.835Z",
+    "lastFeatured": "TBA",
+    "complete": "0% Complete",
+    "previewUrl": "https://p.scdn.co/mp3-preview/9d7e12554cc4380586f77abad1b8a201cc0d1d7d",
+    "rotated": true
   }
 }
