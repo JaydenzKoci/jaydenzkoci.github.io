@@ -1319,5 +1319,181 @@
     "complete": "0% Complete",
     "previewUrl": "https://p.scdn.co/mp3-preview/9d7e12554cc4380586f77abad1b8a201cc0d1d7d",
     "rotated": true
+  },
+  "last": {
+    "title": "Last Song",
+    "artist": "Alan Walker (feat. Faouzia)",
+    "releaseYear": 0,
+    "cover": "https://github.com/JaydenzKoci/song-projects/blob/main/Images/Unsure.png?raw=true",
+    "bpm": 0,
+    "duration": "0m 00s",
+    "difficulties": {
+      "vocals": -1,
+      "guitar": -1,
+      "bass": -1,
+      "drums": -1,
+      "plastic-bass": -1,
+      "plastic-drums": -1,
+      "plastic-guitar": -1
+    },
+    "createdAt": "2024-03-19T06:08:19.835Z",
+    "lastFeatured": "TBA",
+    "complete": "0% Complete",
+    "previewUrl": "https://p.scdn.co/mp3-preview/25b2f8584a1c8996a637382aed0310f49801e986",
+    "rotated": true
+  },
+  "part": {
+    "title": "Another Part Of Me",
+    "artist": "Snoop Dogg & Dr. Dre (Feat. Sting)",
+    "releaseYear": 0,
+    "cover": "https://github.com/JaydenzKoci/song-projects/blob/main/Images/AnotherPartOfMe.png?raw=true",
+    "bpm": 0,
+    "duration": "0m 00s",
+    "difficulties": {
+      "vocals": -1,
+      "guitar": -1,
+      "bass": -1,
+      "drums": -1,
+      "plastic-bass": -1,
+      "plastic-drums": -1,
+      "plastic-guitar": -1
+    },
+    "createdAt": "2024-03-19T06:08:19.835Z",
+    "lastFeatured": "TBA",
+    "complete": "0% Complete",
+    "previewUrl": "https://p.scdn.co/mp3-preview/96f784e4a917aa8a735eba057a3895a5a0875655",
+    "rotated": true
+  },
+  "houdini": {
+    "title": "Houdini",
+    "artist": "Dua Lipa",
+    "releaseYear": 0,
+    "cover": "https://github.com/JaydenzKoci/song-projects/blob/main/Images/FutureNostagia.png?raw=true",
+    "bpm": 0,
+    "duration": "0m 00s",
+    "difficulties": {
+      "vocals": -1,
+      "guitar": -1,
+      "bass": -1,
+      "drums": -1,
+      "plastic-bass": -1,
+      "plastic-drums": -1,
+      "plastic-guitar": -1
+    },
+    "createdAt": "2024-03-19T06:08:19.835Z",
+    "lastFeatured": "TBA",
+    "complete": "0% Complete",
+    "previewUrl": "https://p.scdn.co/mp3-preview/df4af86970ffb1a7042d1d228bcea7b4aabfdba4",
+    "rotated": true
+  },
+  "good": {
+    "title": "I'm Good (Blue)",
+    "artist": "David Guetta & Bebe Rexha",
+    "releaseYear": 0,
+    "cover": "https://github.com/JaydenzKoci/song-projects/blob/main/Images/ImGood.png?raw=true",
+    "bpm": 0,
+    "duration": "0m 00s",
+    "difficulties": {
+      "vocals": -1,
+      "guitar": -1,
+      "bass": -1,
+      "drums": -1,
+      "plastic-bass": -1,
+      "plastic-drums": -1,
+      "plastic-guitar": -1
+    },
+    "createdAt": "2024-03-19T06:08:19.835Z",
+    "lastFeatured": "TBA",
+    "complete": "0% Complete",
+    "previewUrl": "https://p.scdn.co/mp3-preview/c1de960c1a98f7ab652331e5223c50baba75c460",
+    "rotated": true
+  },
+  "monody": {
+    "title": "Monody",
+    "artist": "TheFatRat (Feat. Laura Brehm)",
+    "releaseYear": 0,
+    "cover": "https://github.com/JaydenzKoci/song-projects/blob/main/Images/Monody.png?raw=true",
+    "bpm": 0,
+    "duration": "0m 00s",
+    "difficulties": {
+      "vocals": -1,
+      "guitar": -1,
+      "bass": -1,
+      "drums": -1,
+      "plastic-bass": -1,
+      "plastic-drums": -1,
+      "plastic-guitar": -1
+    },
+    "createdAt": "2024-03-19T06:08:19.835Z",
+    "lastFeatured": "TBA",
+    "complete": "0% Complete",
+    "previewUrl": "https://p.scdn.co/mp3-preview/25b902df4aa6f5a95ef5f4a31795b9c13c434816",
+    "rotated": true
+  },
+  "unity": {
+    "title": "Unity",
+    "artist": "TheFatRat",
+    "releaseYear": 0,
+    "cover": "https://github.com/JaydenzKoci/song-projects/blob/main/Images/Unity.png?raw=true",
+    "bpm": 0,
+    "duration": "0m 00s",
+    "difficulties": {
+      "vocals": -1,
+      "guitar": -1,
+      "bass": -1,
+      "drums": -1,
+      "plastic-bass": -1,
+      "plastic-drums": -1,
+      "plastic-guitar": -1
+    },
+    "createdAt": "2024-03-19T06:08:19.835Z",
+    "lastFeatured": "TBA",
+    "complete": "0% Complete",
+    "previewUrl": "https://p.scdn.co/mp3-preview/00f0330a02e302be04b0989ebd22b24641d7c4ac",
+    "rotated": true
+  },
+  "mask": {
+    "title": "Throw Away Your Mask",
+    "artist": "Lyn",
+    "releaseYear": 0,
+    "cover": "https://github.com/JaydenzKoci/song-projects/blob/main/Images/ThrowAwayYourMask.png?raw=true",
+    "bpm": 0,
+    "duration": "0m 00s",
+    "difficulties": {
+      "vocals": -1,
+      "guitar": -1,
+      "bass": -1,
+      "drums": -1,
+      "plastic-bass": -1,
+      "plastic-drums": -1,
+      "plastic-guitar": -1
+    },
+    "createdAt": "2024-03-19T06:08:19.835Z",
+    "lastFeatured": "TBA",
+    "complete": "0% Complete",
+    "previewUrl": "https://p.scdn.co/mp3-preview/af21fc38c1651961bde204232cadac4e08703b3a",
+    "rotated": true
+  },
+  "thick": {
+    "title": "Thick Of It",
+    "artist": "KSI (Feat. Trippie Redd)",
+    "releaseYear": 0,
+    "cover": "https://github.com/JaydenzKoci/song-projects/blob/main/Images/ThickOfIt.png?raw=true",
+    "bpm": 0,
+    "duration": "0m 00s",
+    "difficulties": {
+      "vocals": -1,
+      "guitar": -1,
+      "bass": -1,
+      "drums": -1,
+      "plastic-bass": -1,
+      "plastic-drums": -1,
+      "plastic-guitar": -1
+    },
+    "createdAt": "2024-03-19T06:08:19.835Z",
+    "lastFeatured": "TBA",
+    "complete": "0% Complete",
+    "previewUrl": "https://p.scdn.co/mp3-preview/75fc8a58cc0b1f2a473c3ea5e350da662d9f62f8",
+    "rotated": true
   }
 }
