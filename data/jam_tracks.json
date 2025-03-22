@@ -5,6 +5,7 @@
     "releaseYear": 2024,
     "cover": "https://github.com/JaydenzKoci/song-projects/blob/main/Images/Unsure.png?raw=true",
     "bpm": 130,
+    "key": "F",
     "duration": "2m 49s",
     "difficulties": {
       "vocals": 3,
@@ -531,10 +532,10 @@
   "exes": {
     "title": "exes",
     "artist": "Tate McRae",
-    "releaseYear": 0,
+    "releaseYear": 2023,
     "cover": "https://github.com/JaydenzKoci/song-projects/blob/main/Images/ThinkLater.png?raw=true",
-    "bpm": 0,
-    "duration": "0m 00s",
+    "bpm": 137,
+    "duration": "2m 41s",
     "difficulties": {
       "vocals": -1,
       "guitar": -1,
@@ -545,10 +546,11 @@
       "plastic-guitar": -1
     },
     "createdAt": "2024-03-19T06:08:19.835Z",
-    "lastFeatured": "TBA",
-    "complete": "0% Complete",
+    "lastFeatured": "3/21/2024, 10:57:49 PM",
+    "complete": "13% Complete",
     "previewUrl": "https://p.scdn.co/mp3-preview/9f2e1821dfa9781d4e594b3e85ffc90c4f5cc089",
-    "rotated": true
+    "rotated": true,
+    "featured": true
   },
   "stereo": {
     "title": "Stereo Hearts",

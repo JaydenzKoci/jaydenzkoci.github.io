@@ -60,17 +60,17 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     function renderModal(track) {
-        const { title, artist, releaseYear, cover, bpm, duration, difficulties, createdAt, lastFeatured, previewUrl, download, complete } = track;
+        const { title, artist, releaseYear, cover, bpm, duration, difficulties, createdAt, lastFeatured, previewUrl, download, key, complete } = track;
 
         modal.querySelector('#modalCover').src = cover;
         modal.querySelector('#modalTitle').textContent = title;
         modal.querySelector('#modalArtist').textContent = artist;
         modal.querySelector('#modalDetails').innerHTML = `
-            <p>Release Year: ${releaseYear}</p>
-            <p>BPM: ${bpm}</p>
-            <p>Duration: ${duration}</p>
+            <p>Release Year: ${releaseYear} | Duration: ${duration} | BPM: ${bpm}
+            =============================================
             <p>Created At: ${new Date(createdAt).toLocaleString()}</p>
             <p>Last Updated: ${lastFeatured}</p>
+            =============================================
             <p>Progress: ${complete}</p>
         `;
         generateDifficultyBars(difficulties, modal.querySelector('#modalDifficulties'));
@@ -155,6 +155,8 @@ document.addEventListener('DOMContentLoaded', () => {
                     return track.rotated;
                 case 'new':
                     return track.new;
+                case 'finish':
+                    return track.finish;
                 default:
                     return true;
             }
@@ -165,7 +167,9 @@ document.addEventListener('DOMContentLoaded', () => {
             if (filterValue === 'rotated') {
                 return new Date(b.lastFeatured) - new Date(a.lastFeatured);
             } else if (filterValue === 'new') {
-                return new Date(b.createdAt) - new Date(a.createdAt);
+                return new Date(b.createdAt) - new Date(a.createdAt);       
+            } else if (filterValue === 'finish') {
+                return new Date(b.createdAt) - new Date(a.createdAt);       
             } else {
                 if (a.featured && !b.featured) return -1;
                 if (!a.featured && b.featured) return 1;
@@ -276,7 +280,15 @@ document.addEventListener('DOMContentLoaded', () => {
             `;
             labelContainer.appendChild(newLabel);
         }
-
+        if (track.finish) {
+            const newLabel = document.createElement('span');
+            newLabel.classList.add('finish-label');
+            newLabel.innerHTML = `
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+                </svg>
+            `;
+            labelContainer.appendChild(newLabel);
+        }
         if (track.featured) {
             const featuredLabel = document.createElement('span');
             featuredLabel.classList.add('featured-label');
@@ -404,5 +416,5 @@ document.addEventListener('DOMContentLoaded', () => {
     Object.values(headerEvents).forEach(init => init());
 
     // Load initial data
-    loadTracks();
+    loadTracks(); 
 });

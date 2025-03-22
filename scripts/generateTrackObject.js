@@ -13,6 +13,7 @@ export function generateTrackObject(trackData, previewUrl, createdAt, lastFeatur
         artist: track.an.trim(),
         releaseYear: track.ry,
         cover: track.au,
+        key: track.ry,
         bpm: track.mt,
         duration,
         difficulties: {
