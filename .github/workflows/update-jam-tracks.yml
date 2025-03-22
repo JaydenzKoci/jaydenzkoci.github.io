@@ -1,4 +1,4 @@
-name: Update Tracks
+name: Update Jam Tracks
 
 on:
   push:
