@@ -1,0 +1,11 @@
+{
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "auth": "node authenticate.js",
+    "update-jam-tracks": "node scripts/index.js"
+  },
+  "dependencies": {
+    "spotify-web-api-node": "^5.0.2"
+  }
+}

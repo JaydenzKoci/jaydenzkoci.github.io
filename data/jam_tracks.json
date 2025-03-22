@@ -1497,5 +1497,27 @@
     "complete": "0% Complete",
     "previewUrl": "https://p.scdn.co/mp3-preview/75fc8a58cc0b1f2a473c3ea5e350da662d9f62f8",
     "rotated": true
+  },
+  "sweet": {
+    "title": "Sweet But Psycho",
+    "artist": "Ava Max",
+    "releaseYear": 0,
+    "cover": "https://github.com/JaydenzKoci/song-projects/blob/main/Images/HeavenandHell.png?raw=true",
+    "bpm": 0,
+    "duration": "0m 00s",
+    "difficulties": {
+      "vocals": -1,
+      "guitar": -1,
+      "bass": -1,
+      "drums": -1,
+      "plastic-bass": -1,
+      "plastic-drums": -1,
+      "plastic-guitar": -1
+    },
+    "createdAt": "2024-03-19T06:08:19.835Z",
+    "lastFeatured": "TBA",
+    "complete": "0% Complete",
+    "previewUrl": "",
+    "rotated": true
   }
 }
