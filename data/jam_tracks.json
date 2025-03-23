@@ -550,8 +550,8 @@
       "plastic-drums": -1,
       "plastic-guitar": -1
     },
-    "createdAt": "2024-03-20T08:04:19.835Z",
-    "lastFeatured": "3/21/2024, 10:57:49 PM",
+    "createdAt": "2025-03-20T08:04:19.835Z",
+    "lastFeatured": "3/21/2025, 10:57:49 PM",
     "complete": "20% Complete",
     "download": "https://github.com/JaydenzKoci/song-projects/raw/refs/heads/main/Songs/Tate%20McRae%20-%20exes.zip",
     "previewUrl": "https://p.scdn.co/mp3-preview/9f2e1821dfa9781d4e594b3e85ffc90c4f5cc089",
@@ -870,24 +870,27 @@
   "chick": {
     "title": "Sexy Chick",
     "artist": "David Guetta (Feat. Akon)",
-    "releaseYear": 0,
+    "releaseYear": 2009,
     "cover": "https://github.com/JaydenzKoci/song-projects/blob/main/Images/SexyChick.png?raw=true",
-    "bpm": 0,
-    "duration": "0m 00s",
+    "bpm": 130,
+    "key": "B",
+    "duration": "3m 14s",
     "difficulties": {
       "vocals": -1,
-      "guitar": -1,
+      "guitar": 2,
       "bass": -1,
       "drums": -1,
       "plastic-bass": -1,
       "plastic-drums": -1,
       "plastic-guitar": -1
     },
-    "createdAt": "2024-03-19T06:08:19.835Z",
-    "lastFeatured": "TBA",
-    "complete": "0% Complete",
+    "createdAt": "2025-03-23T01:08:19.835Z",
+    "lastFeatured": "3/23/2025, 2:12:31 AM",
+    "complete": "10% Complete",
+    "download": "https://github.com/JaydenzKoci/song-projects/raw/refs/heads/main/Songs/David%20Guetta%20-%20Sexy%20Chick.zip",
     "previewUrl": "https://p.scdn.co/mp3-preview/857b312ba89079f65a60491247ce2dc5f01ab70b",
-    "rotated": true
+    "featured": true,
+    "new": true
   },
   "dutch": {
     "title": "Von dutch",
