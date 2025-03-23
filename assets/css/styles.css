@@ -391,35 +391,29 @@ main {
     display: none;
 }
 
-.mute-button {
-    background-color: transparent;
-    border: none;
-    cursor: pointer;
+.button-container {
     display: flex;
-    align-items: center;
-    padding: 0;
-    margin-left: auto;
-}
-
-.mute-icon,
-.unmute-icon {
-    fill: white;
-    width: 32px;
-    height: 32px;
-}
-
-.unmute-icon {
-    display: none;
-}
-
-.mute-button {
-    background-color: transparent;
+    flex-direction: column; /* Stack vertically */
+    align-items: center; /* Center horizontally, adjust as needed */
+    gap: 10px; /* Space between buttons */
+  }
+  
+  #muteButton, #downloadButton {
+    background: none;
     border: none;
-    color: white;
     cursor: pointer;
-    font-size: 14px;
-    margin-left: 10px;
-}
+    font-size: 1.5em;
+    padding: 5px;
+  }
+  
+  #downloadButton:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
+  
+  .mute-icon, .unmute-icon, .download-icon {
+    display: inline-block;
+  }
 
 .modal-body {
     margin-top: 20px;

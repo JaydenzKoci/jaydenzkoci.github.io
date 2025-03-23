@@ -5,6 +5,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const contentElement = document.querySelector('.content');
     const logo = document.getElementById('logo');
     const muteButton = document.getElementById('muteButton');
+    const downloadButton = document.getElementById('downloadButton');
     const filterSelect = document.getElementById('filterSelect');
 
     let tracksData = [];
@@ -18,7 +19,7 @@ document.addEventListener('DOMContentLoaded', () => {
     let sawUpdateMessage = false;
     let currentTrackIndex = -1;
     let currentFilteredTracks = [];
-
+    let currentDownloadUrl = '';
     audio.muted = isMuted;
     updateMuteIcon();
 
@@ -44,6 +45,18 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 
+    function updateDownloadButton(downloadUrl) {
+        currentDownloadUrl = downloadUrl || ''; // Fallback to empty string if undefined
+        downloadButton.disabled = !currentDownloadUrl || currentDownloadUrl.trim() === '';
+        console.log('Download URL set to:', currentDownloadUrl, 'Button disabled:', downloadButton.disabled);
+    }
+
+    function handleDownload() {
+        if (currentDownloadUrl) {
+            window.location.href = currentDownloadUrl;
+        }
+    }
+
     function playPreview(previewUrl) {
         if (audio.src !== previewUrl) {
             audio.src = previewUrl;
@@ -60,17 +73,17 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     function renderModal(track) {
-        const { title, artist, releaseYear, cover, bpm, duration, difficulties, createdAt, lastFeatured, previewUrl, download, key, complete } = track;
+        const { title, artist, releaseYear, cover, bpm, duration, difficulties, createdAt, lastFeatured, previewUrl, download, complete } = track;
 
         modal.querySelector('#modalCover').src = cover;
         modal.querySelector('#modalTitle').textContent = title;
         modal.querySelector('#modalArtist').textContent = artist;
         modal.querySelector('#modalDetails').innerHTML = `
-            <p>Release Year: ${releaseYear} | Duration: ${duration} | BPM: ${bpm}
-            =============================================
+            <p>Release Year: ${releaseYear} 
+            <p>Duration: ${duration} 
+            <p>BPM: ${bpm}
             <p>Created At: ${new Date(createdAt).toLocaleString()}</p>
             <p>Last Updated: ${lastFeatured}</p>
-            =============================================
             <p>Progress: ${complete}</p>
         `;
         generateDifficultyBars(difficulties, modal.querySelector('#modalDifficulties'));
@@ -81,6 +94,9 @@ document.addEventListener('DOMContentLoaded', () => {
         if (previewUrl) {
             playPreview(previewUrl);
         }
+
+        updateDownloadButton(download);
+
 
         // Update navigation buttons visibility
         const prevButton = modal.querySelector('.modal-prev');
@@ -97,6 +113,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
         audio.src = '';
         currentPreviewUrl = '';
+        updateDownloadButton('');
     }
 
     function renderTracks(tracks, clearExisting = true) {
@@ -327,6 +344,11 @@ document.addEventListener('DOMContentLoaded', () => {
             });
     }
 
+    function updateDownloadButton(downloadUrl) {
+        currentDownloadUrl = downloadUrl || ''; // Fallback to empty string
+        downloadButton.disabled = !currentDownloadUrl || currentDownloadUrl.trim() === ''; // Extra check for empty/whitespace
+        console.log('Download URL:', currentDownloadUrl, 'Disabled:', downloadButton.disabled);
+    }
     function updateCountdown() {
         const now = new Date();
         const nextUpdate = new Date();
@@ -408,6 +430,9 @@ document.addEventListener('DOMContentLoaded', () => {
         },
         audio: () => {
             muteButton.addEventListener('click', toggleMute);
+        },
+        download: () => { // New event listener for download button
+            downloadButton.addEventListener('click', handleDownload);
         }
     };
 
