@@ -553,9 +553,10 @@
     "createdAt": "2024-03-19T06:08:19.835Z",
     "lastFeatured": "3/21/2024, 10:57:49 PM",
     "complete": "13% Complete",
+    "download": "https://github.com/JaydenzKoci/song-projects/raw/refs/heads/main/Songs/Tate%20McRae%20-%20exes.zip",
     "previewUrl": "https://p.scdn.co/mp3-preview/9f2e1821dfa9781d4e594b3e85ffc90c4f5cc089",
-    "rotated": true,
-    "featured": true
+    "featured": true,
+    "new": true
   },
   "stereo": {
     "title": "Stereo Hearts",
