@@ -73,15 +73,14 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     function renderModal(track) {
-        const { title, artist, releaseYear, cover, bpm, duration, difficulties, createdAt, lastFeatured, previewUrl, download, complete } = track;
+        const { title, artist, releaseYear, cover, bpm, duration, difficulties, createdAt, lastFeatured, previewUrl, download, key, complete } = track;
 
         modal.querySelector('#modalCover').src = cover;
         modal.querySelector('#modalTitle').textContent = title;
         modal.querySelector('#modalArtist').textContent = artist;
+        modal.querySelector('#modalDuration').textContent = duration;
         modal.querySelector('#modalDetails').innerHTML = `
-            <p>Release Year: ${releaseYear} 
-            <p>Duration: ${duration} 
-            <p>BPM: ${bpm}
+            <p>Release Year: ${releaseYear} | BPM: ${bpm}
             <p>Created At: ${new Date(createdAt).toLocaleString()}</p>
             <p>Last Updated: ${lastFeatured}</p>
             <p>Progress: ${complete}</p>
