@@ -722,7 +722,7 @@
   },
   "1035": {
     "title": "10:35",
-    "artist": "Ti\u00c3\u00absto (feat. Tate McRae)",
+    "artist": "Tiesto (feat. Tate McRae)",
     "releaseYear": 0,
     "cover": "https://github.com/JaydenzKoci/song-projects/blob/main/Images/1035.png?raw=true",
     "bpm": 0,
@@ -1513,6 +1513,7 @@
     "createdAt": "2024-03-19T06:08:19.835Z",
     "lastFeatured": "TBA",
     "complete": "0% Complete",
+    "spotify": "0L47Eu4MJH1J1vIerB7MMc",
     "previewUrl": "https://p.scdn.co/mp3-preview/75fc8a58cc0b1f2a473c3ea5e350da662d9f62f8",
     "rotated": true
   }
