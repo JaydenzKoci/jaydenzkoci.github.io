@@ -341,7 +341,7 @@ main {
     width: 100%;
     height: 100%;
     background-color: rgba(0, 0, 0, 0.7);
-    backdrop-filter: blur(20px);
+    backdrop-filter: blur(10px);
     z-index: 1000;
     cursor: pointer;
 }
@@ -351,14 +351,32 @@ main {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    background-color: #2a2a2a;
+    background-color: #2a2a2a70;
     border-radius: 10px;
-    width: 90%;
+    width: 50%;
     max-width: 500px;
     padding: 20px;
     cursor: auto;
+    overflow: hidden;
 }
-
+.modal-content.no-video {
+    background-color: #333333; /* Default color when no video */
+ }
+.modal-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+    opacity: 0; /* Start invisible */
+    transition: opacity 0.3s ease; /* Smooth fade-in */
+    background-color: transparent;
+}
+.modal-video.loaded {
+    opacity: 0.8; /* Fade to visible when loaded */
+}
 .modal-close {
     position: absolute;
     top: 0px;
@@ -419,11 +437,17 @@ main {
     margin-top: 20px;
 }
 
-.modal-details,
+.modal-details {
+padding: 15px;
+border-radius: 8px;
+background-color: rgba(255, 255, 255, 0.329);
+margin-bottom: 15px;
+color: rgb(255, 255, 255); /* Fill color of the text */
+}
 .modal-difficulties {
     padding: 15px;
     border-radius: 8px;
-    background-color: rgba(255, 255, 255, 0.1);
+    background-color: rgba(255, 255, 255, 0.329);
     margin-bottom: 15px;
 }
 

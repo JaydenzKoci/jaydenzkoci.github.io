@@ -19,7 +19,8 @@
     "createdAt": "2025-01-11T04:08:19.834Z",
     "lastFeatured": "2/26/2025, 12:08:19 PM",
     "complete": "20% Complete",
-    "previewUrl":"https://p.scdn.co/mp3-preview/0fa590f4f9fb1c7d852ede53de59699a219a2d52",
+    "videoUrl": "unsure.mp4",
+    "previewUrl": "https://p.scdn.co/mp3-preview/0fa590f4f9fb1c7d852ede53de59699a219a2d52",
     "download": "https://github.com/JaydenzKoci/song-projects/raw/refs/heads/main/Songs/Alan%20Walker%20-%20Unsure.zip",
     "new": true
   },
@@ -42,6 +43,7 @@
     "createdAt": "2024-11-18T01:40:19.835Z",
     "lastFeatured": "12/16/2024, 11:51:32 AM",
     "complete": "25% Complete",
+    "videoUrl": "spotafake.mp4",
     "download": "https://github.com/JaydenzKoci/song-projects/raw/refs/heads/main/Songs/Ava%20Max%20-%20Spot%20a%20Fake.zip",
     "previewUrl": "https://p.scdn.co/mp3-preview/f2fb7a2b1f0a602d0fa21194bdf2780a178c1450",
     "new": true
@@ -65,6 +67,7 @@
     "createdAt": "2025-02-09T12:08:19.835Z",
     "lastFeatured": "2/11/2025, 4:50:19 AM",
     "complete": "10% Complete",
+    "videoUrl": "lostyourfaith.mp4",
     "download": "https://github.com/JaydenzKoci/song-projects/raw/refs/heads/main/Songs/Ava%20Max%20-%20Lost%20Your%20Faith.zip",
     "previewUrl": "https://p.scdn.co/mp3-preview/3564f9445e53690decad7b57d5b6c18f6b712f4a",
     "new": true
@@ -88,6 +91,7 @@
     "createdAt": "2024-11-28T04:08:14.835Z",
     "lastFeatured": "12/18/2024, 2:40:14 PM",
     "complete": "20% Complete",
+    "videoUrl": "foreveryoung.mp4",
     "download": "https://github.com/JaydenzKoci/song-projects/raw/refs/heads/main/Songs/David%20Guetta%20-%20Forever%20Young.zip",
     "previewUrl": "https://p.scdn.co/mp3-preview/a47b1ab8552acc16146597026a45aa53806dbd1f",
     "new": true
@@ -111,6 +115,7 @@
     "createdAt": "2024-12-05T06:08:19.835Z",
     "lastFeatured": "12/15/2024, 9:11:39 PM",
     "complete": "20% Complete",
+    "videoUrl": "breakyourheart.mp4",
     "download": "https://github.com/JaydenzKoci/song-projects/raw/refs/heads/main/Songs/Taio%20Cruz%20-%20Break%20Your%20Heart.zip",
     "previewUrl": "https://p.scdn.co/mp3-preview/c6363106816b05ddd83a0467c0e17591ecafcadd",
     "new": true
@@ -310,6 +315,7 @@
     "createdAt": "2025-03-19T06:08:19.835Z",
     "lastFeatured": "3/20/2025, 12:12:18 AM",
     "complete": "10% Complete",
+    "videoUrl": "myheadandmyheart.mp4",
     "download": "https://github.com/JaydenzKoci/song-projects/raw/refs/heads/main/Songs/Ava%20Max%20-%20My%20Head%20&%20My%20Heart.zip",
     "previewUrl": "https://p.scdn.co/mp3-preview/60f31c477e494d379c3eb8e6ff15d8007d0cbe0b",
     "new": true
@@ -553,9 +559,9 @@
     "createdAt": "2025-03-20T08:04:19.835Z",
     "lastFeatured": "3/21/2025, 10:57:49 PM",
     "complete": "20% Complete",
+    "videoUrl": "exes.mp4",
     "download": "https://github.com/JaydenzKoci/song-projects/raw/refs/heads/main/Songs/Tate%20McRae%20-%20exes.zip",
     "previewUrl": "https://p.scdn.co/mp3-preview/9f2e1821dfa9781d4e594b3e85ffc90c4f5cc089",
-    "featured": true,
     "new": true
   },
   "stereo": {
@@ -643,6 +649,7 @@
     "createdAt": "2025-03-19T08:21:19.835Z",
     "lastFeatured": "3/20/2025, 4:17:44PM",
     "complete": "10% Complete",
+    "videoUrl": "whatever.mp4",
     "download": "https://github.com/JaydenzKoci/song-projects/raw/refs/heads/main/Songs/Kygo%20-%20Whatever.zip",
     "previewUrl": "https://p.scdn.co/mp3-preview/03bbf447d8f0101cff90c78b3ab0c4757c3bf27b",
     "new": true
@@ -715,7 +722,7 @@
   },
   "1035": {
     "title": "10:35",
-    "artist": "Tiësto (feat. Tate McRae)",
+    "artist": "Ti\u00c3\u00absto (feat. Tate McRae)",
     "releaseYear": 0,
     "cover": "https://github.com/JaydenzKoci/song-projects/blob/main/Images/1035.png?raw=true",
     "bpm": 0,
@@ -887,6 +894,7 @@
     "createdAt": "2025-03-23T01:08:19.835Z",
     "lastFeatured": "3/23/2025, 2:12:31 AM",
     "complete": "10% Complete",
+    "videoUrl": "sexychick.mp4",
     "download": "https://github.com/JaydenzKoci/song-projects/raw/refs/heads/main/Songs/David%20Guetta%20-%20Sexy%20Chick.zip",
     "previewUrl": "https://p.scdn.co/mp3-preview/857b312ba89079f65a60491247ce2dc5f01ab70b",
     "featured": true,

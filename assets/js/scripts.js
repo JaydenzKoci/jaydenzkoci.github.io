@@ -42,6 +42,7 @@ document.addEventListener('DOMContentLoaded', () => {
         updateMuteIcon();
         if (!isMuted && currentPreviewUrl) {
             audio.play();
+
         }
     }
 
@@ -66,15 +67,47 @@ document.addEventListener('DOMContentLoaded', () => {
             audio.play();
         }
     }
-
     function openModal(track) {
         currentTrackIndex = currentFilteredTracks.findIndex(t => t.title === track.title && t.artist === track.artist);
         renderModal(track);
     }
-
     function renderModal(track) {
-        const { title, artist, releaseYear, cover, bpm, duration, difficulties, createdAt, lastFeatured, previewUrl, download, key, complete } = track;
+        const { title, artist, releaseYear, cover, bpm, duration, difficulties, createdAt, lastFeatured, previewUrl, download, key, complete, videoUrl} = track;
+        console.log('Video URL:', videoUrl); // Debug line
+        
+        const modalContent = modal.querySelector('.modal-content');
+        const existingVideo = modalContent.querySelector('.modal-video');
+        if (existingVideo) existingVideo.remove();
+    
+        modalContent.classList.remove('no-video');
 
+        // Handle video if videoUrl is provided
+        if (videoUrl) {
+            const videoPath = `/assets/preview/${videoUrl}`; // Prepend the path
+    
+            const videoElement = document.createElement('video');
+            videoElement.classList.add('modal-video');
+            videoElement.autoplay = true;
+            videoElement.muted = true;
+            videoElement.loop = true;
+            videoElement.innerHTML = `<source src="${videoPath}" type="video/mp4">`;
+    
+            // Append video and handle errors
+            modalContent.insertBefore(videoElement, modalContent.firstChild);
+            videoElement.onerror = () => {
+                console.log(`Video not found or failed to load: ${videoPath}`);
+                videoElement.remove(); // Remove if it fails
+                modalContent.classList.add('no-video'); // Fallback to default color
+            };
+            videoElement.onloadeddata = () => {
+                console.log(`Video loaded successfully: ${videoPath}`);
+                videoElement.classList.add('loaded'); // Trigger fade-in
+            };
+        } else {
+            console.log('No videoUrl provided for this track');
+            modalContent.classList.add('no-video'); // Apply default color if no video
+        }
+        
         modal.querySelector('#modalCover').src = cover;
         modal.querySelector('#modalTitle').textContent = title;
         modal.querySelector('#modalArtist').textContent = artist;
@@ -326,22 +359,72 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 
-    function loadTracks() {
-        fetch(`data/jam_tracks.json?_=${Date.now()}`)
-            .then(response => response.json())
-            .then(data => {
-                tracksData = Object.values(data);
+    function preloadAssets(tracks) {
+    const preloadedVideos = new Set();
 
-                const urlParams = new URLSearchParams(window.location.search);
-                const searchQuery = urlParams.get('q');
-                const filterValue = urlParams.get('filter');
+    tracks.forEach(track => {
+        // Preload cover image
+        if (track.cover && !preloadedImages.has(track.cover)) {
+            const img = new Image();
+            img.src = track.cover;
+            img.onload = () => console.log(`Preloaded image: ${track.cover}`);
+            img.onerror = () => console.log(`Failed to preload image: ${track.cover}`);
+            preloadedImages.add(track.cover);
+        }
 
-                if (searchQuery) searchInput.value = searchQuery;
-                if (filterValue) filterSelect.value = filterValue;
+        // Preload video if videoUrl exists
+        if (track.videoUrl && !preloadedVideos.has(track.videoUrl)) {
+            const video = document.createElement('video');
+            const videoPath = `/assets/preview/${track.videoUrl}`;
+            video.src = videoPath;
+            video.preload = 'auto'; // Hint to browser to preload
+            video.muted = true; // Avoid playback issues
+            video.load(); // Explicitly start loading
+            video.onloadeddata = () => console.log(`Preloaded video: ${videoPath}`);
+            video.onerror = () => console.log(`Failed to preload video: ${videoPath}`);
+            preloadedVideos.add(track.videoUrl);
+        }
+    });
+}
+let preloadedVideos = {};
 
-                filterTracks(); // This will handle all sorting and initial rendering
-            });
-    }
+function preloadAssets(tracks) {
+    tracks.forEach(track => {
+        // Preload video if videoUrl exists
+        if (track.videoUrl && !preloadedVideos[track.videoUrl]) {
+            const videoPath = `/assets/preview/${track.videoUrl}`;
+            const video = document.createElement('video');
+            video.src = videoPath;
+            video.preload = 'auto'; // Hint to browser to preload
+            video.muted = true; // Avoid playback issues
+            video.load(); // Explicitly start loading
+            video.onloadeddata = () => console.log(`Preloaded video: ${videoPath}`);
+            video.onerror = () => console.log(`Failed to preload video: ${videoPath}`);
+            preloadedVideos[track.videoUrl] = video; // Store for reuse
+        }
+    });
+}
+
+function loadTracks() {
+    fetch(`data/jam_tracks.json?_=${Date.now()}`)
+        .then(response => response.json())
+        .then(data => {
+            tracksData = Object.values(data);
+
+            // Preload only videos
+            preloadAssets(tracksData);
+
+            const urlParams = new URLSearchParams(window.location.search);
+            const searchQuery = urlParams.get('q');
+            const filterValue = urlParams.get('filter');
+
+            if (searchQuery) searchInput.value = searchQuery;
+            if (filterValue) filterSelect.value = filterValue;
+
+            filterTracks(); // Handle sorting and rendering
+        })
+        .catch(error => console.error('Failed to load tracks:', error));
+}
 
     function updateDownloadButton(downloadUrl) {
         currentDownloadUrl = downloadUrl || ''; // Fallback to empty string
@@ -410,6 +493,7 @@ document.addEventListener('DOMContentLoaded', () => {
                         case 'ArrowLeft': navigateModal(-1); break;
                         case 'ArrowRight': navigateModal(1); break;
                         case 'Escape': closeModal(); break;
+                        case 'm': toggleMute(); break;
                     }
                 }
             });
@@ -441,4 +525,5 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Load initial data
     loadTracks(); 
+    
 });
