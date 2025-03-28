@@ -23,6 +23,10 @@ document.addEventListener('DOMContentLoaded', () => {
     audio.muted = isMuted;
     updateMuteIcon();
 
+    function isMobile() {
+        return window.innerWidth <= 768; // Adjust threshold as needed (768px is common for tablets/mobile)
+    }
+
     function updateMuteIcon() {
         const muteIcon = muteButton.querySelector('.mute-icon');
         const unmuteIcon = muteButton.querySelector('.unmute-icon');
@@ -42,14 +46,12 @@ document.addEventListener('DOMContentLoaded', () => {
         updateMuteIcon();
         if (!isMuted && currentPreviewUrl) {
             audio.play();
-
         }
     }
 
     function updateDownloadButton(downloadUrl) {
-        currentDownloadUrl = downloadUrl || ''; // Fallback to empty string if undefined
+        currentDownloadUrl = downloadUrl || '';
         downloadButton.disabled = !currentDownloadUrl || currentDownloadUrl.trim() === '';
-        console.log('Download URL set to:', currentDownloadUrl, 'Button disabled:', downloadButton.disabled);
     }
 
     function handleDownload() {
@@ -103,7 +105,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 modalContent.classList.add('no-video');
             };
             videoElement.onloadeddata = () => {
-                console.log(`Video loaded successfully: ${videoPath}`);
+                console.log(`Video loaded successfully: ${videoUrl}`);
                 videoElement.classList.add('loaded');
             };
         } else {
@@ -151,44 +153,113 @@ document.addEventListener('DOMContentLoaded', () => {
         updateDownloadButton('');
     }
 
-    function renderTracks(tracks, clearExisting = true) {
-        if (clearExisting) contentElement.innerHTML = '';
+        const gridSizeSlider = document.getElementById('gridSize');
+        const gridSizeValue = document.getElementById('gridSizeValue');
+        let tracksPerRow = parseInt(gridSizeSlider.value); // Will be 4 by default
+    
+        // ... (previous functions remain the same)
+    
+        function updateGridSize() {
+            tracksPerRow = parseInt(gridSizeSlider.value);
+            gridSizeValue.textContent = tracksPerRow;
+    
+            // Adjust for mobile: override slider if screen is too small
+            const screenWidth = window.innerWidth;
+            let effectiveTracksPerRow = tracksPerRow;
+            if (screenWidth <= 480) {
+                effectiveTracksPerRow = 1; // 1 per row on small screens
+            } else if (screenWidth <= 768) {
+                effectiveTracksPerRow = Math.min(tracksPerRow, 2); // Max 2 on medium screens
+            } else if (screenWidth <= 1024) {
+                effectiveTracksPerRow = Math.min(tracksPerRow, 3); // Max 3 on tablets
+            }
+    
+            const percentage = 100 / effectiveTracksPerRow;
+            const trackElements = document.querySelectorAll('.jam-track');
+            trackElements.forEach(track => {
+                track.style.flex = `1 1 calc(${percentage}% - 20px)`;
+            });
+        }
+    
+        function renderTracks(tracks, clearExisting = true) {
+            if (clearExisting) contentElement.innerHTML = '';
+    
+            tracks.forEach(track => {
+                const trackElement = document.createElement('div');
+                trackElement.classList.add('jam-track');
+    
+                const loadingSpinner = document.createElement('div');
+                loadingSpinner.className = 'loading-spinner';
+    
+                const img = new Image();
+                img.src = track.cover;
+                img.alt = `${track.title} Cover`;
+                img.style.display = 'none';
+    
+                img.onload = () => {
+                    loadingSpinner.remove();
+                    img.style.display = '';
+                    img.classList.add('loaded');
+                };
+    
+                trackElement.innerHTML = `
+                    <div>
+                        <h2>${track.title}</h2>
+                        <p>${track.artist}</p>
+                    </div>
+                `;
+                let touchTimer;
+                trackElement.addEventListener('touchstart', (e) => {
+                e.preventDefault();
+                if (isMobile()) {
+                touchTimer = setTimeout(() => openModal(track), 500); // Open modal after 500ms
+                } else {
+                openModal(track);
+                }
+                }, { passive: false });
 
-        tracks.forEach(track => {
-            const trackElement = document.createElement('div');
-            trackElement.classList.add('jam-track');
-
-            const loadingSpinner = document.createElement('div');
-            loadingSpinner.className = 'loading-spinner';
-
-            const img = new Image();
-            img.src = track.cover;
-            img.alt = `${track.title} Cover`;
-            img.style.display = 'none';
-
-            img.onload = () => {
-                loadingSpinner.remove();
-                img.style.display = '';
-                img.classList.add('loaded');
-            };
-
-            trackElement.innerHTML = `
-                <div>
-                    <h2>${track.title}</h2>
-                    <p>${track.artist}</p>
-                </div>
-            `;
-
-            trackElement.insertBefore(loadingSpinner, trackElement.firstChild);
-            trackElement.insertBefore(img, trackElement.firstChild);
-
-            const labels = generateLabels(track);
-            trackElement.appendChild(labels);
-
-            trackElement.addEventListener('click', () => openModal(track));
-            contentElement.appendChild(trackElement);
-        });
+trackElement.addEventListener('touchend', (e) => {
+    if (isMobile()) {
+        clearTimeout(touchTimer);
+        trackElement.classList.toggle('mobile-highlight');
+        if (track.previewUrl) playPreview(track.previewUrl);
     }
+});
+                trackElement.insertBefore(loadingSpinner, trackElement.firstChild);
+                trackElement.insertBefore(img, trackElement.firstChild);
+    
+                const labels = generateLabels(track);
+                trackElement.appendChild(labels);
+
+                trackElement.addEventListener('click', (e) => {
+                    if (!isMobile()) {
+                        openModal(track);
+                    }
+                });
+    
+                trackElement.addEventListener('click', () => openModal(track));
+                // Add touch event for mobile
+                trackElement.addEventListener('touchstart', (e) => {
+                    e.preventDefault(); // Prevent default touch behavior
+                    if (isMobile()) {
+                        // Alternative action (e.g., toggle a highlight or play preview only)
+                        trackElement.classList.toggle('mobile-highlight');
+                        if (track.previewUrl) {
+                            playPreview(track.previewUrl); // Play audio preview instead
+                        }
+                    } else {
+                        openModal(track); // Desktop fallback
+                    }
+                }, { passive: false });
+    
+                contentElement.appendChild(trackElement);
+            });
+            
+            if (isMobile()) {
+                alert(`Selected: ${track.title} by ${track.artist}`); // Simple alert
+            }
+            updateGridSize();
+        }
 
     function filterTracks() {
         const query = searchInput.value.toLowerCase();
@@ -362,60 +433,11 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 
-    function preloadAssets(tracks) {
-    const preloadedVideos = new Set();
-
-    tracks.forEach(track => {
-        // Preload cover image
-        if (track.cover && !preloadedImages.has(track.cover)) {
-            const img = new Image();
-            img.src = track.cover;
-            img.onload = () => console.log(`Preloaded image: ${track.cover}`);
-            img.onerror = () => console.log(`Failed to preload image: ${track.cover}`);
-            preloadedImages.add(track.cover);
-        }
-
-        // Preload video if videoUrl exists
-        if (track.videoUrl && !preloadedVideos.has(track.videoUrl)) {
-            const video = document.createElement('video');
-            const videoPath = `/assets/preview/${track.videoUrl}`;
-            video.src = videoPath;
-            video.preload = 'auto'; // Hint to browser to preload
-            video.muted = true; // Avoid playback issues
-            video.load(); // Explicitly start loading
-            video.onloadeddata = () => console.log(`Preloaded video: ${videoPath}`);
-            video.onerror = () => console.log(`Failed to preload video: ${videoPath}`);
-            preloadedVideos.add(track.videoUrl);
-        }
-    });
-}
-let preloadedVideos = {};
-
-function preloadAssets(tracks) {
-    tracks.forEach(track => {
-        // Preload video if videoUrl exists
-        if (track.videoUrl && !preloadedVideos[track.videoUrl]) {
-            const videoPath = `/assets/preview/${track.videoUrl}`;
-            const video = document.createElement('video');
-            video.src = videoPath;
-            video.preload = 'auto'; // Hint to browser to preload
-            video.muted = true; // Avoid playback issues
-            video.load(); // Explicitly start loading
-            video.onloadeddata = () => console.log(`Preloaded video: ${videoPath}`);
-            video.onerror = () => console.log(`Failed to preload video: ${videoPath}`);
-            preloadedVideos[track.videoUrl] = video; // Store for reuse
-        }
-    });
-}
-
 function loadTracks() {
     fetch(`data/jam_tracks.json?_=${Date.now()}`)
         .then(response => response.json())
         .then(data => {
             tracksData = Object.values(data);
-
-            // Preload only videos
-            preloadAssets(tracksData);
 
             const urlParams = new URLSearchParams(window.location.search);
             const searchQuery = urlParams.get('q');
@@ -450,18 +472,15 @@ function loadTracks() {
             return;
         }
 
-        // If we just left the update window and saw the message, reload the page
         if (sawUpdateMessage && now > updateEnd) {
             window.location.reload();
             return;
         }
 
-        // Reset the flag if we're past the update window
         if (now > updateEnd) {
             sawUpdateMessage = false;
         }
 
-        // If we're past today's update window, set next update to tomorrow
         if (now > updateEnd) {
             nextUpdate.setUTCDate(nextUpdate.getUTCDate() + 1);
         }
@@ -473,11 +492,9 @@ function loadTracks() {
         document.getElementById('countdown').textContent = ``;
     }
 
-    // Initialize countdown timer
     setInterval(updateCountdown, 1000);
     updateCountdown();
 
-    // Modal event listeners
     const modalEvents = {
         close: () => {
             modal.addEventListener('click', (e) => {
@@ -503,7 +520,22 @@ function loadTracks() {
         }
     };
 
-    // Header event listeners
+    window.addEventListener('resize', debounce(() => {
+        updateGridSize();
+    }, 200));
+
+    function debounce(func, wait) {
+        let timeout;
+        return function executedFunction(...args) {
+            const later = () => {
+                clearTimeout(timeout);
+                func(...args);
+            };
+            clearTimeout(timeout);
+            timeout = setTimeout(later, wait);
+        };
+    }
+    
     const headerEvents = {
         logo: () => {
             logo.addEventListener('click', () => window.location.href = '/');
@@ -517,16 +549,21 @@ function loadTracks() {
         audio: () => {
             muteButton.addEventListener('click', toggleMute);
         },
-        download: () => { // New event listener for download button
+        download: () => {
             downloadButton.addEventListener('click', handleDownload);
+        },
+        gridSize: () => {
+            gridSizeSlider.addEventListener('input', debounce(() => {
+                updateGridSize();
+            }, 100));
+            gridSizeSlider.addEventListener('touchmove', debounce(() => {
+                updateGridSize();
+            }, 100));
         }
     };
 
-    // Initialize all event listeners
     Object.values(modalEvents).forEach(init => init());
     Object.values(headerEvents).forEach(init => init());
 
-    // Load initial data
-    loadTracks(); 
-    
+    loadTracks();
 });

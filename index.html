@@ -42,6 +42,11 @@
                     <option value="featured">🟨 Updated Tracks</option>
                     <option value="finish">🟩 Finished Tracks</option>
                 </select>
+                <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                <div class="grid-size-control">
+                    <label for="gridSize">Tracks per row: <span id="gridSizeValue">4</span></label>
+                    <input type="range" id="gridSize" min="1" max="4" value="4" step="1">
+                </div>
             </div>
             <div class="content">
                 <!-- Jam tracks will be added dynamically here -->

@@ -189,6 +189,9 @@ main {
 }
 
 .jam-track {
+    flex: 1 1 calc(25% - 20px); /* Default 4 per row */
+    margin: 10px;
+    box-sizing: border-box;
     width: 270px;
     margin: 10px;
     border-radius: 10px;
@@ -281,7 +284,7 @@ main {
 }
 
 /* Mobile */
-@media (max-width: 992px) {
+@media (max-width: 768px) {
     .header {
         position: relative;
     }
@@ -325,10 +328,7 @@ main {
     }
 
     .jam-track {
-        width: 100%;
-        max-width: 600px;
-        margin: 5px 0;
-        padding: 10px;
+        flex: 1 1 calc(50% - 20px); /* 2 per row on smaller screens */
     }
 }
 
@@ -375,7 +375,7 @@ main {
     background-color: transparent;
 }
 .modal-video.loaded {
-    opacity: 1; /* Fade to visible when loaded */
+    opacity: 0.8; /* Fade to visible when loaded */
 }
 .modal-close {
     position: absolute;
@@ -504,10 +504,22 @@ color: rgb(255, 255, 255); /* Fill color of the text */
 }
 .active { background-color: white !important; }
 
+.grid-size-control {
+    margin: 0 15px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+#gridSize {
+    width: 100px;
+    cursor: pointer;
+}
+
 .filter-wrapper {
     margin-bottom: 20px;
     display: flex;
-    justify-content: center;
+    justify-content: left;
 }
 
 .custom-select {
@@ -594,6 +606,70 @@ color: rgb(255, 255, 255); /* Fill color of the text */
 
     .modal-next {
         right: 10px;
+    }
+}
+.jam-track {
+    flex: 1 1 calc(25% - 20px); /* Default 4 per row */
+    margin: 10px;
+    box-sizing: border-box;
+}
+
+.mobile-highlight {
+    background-color: #e0f7fa; /* Light blue highlight */
+    border: 2px solid #007bff; /* Blue border */
+    transition: background-color 0.3s, border 0.3s;
+}
+
+/* Ensure touch feedback is visible */
+.jam-track {
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0.1); /* Subtle tap feedback */
+}
+/* We'll dynamically update these based on slider */
+@media (max-width: 768px) {
+    .jam-track {
+        flex: 1 1 calc(50% - 20px); /* 2 per row on smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .jam-track {
+        flex: 1 1 100%; /* 1 per row on mobile */
+    }
+}
+@media (max-width: 1024px) {
+    .jam-track {
+        flex: 1 1 calc(33.33% - 20px); /* 3 per row on tablets */
+    }
+}
+
+@media (max-width: 768px) {
+    .jam-track {
+        flex: 1 1 calc(50% - 20px); /* 2 per row on smaller tablets/mobile */
+    }
+    .grid-size-control {
+        flex-direction: column; /* Stack label and slider on mobile */
+        align-items: flex-start;
+    }
+    #gridSize {
+        width: 80%; /* Wider slider on mobile */
+    }
+}
+
+@media (max-width: 480px) {
+    .jam-track {
+        flex: 1 1 100%; /* 1 per row on phones */
+    }
+    .grid-size-control {
+        margin: 10px;
+    }
+    #gridSize {
+        width: 100%;
+    }
+    h2 {
+        font-size: 1.2em; /* Smaller titles */
+    }
+    p {
+        font-size: 0.9em; /* Smaller text */
     }
 }
 
