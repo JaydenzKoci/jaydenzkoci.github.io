@@ -72,8 +72,9 @@ document.addEventListener('DOMContentLoaded', () => {
         renderModal(track);
     }
     function renderModal(track) {
-        const { title, artist, releaseYear, cover, bpm, duration, difficulties, createdAt, lastFeatured, previewUrl, download, key, complete, videoUrl} = track;
-        console.log('Video URL:', videoUrl); // Debug line
+        const { title, artist, releaseYear, cover, bpm, duration, difficulties, createdAt, lastFeatured, previewUrl, download, key, complete, videoUrl, videoPosition} = track;
+        const positionPercent = videoPosition !== undefined ? videoPosition : 50;
+        console.log('Video URL:', videoUrl, 'Video Position:', videoPosition);
         
         const modalContent = modal.querySelector('.modal-content');
         const existingVideo = modalContent.querySelector('.modal-video');
@@ -81,9 +82,8 @@ document.addEventListener('DOMContentLoaded', () => {
     
         modalContent.classList.remove('no-video');
 
-        // Handle video if videoUrl is provided
         if (videoUrl) {
-            const videoPath = `/assets/preview/${videoUrl}`; // Prepend the path
+            const videoPath = `/assets/preview/${videoUrl}`;
     
             const videoElement = document.createElement('video');
             videoElement.classList.add('modal-video');
@@ -92,20 +92,23 @@ document.addEventListener('DOMContentLoaded', () => {
             videoElement.loop = true;
             videoElement.innerHTML = `<source src="${videoPath}" type="video/mp4">`;
     
-            // Append video and handle errors
+            // Set video positioning using percentage
+            videoElement.style.objectFit = 'cover';
+            videoElement.style.objectPosition = `center ${positionPercent}%`;
+    
             modalContent.insertBefore(videoElement, modalContent.firstChild);
             videoElement.onerror = () => {
                 console.log(`Video not found or failed to load: ${videoPath}`);
-                videoElement.remove(); // Remove if it fails
-                modalContent.classList.add('no-video'); // Fallback to default color
+                videoElement.remove();
+                modalContent.classList.add('no-video');
             };
             videoElement.onloadeddata = () => {
                 console.log(`Video loaded successfully: ${videoPath}`);
-                videoElement.classList.add('loaded'); // Trigger fade-in
+                videoElement.classList.add('loaded');
             };
         } else {
             console.log('No videoUrl provided for this track');
-            modalContent.classList.add('no-video'); // Apply default color if no video
+            modalContent.classList.add('no-video');
         }
         
         modal.querySelector('#modalCover').src = cover;
