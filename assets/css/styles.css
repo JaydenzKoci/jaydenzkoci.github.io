@@ -89,7 +89,7 @@ a:hover {
     width: 100%;
     z-index: 100;
     position: fixed;
-    top: 65px;
+    top: 60px;
     backdrop-filter: blur(20px);
 }
 
@@ -432,6 +432,98 @@ main {
   .mute-icon, .unmute-icon, .download-icon {
     display: inline-block;
   }
+  #githubLink, #settingsGear {
+    display: inline-flex;
+    align-items: center;
+    color: white;
+    text-decoration: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 4px 8px;
+    border-radius: 4px;
+    transition: outline 0.15s, outline-offset 0.15s ease-out;
+}
+
+
+#githubLink:hover, #settingsGear:hover {
+    outline: 0.15rem solid #fffc;
+    outline-offset: 0.1875rem;
+}
+
+#githubLink svg, #settingsGear svg {
+    width: 24px;
+    height: 24px;
+    fill: currentColor;
+}
+.header-left, .header-right {
+    display: flex;
+    align-items: center;
+}
+
+#logo {
+    display: inline-flex;
+    align-items: center;
+}
+
+#logo img {
+    width: 40px;
+    height: 40px;
+}
+.settings-panel {
+    display: none;
+    position: fixed;
+    top: 350%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #2a2a2a70; 
+    padding: 20px;
+    width: 90%;
+    max-width: 400px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(10px);
+    z-index: 1001; 
+    color: #000000;
+}
+
+.settings-panel.active {
+    display: block;
+}
+
+.settings-panel h3 {
+    margin: 0 0 15px;
+    font-size: 1.2em;
+    font-variation-settings: "wdth" 668, "wght" 600;
+    color: rgb(0, 0, 0);
+}
+
+.settings-panel label {
+    display: flex;
+    align-items: center;
+    margin: 10px 0;
+    font-size: 14px;
+}
+
+.settings-panel input[type="checkbox"] {
+    margin-right: 10px;
+    accent-color: #007bff;
+}
+
+.settings-close {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    font-size: 50px;
+    color: #cccccc;
+    cursor: pointer;
+    line-height: 1;
+    padding: 0px 10px;
+    transition: color 0.2s;
+}
+
+.settings-close:hover {
+    color: #fff;
+}
 
 .modal-body {
     margin-top: 20px;

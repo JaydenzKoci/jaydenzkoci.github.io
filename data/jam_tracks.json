@@ -242,6 +242,8 @@
     "createdAt": "2024-03-19T06:08:19.835Z",
     "lastFeatured": "TBA",
     "spotify": "2wqxcctWptasX4VnP2sRvV",
+    "videoUrl": "dancingsdone.mp4",
+    "videoPosition": 15,
     "complete": "0% Complete",
     "previewUrl": "https://p.scdn.co/mp3-preview/54d7409522efa6615dc9706ed2c2f75647237a87",
     "rotated": true
@@ -265,6 +267,8 @@
     "createdAt": "2024-03-19T06:08:19.835Z",
     "lastFeatured": "TBA",
     "spotify": "6fOMwREhKJy0VZXH7lLmn9",
+    "videoUrl": "holdupwaitaminute.mp4",
+    "videoPosition": 70,
     "complete": "0% Complete",
     "previewUrl": "https://p.scdn.co/mp3-preview/7b4889dd584b4cccfcbab5a0c1e77218830a76c8",
     "rotated": true
@@ -288,6 +292,8 @@
     "createdAt": "2024-03-19T06:08:19.835Z",
     "lastFeatured": "TBA",
     "spotify": "1pFuoLQ9iRbPv7a0LQvhEJ",
+    "videoUrl": "sleepwalker.mp4",
+    "videoPosition": 30,
     "complete": "0% Complete",
     "previewUrl": "https://p.scdn.co/mp3-preview/06ab382b0c83d1f67ac27cef4132d50089962ee4",
     "rotated": true
@@ -311,6 +317,8 @@
     "createdAt": "2024-03-19T06:08:19.835Z",
     "lastFeatured": "TBA",
     "spotify": "6WDG2ybdV3SBXV0lwBGu4D",
+    "videoUrl": "maybeyouretheproblem.mp4",
+    "videoPosition": 20,
     "complete": "0% Complete",
     "previewUrl": "https://p.scdn.co/mp3-preview/bf27c9df48f15fed10f27bb33c414d65822ee5f5",
     "rotated": true
@@ -1572,6 +1580,8 @@
     "createdAt": "2024-03-19T06:08:19.835Z",
     "lastFeatured": "TBA",
     "spotify": "4Rd5l7mIiV0V35AhxHV1oh",
+    "videoUrl": "monody.mp4",
+    "videoPosition": 60,
     "complete": "0% Complete",
     "previewUrl": "https://p.scdn.co/mp3-preview/25b902df4aa6f5a95ef5f4a31795b9c13c434816",
     "rotated": true
@@ -1595,6 +1605,8 @@
     "createdAt": "2024-03-19T06:08:19.835Z",
     "lastFeatured": "TBA",
     "spotify": "4QLjLmiBMEprh7NaGUWxl9",
+    "videoUrl": "unity.mp4",
+    "videoPosition": 50,
     "complete": "0% Complete",
     "previewUrl": "https://p.scdn.co/mp3-preview/00f0330a02e302be04b0989ebd22b24641d7c4ac",
     "rotated": true
@@ -1618,6 +1630,8 @@
     "createdAt": "2024-03-19T06:08:19.835Z",
     "lastFeatured": "TBA",
     "spotify": "2uNrsZLJloillM1kbzxgmn",
+    "videoUrl": "throwawayyourmask.mp4",
+    "videoPosition": 20,
     "complete": "0% Complete",
     "previewUrl": "https://p.scdn.co/mp3-preview/af21fc38c1651961bde204232cadac4e08703b3a",
     "rotated": true
@@ -1886,6 +1900,8 @@
     "createdAt": "2024-03-19T06:08:19.835Z",
     "lastFeatured": "TBA",
     "spotify": "7LbhIjYNfCguxjAw43Mkff",
+    "videoUrl": "ghost.mp4",
+    "videoPosition": 30,
     "complete": "0% Complete",
     "previewUrl": "https://p.scdn.co/mp3-preview/0fe82d6c63ec96687dce03dea050fc6f736ca536",
     "rotated": true
@@ -1909,6 +1925,8 @@
     "createdAt": "2024-03-19T06:08:19.835Z",
     "lastFeatured": "TBA",
     "spotify": "5klJoVyUPQyqgG8TpVekRo",
+    "videoUrl": "lastnightonearth.mp4",
+    "videoPosition": 20,
     "complete": "0% Complete",
     "previewUrl": "https://p.scdn.co/mp3-preview/9787e6503d00ad67a833bacf1ddad8e488fdc8da",
     "rotated": true

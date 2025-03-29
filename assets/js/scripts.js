@@ -6,6 +6,9 @@ document.addEventListener('DOMContentLoaded', () => {
     const logo = document.getElementById('logo');
     const muteButton = document.getElementById('muteButton');
     const downloadButton = document.getElementById('downloadButton');
+    const settingsGear = document.getElementById('settingsGear');
+    const settingsPanel = document.getElementById('settingsPanel');
+    const settingsClose = document.querySelector('.settings-close');
     const filterSelect = document.getElementById('filterSelect');
 
     let tracksData = [];
@@ -24,7 +27,7 @@ document.addEventListener('DOMContentLoaded', () => {
     updateMuteIcon();
 
     function isMobile() {
-        return window.innerWidth <= 768; // Adjust threshold as needed (768px is common for tablets/mobile)
+        return window.innerWidth <= 768;
     }
 
     function updateMuteIcon() {
@@ -559,6 +562,12 @@ function loadTracks() {
             gridSizeSlider.addEventListener('touchmove', debounce(() => {
                 updateGridSize();
             }, 100));
+        },
+        settings: () => {
+            settingsGear.addEventListener('click', (e) => {
+                e.stopPropagation();
+                toggleSettingsPanel();
+            });
         }
     };
 

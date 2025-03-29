@@ -17,14 +17,33 @@
 <body>
     <header class="header">
         <div class="container">
-            <img id="logo" src="assets/images/logo.png" alt="Encore Songs" draggable="false">
+            <div class="header-left">
+                <a href="/" id="logo">
+                    <img src="assets/images/logo.png" alt="Logo" width="40" height="40">
+                </a>
+            </div>
             <div class="search-wrapper">
                 <input type="search" id="searchInput" placeholder="Search tracks..." aria-label="Search Tracks">
             </div>
-            <div class="links">
-                <a href="https://github.com/JaydenzKoci/song-projects" target="_blank">GitHub</a>
+                <div class="header-right">
+                    <a href="https://github.com/JaydenzKoci/song-projects" id="githubLink" target="_blank">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M12 .5C5.37.5 0 5.87 0 12.5c0 5.3 3.44 9.8 8.2 11.39.6.11.82-.26.82-.58v-2.07c-3.34.72-4.04-1.61-4.04-1.61-.55-1.39-1.34-1.76-1.34-1.76-1.09-.74.08-.73.08-.73 1.21.09 1.85 1.24 1.85 1.24 1.07 1.83 2.81 1.3 3.5 1 .11-.78.42-1.3.76-1.6-2.67-.3-5.47-1.33-5.47-5.93 0-1.31.47-2.38 1.24-3.22-.12-.3-.54-1.52.12-3.17 0 0 1-.32 3.3 1.23a11.5 11.5 0 016 0c2.3-1.55 3.3-1.23 3.3-1.23.66 1.65.24 2.87.12 3.17.77.84 1.24 1.91 1.24 3.22 0 4.61-2.8 5.63-5.48 5.93.43.37.82 1.08.82 2.2v3.27c0 .32.22.7.82.58A12.5 12.5 0 0024 12.5C24 5.87 18.63.5 12 .5z"/>
+                        </svg>
+                    </a>
+                    <button id="settingsGear" aria-label="Settings">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M19.14 12.94c.04-.3.06-.61.06-.94 0-.33-.02-.64-.06-.94l2.03-1.58c.18-.14.23-.41.12-.61l-1.92-3.32c-.12-.22-.37-.29-.59-.22l-2.39.96c-.5-.38-1.03-.7-1.62-.94l-.36-2.54c-.04-.24-.24-.43-.48-.43h-3.84c-.24 0-.44.19-.48.43l-.36 2.54c-.59.24-1.12.56-1.62.94l-2.39-.96c-.22-.07-.47 0-.59.22L2.74 8.87c-.12.21-.07.47.12.61l2.03 1.58c-.04.3-.06.61-.06.94 0 .33.02.64.06.94l-2.03 1.58c-.18.14-.23.41-.12.61l1.92 3.32c.12.22.37.29.59.22l2.39-.96c.5.38 1.03.7 1.62.94l.36 2.54c.04.24.24.43.48.43h3.84c.24 0 .44-.19.48-.43l.36-2.54c.59-.24 1.12-.56 1.62-.94l2.39.96c.22.07.47 0 .59-.22l1.92-3.32c.12-.22.07-.47-.12-.61l-2.03-1.58zM12 15.6c-1.98 0-3.6-1.62-3.6-3.6s1.62-3.6 3.6-3.6 3.6 1.62 3.6 3.6-1.62 3.6-3.6 3.6z"/>
+                        </svg>
+                    </button>
+                </div>
             </div>
-        </div>
+            <div id="settingsPanel" class="settings-panel">
+                <span class="settings-close">×</span>
+                <h3>Settings</h3>
+                <label><input type="checkbox" id="mobileModalToggle"> Enable modal on mobile</label>
+                <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            </div>
     </header>
     <div class="header-info">
         <div class="container">
