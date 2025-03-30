@@ -72,7 +72,7 @@
     "complete": "10% Complete",
     "spotify": "4j5vH33ipS1ulVxbwtYkpm",
     "videoUrl": "lostyourfaith.mp4",
-    "videoPosition": 25,
+    "videoPosition": 45,
     "download": "https://github.com/JaydenzKoci/song-projects/raw/refs/heads/main/Songs/Ava%20Max%20-%20Lost%20Your%20Faith.zip",
     "previewUrl": "https://p.scdn.co/mp3-preview/3564f9445e53690decad7b57d5b6c18f6b712f4a",
     "new": true
@@ -150,6 +150,7 @@
     "spotify": "05mAIVLkIWc2d1UBYZBCp8",
     "complete": "0% Complete",
     "videoUrl": "1999.mp4",
+    "videoPosition": 30,
     "previewUrl": "https://p.scdn.co/mp3-preview/80df2f56d0948b2c6d189de331dea8233582adaa",
     "rotated": true
   },
@@ -173,6 +174,8 @@
     "lastFeatured": "TBA",
     "spotify": "4w1lzcaoZ1IC2K5TwjalRP",
     "complete": "0% Complete",
+    "videoUrl": "athousandmiles.mp4",
+    "videoPosition": 30,
     "previewUrl": "https://p.scdn.co/mp3-preview/1dab77144140b38cf360a7e770f002335884954f",
     "rotated": true
   },
@@ -220,6 +223,7 @@
     "lastFeatured": "TBA",
     "spotify": "1ml6e0VxMUyPgsVFxQA0Xw",
     "complete": "0% Complete",
+    "videoUrl": "feelthismoment.mp4",
     "previewUrl": "https://p.scdn.co/mp3-preview/deb34682637ed436b1d85841d7ac385541a1225c",
     "rotated": true
   },
@@ -394,6 +398,8 @@
     "lastFeatured": "TBA",
     "spotify": "5uHYcK0nbEYgRaFTY5BqnP",
     "complete": "0% Complete",
+    "videoUrl": "magic.mp4",
+    "videoPosition": 35,
     "previewUrl": "https://p.scdn.co/mp3-preview/7766c5f7ee8ab1ef6dd8440a17f910a6e236af6a",
     "rotated": true
   },
@@ -466,6 +472,7 @@
     "lastFeatured": "TBA",
     "spotify": "5oLWKwAejXRkOv8bKaTBO7",
     "complete": "0% Complete",
+    "videoUrl": "turnthemusicup.mp4",
     "previewUrl": "https://p.scdn.co/mp3-preview/6b34c90c2b34f53905201fcf5aabf9cbb7cca659",
     "rotated": true
   },
@@ -513,6 +520,7 @@
     "lastFeatured": "TBA",
     "spotify": "0we7ShV1o6cPTFjxOADPbC",
     "complete": "0% Complete",
+    "videoUrl": "outcast.mp4",
     "previewUrl": "https://p.scdn.co/mp3-preview/42ef02dd488ab4b69b86b226301b835f7de1303f",
     "rotated": true
   },
@@ -685,6 +693,8 @@
     "lastFeatured": "TBA",
     "spotify": "24d2Lj3peyJX2nywUySth2",
     "complete": "0% Complete",
+    "videoUrl": "tonight.mp4",
+    "videoPosition": 25,
     "previewUrl": "https://p.scdn.co/mp3-preview/ac1923e771faf3c4deb979ffba2e984742fd0102",
     "rotated": true
   },
@@ -733,6 +743,8 @@
     "lastFeatured": "TBA",
     "complete": "0% Complete",
     "spotify": "5ZkAx8zjLiSs1nMmBwJoZS",
+    "videoUrl": "whencaniseeyouagain.mp4",
+    "videoPosition": 40,
     "previewUrl": "https://p.scdn.co/mp3-preview/de32e8f58f055ed972826b9b7eed5f9f76235612",
     "rotated": true
   },
@@ -756,7 +768,8 @@
     "lastFeatured": "TBA",
     "complete": "0% Complete",
     "spotify": "5c9tBmJKbTdn1vhzXHeAwW",
-    "videoUrl": "brat.mp4",
+    "videoUrl": "sympathyisaknife.mp4",
+    "videoPosition": 30,
     "previewUrl": "https://p.scdn.co/mp3-preview/1a782e33f0c910129167914a89fc7b53edc52264",
     "rotated": true
   },
@@ -830,6 +843,8 @@
     "lastFeatured": "TBA",
     "spotify": "1kPpge9JDLpcj15qgrPbYX",
     "complete": "0% Complete",
+    "videoUrl": "goodtime.mp4",
+    "videoPosition": 40,
     "previewUrl": "https://p.scdn.co/mp3-preview/948112ba8bf947a429389e2dd71c990989027a7e",
     "rotated": true
   },
@@ -902,6 +917,8 @@
     "lastFeatured": "TBA",
     "spotify": "6JY1IdkZGeIcPegKxjSKeb",
     "complete": "0% Complete",
+    "videoUrl": "sinceubeengone.mp4",
+    "videoPosition": 15,
     "previewUrl": "https://p.scdn.co/mp3-preview/3010d17f854dad67cb0133a5687d871366d67882",
     "rotated": true
   },
@@ -925,6 +942,8 @@
     "lastFeatured": "TBA",
     "spotify": "3bC1ahPIYt1btJzSSEyyrF",
     "complete": "0% Complete",
+    "videoUrl": "whistle.mp4",
+    "videoPosition": 45,
     "previewUrl": "https://p.scdn.co/mp3-preview/ea7012e8d63798a9bd4ec40e566cb81c5955d18f",
     "rotated": true
   },
@@ -1123,6 +1142,8 @@
     "lastFeatured": "TBA",
     "spotify": "5WtHlOkaOXwuW6yMW2buRq",
     "complete": "0% Complete",
+    "videoUrl": "planetofthebass.mp4",
+    "videoPosition": 35,
     "previewUrl": "https://p.scdn.co/mp3-preview/cfc21efa41c8301d0b2426aa277155b91706b3ab",
     "rotated": true
   },
@@ -1171,6 +1192,8 @@
     "lastFeatured": "TBA",
     "spotify": "3nKRYKbGxhzv4BbwlLOcWU",
     "complete": "0% Complete",
+    "videoUrl": "mansion.mp4",
+    "videoPosition": 45,
     "previewUrl": "https://p.scdn.co/mp3-preview/eca6e04833215ce19b8ef59c39b38a8c2c481914",
     "rotated": true
   },
@@ -1194,6 +1217,8 @@
     "lastFeatured": "TBA",
     "spotify": "0ZFayEwoO5qqYjsOi8YDjO",
     "complete": "0% Complete",
+    "videoUrl": "real.mp4",
+    "videoPosition": 35,
     "previewUrl": "https://p.scdn.co/mp3-preview/92dc1b33bfdc2c927fbc95e53a8742038ddf8998",
     "rotated": true
   },
@@ -1217,6 +1242,8 @@
     "lastFeatured": "TBA",
     "spotify": "65kWtHIqg2IACNR9KP4KOS",
     "complete": "0% Complete",
+    "videoUrl": "intro.mp4",
+    "videoPosition": 35,
     "previewUrl": "https://p.scdn.co/mp3-preview/61c4bb05d7c0eb3af01ec7b2c2699ebd4c5c7bb4",
     "rotated": true
   },
@@ -1240,6 +1267,8 @@
     "lastFeatured": "TBA",
     "spotify": "6nonTdcZbN2pmyiN032MXw",
     "complete": "0% Complete",
+    "videoUrl": "intro2.mp4",
+    "videoPosition": 35,
     "previewUrl": "https://p.scdn.co/mp3-preview/301025a29efea2008eb11438e16a5cb79f43d16e",
     "rotated": true
   },
@@ -1263,6 +1292,8 @@
     "lastFeatured": "TBA",
     "spotify": "6e56CkYWD3JO6ovFZBA8po",
     "complete": "0% Complete",
+    "videoUrl": "intro3.mp4",
+    "videoPosition": 35,
     "previewUrl": "https://p.scdn.co/mp3-preview/bf90fcfe66c0843e2e567d4b4dc343727f8d160a",
     "rotated": true
   },
@@ -1384,7 +1415,7 @@
     "createdAt": "2024-03-19T06:08:19.835Z",
     "lastFeatured": "TBA",
     "spotify": "50GxvQA2KEWNt31EdwIlzY",
-    "videoUrl": "brat.mp4",
+    "videoUrl": "rewind.mp4",
     "complete": "0% Complete",
     "previewUrl": "https://p.scdn.co/mp3-preview/559ebf2f3d0f42be978363adae4c42d603c535d2",
     "rotated": true
@@ -1409,6 +1440,8 @@
     "lastFeatured": "TBA",
     "spotify": "6hATAO5iUrKqiGdghyjtlM",
     "complete": "0% Complete",
+    "videoUrl": "liveitup.mp4",
+    "videoPosition": 45,
     "previewUrl": "https://p.scdn.co/mp3-preview/88f958c9675895415e783f46251b4ce78fb467d3",
     "rotated": true
   },
@@ -1656,6 +1689,8 @@
     "lastFeatured": "TBA",
     "complete": "0% Complete",
     "spotify": "0L47Eu4MJH1J1vIerB7MMc",
+    "videoUrl": "thickofit.mp4",
+    "videoPosition": 30,
     "previewUrl": "https://p.scdn.co/mp3-preview/75fc8a58cc0b1f2a473c3ea5e350da662d9f62f8",
     "rotated": true
   },
@@ -1829,6 +1864,8 @@
     "lastFeatured": "TBA",
     "complete": "0% Complete",
     "spotify": "15djS9QeF1Ga4nM7CP3VGI",
+    "videoUrl": "flyaway.mp4",
+    "videoPosition": 30,
     "previewUrl": "https://p.scdn.co/mp3-preview/4418e7a729ce692fa686ff64696ea15cbe58c0df",
     "rotated": true
   },
@@ -2173,6 +2210,8 @@
     "lastFeatured": "TBA",
     "complete": "0% Complete",
     "spotify": "5pNFibJLq7dvoDVIIcQBkn",
+    "videoUrl": "hotinit.mp4",
+    "videoPosition": 35,
     "previewUrl": "https://p.scdn.co/mp3-preview/e0deb5ab5c14c3fdc54fb8aea726ece21d8229ef",
     "rotated": true
   },
@@ -2196,7 +2235,8 @@
     "lastFeatured": "TBA",
     "complete": "0% Complete",
     "spotify": "29KYqUjF9Oc9NCxvs7srlP",
-    "videoUrl": "crash.mp4",
+    "videoUrl": "wink.mp4",
+    "videoPosition": 35,
     "previewUrl": "https://p.scdn.co/mp3-preview/5aac31ee07977514f2a769f93165ca0cd2608cb1",
     "rotated": true
   },
@@ -2220,6 +2260,8 @@
     "lastFeatured": "TBA",
     "complete": "0% Complete",
     "spotify": "6bPPyigCphBBQ9781j6eKM",
+    "videoUrl": "colors.mp4",
+    "videoPosition": 65,
     "previewUrl": "https://p.scdn.co/mp3-preview/86fce40a7cfba2813ca702a134e45d608d1529b6",
     "rotated": true
   },
