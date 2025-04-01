@@ -247,7 +247,7 @@
     "lastFeatured": "TBA",
     "spotify": "2wqxcctWptasX4VnP2sRvV",
     "videoUrl": "dancingsdone.mp4",
-    "videoPosition": 15,
+    "videoPosition": 25,
     "complete": "0% Complete",
     "previewUrl": "https://p.scdn.co/mp3-preview/54d7409522efa6615dc9706ed2c2f75647237a87",
     "rotated": true
@@ -620,6 +620,7 @@
     "complete": "20% Complete",
     "spotify": "6RGVgepzeIBgl4iFQyTayh",
     "videoUrl": "exes.mp4",
+    "videoPosition": 40,
     "download": "https://github.com/JaydenzKoci/song-projects/raw/refs/heads/main/Songs/Tate%20McRae%20-%20exes.zip",
     "previewUrl": "https://p.scdn.co/mp3-preview/9f2e1821dfa9781d4e594b3e85ffc90c4f5cc089",
     "new": true
@@ -868,7 +869,7 @@
     "lastFeatured": "TBA",
     "spotify": "4y3g40TWe7fCWCayJZuGvw",
     "videoUrl": "goodingoodbye.mp4",
-    "videoPosition": 15,
+    "videoPosition": 50,
     "complete": "0% Complete",
     "previewUrl": "https://p.scdn.co/mp3-preview/6498f9b96b03bccdee0496c309770676c744fe57",
     "rotated": true
@@ -892,7 +893,8 @@
     "createdAt": "2024-03-19T06:08:19.835Z",
     "lastFeatured": "TBA",
     "spotify": "2grSOc6HNTXQQXNoRKt9UM",
-    "videoUrl": "crash.mp4",
+    "videoUrl": "goodones.mp4",
+    "videoPosition": 30,
     "complete": "0% Complete",
     "previewUrl": "https://p.scdn.co/mp3-preview/afe171188865b9dbfbfa6b9a5e6f30a64ef5226e",
     "rotated": true
@@ -982,7 +984,7 @@
     "duration": "3m 14s",
     "difficulties": {
       "vocals": -1,
-      "guitar": 2,
+      "guitar": 3,
       "bass": -1,
       "drums": -1,
       "plastic-bass": -1,
@@ -1118,6 +1120,7 @@
     "lastFeatured": "TBA",
     "spotify": "6wCv0m87EJ6kYGUi5c0kbG",
     "videoUrl": "greedy.mp4",
+    "videoPosition": 30,
     "complete": "0% Complete",
     "previewUrl": "https://p.scdn.co/mp3-preview/ca7bdcb691fb64a5af8a3253b89356390664fcf1",
     "rotated": true
@@ -2236,7 +2239,7 @@
     "complete": "0% Complete",
     "spotify": "29KYqUjF9Oc9NCxvs7srlP",
     "videoUrl": "wink.mp4",
-    "videoPosition": 35,
+    "videoPosition": 20,
     "previewUrl": "https://p.scdn.co/mp3-preview/5aac31ee07977514f2a769f93165ca0cd2608cb1",
     "rotated": true
   },
@@ -2288,6 +2291,106 @@
     "videoPosition": 20,
     "spotify": "2bl81llf715VEEbAx03yvB",
     "previewUrl": "https://p.scdn.co/mp3-preview/4e0bee1c5f912893ed108cb53c3d4a36f1163226",
+    "rotated": true
+  },
+  "story": {
+    "title": "CHEMYXSTORY",
+    "artist": "BACK-ON",
+    "releaseYear": 0,
+    "cover": "https://github.com/JaydenzKoci/song-projects/blob/main/Images/CHEMYXSTORY.png?raw=true",
+    "bpm": 0,
+    "duration": "0m 00s",
+    "difficulties": {
+      "vocals": -1,
+      "guitar": -1,
+      "bass": -1,
+      "drums": -1,
+      "plastic-bass": -1,
+      "plastic-drums": -1,
+      "plastic-guitar": -1
+    },
+    "createdAt": "2024-03-19T06:08:19.835Z",
+    "lastFeatured": "TBA",
+    "complete": "0% Complete",
+    "videoUrl": "chemyxstory.mp4",
+    "videoPosition": 20,
+    "spotify": "2GxSHaoToZY6cXSRuvGRxv",
+    "previewUrl": "https://p.scdn.co/mp3-preview/fe4d6733056b92fa2843372e893bb31495ca5ab0",
+    "rotated": true
+  },
+  "girls": {
+    "title": "What Girls Do",
+    "artist": "Leah Kate",
+    "releaseYear": 0,
+    "cover": "https://github.com/JaydenzKoci/song-projects/blob/main/Images/WhatGirlsDo.png?raw=true",
+    "bpm": 0,
+    "duration": "0m 00s",
+    "difficulties": {
+      "vocals": -1,
+      "guitar": -1,
+      "bass": -1,
+      "drums": -1,
+      "plastic-bass": -1,
+      "plastic-drums": -1,
+      "plastic-guitar": -1
+    },
+    "createdAt": "2024-03-19T06:08:19.835Z",
+    "lastFeatured": "TBA",
+    "complete": "0% Complete",
+    "videoUrl": "whatgirlsdo.mp4",
+    "videoPosition": 20,
+    "spotify": "5j73CgpZczAjhn5zf4t1FC",
+    "previewUrl": "https://p.scdn.co/mp3-preview/d17f02cb04675093545a20e5b3c40bb48bce82e7",
+    "rotated": true
+  },
+  "sorry": {
+    "title": "Apologize",
+    "artist": "Timbaland (feat. OneRepublic)",
+    "releaseYear": 0,
+    "cover": "https://github.com/JaydenzKoci/song-projects/blob/main/Images/Apologize.png?raw=true",
+    "bpm": 0,
+    "duration": "0m 00s",
+    "difficulties": {
+      "vocals": -1,
+      "guitar": -1,
+      "bass": -1,
+      "drums": -1,
+      "plastic-bass": -1,
+      "plastic-drums": -1,
+      "plastic-guitar": -1
+    },
+    "createdAt": "2024-03-19T06:08:19.835Z",
+    "lastFeatured": "TBA",
+    "complete": "0% Complete",
+    "videoUrl": "apologize.mp4",
+    "videoPosition": 50,
+    "spotify": "6ucR4KfvsBFWCMVFDvyKKl",
+    "previewUrl": "https://p.scdn.co/mp3-preview/644d7ac165346bae267f00077cb69c26b042105c",
+    "rotated": true
+  },
+  "xeno": {
+    "title": "Xenogenesis",
+    "artist": "TheFatRat",
+    "releaseYear": 0,
+    "cover": "https://github.com/JaydenzKoci/song-projects/blob/main/Images/Xenogenesis.png?raw=true",
+    "bpm": 0,
+    "duration": "0m 00s",
+    "difficulties": {
+      "vocals": -1,
+      "guitar": -1,
+      "bass": -1,
+      "drums": -1,
+      "plastic-bass": -1,
+      "plastic-drums": -1,
+      "plastic-guitar": -1
+    },
+    "createdAt": "2024-03-19T06:08:19.835Z",
+    "lastFeatured": "TBA",
+    "complete": "0% Complete",
+    "videoUrl": "xenogenesis.mp4",
+    "videoPosition": 20,
+    "spotify": "6anGosAX39TdpJGNQH3H9n",
+    "previewUrl": "https://p.scdn.co/mp3-preview/1934072807263b169741f1cebc9798354e0d376d",
     "rotated": true
   }
 }
