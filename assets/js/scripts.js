@@ -119,9 +119,8 @@ document.addEventListener('DOMContentLoaded', () => {
         modal.querySelector('#modalCover').src = cover;
         modal.querySelector('#modalTitle').textContent = title;
         modal.querySelector('#modalArtist').textContent = artist;
-        modal.querySelector('#modalDuration').textContent = duration;
+        modal.querySelector('#modalDuration').textContent = `${releaseYear} | ${duration}`;
         modal.querySelector('#modalDetails').innerHTML = `
-            <p>Release Year: ${releaseYear} | BPM: ${bpm}
             <p>Created At: ${new Date(createdAt).toLocaleString()}</p>
             <p>Last Updated: ${lastFeatured}</p>
             <p>Progress: ${complete}</p>

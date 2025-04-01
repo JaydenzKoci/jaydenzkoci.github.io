@@ -526,16 +526,15 @@ main {
 }
 
 .modal-body {
-    margin-top: 20px;
+    margin-top: 50px;
 }
-
 .modal-details {
-padding: 15px;
-border-radius: 8px;
-background-color: rgba(255, 255, 255, 0.329);
-margin-bottom: 15px;
-color: rgb(255, 255, 255); /* Fill color of the text */
-}
+    padding: 15px;
+    border-radius: 8px;
+    background-color: rgba(255, 255, 255, 0.329);
+    margin-bottom: 15px;
+    color: rgb(255, 255, 255); /* Fill color of the text */
+    }
 .modal-difficulties {
     padding: 15px;
     border-radius: 8px;
@@ -673,7 +672,6 @@ color: rgb(255, 255, 255); /* Fill color of the text */
     justify-content: center;
     transition: background-color 0.2s;
 }
-
 .modal-nav:hover {
     background: rgba(0, 0, 0, 0.8);
 }
