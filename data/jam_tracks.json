@@ -1372,7 +1372,9 @@
     "videoUrl": "carkeys.mp4",
     "complete": "10% Complete",
     "previewUrl": "https://p.scdn.co/mp3-preview/ef40d2697f0281f1fb27a213aac89790a7b4d9d6",
-    "new": true
+    "download": "https://github.com/JaydenzKoci/song-projects/raw/refs/heads/main/Songs/Alok%20-%20Car%20Keys%20(Ayla).zip",
+    "new": true,
+    "featured": true
   },
   "door": {
     "title": "Revolving door",
