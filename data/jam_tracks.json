@@ -406,10 +406,10 @@
   "hope": {
     "title": "HOPE",
     "artist": "NF",
-    "releaseYear": 0,
+    "releaseYear": 2023,
     "cover": "https://github.com/JaydenzKoci/song-projects/blob/main/Images/HOPE.png?raw=true",
     "bpm": 0,
-    "duration": "0m 00s",
+    "duration": "4m 27s",
     "difficulties": {
       "vocals": -1,
       "guitar": -1,
@@ -419,14 +419,15 @@
       "plastic-drums": -1,
       "plastic-guitar": -1
     },
-    "createdAt": "2000-01-01T08:00:00.000Z",
-    "lastFeatured": "TBA",
+    "createdAt": "2025-04-12T20:31:54.000Z",
+    "lastFeatured": "4/12/2025, 2:54:12 PM",
     "spotify": "12cZWGf5ZgLcKubEW9mx5q",
     "videoUrl": "hope.mp4",
     "videoPosition": 35,
-    "complete": "0% Complete",
+    "complete": "5% Complete",
     "previewUrl": "https://p.scdn.co/mp3-preview/664126639bda259bb7e5bf47989f50f023298575",
-    "rotated": true
+    "rotated": true,
+    "featured": true
   },
   "iloveit": {
     "title": "I Love It",
@@ -1352,26 +1353,26 @@
   "keys": {
     "title": "Car Keys (Ayla)",
     "artist": "Alok & Ava Max",
-    "releaseYear": 0,
+    "releaseYear": 2023,
     "cover": "https://github.com/JaydenzKoci/song-projects/blob/main/Images/CarKeys.png?raw=true",
     "bpm": 0,
-    "duration": "0m 00s",
+    "duration": "2m 30s",
     "difficulties": {
       "vocals": -1,
-      "guitar": -1,
+      "guitar": 1,
       "bass": -1,
       "drums": -1,
       "plastic-bass": -1,
       "plastic-drums": -1,
       "plastic-guitar": -1
     },
-    "createdAt": "2000-01-01T08:00:00.000Z",
-    "lastFeatured": "TBA",
+    "createdAt": "2025-04-12T15:31:54.000Z",
+    "lastFeatured": "4/12/2025, 4:23:21 PM",
     "spotify": "00E0Z2jrF7reoHps4zcbWQ",
     "videoUrl": "carkeys.mp4",
-    "complete": "0% Complete",
+    "complete": "10% Complete",
     "previewUrl": "https://p.scdn.co/mp3-preview/ef40d2697f0281f1fb27a213aac89790a7b4d9d6",
-    "rotated": true
+    "new": true
   },
   "door": {
     "title": "Revolving door",
