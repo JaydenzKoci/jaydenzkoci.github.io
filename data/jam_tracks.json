@@ -2324,27 +2324,29 @@
   "girls": {
     "title": "What Girls Do",
     "artist": "Leah Kate",
-    "releaseYear": 0,
+    "releaseYear": 2024,
     "cover": "https://github.com/JaydenzKoci/song-projects/blob/main/Images/WhatGirlsDo.png?raw=true",
     "bpm": 0,
-    "duration": "0m 00s",
+    "duration": "2m 21s",
     "difficulties": {
       "vocals": -1,
-      "guitar": -1,
+      "guitar": 2,
       "bass": -1,
       "drums": -1,
       "plastic-bass": -1,
       "plastic-drums": -1,
       "plastic-guitar": -1
     },
-    "createdAt": "2000-01-01T08:00:00.000Z",
-    "lastFeatured": "TBA",
-    "complete": "0% Complete",
+    "createdAt": "2025-04-13T03:31:54.000Z",
+    "lastFeatured": "4/13/2025, 3:31:54 AM",
+    "complete": "10% Complete",
     "videoUrl": "whatgirlsdo.mp4",
     "videoPosition": 20,
+    "download": "https://github.com/JaydenzKoci/song-projects/raw/refs/heads/main/Songs/Leah%20Kate%20-%20What%20Girls%20Do.zip",
     "spotify": "5j73CgpZczAjhn5zf4t1FC",
     "previewUrl": "https://p.scdn.co/mp3-preview/d17f02cb04675093545a20e5b3c40bb48bce82e7",
-    "rotated": true
+    "featured": true,
+    "new": true
   },
   "sorry": {
     "title": "Apologize",
