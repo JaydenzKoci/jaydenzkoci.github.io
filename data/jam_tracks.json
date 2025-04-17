@@ -2346,7 +2346,13 @@
     "spotify": "5j73CgpZczAjhn5zf4t1FC",
     "previewUrl": "https://p.scdn.co/mp3-preview/d17f02cb04675093545a20e5b3c40bb48bce82e7",
     "featured": true,
-    "new": true
+    "new": true,
+    "youtubeLinks": {
+      "vocals": "",
+      "lead": "https://youtu.be/z_u95KJU6SM",
+      "bass": "",
+      "drums": ""
+  }
   },
   "sorry": {
     "title": "Apologize",

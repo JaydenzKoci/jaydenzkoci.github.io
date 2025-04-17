@@ -80,7 +80,6 @@
             </svg>
         </button>
         <div class="modal-content">
-            </video>
             <div class="modal-header">
                 <img id="modalCover" src="" alt="Jam Track Cover" draggable="false">
                 <div class="track-info">
@@ -89,17 +88,25 @@
                     <p id="modalDuration" translate="no"></p>
                 </div>
                 <div class="button-container">
-                    <button id="muteButton">
-                      <span class="mute-icon" style="display: none;">🔇</span>
-                      <span class="unmute-icon">🔊</span>
+                    <button id="muteButton" aria-label="Toggle mute" aria-pressed="false">
+                        <span class="mute-icon" style="display: none;">🔇</span>
+                        <span class="unmute-icon">🔊</span>
                     </button>
                     <button id="downloadButton" title="Download" disabled>
-                      <span class="download-icon">⬇️</span>
+                        <span class="download-icon">⬇️</span>
                     </button>
-                  </div>
-                </header>
-                <div class="content"></div>
-            </button>
+                    <div class="video-menu-container">
+                        <button id="videoMenuButton" title="Videos" aria-label="Open video menu">
+                            <span class="video-icon">🎥</span>
+                        </button>
+                        <ul id="videoMenu" class="video-menu" style="display: none;">
+                            <li data-instrument="vocals"><span class="instrument-icon vocals"></span>Vocals</li>
+                            <li data-instrument="lead"><span class="instrument-icon lead"></span>Lead</li>
+                            <li data-instrument="bass"><span class="instrument-icon bass"></span>Bass</li>
+                            <li data-instrument="drums"><span class="instrument-icon drums"></span>Drums</li>
+                        </ul>
+                    </div>
+                </div>
             </div>
             <div class="modal-body">
                 <div id="modalDetails" class="modal-details"></div>
@@ -107,5 +114,11 @@
             </div>
         </div>
     </div>
+<div id="videoPopup" class="video-popup" style="display: none;">
+    <span class="video-popup-close">×</span>
+    <div class="video-popup-content">
+        <iframe id="youtubeIframe" width="560" height="315" src="" frameborder="0" allow="autoplay; muted" allowfullscreen></iframe>
+    </div>
+</div>
 </body>
 </html>

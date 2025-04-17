@@ -10,6 +10,11 @@ document.addEventListener('DOMContentLoaded', () => {
     const settingsPanel = document.getElementById('settingsPanel');
     const settingsClose = document.querySelector('.settings-close');
     const filterSelect = document.getElementById('filterSelect');
+    const videoMenuButton = document.getElementById('videoMenuButton');
+    const videoMenu = document.getElementById('videoMenu');
+    const videoPopup = document.getElementById('videoPopup');
+    const youtubeIframe = document.getElementById('youtubeIframe');
+    const videoPopupClose = videoPopup.querySelector('.video-popup-close');
 
     let tracksData = [];
     let loadedTracks = 0;
@@ -25,11 +30,44 @@ document.addEventListener('DOMContentLoaded', () => {
     let currentDownloadUrl = '';
     audio.muted = isMuted;
     updateMuteIcon();
+    
+    let player;
+    window.onYouTubeIframeAPIReady = () => {
+        player = new YT.Player('youtubeIframe', {
+            height: '315',
+            width: '560',
+            playerVars: {
+                autoplay: 1
+            },
+            events: {
+                onReady: (event) => {
+                    event.target.playVideo();
+                },
+                onError: (event) => {
+                    console.error('YouTube Player Error:', event.data);
+                    videoPopup.querySelector('.video-popup-content').innerHTML = '<p>Failed to load YouTube video</p>';
+                }
+            }
+        });
+    };
 
     function isMobile() {
         return window.innerWidth <= 768;
     }
 
+    function toggleVideoMenu() {
+        const isOpen = videoMenu.style.display === 'block';
+        videoMenu.style.display = isOpen ? 'none' : 'block';
+        videoMenuButton.setAttribute('aria-expanded', !isOpen);
+    }
+
+    document.addEventListener('click', (e) => {
+        if (!videoMenuButton.contains(e.target) && !videoMenu.contains(e.target)) {
+            videoMenu.style.display = 'none';
+            videoMenuButton.setAttribute('aria-expanded', 'false');
+        }
+    });
+    
     function updateMuteIcon() {
         const muteIcon = muteButton.querySelector('.mute-icon');
         const unmuteIcon = muteButton.querySelector('.unmute-icon');
@@ -77,7 +115,7 @@ document.addEventListener('DOMContentLoaded', () => {
         renderModal(track);
     }
     function renderModal(track) {
-        const { title, artist, releaseYear, cover, bpm, duration, difficulties, createdAt, lastFeatured, previewUrl, download, key, complete, videoUrl, videoPosition} = track;
+        const { title, artist, releaseYear, cover, bpm, duration, difficulties, createdAt, lastFeatured, previewUrl, download, key, complete, videoUrl, videoPosition, youtubeLinks} = track;
         const positionPercent = videoPosition !== undefined ? videoPosition : 50;
         console.log('Video URL:', videoUrl, 'Video Position:', videoPosition);
         
@@ -97,7 +135,6 @@ document.addEventListener('DOMContentLoaded', () => {
             videoElement.loop = true;
             videoElement.innerHTML = `<source src="${videoPath}" type="video/mp4">`;
     
-            // Set video positioning using percentage
             videoElement.style.objectFit = 'cover';
             videoElement.style.objectPosition = `center ${positionPercent}%`;
     
@@ -136,13 +173,71 @@ document.addEventListener('DOMContentLoaded', () => {
 
         updateDownloadButton(download);
 
-
-        // Update navigation buttons visibility
         const prevButton = modal.querySelector('.modal-prev');
         const nextButton = modal.querySelector('.modal-next');
         prevButton.style.display = currentTrackIndex > 0 ? 'block' : 'none';
         nextButton.style.display = currentTrackIndex < currentFilteredTracks.length - 1 ? 'block' : 'none';
+
+        const menuItems = videoMenu.querySelectorAll('li');
+        menuItems.forEach(item => {
+            const instrument = item.getAttribute('data-instrument');
+            const youtubeUrl = youtubeLinks && youtubeLinks[instrument];
+            item.style.display = youtubeUrl ? 'block' : 'none';
+            item.onclick = () => {
+                if (youtubeUrl) {
+                    openVideoPopup(youtubeUrl);
+                    videoMenu.style.display = 'none';
+                    videoMenuButton.setAttribute('aria-expanded', 'false');
+                }
+            };
+        });
+    
+
+videoMenuButton.disabled = !youtubeLinks || !Object.values(youtubeLinks).some(url => url);
+}
+
+function openVideoPopup(youtubeUrl) {
+    const videoId = youtubeUrl.match(/(?:youtu\.be\/|youtube\.com\/(?:watch\?v=|embed\/))([^&?]+)/)?.[1];
+    if (!audio.paused) {
+        audio.pause(); 
     }
+    if (videoId && player) {
+        player.loadVideoById(videoId);
+        player.mute(); 
+        videoPopup.style.display = 'block';
+        document.body.classList.add('video-popup-open');
+        console.log('Popup styles:', getComputedStyle(videoPopup)); 
+    } else {
+        if (videoId) {
+            youtubeIframe.src = `https://www.youtube.com/embed/${videoId}?autoplay=1`;
+            videoPopup.style.display = 'block';
+            document.body.classList.add('video-popup-open');
+            console.log('Popup styles:', getComputedStyle(videoPopup)); 
+        } else {
+            console.error('Invalid YouTube URL:', youtubeUrl);
+            videoPopup.style.display = 'block';
+            videoPopup.querySelector('.video-popup-content').innerHTML = '<p>Invalid YouTube video URL</p>';
+        }
+    }
+}
+
+function closeVideoPopup() {
+    videoPopup.style.display = 'none';
+    if (player) {
+        player.stopVideo(); 
+    } else {
+        youtubeIframe.src = ''; 
+    }
+    document.body.classList.remove('video-popup-open');
+    if (!isMuted && currentPreviewUrl) {
+        audio.play();
+    }
+}
+function closeVideoPopup() {
+    videoPopup.style.display = 'none';
+    youtubeIframe.src = '';
+    document.body.classList.remove('video-popup-open');
+}
 
     function closeModal() {
         modal.style.display = 'none';
@@ -157,23 +252,21 @@ document.addEventListener('DOMContentLoaded', () => {
 
         const gridSizeSlider = document.getElementById('gridSize');
         const gridSizeValue = document.getElementById('gridSizeValue');
-        let tracksPerRow = parseInt(gridSizeSlider.value); // Will be 4 by default
+        let tracksPerRow = parseInt(gridSizeSlider.value); 
     
-        // ... (previous functions remain the same)
     
         function updateGridSize() {
             tracksPerRow = parseInt(gridSizeSlider.value);
             gridSizeValue.textContent = tracksPerRow;
     
-            // Adjust for mobile: override slider if screen is too small
             const screenWidth = window.innerWidth;
             let effectiveTracksPerRow = tracksPerRow;
             if (screenWidth <= 480) {
-                effectiveTracksPerRow = 1; // 1 per row on small screens
+                effectiveTracksPerRow = 1; 
             } else if (screenWidth <= 768) {
-                effectiveTracksPerRow = Math.min(tracksPerRow, 2); // Max 2 on medium screens
+                effectiveTracksPerRow = Math.min(tracksPerRow, 2); 
             } else if (screenWidth <= 1024) {
-                effectiveTracksPerRow = Math.min(tracksPerRow, 3); // Max 3 on tablets
+                effectiveTracksPerRow = Math.min(tracksPerRow, 3); 
             }
     
             const percentage = 100 / effectiveTracksPerRow;
@@ -214,7 +307,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 trackElement.addEventListener('touchstart', (e) => {
                 e.preventDefault();
                 if (isMobile()) {
-                touchTimer = setTimeout(() => openModal(track), 500); // Open modal after 500ms
+                touchTimer = setTimeout(() => openModal(track), 500); 
                 } else {
                 openModal(track);
                 }
@@ -240,17 +333,15 @@ trackElement.addEventListener('touchend', (e) => {
                 });
     
                 trackElement.addEventListener('click', () => openModal(track));
-                // Add touch event for mobile
                 trackElement.addEventListener('touchstart', (e) => {
-                    e.preventDefault(); // Prevent default touch behavior
+                    e.preventDefault(); 
                     if (isMobile()) {
-                        // Alternative action (e.g., toggle a highlight or play preview only)
                         trackElement.classList.toggle('mobile-highlight');
                         if (track.previewUrl) {
-                            playPreview(track.previewUrl); // Play audio preview instead
+                            playPreview(track.previewUrl); 
                         }
                     } else {
-                        openModal(track); // Desktop fallback
+                        openModal(track); 
                     }
                 }, { passive: false });
     
@@ -258,7 +349,7 @@ trackElement.addEventListener('touchend', (e) => {
             });
             
             if (isMobile()) {
-                alert(`Selected: ${track.title} by ${track.artist}`); // Simple alert
+                alert(`Selected: ${track.title} by ${track.artist}`);
             }
             updateGridSize();
         }
@@ -287,7 +378,6 @@ trackElement.addEventListener('touchend', (e) => {
             }
         });
 
-        // Sort filtered tracks
         filteredTracks.sort((a, b) => {
             if (filterValue === 'rotated') {
                 return new Date(b.lastFeatured) - new Date(a.lastFeatured);
@@ -302,31 +392,25 @@ trackElement.addEventListener('touchend', (e) => {
             }
         });
 
-        // Store current filtered tracks
         currentFilteredTracks = filteredTracks;
 
         trackCount.textContent = query || filterValue !== 'all'
             ? `Found: ${filteredTracks.length}`
             : `Total: ${tracksData.length}`;
 
-        // Reset loaded tracks counter
         loadedTracks = 0;
 
-        // Show all results at once for filtered/search views, or initial batch for main view
         if (query || filterValue !== 'all') {
             renderTracks(filteredTracks);
         } else {
-            // For main view, show initial batch and set up infinite scroll
             renderTracks(filteredTracks.slice(0, initialLoad));
 
-            // Only set up infinite scroll if there are more tracks to load
             if (filteredTracks.length > initialLoad) {
                 loadedTracks = initialLoad;
                 setupInfiniteScroll(filteredTracks);
             }
         }
 
-        // Update URL parameters
         const url = new URL(window.location);
         if (query) url.searchParams.set('q', query);
         else url.searchParams.delete('q');
@@ -336,7 +420,6 @@ trackElement.addEventListener('touchend', (e) => {
     }
 
     function setupInfiniteScroll(tracks) {
-        // Remove any existing sentinel
         const existingSentinel = contentElement.querySelector('.sentinel');
         if (existingSentinel) {
             existingSentinel.remove();
@@ -448,14 +531,14 @@ function loadTracks() {
             if (searchQuery) searchInput.value = searchQuery;
             if (filterValue) filterSelect.value = filterValue;
 
-            filterTracks(); // Handle sorting and rendering
+            filterTracks();
         })
         .catch(error => console.error('Failed to load tracks:', error));
 }
 
     function updateDownloadButton(downloadUrl) {
-        currentDownloadUrl = downloadUrl || ''; // Fallback to empty string
-        downloadButton.disabled = !currentDownloadUrl || currentDownloadUrl.trim() === ''; // Extra check for empty/whitespace
+        currentDownloadUrl = downloadUrl || '';
+        downloadButton.disabled = !currentDownloadUrl || currentDownloadUrl.trim() === ''; 
         console.log('Download URL:', currentDownloadUrl, 'Disabled:', downloadButton.disabled);
     }
     function updateCountdown() {
@@ -463,7 +546,6 @@ function loadTracks() {
         const nextUpdate = new Date();
         nextUpdate.setUTCHours(0, 0, 0, 0);
 
-        // Check if we're in the update window (00:00-00:02 UTC)
         const updateStart = new Date(nextUpdate);
         const updateEnd = new Date(nextUpdate);
         updateEnd.setUTCMinutes(2);
@@ -519,6 +601,13 @@ function loadTracks() {
                     }
                 }
             });
+        },
+        videoPopupKeyboard: () => {
+            document.addEventListener('keydown', (e) => {
+                if (videoPopup.style.display === 'block' && e.key === 'Escape') {
+                    closeVideoPopup();
+                }
+            });
         }
     };
 
@@ -566,6 +655,13 @@ function loadTracks() {
             settingsGear.addEventListener('click', (e) => {
                 e.stopPropagation();
                 toggleSettingsPanel();
+            });
+        },
+        videoMenu: () => {
+            videoMenuButton.addEventListener('click', toggleVideoMenu);
+            videoPopupClose.addEventListener('click', closeVideoPopup);
+            videoPopup.addEventListener('click', (e) => {
+                if (e.target === videoPopup) closeVideoPopup();
             });
         }
     };
