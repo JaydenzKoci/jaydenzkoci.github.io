@@ -6,16 +6,18 @@ document.addEventListener('DOMContentLoaded', () => {
     const logo = document.getElementById('logo');
     const muteButton = document.getElementById('muteButton');
     const downloadButton = document.getElementById('downloadButton');
-    const settingsGear = document.getElementById('settingsGear');
-    const settingsPanel = document.getElementById('settingsPanel');
-    const settingsClose = document.querySelector('.settings-close');
+    const settingsButton = document.getElementById('settingsButton');
+    const settingsMenu = document.getElementById('settingsMenu');
     const filterSelect = document.getElementById('filterSelect');
     const videoMenuButton = document.getElementById('videoMenuButton');
     const videoMenu = document.getElementById('videoMenu');
     const videoPopup = document.getElementById('videoPopup');
     const youtubeIframe = document.getElementById('youtubeIframe');
     const videoPopupClose = videoPopup.querySelector('.video-popup-close');
-
+    
+    let fadeInRequestId = null; // Track fade animation
+    let muteTrackOnVideo = localStorage.getItem('muteTrackOnVideo') === 'true' || true;
+    let fadeInAudioEnabled = localStorage.getItem('fadeInAudioEnabled') === 'true' || true;
     let tracksData = [];
     let loadedTracks = 0;
     const tracksPerPage = 10;
@@ -30,7 +32,7 @@ document.addEventListener('DOMContentLoaded', () => {
     let currentDownloadUrl = '';
     audio.muted = isMuted;
     updateMuteIcon();
-    
+
     let player;
     window.onYouTubeIframeAPIReady = () => {
         player = new YT.Player('youtubeIframe', {
@@ -44,7 +46,6 @@ document.addEventListener('DOMContentLoaded', () => {
                     event.target.playVideo();
                 },
                 onError: (event) => {
-                    console.error('YouTube Player Error:', event.data);
                     videoPopup.querySelector('.video-popup-content').innerHTML = '<p>Failed to load YouTube video</p>';
                 }
             }
@@ -55,12 +56,6 @@ document.addEventListener('DOMContentLoaded', () => {
         return window.innerWidth <= 768;
     }
 
-    function toggleVideoMenu() {
-        const isOpen = videoMenu.style.display === 'block';
-        videoMenu.style.display = isOpen ? 'none' : 'block';
-        videoMenuButton.setAttribute('aria-expanded', !isOpen);
-    }
-
     document.addEventListener('click', (e) => {
         if (!videoMenuButton.contains(e.target) && !videoMenu.contains(e.target)) {
             videoMenu.style.display = 'none';
@@ -68,9 +63,130 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
     
+    function toggleSettingsMenu() {
+        const isOpen = settingsMenu.style.display === 'block';
+        settingsMenu.style.display = isOpen ? 'none' : 'block';
+        settingsButton.setAttribute('aria-expanded', !isOpen);
+        settingsButton.classList.add('settings-menu-debug');
+        console.log('Settings button styles:', getComputedStyle(settingsButton));
+    }
+    
+    function toggleVideoMenu() {
+        const isOpen = videoMenu.style.display === 'block';
+        videoMenu.style.display = isOpen ? 'none' : 'block';
+        videoMenuButton.setAttribute('aria-expanded', !isOpen);
+        videoMenuButton.classList.add('video-icon-debug');
+        console.log('Video menu button styles:', getComputedStyle(videoMenuButton));
+    }
+    
+    document.addEventListener('click', (e) => {
+        if (!settingsButton.contains(e.target) && !settingsMenu.contains(e.target)) {
+            settingsMenu.style.display = 'none';
+            settingsButton.setAttribute('aria-expanded', 'false');
+        }
+        if (!videoMenuButton.contains(e.target) && !videoMenu.contains(e.target)) {
+            videoMenu.style.display = 'none';
+            videoMenuButton.setAttribute('aria-expanded', 'false');
+        }
+    });
+
+    function fadeInAudio(audio, targetVolume, duration) {
+        if (fadeInRequestId) {
+            cancelAnimationFrame(fadeInRequestId);
+        }
+        audio.volume = 0;
+        const startTime = performance.now();
+    
+        function step(currentTime) {
+            const elapsed = Math.max(currentTime - startTime, 0);
+            const progress = Math.min(elapsed / duration, 1);
+            audio.volume = Math.max(0, Math.min(progress * targetVolume, 1));
+            if (progress < 1) {
+                fadeInRequestId = requestAnimationFrame(step);
+            } else {
+                audio.volume = targetVolume;
+                fadeInRequestId = null;
+            }
+        }
+        fadeInRequestId = requestAnimationFrame(step);
+    }
+    
+    function toggleSettingsMenu() {
+        const isOpen = settingsMenu.style.display === 'block';
+        settingsMenu.style.display = isOpen ? 'none' : 'block';
+        settingsButton.setAttribute('aria-expanded', !isOpen);
+        settingsButton.classList.add('settings-menu-debug');
+        console.log('Settings menu z-index:', getComputedStyle(settingsMenu).zIndex);
+        console.log('Settings button styles:', getComputedStyle(settingsButton));
+    }
+    
+    function toggleVideoMenu() {
+        const isOpen = videoMenu.style.display === 'block';
+        videoMenu.style.display = isOpen ? 'none' : 'block';
+        videoMenuButton.setAttribute('aria-expanded', !isOpen);
+        videoMenuButton.classList.add('video-icon-debug');
+        console.log('Video menu z-index:', getComputedStyle(videoMenu).zIndex);
+        console.log('Video menu button styles:', getComputedStyle(videoMenuButton));
+    }
+    
+    document.addEventListener('click', (e) => {
+        if (!settingsButton.contains(e.target) && !settingsMenu.contains(e.target)) {
+            settingsMenu.style.display = 'none';
+            settingsButton.setAttribute('aria-expanded', 'false');
+        }
+        if (!videoMenuButton.contains(e.target) && !videoMenu.contains(e.target)) {
+            videoMenu.style.display = 'none';
+            videoMenuButton.setAttribute('aria-expanded', 'false');
+        }
+        if (e.target === videoPopup && videoPopup.style.display === 'block') {
+            closeVideoPopup();
+        }
+    });
+    
+    function handleSettingsMenuClick() {
+        const menuItems = settingsMenu.querySelectorAll('li');
+        menuItems.forEach(item => {
+            item.onclick = () => {
+                const setting = item.getAttribute('data-setting');
+                if (setting === 'audio-fade') {
+                    fadeInAudioEnabled = !fadeInAudioEnabled;
+                    localStorage.setItem('fadeInAudioEnabled', fadeInAudioEnabled);
+                    item.textContent = `Fade In Audio: ${fadeInAudioEnabled ? 'On' : 'Off'}`;
+                } else if (setting === 'reset') {
+                    localStorage.clear();
+                    location.reload();
+                }
+                settingsMenu.style.display = 'none';
+                settingsButton.setAttribute('aria-expanded', 'false');
+            };
+        });
+    }
+    
+    function playPreview(previewUrl) {
+        if (audio.src !== previewUrl) {
+            audio.src = previewUrl;
+            currentPreviewUrl = previewUrl;
+            audio.load();
+        }
+        if (!isMuted && videoPopup.style.display !== 'block') {
+            audio.play().then(() => {
+                console.log('Audio playing:', previewUrl);
+                if (fadeInAudioEnabled) {
+                    fadeInAudio(audio, 0.25, 3000);
+                } else {
+                    audio.volume = 0.25;
+                }
+            }).catch(error => {
+                console.error('Audio playback failed:', error);
+            });
+        }
+    }
+    
+    
     function updateMuteIcon() {
         const muteIcon = muteButton.querySelector('.mute-icon');
         const unmuteIcon = muteButton.querySelector('.unmute-icon');
+        muteButton.setAttribute('aria-pressed', isMuted);
         if (isMuted) {
             muteIcon.style.display = 'block';
             unmuteIcon.style.display = 'none';
@@ -79,14 +195,71 @@ document.addEventListener('DOMContentLoaded', () => {
             unmuteIcon.style.display = 'block';
         }
     }
-
+    
     function toggleMute() {
         isMuted = !isMuted;
         audio.muted = isMuted;
         localStorage.setItem('isMuted', isMuted);
         updateMuteIcon();
-        if (!isMuted && currentPreviewUrl) {
-            audio.play();
+        if (!isMuted && currentPreviewUrl && videoPopup.style.display !== 'block') {
+            audio.play().then(() => {
+                console.log('Audio unmuted:', currentPreviewUrl);
+                if (fadeInAudioEnabled) {
+                    fadeInAudio(audio, 0.25, 2000);
+                } else {
+                    audio.volume = 0.25;
+                }
+            }).catch(error => {
+                console.error('Audio playback failed:', error);
+            });
+        }
+    }
+    
+    function openVideoPopup(youtubeUrl) {
+        const videoId = youtubeUrl.match(/(?:youtu\.be\/|youtube\.com\/(?:watch\?v=|embed\/))([^&?]+)/)?.[1];
+        if (muteTrackOnVideo && !audio.paused) {
+            audio.pause();
+        }
+        if (videoId && player) {
+            player.loadVideoById(videoId);
+            player.mute();
+            videoPopup.style.display = 'block';
+            document.body.classList.add('video-popup-open');
+            console.log('Video popup opened:', videoId);
+        } else {
+            if (videoId) {
+                youtubeIframe.src = `https://www.youtube.com/embed/${videoId}?autoplay=1`;
+                videoPopup.style.display = 'block';
+                document.body.classList.add('video-popup-open');
+                console.log('Iframe video opened:', videoId);
+            } else {
+                console.error('Invalid YouTube URL:', youtubeUrl);
+                videoPopup.style.display = 'block';
+                videoPopup.querySelector('.video-popup-content').innerHTML = '<p>Invalid YouTube video URL</p>';
+            }
+        }
+    }
+    
+    function closeVideoPopup() {
+        console.log('Closing video popup');
+        videoPopup.style.display = 'none';
+        document.body.classList.remove('video-popup-open');
+        if (player) {
+            player.stopVideo();
+            player.clearVideo();
+        }
+        youtubeIframe.src = '';
+        if (!isMuted && currentPreviewUrl && muteTrackOnVideo) {
+            audio.play().then(() => {
+                console.log('Audio resumed:', currentPreviewUrl);
+                if (fadeInAudioEnabled) {
+                    fadeInAudio(audio, 0.25, 2000);
+                } else {
+                    audio.volume = 0.25;
+                }
+            }).catch(error => {
+                console.error('Audio playback failed:', error);
+            });
         }
     }
 
@@ -98,16 +271,6 @@ document.addEventListener('DOMContentLoaded', () => {
     function handleDownload() {
         if (currentDownloadUrl) {
             window.location.href = currentDownloadUrl;
-        }
-    }
-
-    function playPreview(previewUrl) {
-        if (audio.src !== previewUrl) {
-            audio.src = previewUrl;
-            currentPreviewUrl = previewUrl;
-        }
-        if (!isMuted) {
-            audio.play();
         }
     }
     function openModal(track) {
@@ -602,6 +765,15 @@ function loadTracks() {
                 }
             });
         },
+        settingsMenuKeyboard: () => {
+            document.addEventListener('keydown', (e) => {
+                if (settingsMenu.style.display === 'block' && e.key === 'Escape') {
+                    settingsMenu.style.display = 'none';
+                    settingsButton.setAttribute('aria-expanded', 'false');
+                    settingsButton.focus();
+                }
+            });
+        },
         videoPopupKeyboard: () => {
             document.addEventListener('keydown', (e) => {
                 if (videoPopup.style.display === 'block' && e.key === 'Escape') {
@@ -626,7 +798,7 @@ function loadTracks() {
             timeout = setTimeout(later, wait);
         };
     }
-    
+
     const headerEvents = {
         logo: () => {
             logo.addEventListener('click', () => window.location.href = '/');
@@ -651,23 +823,62 @@ function loadTracks() {
                 updateGridSize();
             }, 100));
         },
-        settings: () => {
-            settingsGear.addEventListener('click', (e) => {
-                e.stopPropagation();
-                toggleSettingsPanel();
-            });
-        },
-        videoMenu: () => {
-            videoMenuButton.addEventListener('click', toggleVideoMenu);
-            videoPopupClose.addEventListener('click', closeVideoPopup);
-            videoPopup.addEventListener('click', (e) => {
-                if (e.target === videoPopup) closeVideoPopup();
-            });
-        }
-    };
+    settingsMenu: () => {
+        settingsButton.addEventListener('click', toggleSettingsMenu);
+        handleSettingsMenuClick();
+        settingsButton.addEventListener('keydown', (e) => {
+            if (e.key === 'Enter' || e.key === ' ') {
+                e.preventDefault();
+                toggleSettingsMenu();
+            }
+        });
+    },
+    videoMenu: () => {
+        videoMenuButton.addEventListener('click', toggleVideoMenu);
+        videoPopupClose.addEventListener('click', closeVideoPopup);
+        videoPopup.addEventListener('click', (e) => {
+            if (e.target === videoPopup) closeVideoPopup();
+        });
+    },
+    settingsMenu: () => {
+        settingsButton.addEventListener('click', toggleSettingsMenu);
+        handleSettingsMenuClick();
+        settingsButton.addEventListener('keydown', (e) => {
+            if (e.key === 'Enter' || e.key === ' ') {
+                e.preventDefault();
+                toggleSettingsMenu();
+            }
+        });
+        settingsMenu.addEventListener('keydown', (e) => {
+            const items = settingsMenu.querySelectorAll('li');
+            const current = document.activeElement;
+            const index = Array.from(items).indexOf(current);
+            if (e.key === 'ArrowDown') {
+                e.preventDefault();
+                const next = (index + 1) % items.length;
+                items[next].focus();
+            } else if (e.key === 'ArrowUp') {
+                e.preventDefault();
+                const prev = (index - 1 + items.length) % items.length;
+                items[prev].focus();
+            } else if (e.key === 'Escape') {
+                settingsMenu.style.display = 'none';
+                settingsButton.setAttribute('aria-expanded', 'false');
+                settingsButton.focus();
+            }
+        });
+    }
+};
 
     Object.values(modalEvents).forEach(init => init());
     Object.values(headerEvents).forEach(init => init());
+
+    document.addEventListener('DOMContentLoaded', () => {
+        const fadeAudioItem = settingsMenu.querySelector('li[data-setting="audio-fade"]');
+        if (fadeAudioItem) {
+            fadeAudioItem.textContent = `Fade In Audio: ${fadeInAudioEnabled ? 'On' : 'Off'}`;
+        }
+    });
 
     loadTracks();
 });

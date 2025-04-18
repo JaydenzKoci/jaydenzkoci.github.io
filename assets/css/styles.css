@@ -111,7 +111,44 @@ a:hover {
     max-height: 45px;
     cursor: pointer;
 }
+.header-controls #githubButton {
+    background: #333 !important; 
+    border: none;
+    color: #fff;
+    padding: 8px;
+    border-radius: 4px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    transition: background 0.2s ease;
+}
+.header-controls #githubButton:hover {
+    background: #555 !important;
+}
 
+.header-controls #githubButton svg {
+    width: 24px; 
+    height: 24px;
+    fill: #fff;
+    display: block;
+}
+.header-controls #settingsButton {
+    background: #333 !important;
+    border: none;
+    color: #fff;
+    padding: 8px;
+    border-radius: 4px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    transition: background 0.2s ease;
+}
 .search-wrapper {
     display: flex;
     align-items: center;
@@ -431,7 +468,7 @@ main {
   .mute-icon, .unmute-icon, .download-icon, .video-icon{
     display: inline-block;
   }
-  #githubLink, #settingsGear {
+  #githubLink  {
     display: inline-flex;
     align-items: center;
     color: white;
@@ -443,14 +480,130 @@ main {
     border-radius: 4px;
     transition: outline 0.15s, outline-offset 0.15s ease-out;
 }
-
-
-#githubLink:hover, #settingsGear:hover {
+.header-right #githubLink {
+    border: none;
+    color: #fff;
+    padding: 8px;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    margin: 0;
+    vertical-align: middle;
+    transition: background 0.2s ease;
+    text-decoration: none; /* Remove underline */
+}
+.header-right #settingsButton {
+    border: none;
+    color: #fff;
+    padding: 8px;
+    border-radius: 4px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    margin: 0;
+    vertical-align: middle;
+    transition: background 0.2s ease;
+}
+#settingsButton {
+    display: inline-flex;
+    align-items: center;
+    color: white;
+    text-decoration: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 4px 8px;
+    border-radius: 1px;
+    transition: outline 0.15s, outline-offset 0.15s ease-out;
+}
+.header-controls {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.settings-menu-container {
+    position: relative;
+    background: transparent !important;
+    z-index: 10010;
+}
+.header-controls #githubButton:hover {
+    background: #555 !important;
+}
+.header-controls #settingsButton {
+    background: #333 !important;
+    border: none;
+    color: #fff;
+    padding: 8px;
+    border-radius: 4px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    transition: background 0.2s ease;
+}
+.header-controls .settings-icon {
+    font-size: 24px; /* Match SVG size */
+    line-height: 1;
+    color: #fff;
+    display: block; /* Prevent emoji baseline issues */
+    text-align: center;
+    background: transparent !important;
+    border: none !important;
+    padding: 0 !important;
+    margin: 0 !important;
+}
+#settingsButton svg {
+    width: 28px;
+    height: 28px;
+    fill: currentColor;
+}
+#githubLink:hover, #settingsButton:hover {
     outline: 0.15rem solid #fffc;
     outline-offset: 0.1875rem;
 }
+.header {
+    z-index: 1000;
+}
+.settings-menu {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background: #222;
+    border: 1px solid #444;
+    border-radius: 4px;
+    list-style: none;
+    margin: 10x 0 0;
+    padding: 0;
+    z-index: 10000;
+    min-width: 250px;
+}
+.video-menu-container {
+    position: relative;
+    background: transparent !important;
+    z-index: 1010;
+}
+.settings-menu li {
+    padding: 10px 15px;
+    color: #fff;
+    cursor: pointer;
+    display: block; 
+}
 
-#githubLink svg, #settingsGear svg {
+.settings-menu li:hover {
+    background: #444; 
+}
+
+#githubLink svg{
     width: 24px;
     height: 24px;
     fill: currentColor;
@@ -793,6 +946,9 @@ main {
     0% { transform: rotate(0deg); }
     100% { transform: rotate(360deg); }
 }
+.modal {
+    z-index: 1000;
+}
 .video-popup {
     position: fixed;
     top: 0;
@@ -895,6 +1051,8 @@ body.video-popup-open {
 
 .video-menu-container {
     position: relative;
+    background: transparent !important;
+    z-index: 1010;
 }
 
 .video-menu {
@@ -922,4 +1080,8 @@ body.video-popup-open {
 
 .video-menu li:hover {
     background: #444;
+}
+
+.modal {
+    z-index: 1000;
 }
