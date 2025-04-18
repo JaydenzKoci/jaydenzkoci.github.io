@@ -7,5 +7,6 @@
     { "text": "Fix The Mobile Site", "completed": false },
     { "text": "Add Sorting Tracks By Length and Year", "completed": false },
     { "text": "Optimize The Site", "completed": false },
-    { "text": "Add Some Easter Eggs / Secrets", "completed": false }
+    { "text": "Add Some Easter Eggs / Secrets", "completed": false },
+    { "text": "Add Latest Update Text", "completed": false }
 ]
