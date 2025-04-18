@@ -20,11 +20,12 @@ document.addEventListener('DOMContentLoaded', () => {
     const videoTrackDuration = document.getElementById('videoTrackDuration');
     const videoTrackCover = document.getElementById('videoTrackCover');
     
-    let fadeInRequestId = null; // Track fade animation
-    let muteTrackOnVideo = localStorage.getItem('muteTrackOnVideo') === 'true' || true;
-    let fadeInAudioEnabled = localStorage.getItem('fadeInAudioEnabled') === 'true' || true;
+    let fadeInRequestId = null; 
+    let fadeInAudioEnabled = localStorage.getItem('fadeInAudioEnabled') === 'true' || false;
     let tracksData = [];
     let loadedTracks = 0;
+    let content;
+    let gridSize = localStorage.getItem('gridSize') || '4';
     const tracksPerPage = 10;
     const initialLoad = 50;
     const audio = new Audio();
@@ -37,6 +38,8 @@ document.addEventListener('DOMContentLoaded', () => {
     let currentTrack = null;
     let currentDownloadUrl = '';
     audio.muted = isMuted;
+    let preloadAssetsEnabled = localStorage.getItem('preloadAssetsEnabled') === 'true' || false;
+    let todoList = []; // To-do list array
     updateMuteIcon();
 
     let tracks = [];
@@ -60,6 +63,178 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     };
 
+    // Fetch to-do list with retries
+    function fetchTodoList(retryCount = 0) {
+        fetch('data/todoList.json?_=' + Date.now())
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error(`HTTP error ${response.status}: ${response.statusText}`);
+                }
+                return response.json();
+            })
+            .then(data => {
+                todoList = Array.isArray(data) ? data : [];
+                console.log('Loaded to-do list:', todoList);
+                updateTodoListUI();
+            })
+            .catch(error => {
+                console.error(`Error loading to-do list (attempt ${retryCount + 1}):`, error.message);
+                if (retryCount < 2) {
+                    console.log(`Retrying fetch (attempt ${retryCount + 2})...`);
+                    setTimeout(() => fetchTodoList(retryCount + 1), 1000);
+                } else {
+                    console.error('Max retries reached; falling back to empty to-do list');
+                    todoList = [];
+                    updateTodoListUI();
+                }
+            });
+    }
+
+    function preloadAssets(tracks) {
+        if (!preloadAssetsEnabled) {
+            console.log('Preload assets disabled; skipping preload');
+            return;
+        }
+        const preloadIndicator = document.getElementById('preloadIndicator');
+        const preloadProgress = document.getElementById('preloadProgress');
+        if (preloadIndicator) {
+            preloadIndicator.classList.add('active');
+        } else {
+            console.warn('Preload indicator not found; expected #preloadIndicator');
+        }
+    
+        const maxPreload = 200;
+        const tracksToPreload = tracks.slice(0, maxPreload);
+        console.log(`Preloading assets for ${tracksToPreload.length} tracks`);
+    
+        let loadedCount = 0;
+        const totalAssets = tracksToPreload.reduce((count, track) => count + (track.cover ? 1 : 0) + (track.videoUrl ? 1 : 0), 0);
+    
+        // Skip if no assets to preload
+        if (totalAssets === 0) {
+            console.log('No assets to preload');
+            if (preloadIndicator) {
+                preloadIndicator.classList.remove('active');
+            }
+            return;
+        }
+    
+        // Update progress bar
+        function updateProgress() {
+            const progressPercent = (loadedCount / totalAssets) * 100;
+            if (preloadProgress) {
+                preloadProgress.value = progressPercent; // For <progress> element
+                // For div-based bar: preloadProgressFill.style.width = `${progressPercent}%`;
+                console.log(`Preload progress: ${loadedCount}/${totalAssets} (${progressPercent.toFixed(1)}%)`);
+                const preloadPercent = document.getElementById('preloadPercent');
+                if (preloadPercent) {
+                    preloadPercent.textContent = `${Math.round(progressPercent)}%`;
+                }
+            }
+            if (loadedCount >= totalAssets && preloadIndicator) {
+                preloadIndicator.classList.remove('active');
+            }
+        }
+    
+        tracksToPreload.forEach((track, index) => {
+            if (track.cover) {
+                const img = new Image();
+                img.src = track.cover;
+                img.onload = () => {
+                    console.log(`Preloaded cover image: ${track.cover}`);
+                    loadedCount++;
+                    updateProgress();
+                };
+                img.onerror = () => {
+                    console.error(`Failed to preload cover image: ${track.cover}`);
+                    loadedCount++;
+                    updateProgress();
+                };
+            }
+    
+            if (track.videoUrl) {
+                const videoPath = `/assets/preview/${track.videoUrl}`;
+                const video = document.createElement('video');
+                video.src = videoPath;
+                video.preload = 'auto';
+                video.onloadeddata = () => {
+                    console.log(`Preloaded video: ${videoPath}`);
+                    loadedCount++;
+                    updateProgress();
+                    video.remove();
+                };
+                video.onerror = () => {
+                    console.error(`Failed to preload video: ${videoPath}`);
+                    loadedCount++;
+                    updateProgress();
+                    video.remove();
+                };
+                document.body.appendChild(video);
+            }
+        });
+    
+        // Fallback to hide indicator after timeout
+        if (preloadIndicator) {
+            setTimeout(() => {
+                preloadIndicator.classList.remove('active');
+                if (preloadProgress) {
+                    preloadProgress.value = 0; // Reset progress
+                    // For div-based bar: preloadProgressFill.style.width = '0%';
+                }
+            }, 10000);
+        }
+    }
+
+    function handleSettingsMenuClick() {
+        const menuItems = settingsMenu.querySelectorAll('li');
+        menuItems.forEach(item => {
+            item.onclick = (e) => {
+                const setting = item.getAttribute('data-setting');
+                console.log('Clicked setting:', setting);
+                if (setting === 'audio-fade') {
+                    fadeInAudioEnabled = !fadeInAudioEnabled;
+                    localStorage.setItem('fadeInAudioEnabled', fadeInAudioEnabled);
+                    item.textContent = `Fade In Audio: ${fadeInAudioEnabled ? 'On' : 'Off'}`;
+                    item.setAttribute('aria-checked', fadeInAudioEnabled);
+                    console.log('Toggled audio-fade:', fadeInAudioEnabled);
+                } else if (setting === 'grid-size') {
+                    const gridSizeSpan = e.target.closest('span[data-grid-size]');
+                    if (gridSizeSpan) {
+                        const newSize = gridSizeSpan.getAttribute('data-grid-size');
+                        gridSize = newSize;
+                        localStorage.setItem('gridSize', gridSize);
+                        document.documentElement.style.setProperty('--grid-size', gridSize);
+                        item.querySelectorAll('span').forEach(span => span.classList.remove('active'));
+                        gridSizeSpan.classList.add('active');
+                        console.log('Toggled grid-size:', gridSize);
+                    }
+                } else if (setting === 'preload') {
+                    preloadAssetsEnabled = !preloadAssetsEnabled;
+                    localStorage.setItem('preloadAssetsEnabled', preloadAssetsEnabled);
+                    item.textContent = `Preload Assets: ${preloadAssetsEnabled ? 'On' : 'Off'}`;
+                    item.setAttribute('aria-checked', preloadAssetsEnabled);
+                    if (preloadAssetsEnabled) {
+                        preloadAssets(currentFilteredTracks);
+                    }
+                    console.log('Toggled preload:', preloadAssetsEnabled);
+                } else if (setting === 'todo') {
+                    e.stopPropagation();
+                    e.preventDefault();
+                    settingsMenu.style.display = 'block';
+                    settingsButton.setAttribute('aria-expanded', 'true');
+                    fetchTodoList(); // Refresh to-do list on click
+                    console.log('To-do list clicked; menu kept open');
+                    return;
+                } else if (setting === 'reset') {
+                    localStorage.clear();
+                    location.reload();
+                }
+                settingsMenu.style.display = 'none';
+                settingsButton.setAttribute('aria-expanded', 'false');
+            };
+        });
+    }
+
     function isMobile() {
         return window.innerWidth <= 768;
     }
@@ -75,16 +250,12 @@ document.addEventListener('DOMContentLoaded', () => {
         const isOpen = settingsMenu.style.display === 'block';
         settingsMenu.style.display = isOpen ? 'none' : 'block';
         settingsButton.setAttribute('aria-expanded', !isOpen);
-        settingsButton.classList.add('settings-menu-debug');
-        console.log('Settings button styles:', getComputedStyle(settingsButton));
     }
     
     function toggleVideoMenu() {
         const isOpen = videoMenu.style.display === 'block';
         videoMenu.style.display = isOpen ? 'none' : 'block';
         videoMenuButton.setAttribute('aria-expanded', !isOpen);
-        videoMenuButton.classList.add('video-icon-debug');
-        console.log('Video menu button styles:', getComputedStyle(videoMenuButton));
     }
     
     document.addEventListener('click', (e) => {
@@ -96,8 +267,11 @@ document.addEventListener('DOMContentLoaded', () => {
             videoMenu.style.display = 'none';
             videoMenuButton.setAttribute('aria-expanded', 'false');
         }
+        if (e.target === videoPopup && videoPopup.style.display === 'block') {
+            closeVideoPopup();
+        }
     });
-
+    
     function fadeInAudio(audio, targetVolume, duration) {
         if (fadeInRequestId) {
             cancelAnimationFrame(fadeInRequestId);
@@ -119,57 +293,6 @@ document.addEventListener('DOMContentLoaded', () => {
         fadeInRequestId = requestAnimationFrame(step);
     }
     
-    function toggleSettingsMenu() {
-        const isOpen = settingsMenu.style.display === 'block';
-        settingsMenu.style.display = isOpen ? 'none' : 'block';
-        settingsButton.setAttribute('aria-expanded', !isOpen);
-        settingsButton.classList.add('settings-menu-debug');
-        console.log('Settings menu z-index:', getComputedStyle(settingsMenu).zIndex);
-        console.log('Settings button styles:', getComputedStyle(settingsButton));
-    }
-    
-    function toggleVideoMenu() {
-        const isOpen = videoMenu.style.display === 'block';
-        videoMenu.style.display = isOpen ? 'none' : 'block';
-        videoMenuButton.setAttribute('aria-expanded', !isOpen);
-        videoMenuButton.classList.add('video-icon-debug');
-        console.log('Video menu z-index:', getComputedStyle(videoMenu).zIndex);
-        console.log('Video menu button styles:', getComputedStyle(videoMenuButton));
-    }
-    
-    document.addEventListener('click', (e) => {
-        if (!settingsButton.contains(e.target) && !settingsMenu.contains(e.target)) {
-            settingsMenu.style.display = 'none';
-            settingsButton.setAttribute('aria-expanded', 'false');
-        }
-        if (!videoMenuButton.contains(e.target) && !videoMenu.contains(e.target)) {
-            videoMenu.style.display = 'none';
-            videoMenuButton.setAttribute('aria-expanded', 'false');
-        }
-        if (e.target === videoPopup && videoPopup.style.display === 'block') {
-            closeVideoPopup();
-        }
-    });
-    
-    function handleSettingsMenuClick() {
-        const menuItems = settingsMenu.querySelectorAll('li');
-        menuItems.forEach(item => {
-            item.onclick = () => {
-                const setting = item.getAttribute('data-setting');
-                if (setting === 'audio-fade') {
-                    fadeInAudioEnabled = !fadeInAudioEnabled;
-                    localStorage.setItem('fadeInAudioEnabled', fadeInAudioEnabled);
-                    item.textContent = `Fade In Audio: ${fadeInAudioEnabled ? 'On' : 'Off'}`;
-                } else if (setting === 'reset') {
-                    localStorage.clear();
-                    location.reload();
-                }
-                settingsMenu.style.display = 'none';
-                settingsButton.setAttribute('aria-expanded', 'false');
-            };
-        });
-    }
-    
     function playPreview(previewUrl) {
         if (audio.src !== previewUrl) {
             audio.src = previewUrl;
@@ -186,10 +309,12 @@ document.addEventListener('DOMContentLoaded', () => {
                 }
             }).catch(error => {
                 console.error('Audio playback failed:', error);
+                if (isMobile()) {
+                    console.log('Mobile device detected; audio playback may require user interaction');
+                }
             });
         }
     }
-    
     
     function updateMuteIcon() {
         const muteIcon = muteButton.querySelector('.mute-icon');
@@ -223,37 +348,39 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
     
-function closeVideoPopup() {
-    console.log('Closing video popup');
-    videoPopup.style.display = 'none';
-    document.body.classList.remove('video-popup-open');
-    if (player) {
-        try {
-            player.stopVideo();
-            player.clearVideo();
-        } catch (error) {
-            console.error('Player cleanup failed:', error);
-        }
-    }
-    youtubeIframe.src = '';
-    instrumentList.innerHTML = '';
-    videoTrackTitle.textContent = '';
-    videoTrackArtist.textContent = '';
-    videoTrackDuration.textContent = '';
-    currentTrack = null;
-    if (!isMuted && currentPreviewUrl) {
-        audio.play().then(() => {
-            console.log('Audio resumed:', currentPreviewUrl);
-            if (fadeInAudioEnabled) {
-                fadeInAudio(audio, 0.25, 2000);
-            } else {
-                audio.volume = 0.25;
+    function closeVideoPopup() {
+        console.log('Closing video popup');
+        videoPopup.style.display = 'none';
+        document.body.classList.remove('video-popup-open');
+    
+        if (player) {
+            try {
+                player.stopVideo();
+                player.clearVideo();
+            } catch (error) {
+                console.error('Player cleanup failed:', error);
             }
-        }).catch(error => {
-            console.error('Audio playback failed:', error);
-        });
+        }
+        youtubeIframe.src = '';
+    
+        instrumentList.innerHTML = '';
+        videoTrackCover.src = '';
+        videoTrackTitle.textContent = '';
+        videoTrackArtist.textContent = '';
+        videoTrackDuration.textContent = '';
+    
+        if (currentPreviewUrl) {
+            isMuted = false; 
+            audio.muted = false; 
+            localStorage.setItem('isMuted', false); 
+            updateMuteIcon(); 
+            playPreview(currentPreviewUrl);
+        } else {
+            console.log('No preview audio to play: currentPreviewUrl is empty');
+        }
+    
+        currentTrack = null;
     }
-}
 
     function updateDownloadButton(downloadUrl) {
         currentDownloadUrl = downloadUrl || '';
@@ -265,10 +392,12 @@ function closeVideoPopup() {
             window.location.href = currentDownloadUrl;
         }
     }
+
     function openModal(track) {
         currentTrackIndex = currentFilteredTracks.findIndex(t => t.title === track.title && t.artist === track.artist);
         renderModal(track);
     }
+
     function renderModal(track) {
         const { title, artist, releaseYear, cover, bpm, duration, difficulties, createdAt, lastFeatured, previewUrl, download, key, complete, videoUrl, videoPosition, youtubeLinks} = track;
         const positionPercent = videoPosition !== undefined ? videoPosition : 50;
@@ -280,6 +409,9 @@ function closeVideoPopup() {
     
         modalContent.classList.remove('no-video');
 
+        if (track.previewUrl) {
+            playPreview(track.previewUrl);
+        }
         if (videoUrl) {
             const videoPath = `/assets/preview/${videoUrl}`;
     
@@ -333,6 +465,11 @@ function closeVideoPopup() {
         prevButton.style.display = currentTrackIndex > 0 ? 'block' : 'none';
         nextButton.style.display = currentTrackIndex < currentFilteredTracks.length - 1 ? 'block' : 'none';
 
+        // Disable video menu button if no YouTube links
+        const hasYouTubeLinks = youtubeLinks && Object.values(youtubeLinks).some(url => url && typeof url === 'string' && url.trim() !== '');
+        videoMenuButton.disabled = !hasYouTubeLinks;
+        console.log('Video menu button status:', hasYouTubeLinks ? 'enabled' : 'disabled', 'youtubeLinks:', youtubeLinks);
+
         const menuItems = videoMenu.querySelectorAll('li');
         menuItems.forEach(item => {
             const instrument = item.getAttribute('data-instrument');
@@ -346,19 +483,13 @@ function closeVideoPopup() {
                 }
             };
         });
-    
-
-        videoMenuButton.disabled = !youtubeLinks || !Object.values(youtubeLinks).some(url => url);
-        videoMenuButton.classList.add('video-icon-debug');
-        console.log('Video menu button styles:', getComputedStyle(videoMenuButton));
-        console.log('Video icon styles:', getComputedStyle(videoMenuButton.querySelector('.video-icon')));
     }
     
     function updateDownloadButton(download) {
         downloadButton.disabled = !download;
         downloadButton.onclick = download ? () => window.open(download, '_blank') : null;
     }
-
+    
     function populateInstrumentList(track, selectedInstrument) {
         instrumentList.innerHTML = '';
         const instruments = ['vocals', 'lead', 'bass', 'drums'];
@@ -390,18 +521,26 @@ function closeVideoPopup() {
     function openVideoPopup(track, youtubeUrl) {
         currentTrack = track;
         const videoId = youtubeUrl.match(/(?:youtu\.be\/|youtube\.com\/(?:watch\?v=|embed\/))([^&?]+)/)?.[1];
-        if (!audio.paused) {
-            audio.pause();
+
+        if (!audio.paused || currentPreviewUrl) {
+            isMuted = true; 
+            audio.muted = true; 
+            audio.pause(); 
+            localStorage.setItem('isMuted', true); 
+            updateMuteIcon(); 
+            console.log('Preview audio muted and paused for video popup');
         }
-        // Populate track info
+
+        if (track.previewUrl && !currentPreviewUrl) {
+            currentPreviewUrl = track.previewUrl;
+        }
         videoTrackCover.src = track.cover;
         videoTrackTitle.textContent = track.title;
         videoTrackArtist.textContent = track.artist;
         videoTrackDuration.textContent = `${track.releaseYear} | ${track.duration}`;
-        // Populate instrument list
         const selectedInstrument = Object.keys(track.youtubeLinks || {}).find(instrument => track.youtubeLinks[instrument] === youtubeUrl) || 'vocals';
         populateInstrumentList(track, selectedInstrument);
-        // Load video
+
         if (videoId && player) {
             player.loadVideoById(videoId);
             player.mute();
@@ -418,25 +557,9 @@ function closeVideoPopup() {
             videoPopup.style.display = 'block';
             videoPopup.querySelector('.video-popup-content').innerHTML = '<p>Invalid YouTube video URL</p>';
             instrumentList.innerHTML = '';
+            videoTrackCover.src = '';
         }
     }
-function closeVideoPopup() {
-    videoPopup.style.display = 'none';
-    if (player) {
-        player.stopVideo(); 
-    } else {
-        youtubeIframe.src = ''; 
-    }
-    document.body.classList.remove('video-popup-open');
-    if (!isMuted && currentPreviewUrl) {
-        audio.play();
-    }
-}
-function closeVideoPopup() {
-    videoPopup.style.display = 'none';
-    youtubeIframe.src = '';
-    document.body.classList.remove('video-popup-open');
-}
 
     function closeModal() {
         modal.style.display = 'none';
@@ -449,109 +572,84 @@ function closeVideoPopup() {
         updateDownloadButton('');
     }
 
-        const gridSizeSlider = document.getElementById('gridSize');
-        const gridSizeValue = document.getElementById('gridSizeValue');
-        let tracksPerRow = parseInt(gridSizeSlider.value); 
+    function renderTracks(clearExisting = true) {
+        if (clearExisting) contentElement.innerHTML = '';
     
+        currentFilteredTracks.forEach((track, index) => {
+            const trackElement = document.createElement('div');
+            trackElement.classList.add('jam-track');
     
-        function updateGridSize() {
-            tracksPerRow = parseInt(gridSizeSlider.value);
-            gridSizeValue.textContent = tracksPerRow;
+            const loadingSpinner = document.createElement('div');
+            loadingSpinner.className = 'loading-spinner';
     
-            const screenWidth = window.innerWidth;
-            let effectiveTracksPerRow = tracksPerRow;
-            if (screenWidth <= 480) {
-                effectiveTracksPerRow = 1; 
-            } else if (screenWidth <= 768) {
-                effectiveTracksPerRow = Math.min(tracksPerRow, 2); 
-            } else if (screenWidth <= 1024) {
-                effectiveTracksPerRow = Math.min(tracksPerRow, 3); 
-            }
+            const img = new Image();
+            img.src = track.cover;
+            img.alt = `${track.title} Cover`;
+            img.style.display = 'none';
     
-            const percentage = 100 / effectiveTracksPerRow;
-            const trackElements = document.querySelectorAll('.jam-track');
-            trackElements.forEach(track => {
-                track.style.flex = `1 1 calc(${percentage}% - 20px)`;
-            });
-        }
+            img.onload = () => {
+                loadingSpinner.remove();
+                img.style.display = '';
+                img.classList.add('loaded');
+            };
     
-        function renderTracks(tracks, clearExisting = true) {
-            if (clearExisting) contentElement.innerHTML = '';
-    
-            tracks.forEach(track => {
-                const trackElement = document.createElement('div');
-                trackElement.classList.add('jam-track');
-    
-                const loadingSpinner = document.createElement('div');
-                loadingSpinner.className = 'loading-spinner';
-    
-                const img = new Image();
-                img.src = track.cover;
-                img.alt = `${track.title} Cover`;
-                img.style.display = 'none';
-    
-                img.onload = () => {
-                    loadingSpinner.remove();
-                    img.style.display = '';
-                    img.classList.add('loaded');
-                };
-    
-                trackElement.innerHTML = `
-                    <div>
-                        <h2>${track.title}</h2>
-                        <p>${track.artist}</p>
-                    </div>
-                `;
-                let touchTimer;
-                trackElement.addEventListener('touchstart', (e) => {
+            trackElement.innerHTML = `
+                <div>
+                    <h2>${track.title}</h2>
+                    <p>${track.artist}</p>
+                </div>
+            `;
+
+            let touchTimer;
+            trackElement.addEventListener('touchstart', (e) => {
                 e.preventDefault();
                 if (isMobile()) {
-                touchTimer = setTimeout(() => openModal(track), 500); 
+                    touchTimer = setTimeout(() => openModal(track), 500); 
                 } else {
-                openModal(track);
+                    openModal(track);
                 }
-                }, { passive: false });
+            }, { passive: false });
 
-trackElement.addEventListener('touchend', (e) => {
-    if (isMobile()) {
-        clearTimeout(touchTimer);
-        trackElement.classList.toggle('mobile-highlight');
-        if (track.previewUrl) playPreview(track.previewUrl);
-    }
-});
-                trackElement.insertBefore(loadingSpinner, trackElement.firstChild);
-                trackElement.insertBefore(img, trackElement.firstChild);
-    
-                const labels = generateLabels(track);
-                trackElement.appendChild(labels);
-
-                trackElement.addEventListener('click', (e) => {
-                    if (!isMobile()) {
-                        openModal(track);
-                    }
-                });
-    
-                trackElement.addEventListener('click', () => openModal(track));
-                trackElement.addEventListener('touchstart', (e) => {
-                    e.preventDefault(); 
-                    if (isMobile()) {
-                        trackElement.classList.toggle('mobile-highlight');
-                        if (track.previewUrl) {
-                            playPreview(track.previewUrl); 
-                        }
-                    } else {
-                        openModal(track); 
-                    }
-                }, { passive: false });
-    
-                contentElement.appendChild(trackElement);
+            trackElement.addEventListener('touchend', (e) => {
+                if (isMobile()) {
+                    clearTimeout(touchTimer);
+                    trackElement.classList.toggle('mobile-highlight');
+                    if (track.previewUrl) playPreview(track.previewUrl);
+                }
             });
-            
-            if (isMobile()) {
-                alert(`Selected: ${track.title} by ${track.artist}`);
-            }
-            updateGridSize();
+
+            trackElement.insertBefore(loadingSpinner, trackElement.firstChild);
+            trackElement.insertBefore(img, trackElement.firstChild);
+    
+            const labels = generateLabels(track);
+            trackElement.appendChild(labels);
+
+            trackElement.addEventListener('click', (e) => {
+                if (!isMobile()) {
+                    openModal(track);
+                }
+            });
+    
+            trackElement.addEventListener('click', () => openModal(track));
+            trackElement.addEventListener('touchstart', (e) => {
+                e.preventDefault(); 
+                if (isMobile()) {
+                    trackElement.classList.toggle('mobile-highlight');
+                    if (track.previewUrl) {
+                        playPreview(track.previewUrl); 
+                    }
+                } else {
+                    openModal(track); 
+                }
+            }, { passive: false });
+    
+            contentElement.appendChild(trackElement);
+        });
+        
+        if (isMobile()) {
+            alert(`Selected: ${track.title} by ${track.artist}`);
         }
+    }
 
     function filterTracks() {
         const query = searchInput.value.toLowerCase();
@@ -610,6 +708,10 @@ trackElement.addEventListener('touchend', (e) => {
             }
         }
 
+        if (preloadAssetsEnabled) {
+            preloadAssets(currentFilteredTracks);
+        }
+    
         const url = new URL(window.location);
         if (query) url.searchParams.set('q', query);
         else url.searchParams.delete('q');
@@ -717,29 +819,36 @@ trackElement.addEventListener('touchend', (e) => {
         }
     }
 
-function loadTracks() {
-    fetch(`data/jam_tracks.json?_=${Date.now()}`)
-        .then(response => response.json())
-        .then(data => {
-            tracksData = Object.values(data);
+    function loadTracks() {
+        fetch(`data/tracks.json?_=${Date.now()}`)
+            .then(response => response.json())
+            .then(data => {
+                tracksData = Object.values(data);
 
-            const urlParams = new URLSearchParams(window.location.search);
-            const searchQuery = urlParams.get('q');
-            const filterValue = urlParams.get('filter');
+                const urlParams = new URLSearchParams(window.location.search);
+                const searchQuery = urlParams.get('q');
+                const filterValue = urlParams.get('filter');
 
-            if (searchQuery) searchInput.value = searchQuery;
-            if (filterValue) filterSelect.value = filterValue;
+                if (searchQuery) searchInput.value = searchQuery;
+                if (filterValue) filterSelect.value = filterValue;
 
-            filterTracks();
-        })
-        .catch(error => console.error('Failed to load tracks:', error));
-}
+                filterTracks();
+
+                if (preloadAssetsEnabled) {
+                    preloadAssets(currentFilteredTracks);
+                }
+            })
+            .catch(error => {
+                console.error('Failed to load tracks:', error);
+            });
+    }
 
     function updateDownloadButton(downloadUrl) {
         currentDownloadUrl = downloadUrl || '';
         downloadButton.disabled = !currentDownloadUrl || currentDownloadUrl.trim() === ''; 
         console.log('Download URL:', currentDownloadUrl, 'Disabled:', downloadButton.disabled);
     }
+
     function updateCountdown() {
         const now = new Date();
         const nextUpdate = new Date();
@@ -814,26 +923,13 @@ function loadTracks() {
             document.addEventListener('keydown', (e) => {
                 if (videoPopup.style.display === 'block' && e.key === 'Escape') {
                     closeVideoPopup();
+                    isMuted = false;
+                    audio.muted = false; 
+                    updateMuteIcon(); 
                 }
             });
         }
     };
-
-    window.addEventListener('resize', debounce(() => {
-        updateGridSize();
-    }, 200));
-
-    function debounce(func, wait) {
-        let timeout;
-        return function executedFunction(...args) {
-            const later = () => {
-                clearTimeout(timeout);
-                func(...args);
-            };
-            clearTimeout(timeout);
-            timeout = setTimeout(later, wait);
-        };
-    }
 
     const headerEvents = {
         logo: () => {
@@ -851,91 +947,238 @@ function loadTracks() {
         download: () => {
             downloadButton.addEventListener('click', handleDownload);
         },
-        gridSize: () => {
-            gridSizeSlider.addEventListener('input', debounce(() => {
-                updateGridSize();
-            }, 100));
-            gridSizeSlider.addEventListener('touchmove', debounce(() => {
-                updateGridSize();
-            }, 100));
+        settingsMenu: () => {
+            settingsButton.addEventListener('click', toggleSettingsMenu);
+            handleSettingsMenuClick();
+            settingsButton.addEventListener('keydown', (e) => {
+                if (e.key === 'Enter' || e.key === ' ') {
+                    e.preventDefault();
+                    toggleSettingsMenu();
+                }
+            });
+            settingsMenu.addEventListener('keydown', (e) => {
+                const items = settingsMenu.querySelectorAll('li');
+                const current = document.activeElement;
+                const index = Array.from(items).indexOf(current);
+                if (e.key === 'ArrowDown') {
+                    e.preventDefault();
+                    const next = (index + 1) % items.length;
+                    items[next].focus();
+                } else if (e.key === 'ArrowUp') {
+                    e.preventDefault();
+                    const prev = (index - 1 + items.length) % items.length;
+                    items[prev].focus();
+                } else if (e.key === 'Escape') {
+                    settingsMenu.style.display = 'none';
+                    settingsButton.setAttribute('aria-expanded', 'false');
+                    settingsButton.focus();
+                }
+            });
         },
-    settingsMenu: () => {
-        settingsButton.addEventListener('click', toggleSettingsMenu);
-        handleSettingsMenuClick();
-        settingsButton.addEventListener('keydown', (e) => {
-            if (e.key === 'Enter' || e.key === ' ') {
-                e.preventDefault();
-                toggleSettingsMenu();
-            }
-        });
-    },
-    videoMenu: () => {
-        videoMenuButton.addEventListener('click', toggleVideoMenu);
-        videoPopupClose.addEventListener('click', closeVideoPopup);
-        videoPopup.addEventListener('click', (e) => {
-            if (e.target === videoPopup) closeVideoPopup();
-        });
-    },
-    settingsMenu: () => {
-        settingsButton.addEventListener('click', toggleSettingsMenu);
-        handleSettingsMenuClick();
-        settingsButton.addEventListener('keydown', (e) => {
-            if (e.key === 'Enter' || e.key === ' ') {
-                e.preventDefault();
-                toggleSettingsMenu();
-            }
-        });
-        settingsMenu.addEventListener('keydown', (e) => {
-            const items = settingsMenu.querySelectorAll('li');
-            const current = document.activeElement;
-            const index = Array.from(items).indexOf(current);
-            if (e.key === 'ArrowDown') {
-                e.preventDefault();
-                const next = (index + 1) % items.length;
-                items[next].focus();
-            } else if (e.key === 'ArrowUp') {
-                e.preventDefault();
-                const prev = (index - 1 + items.length) % items.length;
-                items[prev].focus();
-            } else if (e.key === 'Escape') {
-                settingsMenu.style.display = 'none';
-                settingsButton.setAttribute('aria-expanded', 'false');
-                settingsButton.focus();
-            }
-        });
-    },
-    instrumentListKeyboard: () => {
-        instrumentList.addEventListener('keydown', (e) => {
-            const items = instrumentList.querySelectorAll('li');
-            const current = document.activeElement;
-            const index = Array.from(items).indexOf(current);
-            if (e.key === 'ArrowDown') {
-                e.preventDefault();
-                const next = (index + 1) % items.length;
-                items[next].focus();
-            } else if (e.key === 'ArrowUp') {
-                e.preventDefault();
-                const prev = (index - 1 + items.length) % items.length;
-                items[prev].focus();
-            } else if (e.key === 'Enter' || e.key === ' ') {
-                e.preventDefault();
-                current.click();
-            }
-        });
-    }
-};
+        videoMenu: () => {
+            videoMenuButton.addEventListener('click', toggleVideoMenu);
+            videoPopupClose.addEventListener('click', closeVideoPopup);
+            videoPopup.addEventListener('click', (e) => {
+                if (e.target === videoPopup) closeVideoPopup();
+            });
+        },
+        instrumentListKeyboard: () => {
+            instrumentList.addEventListener('keydown', (e) => {
+                const items = instrumentList.querySelectorAll('li');
+                const current = document.activeElement;
+                const index = Array.from(items).indexOf(current);
+                if (e.key === 'ArrowDown') {
+                    e.preventDefault();
+                    const next = (index + 1) % items.length;
+                    items[next].focus();
+                } else if (e.key === 'ArrowUp') {
+                    e.preventDefault();
+                    const prev = (index - 1 + items.length) % items.length;
+                    items[prev].focus();
+                } else if (e.key === 'Enter' || e.key === ' ') {
+                    e.preventDefault();
+                    current.click();
+                }
+            });
+        }
+    };
 
     Object.values(modalEvents).forEach(init => init());
     Object.values(headerEvents).forEach(init => init());
 
     document.addEventListener('DOMContentLoaded', () => {
-        const fadeAudioItem = settingsMenu.querySelector('li[data-setting="audio-fade"]');
-        if (fadeAudioItem) {
-            fadeAudioItem.textContent = `Fade In Audio: ${fadeInAudioEnabled ? 'On' : 'Off'}`;
+        content = document.querySelector('.content');
+        settingsMenu = document.querySelector('#settingsMenu');
+    
+        fadeInAudioEnabled = localStorage.getItem('fadeInAudioEnabled') === 'true' ? true : localStorage.getItem('fadeInAudioEnabled') === 'false' ? false : true;
+        preloadAssetsEnabled = localStorage.getItem('preloadAssetsEnabled') === 'true' ? true : localStorage.getItem('preloadAssetsEnabled') === 'false' ? false : false;
+        gridSize = ['1', '2', '3', '4'].includes(localStorage.getItem('gridSize')) ? localStorage.getItem('gridSize') : '4';
+        isMuted = localStorage.getItem('isMuted') === 'true' ? true : localStorage.getItem('isMuted') === 'false' ? false : false;
+    
+        console.log('Raw localStorage values:', {
+            fadeInAudioEnabled: localStorage.getItem('fadeInAudioEnabled'),
+            preloadAssetsEnabled: localStorage.getItem('preloadAssetsEnabled'),
+            gridSize: localStorage.getItem('gridSize'),
+            isMuted: localStorage.getItem('isMuted')
+        });
+        console.log('Parsed JavaScript variables:', {
+            fadeInAudioEnabled,
+            preloadAssetsEnabled,
+            gridSize,
+            isMuted
+        });
+
+        fetchTodoList(); // Initial fetch
+    
+        updateAllSettingsUI();
+    
+        audio.muted = isMuted;
+        if (preloadAssetsEnabled) {
+            console.log('Preload enabled; will preload after tracks load');
         }
+        document.documentElement.style.setProperty('--grid-size', gridSize);
+    
+        handleSettingsMenuClick();
     });
 
-        currentFilteredTracks = tracks;
+    function updateTodoListUI(retryCount = 0) {
+        const todoListElement = document.getElementById('todoList');
+        if (!todoListElement) {
+            if (retryCount < 5) {
+                console.warn(`To-do list element not found (attempt ${retryCount + 1}); retrying...`);
+                setTimeout(() => updateTodoListUI(retryCount + 1), 200);
+            } else {
+                console.error('To-do list element not found after retries; expected <ul id="todoList">');
+            }
+            return;
+        }
+        todoListElement.classList.add('todo-list-loading');
+        todoListElement.innerHTML = '';
+        if (todoList.length === 0) {
+            const li = document.createElement('li');
+            li.textContent = 'No tasks available';
+            li.style.opacity = '0.7';
+            todoListElement.appendChild(li);
+        } else {
+            todoList.forEach(task => {
+                const li = document.createElement('li');
+                li.className = task.completed ? 'completed' : '';
+                li.innerHTML = `<span class="todo-text" aria-label="To-do task: ${task.text}${task.completed ? ', completed' : ''}">${task.text}</span>`;
+                todoListElement.appendChild(li);
+            });
+        }
+        todoListElement.classList.remove('todo-list-loading');
+        console.log('Updated to-do list UI:', todoList, 'HTML:', todoListElement.innerHTML);
+    }
 
+    function updateAudioFadeUI() {
+        const audioFadeItem = settingsMenu?.querySelector('li[data-setting="audio-fade"]');
+        if (audioFadeItem) {
+            const newText = `Fade In Audio: ${fadeInAudioEnabled ? 'On' : 'Off'}`;
+            if (audioFadeItem.textContent !== newText) {
+                audioFadeItem.textContent = newText;
+                audioFadeItem.setAttribute('aria-checked', fadeInAudioEnabled);
+                settingsMenu.classList.add('settings-menu-updated');
+                setTimeout(() => settingsMenu.classList.remove('settings-menu-updated'), 1000);
+                console.log('Updated audio-fade UI:', audioFadeItem.textContent, 'fadeInAudioEnabled=', fadeInAudioEnabled);
+            }
+        }
+    }
+
+    function updatePreloadUI() {
+        const preloadItem = settingsMenu?.querySelector('li[data-setting="preload"]');
+        if (preloadItem) {
+            const newText = `Preload Assets: ${preloadAssetsEnabled ? 'On' : 'Off'}`;
+            if (preloadItem.textContent !== newText) {
+                preloadItem.textContent = newText;
+                preloadItem.setAttribute('aria-checked', preloadAssetsEnabled);
+                console.log('Updated preload UI:', preloadItem.textContent, 'preloadAssetsEnabled=', preloadAssetsEnabled);
+            } else {
+                console.log('Preload UI already correct:', preloadItem.textContent, 'preloadAssetsEnabled=', preloadAssetsEnabled);
+            }
+        } else {
+            console.warn('Preload menu item not found; expected <li data-setting="preload">');
+        }
+    }
+    
+    function updateGridSizeUI() {
+        const gridSizeItem = settingsMenu?.querySelector('li[data-setting="grid-size"]');
+        if (gridSizeItem) {
+            gridSizeItem.querySelectorAll('span').forEach(span => span.classList.remove('active'));
+            const activeSpan = gridSizeItem.querySelector(`span[data-grid-size="${gridSize}"]`);
+            if (activeSpan) {
+                activeSpan.classList.add('active');
+                console.log('Updated grid-size UI: Active span:', activeSpan.textContent, 'gridSize=', gridSize);
+            } else {
+                console.warn(`Grid size span for ${gridSize} not found; expected <span data-grid-size="${gridSize}">`);
+            }
+            document.documentElement.style.setProperty('--grid-size', gridSize);
+        } else {
+            console.warn('Grid size menu item not found; expected <li data-setting="grid-size">');
+        }
+    }
+    
+    function updateMuteIcon() {
+        const muteButton = document.getElementById('muteButton');
+        const muteIcon = muteButton?.querySelector('.mute-icon');
+        const unmuteIcon = muteButton?.querySelector('.unmute-icon');
+        if (muteButton && muteIcon && unmuteIcon) {
+            muteButton.setAttribute('aria-pressed', isMuted);
+            muteIcon.style.display = isMuted ? 'block' : 'none';
+            unmuteIcon.style.display = isMuted ? 'none' : 'block';
+            console.log('Updated mute UI: isMuted=', isMuted);
+            updateAudioFadeUI();
+            updatePreloadUI();
+            updateGridSizeUI();
+        } else {
+            console.warn('Mute button or icons not found; expected #muteButton with .mute-icon and .unmute-icon');
+        }
+    }
+    
+    function updateAllSettingsUI(retryCount = 0) {
+        if (!settingsMenu || !settingsMenu.querySelector('li[data-setting="audio-fade"]')) {
+            if (retryCount < 5) {
+                console.warn(`Settings menu not ready (attempt ${retryCount + 1}); retrying...`);
+                setTimeout(() => updateAllSettingsUI(retryCount + 1), 200);
+            } else {
+                console.error('Settings menu not found after retries');
+            }
+            return;
+        }
+    
+        console.log('Final settings menu HTML:', settingsMenu.innerHTML);
+    }
+        
+    function loadTracks() {
+        fetch(`data/tracks.json?_=${Date.now()}`)
+            .then(response => {
+                if (!response.ok) throw new Error('Failed to load tracks');
+                return response.json();
+            })
+            .then(data => {
+                tracksData = Object.values(data);
+    
+                const urlParams = new URLSearchParams(window.location.search);
+                const searchQuery = urlParams.get('q');
+                const filterValue = urlParams.get('filter');
+    
+                if (searchQuery) searchInput.value = searchQuery;
+                if (filterValue) filterSelect.value = filterValue;
+    
+                filterTracks();
+    
+                if (preloadAssetsEnabled) {
+                    console.log('Preloading assets after tracks loaded');
+                    preloadAssets(currentFilteredTracks);
+                }
+            })
+            .catch(error => {
+                console.error('Failed to load tracks:', error);
+                contentElement.innerHTML = '<p>Error loading tracks. Please try again later.</p>';
+            });
+    }
+            
     loadTracks();
+    currentFilteredTracks = tracks;
+    renderTracks();
 });

@@ -2348,10 +2348,10 @@
     "featured": true,
     "new": true,
     "youtubeLinks": {
-      "vocals": "https://youtu.be/z_u95KJU6SM",
+      "vocals": "",
       "lead": "https://youtu.be/z_u95KJU6SM",
-      "bass": "https://youtu.be/z_u95KJU6SM",
-      "drums": "https://youtu.be/z_u95KJU6SM"
+      "bass": "",
+      "drums": ""
   }
   },
   "sorry": {

@@ -40,7 +40,18 @@
                     </button>
                     <ul id="settingsMenu" class="settings-menu" style="display: none;">
                         <li data-setting="audio-fade">Fade In Audio: On</li>
-                        <li data-setting="reset">Reset Preferences</li>
+                        <li data-setting="grid-size">Grid Size: 
+                            <span data-grid-size="1">1</span> | 
+                            <span data-grid-size="2">2</span> | 
+                            <span data-grid-size="3">3</span> | 
+                            <span data-grid-size="4">4</span></li>
+                        <li data-setting="preload">Preload Assets: Off</li>
+                        <li data-setting="todo">
+                            To-Do List:
+                            <ul id="todoList" class="todo-list"></ul>
+                        </li>
+                        <li data-setting="reset">Reset Settings</li>
+                    </ul>
                     </ul>
                 </div>
             </div>
@@ -62,11 +73,10 @@
                     <option value="featured">🟨 Updated Tracks</option>
                     <option value="finish">🟩 Finished Tracks</option>
                 </select>
-                <meta name="viewport" content="width=device-width, initial-scale=1.0">
-                <div class="grid-size-control">
-                    <label for="gridSize">Tracks per row: <span id="gridSizeValue">4</span></label>
-                    <input type="range" id="gridSize" min="1" max="4" value="4" step="1">
-                </div>
+            </div>
+            <div id="preloadIndicator" class="preload-indicator">
+                Preloading assets... <span id="preloadPercent">0%</span>
+                <progress id="preloadProgress" value="0" max="100"></progress>
             </div>
             <div class="content">
                 <!-- Jam tracks will be added dynamically here -->
@@ -123,7 +133,7 @@
 <div id="videoPopup" class="video-popup" style="display: none;">
     <span class="video-popup-close">×</span>
     <div class="video-popup-content">
-        <iframe id="youtubeIframe" width="560" height="315" src="" frameborder="0" allow="autoplay; muted" allowfullscreen></iframe>
+        <iframe id="youtubeIframe" width="560" height="315" src="" frameborder="0" allow="autoplay" allowfullscreen></iframe>
     </div>
     <div class="video-sidebar">
         <div class="track-info">
