@@ -101,7 +101,13 @@
     "videoPosition": 30,
     "download": "https://github.com/JaydenzKoci/song-projects/raw/refs/heads/main/Songs/David%20Guetta%20-%20Forever%20Young.zip",
     "previewUrl": "https://p.scdn.co/mp3-preview/a47b1ab8552acc16146597026a45aa53806dbd1f",
-    "new": true
+    "new": true,
+    "youtubeLinks": {
+      "vocals": "",
+      "lead": "https://youtu.be/TadAG7dgEdY",
+      "bass": "",
+      "drums": ""
+  }
   },
   "breakyourheart": {
     "title": "Break Your Heart",
@@ -624,7 +630,13 @@
     "videoPosition": 40,
     "download": "https://github.com/JaydenzKoci/song-projects/raw/refs/heads/main/Songs/Tate%20McRae%20-%20exes.zip",
     "previewUrl": "https://p.scdn.co/mp3-preview/9f2e1821dfa9781d4e594b3e85ffc90c4f5cc089",
-    "new": true
+    "new": true,
+    "youtubeLinks": {
+      "vocals": "https://youtu.be/zMR40P-LgkM",
+      "lead": "",
+      "bass": "",
+      "drums": ""
+  }
   },
   "stereo": {
     "title": "Stereo Hearts",
@@ -1374,7 +1386,13 @@
     "previewUrl": "https://p.scdn.co/mp3-preview/ef40d2697f0281f1fb27a213aac89790a7b4d9d6",
     "download": "https://github.com/JaydenzKoci/song-projects/raw/refs/heads/main/Songs/Alok%20-%20Car%20Keys%20(Ayla).zip",
     "new": true,
-    "featured": true
+    "featured": true,
+    "youtubeLinks": {
+      "vocals": "",
+      "lead": "https://youtu.be/EvKfc9Mef4Y",
+      "bass": "",
+      "drums": ""
+  }
   },
   "door": {
     "title": "Revolving door",
@@ -3094,5 +3112,304 @@
     "spotify": "3As0n6VHQxTs0KYk9Ja9pU",
     "previewUrl": "https://p.scdn.co/mp3-preview/2b494dade2b486897acb08ce8d946aaa93eadaeb",
     "rotated": true
+  },
+    "arms": {
+      "title": "Into Your Arms",
+      "artist": "Witt Lowry (Feat. Ava Max)",
+      "releaseYear": "0",
+      "cover": "https://github.com/JaydenzKoci/song-projects/blob/main/Images/IntoYourArms.png?raw=true",
+      "bpm": 0,
+      "duration": "0m 00s",
+      "difficulties": {
+        "vocals": -1,
+        "guitar": -1,
+        "bass": -1,
+        "drums": -1,
+        "plastic-bass": -1,
+        "plastic-drums": -1,
+        "plastic-guitar": -1
+      },
+      "createdAt": "2000-01-01T08:00:00.000Z",
+      "lastFeatured": "TBA",
+      "complete": "0% Complete",
+      "videoUrl": "IntoYourArms.mp4",
+      "videoPosition": "5",
+      "spotify": "0b11D9D0hMOYCIMN3OKreM",
+      "previewUrl": "https://p.scdn.co/mp3-preview/bdb8e47f51b0280c493640f4ef938fbae78ce2f9",
+      "rotated": true
+    },
+    "rules": {
+      "title": "Break The Rules",
+      "artist": "Charli xcx",
+      "releaseYear": "0",
+      "cover": "https://github.com/JaydenzKoci/song-projects/blob/main/Images/sucker.png?raw=true",
+      "bpm": 0,
+      "duration": "0 00s",
+      "difficulties": {
+        "vocals": -1,
+        "guitar": -1,
+        "bass": -1,
+        "drums": -1,
+        "plastic-bass": -1,
+        "plastic-drums": -1,
+        "plastic-guitar": -1
+      },
+      "createdAt": "2000-01-01T08:00:00.000Z",
+      "lastFeatured": "TBA",
+      "complete": "0% Complete",
+      "videoUrl": "BreakTheRules.mp4",
+      "spotify": "70ebKSMHvkUSg7JXgUz74Q",
+      "previewUrl": "https://p.scdn.co/mp3-preview/292af297ef56eea5c4aa7e84beb374f9b3790572",
+      "rotated": true
+    },
+    "alone": {
+      "title": "Better Off (Alone, Pt III)",
+      "artist": "Alan Walker",
+      "releaseYear": "0",
+      "cover": "https://github.com/JaydenzKoci/song-projects/blob/main/Images/BetterOff.png?raw=true",
+      "bpm": 0,
+      "duration": "0m 00s",
+      "difficulties": {
+        "vocals": -1,
+        "guitar": -1,
+        "bass": -1,
+        "drums": -1,
+        "plastic-bass": -1,
+        "plastic-drums": -1,
+        "plastic-guitar": -1
+      },
+      "createdAt": "2000-01-01T08:00:00.000Z",
+      "lastFeatured": "TBA",
+      "complete": "0% Complete",
+      "videoUrl": "BetterOff(Alone,PtIII).mp4",
+      "videoPosition": "20",
+      "spotify": "0SML6wWerD0yI2Xd4OUC1R",
+      "previewUrl": "https://p.scdn.co/mp3-preview/cf832964d7ef17933b8064ed10a4c230c506b21a",
+      "rotated": true
+    },
+    "faded": {
+      "title": "Faded",
+      "artist": "Alan Walker",
+      "releaseYear": "0",
+      "cover": "https://github.com/JaydenzKoci/song-projects/blob/main/Images/Faded.png?raw=true",
+      "bpm": 0,
+      "duration": "0m 00s",
+      "difficulties": {
+        "vocals": -1,
+        "guitar": -1,
+        "bass": -1,
+        "drums": -1,
+        "plastic-bass": -1,
+        "plastic-drums": -1,
+        "plastic-guitar": -1
+      },
+      "createdAt": "2000-01-01T08:00:00.000Z",
+      "lastFeatured": "TBA",
+      "complete": "0% Complete",
+      "videoUrl": "Faded.mp4",
+      "videoPosition": "20",
+      "spotify": "7gHs73wELdeycvS48JfIos",
+      "previewUrl": "https://p.scdn.co/mp3-preview/633dfd35d836f9b62bab2344510e68270e5e3873",
+      "rotated": true
+    },
+    "onewish": {
+      "title": "1 Wish",
+      "artist": "Ava Max",
+      "releaseYear": "0",
+      "cover": "https://github.com/JaydenzKoci/song-projects/blob/main/Images/1Wish.png?raw=true",
+      "bpm": 0,
+      "duration": "0m 00s",
+      "difficulties": {
+        "vocals": -1,
+        "guitar": -1,
+        "bass": -1,
+        "drums": -1,
+        "plastic-bass": -1,
+        "plastic-drums": -1,
+        "plastic-guitar": -1
+      },
+      "createdAt": "2000-01-01T08:00:00.000Z",
+      "lastFeatured": "TBA",
+      "complete": "0% Complete",
+      "videoUrl": "1wish.mp4",
+      "videoPosition": "20",
+      "spotify": "1knrvScmRb6ZCPPsBzDHcy",
+      "previewUrl": "https://p.scdn.co/mp3-preview/8d78c2c3f1071a3a3b2877c09d1d62b0e6d5354f",
+      "rotated": true
+    },
+    "broke": {
+      "title": "you broke me first",
+      "artist": "Tate McRae",
+      "releaseYear": "0",
+      "cover": "https://github.com/JaydenzKoci/song-projects/blob/main/Images/youbrokemefirst.png?raw=true",
+      "bpm": 0,
+      "duration": "0m 00s",
+      "difficulties": {
+        "vocals": -1,
+        "guitar": -1,
+        "bass": -1,
+        "drums": -1,
+        "plastic-bass": -1,
+        "plastic-drums": -1,
+        "plastic-guitar": -1
+      },
+      "createdAt": "2000-01-01T08:00:00.000Z",
+      "lastFeatured": "TBA",
+      "complete": "0% Complete",
+      "videoUrl": "youbrokemefirst.mp4",
+      "videoPosition": "70",
+      "spotify": "4l0RmWt52FxpVxMNni6i63",
+      "previewUrl": "https://p.scdn.co/mp3-preview/58f29d1e29100ef77247a4bf0fa22b2cc3528c3f",
+      "rotated": true
+    },
+    "brutal": {
+      "title": "brutal",
+      "artist": "Olivia Rodrigo",
+      "releaseYear": "0",
+      "cover": "https://github.com/JaydenzKoci/song-projects/blob/main/Images/SOUR.png?raw=true",
+      "bpm": 0,
+      "duration": "0m 00s",
+      "difficulties": {
+        "vocals": -1,
+        "guitar": -1,
+        "bass": -1,
+        "drums": -1,
+        "plastic-bass": -1,
+        "plastic-drums": -1,
+        "plastic-guitar": -1
+      },
+      "createdAt": "2000-01-01T08:00:00.000Z",
+      "lastFeatured": "TBA",
+      "complete": "0% Complete",
+      "videoUrl": "brutal.mp4",
+      "videoPosition": "40",
+      "spotify": "3fZVIxJjV4kXYynsz1G5lr",
+      "previewUrl": "https://p.scdn.co/mp3-preview/49c4fbe9e6095e1dd8e1fecd680313862507d793",
+      "rotated": true
+    },
+    "mean": {
+      "title": "Mean girls",
+      "artist": "Charli xcx",
+      "releaseYear": 0,
+      "cover": "https://github.com/JaydenzKoci/song-projects/blob/main/Images/brat.png?raw=true",
+      "bpm": null,
+      "duration": "0m 00s",
+      "difficulties": {
+        "vocals": -1,
+        "guitar": -1,
+        "bass": -1,
+        "drums": -1,
+        "plastic-bass": -1,
+        "plastic-drums": -1,
+        "plastic-guitar": -1
+      },
+      "createdAt": "2000-01-01T08:00:00.000Z",
+      "lastFeatured": "TBA",
+      "complete": "0% Complete",
+      "videoUrl": "rewind.mp4",
+      "videoPosition": "50",
+      "spotify": "1qKCO2Tocwg8CbepJ9uDtd",
+      "previewUrl": "https://p.scdn.co/mp3-preview/20224e86d963a79f56461f92503dd4196d9842fb",
+      "rotated": true
+    },
+    "omg": {
+      "title": "OMG What's Happening",
+      "artist": "Ava Max",
+      "releaseYear": "0",
+      "cover": "https://github.com/JaydenzKoci/song-projects/blob/main/Images/HeavenandHell.png?raw=true",
+      "bpm": 0,
+      "duration": "0m 00s",
+      "difficulties": {
+        "vocals": -1,
+        "guitar": -1,
+        "bass": -1,
+        "drums": -1,
+        "plastic-bass": -1,
+        "plastic-drums": -1,
+        "plastic-guitar": -1
+      },
+      "createdAt": "2000-01-01T08:00:00.000Z",
+      "lastFeatured": "TBA",
+      "complete": "0% Complete",
+      "videoUrl": "OMGWhat'sHappening.mp4",
+      "videoPosition": "20",
+      "spotify": "11OPriDpmUrTMTji52ta17",
+      "previewUrl": "https://p.scdn.co/mp3-preview/8530f3253ccd89b21740c20a1fc64ed95731922a",
+      "rotated": true
+    },
+    "christmas": {
+      "title": "Christmas Without You",
+      "artist": "Ava Max",
+      "releaseYear": "0",
+      "cover": "https://github.com/JaydenzKoci/song-projects/blob/main/Images/ChristmasWithoutYou.png?raw=true",
+      "bpm": 0,
+      "duration": "0m 00s",
+      "difficulties": {
+        "vocals": -1,
+        "guitar": -1,
+        "bass": -1,
+        "drums": -1,
+        "plastic-bass": -1,
+        "plastic-drums": -1,
+        "plastic-guitar": -1
+      },
+      "createdAt": "2000-01-01T08:00:00.000Z",
+      "lastFeatured": "TBA",
+      "complete": "0% Complete",
+      "videoUrl": "ChristmasWithoutYou.mp4",
+      "videoPosition": "20",
+      "spotify": "1QLZKzC2pjP4ySf4ALrNhm",
+      "previewUrl": "https://p.scdn.co/mp3-preview/b4ec58f6d40670ed041d8be4fe5577632a3efe57",
+      "rotated": true
+    },
+    "season": {
+      "title": "Training Season",
+      "artist": "Dua Lipa",
+      "releaseYear": "0",
+      "cover": "https://github.com/JaydenzKoci/song-projects/blob/main/Images/FutureNostagia.png?raw=true",
+      "bpm": 0,
+      "duration": "0m 00s",
+      "difficulties": {
+        "vocals": -1,
+        "guitar": -1,
+        "bass": -1,
+        "drums": -1,
+        "plastic-bass": -1,
+        "plastic-drums": -1,
+        "plastic-guitar": -1
+      },
+      "createdAt": "2000-01-01T08:00:00.000Z",
+      "lastFeatured": "TBA",
+      "complete": "0% Complete",
+      "videoUrl": "TrainingSeason.mp4",
+      "videoPosition": "20",
+      "spotify": "5b5cPscqVEMChvDqscVw26",
+      "previewUrl": "https://p.scdn.co/mp3-preview/5608f578347ae26c20bfebbad47a057eca7b3d5a",
+      "rotated": true
+    },
+    "illusion": {
+      "title": "Illusion",
+      "artist": "Dua Lipa",
+      "releaseYear": "0",
+      "cover": "https://github.com/JaydenzKoci/song-projects/blob/main/Images/FutureNostagia.png?raw=true",
+      "bpm": 0,
+      "duration": "0m 00s",
+      "difficulties": {
+        "vocals": -1,
+        "guitar": -1,
+        "bass": -1,
+        "drums": -1,
+        "plastic-bass": -1,
+        "plastic-drums": -1,
+        "plastic-guitar": -1
+      },
+      "createdAt": "2000-01-01T08:00:00.000Z",
+      "lastFeatured": "TBA",
+      "complete": "0% Complete",
+      "videoUrl": "Illusion.mp4",
+      "videoPosition": "5",
+      "spotify": "5q0EXnBYyeCdXD72FzJxH0",
+      "previewUrl": "https://p.scdn.co/mp3-preview/6b05342e38bc2061ae57abc45c1a3832bf3d7ac7",
+      "rotated": true
+    }
   }
-}
