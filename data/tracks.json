@@ -784,6 +784,7 @@
     "spotify": "5c9tBmJKbTdn1vhzXHeAwW",
     "videoUrl": "sympathyisaknife.mp4",
     "videoPosition": 30,
+    "videoZoom": 1.5,
     "previewUrl": "https://p.scdn.co/mp3-preview/1a782e33f0c910129167914a89fc7b53edc52264",
     "rotated": true
   },
@@ -883,6 +884,7 @@
     "spotify": "4y3g40TWe7fCWCayJZuGvw",
     "videoUrl": "goodingoodbye.mp4",
     "videoPosition": 50,
+    "videoZoom": 1.1,
     "complete": "0% Complete",
     "previewUrl": "https://p.scdn.co/mp3-preview/6498f9b96b03bccdee0496c309770676c744fe57",
     "rotated": true
@@ -959,6 +961,7 @@
     "complete": "0% Complete",
     "videoUrl": "whistle.mp4",
     "videoPosition": 45,
+    "videoZoom": 1.1,
     "previewUrl": "https://p.scdn.co/mp3-preview/ea7012e8d63798a9bd4ec40e566cb81c5955d18f",
     "rotated": true
   },
@@ -1234,6 +1237,7 @@
     "complete": "0% Complete",
     "videoUrl": "real.mp4",
     "videoPosition": 35,
+    "videoZoom": 1.2,
     "previewUrl": "https://p.scdn.co/mp3-preview/92dc1b33bfdc2c927fbc95e53a8742038ddf8998",
     "rotated": true
   },
@@ -1259,6 +1263,7 @@
     "complete": "0% Complete",
     "videoUrl": "intro.mp4",
     "videoPosition": 35,
+    "videoZoom": 1.2,
     "previewUrl": "https://p.scdn.co/mp3-preview/61c4bb05d7c0eb3af01ec7b2c2699ebd4c5c7bb4",
     "rotated": true
   },
@@ -1284,6 +1289,7 @@
     "complete": "0% Complete",
     "videoUrl": "intro2.mp4",
     "videoPosition": 35,
+    "videoZoom": 1.2,
     "previewUrl": "https://p.scdn.co/mp3-preview/301025a29efea2008eb11438e16a5cb79f43d16e",
     "rotated": true
   },
@@ -1309,6 +1315,7 @@
     "complete": "0% Complete",
     "videoUrl": "intro3.mp4",
     "videoPosition": 35,
+    "videoZoom": 1.2,
     "previewUrl": "https://p.scdn.co/mp3-preview/bf90fcfe66c0843e2e567d4b4dc343727f8d160a",
     "rotated": true
   },
@@ -1689,6 +1696,7 @@
     "spotify": "2uNrsZLJloillM1kbzxgmn",
     "videoUrl": "throwawayyourmask.mp4",
     "videoPosition": 20,
+    "videoZoom": 1.2,
     "complete": "0% Complete",
     "previewUrl": "https://p.scdn.co/mp3-preview/af21fc38c1651961bde204232cadac4e08703b3a",
     "rotated": true
@@ -1790,6 +1798,7 @@
     "spotify": "1l0wPhFZP1kWkZNQrrYrGy",
     "videoUrl": "hopealbum.mp4",
     "videoPosition": 70,
+    "videoZoom": 1.8,
     "previewUrl": "https://p.scdn.co/mp3-preview/bdc34ee6c5e5553aafd06fe1b1946a984c918872",
     "rotated": true
   },
@@ -1815,6 +1824,7 @@
     "spotify": "0fLGrGCrbziOu3dnjQMCWS",
     "videoUrl": "hopealbum.mp4",
     "videoPosition": 70,
+    "videoZoom": 1.8,
     "previewUrl": "https://p.scdn.co/mp3-preview/7f71547d1a4c2567c76cb9614f103dbad22d8462",
     "rotated": true
   },
@@ -1840,6 +1850,7 @@
     "spotify": "7FET9gtiECWn7llt0sfvtU",
     "videoUrl": "hopealbum.mp4",
     "videoPosition": 70,
+    "videoZoom": 1.8,
     "previewUrl": "https://p.scdn.co/mp3-preview/b2e9fc97cbf25827c75413922fa55ae9266b8a45",
     "rotated": true
   },
@@ -2013,6 +2024,7 @@
     "spotify": "3wFM8TWbbkwPuB6TyqpVDv",
     "videoUrl": "milliondollarbaby.mp4",
     "complete": "0% Complete",
+    "videoZoom": 1.1,
     "previewUrl": "https://p.scdn.co/mp3-preview/251648c230dcc2f3d96524f8f366d177c605f4cb",
     "rotated": true
   },
@@ -2236,6 +2248,7 @@
     "spotify": "5pNFibJLq7dvoDVIIcQBkn",
     "videoUrl": "hotinit.mp4",
     "videoPosition": 35,
+    "videoZoom": 1.1,
     "previewUrl": "https://p.scdn.co/mp3-preview/e0deb5ab5c14c3fdc54fb8aea726ece21d8229ef",
     "rotated": true
   },
@@ -2286,6 +2299,7 @@
     "spotify": "6bPPyigCphBBQ9781j6eKM",
     "videoUrl": "colors.mp4",
     "videoPosition": 65,
+    "videoZoom": 1.33,
     "previewUrl": "https://p.scdn.co/mp3-preview/86fce40a7cfba2813ca702a134e45d608d1529b6",
     "rotated": true
   },
@@ -2363,6 +2377,7 @@
     "download": "https://github.com/JaydenzKoci/song-projects/raw/refs/heads/main/Songs/Leah%20Kate%20-%20What%20Girls%20Do.zip",
     "spotify": "5j73CgpZczAjhn5zf4t1FC",
     "previewUrl": "https://p.scdn.co/mp3-preview/d17f02cb04675093545a20e5b3c40bb48bce82e7",
+    "loading_phrase": "That's What Girls Do",
     "featured": true,
     "new": true,
     "youtubeLinks": {
@@ -2467,6 +2482,7 @@
     "lastFeatured": "TBA",
     "complete": "0% Complete",
     "videoUrl": "hypnoticdata.mp4",
+    "videoZoom": 1.3,
     "spotify": "1Ll2L0m2QznnoJI9xRN5MP",
     "previewUrl": "https://p.scdn.co/mp3-preview/00721c1e0c9a6532e42282af3ac01c7de2e8ec60",
     "rotated": true
@@ -2712,6 +2728,7 @@
     "lastFeatured": "TBA",
     "complete": "0% Complete",
     "videoUrl": "whoslaughingnow.mp4",
+    "videoZoom": 1.2,
     "spotify": "1Pmp486RrLRkaEkE3HFHXP",
     "previewUrl": "https://p.scdn.co/mp3-preview/6eea8e5de2336c0cf662260d377f4b33044c2add",
     "rotated": true
@@ -2860,7 +2877,7 @@
     "lastFeatured": "TBA",
     "complete": "0% Complete",
     "videoUrl": "culgary.mp4",
-    "videoPosition": 35,
+    "videoPosition": 55,
     "spotify": "01BDK4Skxzh5mqnTbQzWGy",
     "previewUrl": "https://p.scdn.co/mp3-preview/9acafe7b94bea484f7b86b5c11a5a44095b192b6",
     "rotated": true
@@ -2910,6 +2927,7 @@
     "lastFeatured": "TBA",
     "complete": "0% Complete",
     "videoUrl": "sympathyisaknife.mp4",
+    "videoZoom": 1.5,
     "spotify": "4wTvw1dBiPXNiHTh0zzpcI",
     "previewUrl": "https://p.scdn.co/mp3-preview/5dc202f078d5351424ca63c2d0751031f1106ba8",
     "rotated": true
@@ -3059,6 +3077,7 @@
     "complete": "0% Complete",
     "videoUrl": "dontstartnow.mp4",
     "videoPosition": "30",
+    "videoZoom": 1.25,
     "spotify": "3PfIrDoz19wz7qK7tYeu62",
     "previewUrl": "https://p.scdn.co/mp3-preview/cfc6684fc467e40bb9c7e6da2ea1b22eeccb211c",
     "rotated": true
@@ -3084,6 +3103,7 @@
     "complete": "0% Complete",
     "videoUrl": "rewind.mp4",
     "videoPosition": "40",
+    "videoZoom": 1.25,
     "spotify": "7srqyRb5plksW5k65itXDB",
     "previewUrl": "https://p.scdn.co/mp3-preview/ffd0ced326c69928a67d9f053616fdd4cd884e9f",
     "rotated": true
@@ -3232,7 +3252,7 @@
       "lastFeatured": "TBA",
       "complete": "0% Complete",
       "videoUrl": "1wish.mp4",
-      "videoPosition": "20",
+      "videoPosition": "30",
       "spotify": "1knrvScmRb6ZCPPsBzDHcy",
       "previewUrl": "https://p.scdn.co/mp3-preview/8d78c2c3f1071a3a3b2877c09d1d62b0e6d5354f",
       "rotated": true

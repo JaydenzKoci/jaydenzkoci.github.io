@@ -707,7 +707,7 @@ main {
 }
 
 .modal-body {
-    margin-top: 50px;
+    margin-top: 210px;
 }
 .modal-details {
     padding: 15px;
@@ -774,6 +774,7 @@ main {
     margin-right: 5px;
     border-radius: 2px;
 }
+
 .active { background-color: white !important; }
 
 .filter-wrapper {
@@ -1103,7 +1104,7 @@ body.video-popup-open {
 .video-sidebar .track-cover {
     width: 300px;
     height: 300px;
-    border-radius: 4px;
+    border-radius: 10px;
     margin-bottom: 10px;
     object-fit: cover;
 }
@@ -1277,3 +1278,19 @@ body.video-popup-open {
 .modal {
     z-index: 1000;
 }
+.modal-loading-phrase {
+    margin-top: 1rem;
+    padding: 0.5rem;
+    border-top: 1px solid #cccccc00;
+    font-size: 0.8rem;
+    color: #ffffffbd;
+  }
+  
+  .modal-updated-phrase p {
+    margin: 0;
+  }
+  
+  .jam-track {
+    pointer-events: auto !important;
+  }
+  
