@@ -375,7 +375,7 @@ document.addEventListener('DOMContentLoaded', () => {
             loadingPhraseElement.classList.add('modal-loading-phrase');
             modalContent.appendChild(loadingPhraseElement);
           }
-          loadingPhraseElement.innerHTML = `<p><strong>Loading Phrase:</strong> ${loading_phrase || 'Not available'}</p>`;
+          loadingPhraseElement.innerHTML = `<p><strong></strong> ${loading_phrase || 'Not available'}</p>`;
     
           elements.modal.style.display = 'block';
           document.body.classList.add('modal-open');

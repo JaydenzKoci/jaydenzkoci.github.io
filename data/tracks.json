@@ -22,6 +22,7 @@
     "spotify": "1zzInolpjazY7AzzJKGy0L",
     "videoUrl": "unsure.mp4",
     "videoPosition": 30,
+    "loading_phrase": "I am just a dreamer chasing something more",
     "previewUrl": "https://p.scdn.co/mp3-preview/0fa590f4f9fb1c7d852ede53de59699a219a2d52",
     "download": "https://github.com/JaydenzKoci/song-projects/raw/refs/heads/main/Songs/Alan%20Walker%20-%20Unsure.zip",
     "new": true
@@ -47,6 +48,7 @@
     "complete": "25% Complete",
     "spotify": "1svpo8ORIHy4BdgicdyUjx",
     "videoUrl": "spotafake.mp4",
+    "loading_phrase": "Don't say I didn't warn ya. So Fake, So California",
     "download": "https://github.com/JaydenzKoci/song-projects/raw/refs/heads/main/Songs/Ava%20Max%20-%20Spot%20a%20Fake.zip",
     "previewUrl": "https://p.scdn.co/mp3-preview/f2fb7a2b1f0a602d0fa21194bdf2780a178c1450",
     "new": true
@@ -72,6 +74,7 @@
     "complete": "10% Complete",
     "spotify": "4j5vH33ipS1ulVxbwtYkpm",
     "videoUrl": "lostyourfaith.mp4",
+    "loading_phrase": "But I'm afraid we're at the point there's nothin' left to save",
     "videoPosition": 45,
     "download": "https://github.com/JaydenzKoci/song-projects/raw/refs/heads/main/Songs/Ava%20Max%20-%20Lost%20Your%20Faith.zip",
     "previewUrl": "https://p.scdn.co/mp3-preview/3564f9445e53690decad7b57d5b6c18f6b712f4a",
@@ -102,6 +105,7 @@
     "download": "https://github.com/JaydenzKoci/song-projects/raw/refs/heads/main/Songs/David%20Guetta%20-%20Forever%20Young.zip",
     "previewUrl": "https://p.scdn.co/mp3-preview/a47b1ab8552acc16146597026a45aa53806dbd1f",
     "new": true,
+    "loading_phrase": "Do you really want to live forever?",
     "youtubeLinks": {
       "vocals": "",
       "lead": "https://youtu.be/TadAG7dgEdY",
@@ -131,6 +135,7 @@
     "spotify": "7ElF5zxOwYP4qVSWVvse3W",
     "videoUrl": "breakyourheart.mp4",
     "videoPosition": 20,
+    "loading_phrase": "I know Karma's gonna get me back for being so cold",
     "download": "https://github.com/JaydenzKoci/song-projects/raw/refs/heads/main/Songs/Taio%20Cruz%20-%20Break%20Your%20Heart.zip",
     "previewUrl": "https://p.scdn.co/mp3-preview/c6363106816b05ddd83a0467c0e17591ecafcadd",
     "new": true
@@ -354,6 +359,7 @@
     "complete": "10% Complete",
     "spotify": "1KixkQVDUHggZMU9dUobgm",
     "videoUrl": "myheadandmyheart.mp4",
+    "loading_phrase": "My mind's got a ma-ma-mind of its own right now",
     "videoPosition": 25,
     "download": "https://github.com/JaydenzKoci/song-projects/raw/refs/heads/main/Songs/Ava%20Max%20-%20My%20Head%20&%20My%20Heart.zip",
     "previewUrl": "https://p.scdn.co/mp3-preview/60f31c477e494d379c3eb8e6ff15d8007d0cbe0b",
@@ -430,6 +436,7 @@
     "spotify": "12cZWGf5ZgLcKubEW9mx5q",
     "videoUrl": "hope.mp4",
     "videoPosition": 35,
+    "loading_phrase": "It's believing in yourself when no one else does, it's amazing",
     "complete": "5% Complete",
     "previewUrl": "https://p.scdn.co/mp3-preview/664126639bda259bb7e5bf47989f50f023298575",
     "rotated": true,
@@ -628,6 +635,7 @@
     "spotify": "6RGVgepzeIBgl4iFQyTayh",
     "videoUrl": "exes.mp4",
     "videoPosition": 40,
+    "loading_phrase": "Changed my mind up like it's origami",
     "download": "https://github.com/JaydenzKoci/song-projects/raw/refs/heads/main/Songs/Tate%20McRae%20-%20exes.zip",
     "previewUrl": "https://p.scdn.co/mp3-preview/9f2e1821dfa9781d4e594b3e85ffc90c4f5cc089",
     "new": true,
@@ -733,6 +741,7 @@
     "complete": "10% Complete",
     "spotify": "0LMwmV37RCmBO2so0szAFs",
     "videoUrl": "whatever.mp4",
+    "loading_phrase": "I'll be here and you stay there",
     "download": "https://github.com/JaydenzKoci/song-projects/raw/refs/heads/main/Songs/Kygo%20-%20Whatever.zip",
     "previewUrl": "https://p.scdn.co/mp3-preview/03bbf447d8f0101cff90c78b3ab0c4757c3bf27b",
     "new": true
@@ -1012,6 +1021,7 @@
     "complete": "10% Complete",
     "videoUrl": "sexychick.mp4",
     "videoPosition": 25,
+    "loading_phrase": "Oh, she's a diva, I feel the same and I wanna meet her",
     "download": "https://github.com/JaydenzKoci/song-projects/raw/refs/heads/main/Songs/David%20Guetta%20-%20Sexy%20Chick.zip",
     "previewUrl": "https://p.scdn.co/mp3-preview/857b312ba89079f65a60491247ce2dc5f01ab70b",
     "new": true
@@ -1394,6 +1404,7 @@
     "download": "https://github.com/JaydenzKoci/song-projects/raw/refs/heads/main/Songs/Alok%20-%20Car%20Keys%20(Ayla).zip",
     "new": true,
     "featured": true,
+    "loading_phrase": "If you lose me then, baby, good luck",
     "youtubeLinks": {
       "vocals": "",
       "lead": "https://youtu.be/EvKfc9Mef4Y",
@@ -1645,6 +1656,7 @@
     "spotify": "4Rd5l7mIiV0V35AhxHV1oh",
     "videoUrl": "monody.mp4",
     "videoPosition": 60,
+    "loading_phrase": "Holding on, memories never change",
     "complete": "5% Complete",
     "previewUrl": "https://p.scdn.co/mp3-preview/25b902df4aa6f5a95ef5f4a31795b9c13c434816",
     "rotated": true,
@@ -2248,7 +2260,7 @@
     "spotify": "5pNFibJLq7dvoDVIIcQBkn",
     "videoUrl": "hotinit.mp4",
     "videoPosition": 35,
-    "videoZoom": 1.1,
+    "videoZoom": 1.15,
     "previewUrl": "https://p.scdn.co/mp3-preview/e0deb5ab5c14c3fdc54fb8aea726ece21d8229ef",
     "rotated": true
   },
@@ -2377,7 +2389,7 @@
     "download": "https://github.com/JaydenzKoci/song-projects/raw/refs/heads/main/Songs/Leah%20Kate%20-%20What%20Girls%20Do.zip",
     "spotify": "5j73CgpZczAjhn5zf4t1FC",
     "previewUrl": "https://p.scdn.co/mp3-preview/d17f02cb04675093545a20e5b3c40bb48bce82e7",
-    "loading_phrase": "That's What Girls Do",
+    "loading_phrase": "That's what, that's what girls do",
     "featured": true,
     "new": true,
     "youtubeLinks": {
