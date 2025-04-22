@@ -31,10 +31,12 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // State
   let state = {
-    fadeInAudioEnabled: localStorage.getItem('fadeInAudioEnabled') === 'true',
+    fadeInAudioEnabled: localStorage.getItem('fadeInAudioEnabled') !== 'false', 
     preloadAssetsEnabled: localStorage.getItem('preloadAssetsEnabled') === 'true',
     gridSize: localStorage.getItem('gridSize') || '4',
     isMuted: localStorage.getItem('isMuted') === 'true',
+    textGlowEnabled: localStorage.getItem('textGlowEnabled') !== 'false', 
+    modalGlowEnabled: localStorage.getItem('modalGlowEnabled') !== 'false',
     tracksData: [],
     currentFilteredTracks: [],
     loadedTracks: 0,
@@ -47,6 +49,7 @@ document.addEventListener('DOMContentLoaded', () => {
     fadeInRequestId: null,
     tracksPerPage: 10,
     initialLoad: 50,
+    touchStartX: 0,
   };
 
   const audio = new Audio();
@@ -91,6 +94,27 @@ document.addEventListener('DOMContentLoaded', () => {
       const minutes = parseInt(match[1], 10) || 0;
       const seconds = parseInt(match[2], 10) || 0;
       return minutes * 60 + seconds;
+    },
+    isValidColor: (color) => {
+      if (!color) return false;
+      const s = new Option().style;
+      s.color = color;
+      return s.color !== '';
+    },
+    hexToRgb: (hex) => {
+      if (!hex) return '0, 0, 0';
+      hex = hex.replace(/^#/, '');
+      if (hex.length === 3) {
+        hex = hex.split('').map(c => c + c).join('');
+      }
+      const bigint = parseInt(hex, 16);
+      const r = (bigint >> 16) & 255;
+      const g = (bigint >> 8) & 255;
+      const b = bigint & 255;
+      return `${r}, ${g}, ${b}`;
+    },
+    rgbToRgba: (rgb, opacity) => {
+      return `rgba(${rgb}, ${opacity})`;
     },
   };
 
@@ -140,22 +164,29 @@ document.addEventListener('DOMContentLoaded', () => {
         audio.load();
       }
       if (!state.isMuted && elements.videoPopup.style.display !== 'block') {
-        audio
-          .play()
-          .then(() => {
-            console.log('Audio playing:', previewUrl);
-            if (state.fadeInAudioEnabled) {
-              audioModule.fadeInAudio(audio, 0.25, 3000);
-            } else {
-              audio.volume = 0.25;
-            }
-          })
-          .catch((error) => {
-            console.error('Audio playback failed:', error);
-            if (utils.isMobile()) {
-              console.log('Mobile device detected; audio may require interaction');
-            }
-          });
+        const playPromise = audio.play();
+        if (playPromise !== undefined) {
+          playPromise
+            .then(() => {
+              console.log('Audio playing:', previewUrl);
+              if (state.fadeInAudioEnabled) {
+                audioModule.fadeInAudio(audio, 0.25, 3000);
+              } else {
+                audio.volume = 0.25;
+              }
+            })
+            .catch((error) => {
+              console.error('Audio playback failed:', error);
+              if (utils.isMobile()) {
+                console.log('Mobile device detected; audio requires user interaction');
+                elements.content.insertAdjacentHTML(
+                  'beforebegin',
+                  '<div class="audio-notice">Tap a track to enable audio playback</div>'
+                );
+                setTimeout(() => document.querySelector('.audio-notice')?.remove(), 3000);
+              }
+            });
+        }
       }
     },
     toggleMute: () => {
@@ -189,7 +220,7 @@ document.addEventListener('DOMContentLoaded', () => {
         return;
       }
       elements.preloadIndicator?.classList.add('active');
-      const maxPreload = 200;
+      const maxPreload = utils.isMobile() ? 50 : 200;
       const tracksToPreload = tracks.slice(0, maxPreload);
       let loadedCount = 0;
       const totalAssets = tracksToPreload.reduce(
@@ -294,6 +325,16 @@ document.addEventListener('DOMContentLoaded', () => {
         activeSpan?.classList.add('active');
         document.documentElement.style.setProperty('--grid-size', state.gridSize);
       }
+      const textGlowItem = elements.settingsMenu.querySelector('li[data-setting="text-glow"]');
+      if (textGlowItem) {
+        textGlowItem.textContent = `Text Glow: ${state.textGlowEnabled ? 'On' : 'Off'}`;
+        textGlowItem.setAttribute('aria-checked', state.textGlowEnabled);
+      }
+      const modalGlowItem = elements.settingsMenu.querySelector('li[data-setting="modal-glow"]');
+      if (modalGlowItem) {
+        modalGlowItem.textContent = `Track Glow: ${state.modalGlowEnabled ? 'On' : 'Off'}`;
+        modalGlowItem.setAttribute('aria-checked', state.modalGlowEnabled);
+      }
     },
     updateTodoListUI: () => {
       if (!elements.todoList) {
@@ -338,9 +379,49 @@ document.addEventListener('DOMContentLoaded', () => {
       modalModule.renderModal(track);
     },
     renderModal: (track) => {
-      const { title, artist, releaseYear, cover, duration, complete, difficulties, bpm, createdAt, lastFeatured, previewUrl, download, videoUrl, videoPosition, key, youtubeLinks, loading_phrase, videoZoom, glowTimes } = track;
+      const { title, artist, releaseYear, cover, duration, complete, difficulties, bpm, createdAt, lastFeatured, previewUrl, download, videoUrl, videoPosition, key, youtubeLinks, loading_phrase, videoZoom, glowTimes, modalShadowColors } = track;
       const positionPercent = videoPosition ?? 50;
       const modalContent = elements.modal.querySelector('.modal-content');
+
+      modalContent.style.boxShadow = '';
+      modalContent.style.transition = 'box-shadow 0.3s ease';
+      modalContent.removeEventListener('mouseenter', modalModule.handleMouseEnter);
+      modalContent.removeEventListener('mouseleave', modalModule.handleMouseLeave);
+      modalContent.removeEventListener('touchstart', modalModule.handleTouchStart);
+      modalContent.removeEventListener('touchend', modalModule.handleTouchEnd);
+
+      let defaultShadow = '0 0 50px rgba(255, 255, 255, 0.52), 0 0 100px rgba(255, 255, 255, 0.49)';
+      let glowShadow = '0 0 60px rgb(255, 255, 255), 0 0 120px rgb(255, 255, 255)';
+
+      if (modalShadowColors && modalShadowColors.default && modalShadowColors.hover) {
+        const { default: defaultColors, hover: hoverColors } = modalShadowColors;
+        const isValidDefault = defaultColors.color1 && defaultColors.color2 &&
+                              utils.isValidColor(defaultColors.color1) && utils.isValidColor(defaultColors.color2);
+        const isValidHover = hoverColors.color1 && hoverColors.color2 &&
+                             utils.isValidColor(hoverColors.color1) && utils.isValidColor(hoverColors.color2);
+
+        if (isValidDefault) {
+          defaultShadow = `0 0 50px ${utils.rgbToRgba(utils.hexToRgb(defaultColors.color1), 0.3)}, 0 0 100px ${utils.rgbToRgba(utils.hexToRgb(defaultColors.color2), 0.2)}`;
+        } else {
+          console.warn(`Invalid default modalShadowColors for ${track.title}:`, defaultColors);
+        }
+        if (isValidHover) {
+          glowShadow = `0 0 60px ${utils.rgbToRgba(utils.hexToRgb(hoverColors.color1), 0.5)}, 0 0 120px ${utils.rgbToRgba(utils.hexToRgb(hoverColors.color2), 0.4)}`;
+        } else {
+          console.warn(`Invalid hover modalShadowColors for ${track.title}:`, hoverColors);
+        }
+      }
+
+      modalContent.style.boxShadow = defaultShadow;
+
+      if (utils.isMobile()) {
+        modalContent.style.width = '95%';
+        modalContent.style.maxWidth = '400px';
+      } else {
+        modalContent.style.width = '50%';
+        modalContent.style.maxWidth = '500px';
+      }
+
       modalContent.querySelector('.modal-video')?.remove();
       modalContent.classList.remove('no-video');
 
@@ -358,14 +439,14 @@ document.addEventListener('DOMContentLoaded', () => {
       }
       loadingPhraseElement.innerHTML = `<p><strong></strong> ${loading_phrase || 'Not available'}</p>`;
 
-      if (glowTimes && Array.isArray(glowTimes) && glowTimes.length > 0 && previewUrl) {
+      if (state.textGlowEnabled && glowTimes && Array.isArray(glowTimes) && glowTimes.length > 0 && previewUrl) {
         const applyGlowEffect = () => {
           if (!audio.paused && !state.isMuted && elements.videoPopup.style.display !== 'block') {
             const currentTime = audio.currentTime % audio.duration;
             glowTimes.forEach((glowTime) => {
               if (Math.abs(currentTime - glowTime) < 0.1 && !loadingPhraseElement.classList.contains('glow')) {
                 loadingPhraseElement.classList.add('glow');
-                console.log(`Glow triggered at ${currentTime}s for ${glowTime}s`);
+                console.log(`Text glow triggered at ${currentTime}s for ${glowTime}s`);
                 const timeout = setTimeout(() => {
                   loadingPhraseElement.classList.remove('glow');
                 }, 2000);
@@ -386,6 +467,30 @@ document.addEventListener('DOMContentLoaded', () => {
         };
         audio.addEventListener('play', modalModule.handleAudioPlay);
         audio.addEventListener('pause', modalModule.stopGlowInterval);
+      }
+
+      if (state.modalGlowEnabled) {
+        modalModule.handleMouseEnter = () => {
+          modalContent.style.boxShadow = glowShadow;
+          console.log(`Modal glow triggered on hover for ${track.title}`);
+        };
+        modalModule.handleMouseLeave = () => {
+          modalContent.style.boxShadow = defaultShadow;
+          console.log(`Modal glow removed on hover leave for ${track.title}`);
+        };
+        modalModule.handleTouchStart = (e) => {
+          e.preventDefault(); 
+          modalContent.style.boxShadow = glowShadow;
+          console.log(`Modal glow triggered on touch for ${track.title}`);
+        };
+        modalModule.handleTouchEnd = () => {
+          modalContent.style.boxShadow = defaultShadow;
+          console.log(`Modal glow removed on touch end for ${track.title}`);
+        };
+        modalContent.addEventListener('mouseenter', modalModule.handleMouseEnter);
+        modalContent.addEventListener('mouseleave', modalModule.handleMouseLeave);
+        modalContent.addEventListener('touchstart', modalModule.handleTouchStart, { passive: false });
+        modalContent.addEventListener('touchend', modalModule.handleTouchEnd);
       }
 
       if (previewUrl) audioModule.playPreview(previewUrl);
@@ -444,9 +549,10 @@ document.addEventListener('DOMContentLoaded', () => {
         const instrument = item.getAttribute('data-instrument');
         const youtubeUrl = youtubeLinks?.[instrument];
         item.style.display = youtubeUrl ? 'block' : 'none';
-        item.onclick = () => {
+        item.onclick = (event) => {
+          event.preventDefault(); 
           if (youtubeUrl) {
-            videoModule.openVideoPopup(track, youtubeUrl);
+            videoModule.openVideoPopup(track, youtubeUrl, instrument);
             elements.videoMenu.style.display = 'none';
             elements.videoMenuButton.setAttribute('aria-expanded', 'false');
           }
@@ -461,6 +567,13 @@ document.addEventListener('DOMContentLoaded', () => {
       state.currentPreviewUrl = '';
       uiModule.updateDownloadButton('');
       modalModule.stopGlowInterval();
+      const modalContent = elements.modal.querySelector('.modal-content');
+      if (modalContent) {
+        modalContent.removeEventListener('mouseenter', modalModule.handleMouseEnter);
+        modalContent.removeEventListener('mouseleave', modalModule.handleMouseLeave);
+        modalContent.removeEventListener('touchstart', modalModule.handleTouchStart);
+        modalContent.removeEventListener('touchend', modalModule.handleTouchEnd);
+      }
     },
     navigateModal: (direction) => {
       const newIndex = state.currentTrackIndex + direction;
@@ -480,6 +593,10 @@ document.addEventListener('DOMContentLoaded', () => {
     glowTimeouts: [],
     glowInterval: null,
     handleAudioPlay: null,
+    handleMouseEnter: null,
+    handleMouseLeave: null,
+    handleTouchStart: null,
+    handleTouchEnd: null,
     startGlowInterval: (applyGlowEffect) => {
       if (!modalModule.glowInterval) {
         modalModule.glowInterval = setInterval(() => {
@@ -500,7 +617,10 @@ document.addEventListener('DOMContentLoaded', () => {
       if (loadingPhraseElement) {
         loadingPhraseElement.classList.remove('glow');
       }
-
+      const modalContent = elements.modal.querySelector('.modal-content');
+      if (modalContent) {
+        modalContent.style.boxShadow = modalContent.style.boxShadow || '0 0 50px rgba(0, 255, 255, 0.3), 0 0 100px rgba(255, 0, 255, 0.2)';
+      }
       if (modalModule.handleAudioPlay) {
         audio.removeEventListener('play', modalModule.handleAudioPlay);
         modalModule.handleAudioPlay = null;
@@ -511,9 +631,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // Video Popup
   const videoModule = {
-    openVideoPopup: (track, youtubeUrl) => {
+    openVideoPopup: (track, youtubeUrl, instrument) => {
       state.currentTrack = track;
       const videoId = youtubeUrl.match(/(?:youtu\.be\/|youtube\.com\/(?:watch\?v=|embed\/))([^&?]+)/)?.[1];
+
       if (!audio.paused || state.currentPreviewUrl) {
         state.isMuted = true;
         audio.muted = true;
@@ -522,17 +643,41 @@ document.addEventListener('DOMContentLoaded', () => {
         uiModule.updateMuteIcon();
         modalModule.stopGlowInterval();
       }
+
       if (track.previewUrl && !state.currentPreviewUrl) {
         state.currentPreviewUrl = track.previewUrl;
       }
+
+      const videoPopupContent = elements.videoPopup.querySelector('.video-popup-content');
+      const videoSidebar = elements.videoPopup.querySelector('.video-sidebar');
+
+      if (utils.isMobile()) {
+        videoPopupContent.style.flexDirection = 'column';
+        videoPopupContent.style.width = '95%';
+        videoPopupContent.style.maxWidth = 'none';
+        if (videoSidebar) {
+          videoSidebar.style.width = '100%';
+          videoSidebar.style.padding = '20px';
+        }
+        elements.videoTrackCover.style.width = '100%';
+        elements.videoTrackCover.style.height = 'auto';
+      } else {
+        videoPopupContent.style.flexDirection = 'row';
+        videoPopupContent.style.width = '1280px';
+        videoPopupContent.style.maxWidth = '90%';
+        if (videoSidebar) {
+          videoSidebar.style.width = '400px';
+          videoSidebar.style.padding = '50px';
+        }
+        elements.videoTrackCover.style.width = '300px';
+        elements.videoTrackCover.style.height = '300px';
+      }
+
       elements.videoTrackCover.src = track.cover;
       elements.videoTrackTitle.textContent = track.title;
       elements.videoTrackArtist.textContent = track.artist;
       elements.videoTrackDuration.textContent = `${track.releaseYear} | ${track.duration}`;
-      const selectedInstrument = Object.keys(track.youtubeLinks || {}).find(
-        (instrument) => track.youtubeLinks[instrument] === youtubeUrl
-      ) || 'vocals';
-      videoModule.populateInstrumentList(track, selectedInstrument);
+      videoModule.populateInstrumentList(track, instrument);
 
       if (videoId && player) {
         player.loadVideoById(videoId);
@@ -579,6 +724,7 @@ document.addEventListener('DOMContentLoaded', () => {
     populateInstrumentList: (track, selectedInstrument) => {
       elements.instrumentList.innerHTML = '';
       const instruments = ['vocals', 'lead', 'bass', 'drums'];
+
       instruments.forEach((instrument) => {
         if (track.youtubeLinks?.[instrument]) {
           const li = document.createElement('li');
@@ -590,18 +736,42 @@ document.addEventListener('DOMContentLoaded', () => {
           li.addEventListener('click', () => {
             elements.instrumentList.querySelectorAll('li').forEach((item) => item.classList.remove('active'));
             li.classList.add('active');
+
             const youtubeUrl = track.youtubeLinks[instrument];
             const videoId = youtubeUrl.match(/(?:youtu\.be\/|youtube\.com\/(?:watch\?v=|embed\/))([^&?]+)/)?.[1];
-            if (videoId && player) {
-              player.loadVideoById(videoId);
-              player.mute();
-            } else if (videoId) {
-              elements.youtubeIframe.src = `https://www.youtube.com/embed/${videoId}?autoplay=1`;
+
+            if (videoId) {
+              if (player) {
+                player.loadVideoById(videoId);
+                player.mute();
+                console.log(`Loading YouTube video for ${instrument}: ${videoId}`);
+              } else {
+                elements.youtubeIframe.src = `https://www.youtube.com/embed/${videoId}?autoplay=1`;
+                console.log(`Fallback: Setting iframe src for ${instrument}: ${videoId}`);
+              }
+            } else {
+              console.error(`Invalid YouTube URL for ${instrument}: ${youtubeUrl}`);
+              elements.youtubeIframe.src = '';
+              elements.videoPopup.querySelector('.video-popup-content').innerHTML =
+                '<p>Invalid YouTube video URL</p>';
             }
           });
           elements.instrumentList.appendChild(li);
         }
       });
+
+      const initialYoutubeUrl = track.youtubeLinks[selectedInstrument];
+      const initialVideoId = initialYoutubeUrl?.match(/(?:youtu\.be\/|youtube\.com\/(?:watch\?v=|embed\/))([^&?]+)/)?.[1];
+      if (initialVideoId) {
+        if (player) {
+          player.loadVideoById(initialVideoId);
+          player.mute();
+        } else {
+          elements.youtubeIframe.src = `https://www.youtube.com/embed/${initialVideoId}?autoplay=1`;
+        }
+      } else {
+        console.error(`Invalid initial YouTube URL for ${selectedInstrument}: ${initialYoutubeUrl}`);
+      }
     },
   };
 
@@ -612,6 +782,13 @@ document.addEventListener('DOMContentLoaded', () => {
       tracks.forEach((track) => {
         const trackElement = document.createElement('div');
         trackElement.classList.add('jam-track');
+        trackElement.setAttribute('role', 'button');
+        trackElement.setAttribute('aria-label', `Open ${track.title} by ${track.artist}`);
+
+        if (track.borderColor && utils.isValidColor(track.borderColor)) {
+          trackElement.style.border = `2px solid ${track.borderColor}`;
+        }
+
         const loadingSpinner = document.createElement('div');
         loadingSpinner.className = 'loading-spinner';
         const img = new Image();
@@ -628,34 +805,17 @@ document.addEventListener('DOMContentLoaded', () => {
         trackElement.insertBefore(img, trackElement.firstChild);
         trackElement.appendChild(trackModule.generateLabels(track));
 
-        let touchTimer;
-        trackElement.addEventListener(
-          'touchstart',
-          (e) => {
-            e.preventDefault();
-            if (utils.isMobile()) {
-              touchTimer = setTimeout(() => modalModule.openModal(track), 500);
-            } else {
-              modalModule.openModal(track);
-            }
-          },
-          { passive: false }
-        );
-        trackElement.addEventListener('touchend', (e) => {
-          if (utils.isMobile()) {
-            clearTimeout(touchTimer);
-            trackElement.classList.toggle('mobile-highlight');
-            if (track.previewUrl) audioModule.playPreview(track.previewUrl);
-          }
-        });
         trackElement.addEventListener('click', (e) => {
-          if (!utils.isMobile()) modalModule.openModal(track);
+          e.preventDefault();
+          modalModule.openModal(track);
+          if (utils.isMobile() && track.previewUrl) {
+            audioModule.playPreview(track.previewUrl);
+            trackElement.classList.add('mobile-highlight');
+            setTimeout(() => trackElement.classList.remove('mobile-highlight'), 300);
+          }
         });
 
         elements.content.appendChild(trackElement);
-        if (utils.isMobile()) {
-          alert(`Selected: ${track.title} by ${track.artist}`);
-        }
       });
     },
     filterTracks: () => {
@@ -664,12 +824,11 @@ document.addEventListener('DOMContentLoaded', () => {
       const sortValue = elements.sortSelect.value;
 
       let sortBy = null;
-      let sortOrder = 'desc'; 
+      let sortOrder = 'desc';
       if (sortValue !== 'default') {
         [sortBy, sortOrder = 'desc'] = sortValue.split(':');
       }
 
-      // Filter tracks
       let filteredTracks = state.tracksData.filter(
         (track) =>
           (track.title.toLowerCase().includes(query) || track.artist.toLowerCase().includes(query)) &&
@@ -680,7 +839,6 @@ document.addEventListener('DOMContentLoaded', () => {
             (filterValue === 'finish' && track.finish))
       );
 
-      // Sort tracks
       filteredTracks.sort((a, b) => {
         if (sortBy === 'year') {
           const aYear = a.releaseYear || 0;
@@ -721,7 +879,6 @@ document.addEventListener('DOMContentLoaded', () => {
       }
       if (state.preloadAssetsEnabled) preloadModule.preloadAssets(filteredTracks);
 
-      // Update URL parameters
       const url = new URL(window.location);
       if (query) url.searchParams.set('q', query);
       else url.searchParams.delete('q');
@@ -737,6 +894,7 @@ document.addEventListener('DOMContentLoaded', () => {
       sentinel.className = 'sentinel';
       sentinel.style.height = '1px';
       elements.content.appendChild(sentinel);
+      state.tracksPerPage = utils.isMobile() ? 5 : 10;
       intersectionObserver = new IntersectionObserver((entries) => {
         if (
           entries[0].isIntersecting &&
@@ -827,6 +985,14 @@ document.addEventListener('DOMContentLoaded', () => {
             localStorage.setItem('preloadAssetsEnabled', state.preloadAssetsEnabled);
             uiModule.updateSettingsUI();
             if (state.preloadAssetsEnabled) preloadModule.preloadAssets(state.currentFilteredTracks);
+          } else if (setting === 'text-glow') {
+            state.textGlowEnabled = !state.textGlowEnabled;
+            localStorage.setItem('textGlowEnabled', state.textGlowEnabled);
+            uiModule.updateSettingsUI();
+          } else if (setting === 'modal-glow') {
+            state.modalGlowEnabled = !state.modalGlowEnabled;
+            localStorage.setItem('modalGlowEnabled', state.modalGlowEnabled);
+            uiModule.updateSettingsUI();
           } else if (setting === 'todo') {
             e.stopPropagation();
             todoModule.fetchTodoList();
@@ -863,7 +1029,7 @@ document.addEventListener('DOMContentLoaded', () => {
         state.sawUpdateMessage = false;
         nextUpdate.setUTCDate(nextUpdate.getUTCDate() + 1);
       }
-      elements.countdown.textContent = `Last Updated - 04/21/25`;
+      elements.countdown.textContent = `Last Updated - 04/22/25`;
     },
   };
 
@@ -905,11 +1071,10 @@ document.addEventListener('DOMContentLoaded', () => {
         }
       });
 
-      // Header Events
       elements.logo.addEventListener('click', () => (window.location.href = '/'));
       elements.searchInput.addEventListener('input', utils.debounce(trackModule.filterTracks, 300));
       elements.filterSelect.addEventListener('change', trackModule.filterTracks);
-      elements.sortSelect.addEventListener('change', trackModule.filterTracks); // Kept
+      elements.sortSelect.addEventListener('change', trackModule.filterTracks);
       elements.muteButton.addEventListener('click', audioModule.toggleMute);
       elements.downloadButton.addEventListener('click', () => {
         if (state.currentDownloadUrl) window.location.href = state.currentDownloadUrl;
@@ -969,6 +1134,15 @@ document.addEventListener('DOMContentLoaded', () => {
           elements.videoMenu.style.display = 'none';
           elements.videoMenuButton.setAttribute('aria-expanded', 'false');
         }
+      });
+
+      elements.modal.addEventListener('touchstart', (e) => {
+        state.touchStartX = e.touches[0].clientX;
+      });
+      elements.modal.addEventListener('touchend', (e) => {
+        const touchEndX = e.changedTouches[0].clientX;
+        if (state.touchStartX - touchEndX > 50) modalModule.navigateModal(1);
+        if (touchEndX - state.touchStartX > 50) modalModule.navigateModal(-1);
       });
     },
   };

@@ -6,13 +6,12 @@
     { "text": "Update Lost Your Faith", "completed": false },
     { "text": "Update Forever Young", "completed": false },
     { "text": "Update Other Track Info", "completed": false },
-    { "text": "Add Next Wave Of Songs", "completed": true },
     { "text": "Add Preview Videos", "completed": false },
     { "text": "Add Keys Icon For Charts That Start With Keys Or Only Have Keys", "completed": false },
+    { "text": "Add Some Easter Eggs / Secrets", "completed": false },
+    { "text": "Add Next Wave Of Songs", "completed": true },
     { "text": "Unadd Pro Instruments For Now ", "completed": true },
-    { "text": "Fix The Mobile Site", "completed": false },
     { "text": "Add Sorting Tracks By Length and Year", "completed": true },
     { "text": "Optimize The Site", "completed": true },
-    { "text": "Add Some Easter Eggs / Secrets", "completed": false },
     { "text": "Add Latest Update Text", "completed": true }
 ]

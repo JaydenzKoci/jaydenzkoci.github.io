@@ -38,16 +38,19 @@
                         </svg>
                     </button>
                     <ul id="settingsMenu" class="settings-menu" style="display: none;">
+                        <li data-setting="todo">
+                            To-Do List:
+                            <ul id="todoList" class="todo-list"></ul>
+                        </li>
                         <li data-setting="audio-fade">Fade In Audio: On</li>
+                        <li data-setting="modal-glow">Modal Glow: On</li>
+                        <li data-setting="text-glow">Text Glow: On</li>
+                        <li data-setting="preload">Preload Assets: Off</li>
                         <li data-setting="grid-size">Grid Size: 
                             <span data-grid-size="1">1</span> | 
                             <span data-grid-size="2">2</span> | 
                             <span data-grid-size="3">3</span> | 
                             <span data-grid-size="4">4</span></li>
-                        <li data-setting="preload">Preload Assets: Off</li>
-                        <li data-setting="todo">
-                            To-Do List:
-                            <ul id="todoList" class="todo-list"></ul>
                         </li>
                         <li data-setting="reset">Reset Settings</li>
                     </ul>
