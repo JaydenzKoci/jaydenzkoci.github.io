@@ -37,6 +37,12 @@
     "color1": "#ff00cc",
     "color2": "#ffffff"
 }
+},
+"youtubeLinks": {
+  "vocals": "https://youtu.be/XnyzHP425QM",
+  "lead": "https://youtu.be/p4g1hTNojhc",
+  "bass": "",
+  "drums": ""
 }
   },
   "spotafake": {
@@ -74,7 +80,13 @@
         "color1": "#ffffff",
         "color2": "#ffffff"
     }
-    }
+   },
+    "youtubeLinks": {
+      "vocals": "https://youtu.be/ny1pLfJQutw",
+      "lead": "https://youtu.be/dOXC0edobVY",
+      "bass": "",
+      "drums": ""
+  }
   },
   "lostyourfaith": {
     "title": "Lost Your Faith",
@@ -112,7 +124,13 @@
         "color1": "#ffffff",
         "color2": "#ffffff"
     }
-    }
+  },
+    "youtubeLinks": {
+      "vocals": "",
+      "lead": "https://youtu.be/-0mOFRQvig4",
+      "bass": "",
+      "drums": ""
+  }
   },
   "foreveryoung": {
     "title": "Forever Young",
@@ -142,7 +160,7 @@
     "loading_phrase": "Do you really want to live forever?",
     "glowTimes": [0.75, 3.8, 6],
     "youtubeLinks": {
-      "vocals": "",
+      "vocals": "https://youtu.be/dcHeHN7pSr4",
       "lead": "https://youtu.be/TadAG7dgEdY",
       "bass": "",
       "drums": ""
@@ -430,7 +448,13 @@
         "color1": "#ffffff",
         "color2": "#ff0000"
     }
-    }
+    },
+    "youtubeLinks": {
+      "vocals": "",
+      "lead": "https://youtu.be/TAwuJgVQjG0",
+      "bass": "",
+      "drums": ""
+  }
   },
   "kingsandqueens": {
     "title": "Kings & Queens",
@@ -1141,7 +1165,13 @@
         "color1": "#ce63ff",
         "color2": "#ffffff"
     }
-    }
+    },
+    "youtubeLinks": {
+      "vocals": "",
+      "lead": "https://youtu.be/nwLgRc3tiyU",
+      "bass": "",
+      "drums": ""
+  }
   },
   "dutch": {
     "title": "Von dutch",
@@ -2550,7 +2580,7 @@
     "glowTimes": [11],
     "youtubeLinks": {
       "vocals": "",
-      "lead": "https://youtu.be/z_u95KJU6SM",
+      "lead": "https://youtu.be/yUCj7uwSQ8A",
       "bass": "",
       "drums": ""
   },
