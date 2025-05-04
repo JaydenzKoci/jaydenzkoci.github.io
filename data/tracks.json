@@ -288,7 +288,7 @@
     "videoUrl": "chooseyourfighter.mp4",
     "spotify": "7lcuUkp4LjPflvzPjemDzw",
     "complete": "0% Complete",
-    "previewUrl": "https://p.scdn.co/mp3-preview/090010b7932e2c56b811461db98bf9404d3c200b",
+    "previewUrl": "https://p.scdn.co/mp3-preview/090010b7932e2e56b811461db98bf9404d3c200b",
     "rotated": true
   },
   "moment": {
@@ -567,7 +567,7 @@
     "cover": "ILoveIt.png",
     "bpm": 126,
     "duration": "2m 36s",
-    "key": "C# Major",
+    "key": "D Minor",
     "difficulties": {
       "vocals": -1,
       "guitar": -1,
@@ -938,7 +938,7 @@
     "spotify": "5ZkAx8zjLiSs1nMmBwJoZS",
     "videoUrl": "whencaniseeyouagain.mp4",
     "videoPosition": 40,
-    "previewUrl": "https://p.scdn.co/mp3-preview/de32e8f58c1651961bde204232cadac4e08703b3a",
+    "previewUrl": "https://p.scdn.co/mp3-preview/de32e8f58f055ed972826b9b7eed5f9f76235612",
     "rotated": true
   },
   "knife": {
@@ -2575,10 +2575,11 @@
     "colors": {
       "title": "COLORS",
       "artist": "FLOW",
-      "releaseYear": 0,
+      "releaseYear": 2006,
       "cover": "Colors.png",
-      "bpm": 0,
-      "duration": "0m 00s",
+      "bpm": 136,
+      "duration": "3m 38s",
+      "key": "C# Major",
       "difficulties": {
         "vocals": -1,
         "guitar": -1,
@@ -2601,10 +2602,11 @@
     "close": {
       "title": "Close To You",
       "artist": "Gracie Abrams",
-      "releaseYear": 0,
+      "releaseYear": 2024,
       "cover": "TheSecretOfUs.png",
-      "bpm": 0,
-      "duration": "0m 00s",
+      "bpm": 122,
+      "duration": "3m 46s",
+      "key": "F# Major",
       "difficulties": {
         "vocals": -1,
         "guitar": -1,
@@ -2626,10 +2628,11 @@
     "story": {
       "title": "CHEMYXSTORY",
       "artist": "BACK-ON",
-      "releaseYear": 0,
+      "releaseYear": 2023,
       "cover": "CHEMYXSTORY.png",
-      "bpm": 0,
-      "duration": "0m 00s",
+      "bpm": 95,
+      "duration": "3m 07s",
+      "key": "C# Minor",
       "difficulties": {
         "vocals": -1,
         "guitar": -1,
@@ -2653,8 +2656,9 @@
       "artist": "Leah Kate",
       "releaseYear": 2024,
       "cover": "WhatGirlsDo.png",
-      "bpm": 0,
+      "bpm": 131,
       "duration": "2m 21s",
+      "key": "A♭ Major",
       "difficulties": {
         "vocals": -1,
         "guitar": 2,
@@ -2695,10 +2699,11 @@
     "sorry": {
       "title": "Apologize",
       "artist": "Timbaland (feat. OneRepublic)",
-      "releaseYear": 0,
+      "releaseYear": 2007,
       "cover": "Apologize.png",
-      "bpm": 0,
-      "duration": "0m 00s",
+      "bpm": 118,
+      "duration": "3m 04s",
+      "key": "A♭ Major",
       "difficulties": {
         "vocals": -1,
         "guitar": -1,
@@ -2720,10 +2725,11 @@
     "xeno": {
       "title": "Xenogenesis",
       "artist": "TheFatRat",
-      "releaseYear": 0,
+      "releaseYear": 2014,
       "cover": "Xenogenesis.png",
-      "bpm": 0,
-      "duration": "0m 00s",
+      "bpm": 145,
+      "duration": "3m 53s",
+      "key": "B♭ Minor",
       "difficulties": {
         "vocals": -1,
         "guitar": -1,
@@ -2745,10 +2751,11 @@
     "lost": {
       "title": "LOST",
       "artist": "NF",
-      "releaseYear": 0,
+      "releaseYear": 2021,
       "cover": "Clouds.png",
-      "bpm": null,
-      "duration": "0m 00s",
+      "bpm": 117,
+      "duration": "3m 55s",
+      "key": "F Major",
       "difficulties": {
         "vocals": -1,
         "guitar": -1,
@@ -2770,10 +2777,11 @@
     "data": {
       "title": "HYPNOTIC DATA",
       "artist": "Odetari",
-      "releaseYear": 0,
+      "releaseYear": 2024,
       "cover": "HypnoticData.png",
-      "bpm": null,
-      "duration": "0m 00s",
+      "bpm": 136,
+      "duration": "2m 09s",
+      "key": "B Minor",
       "difficulties": {
         "vocals": -1,
         "guitar": -1,
@@ -2795,10 +2803,11 @@
     "cold": {
       "title": "Cold As Ice",
       "artist": "Ava Max",
-      "releaseYear": 0,
+      "releaseYear": 2023,
       "cover": "DiamondsandDancefloors.png",
-      "bpm": null,
-      "duration": "0m 00s",
+      "bpm": 118,
+      "duration": "2m 24s",
+      "key": "C# Major",
       "difficulties": {
         "vocals": -1,
         "guitar": -1,
@@ -2820,10 +2829,11 @@
     "lights": {
       "title": "Turn Off The Lights",
       "artist": "Ava Max",
-      "releaseYear": 0,
+      "releaseYear": 2023,
       "cover": "DiamondsandDancefloors.png",
-      "bpm": null,
-      "duration": "0m 00s",
+      "bpm": 120,
+      "duration": "2m 37s",
+      "key": "D Major",
       "difficulties": {
         "vocals": -1,
         "guitar": -1,
@@ -2845,10 +2855,11 @@
     "weapon": {
       "title": "Weapons",
       "artist": "Ava Max",
-      "releaseYear": 0,
+      "releaseYear": 2023,
       "cover": "DiamondsandDancefloors.png",
-      "bpm": null,
-      "duration": "0m 00s",
+      "bpm": 170,
+      "duration": "2m 32s",
+      "key": "C# Major",
       "difficulties": {
         "vocals": -1,
         "guitar": -1,
@@ -2870,10 +2881,11 @@
     "dark": {
       "title": "In The Dark",
       "artist": "Ava Max",
-      "releaseYear": 0,
+      "releaseYear": 2023,
       "cover": "DiamondsandDancefloors.png",
-      "bpm": null,
-      "duration": "0m 00s",
+      "bpm": 126,
+      "duration": "2m 53s",
+      "key": "C# Minor",
       "difficulties": {
         "vocals": -1,
         "guitar": -1,
@@ -2895,10 +2907,11 @@
     "diamond": {
       "title": "Diamonds & Dancefloors",
       "artist": "Ava Max",
-      "releaseYear": 0,
+      "releaseYear": 2023,
       "cover": "DiamondsandDancefloors.png",
-      "bpm": null,
-      "duration": "0m 00s",
+      "bpm": 121,
+      "duration": "2m 36s",
+      "key": "C# Major",
       "difficulties": {
         "vocals": -1,
         "guitar": -1,
@@ -2919,10 +2932,11 @@
     "talk": {
       "title": "Talk talk",
       "artist": "Charli xcx (feat. Troye Sivan)",
-      "releaseYear": 0,
+      "releaseYear": 2024,
       "cover": "bratremix.png",
-      "bpm": null,
-      "duration": "0m 00s",
+      "bpm": 130,
+      "duration": "2m 53s",
+      "key": "A♭ Major",
       "difficulties": {
         "vocals": -1,
         "guitar": -1,
@@ -2937,7 +2951,7 @@
       "complete": "0% Complete",
       "videoUrl": "rewind.mp4",
       "spotify": "7CwWhMGWICOl2ICwbk3QTE",
-      "previewUrl": "https://p.scdn.co/mp3-preview/ffd0ced326c69928a67d9f053616fdd4cd884e9f",
+      "previewUrl": "https://p.scdn.co/mp3-preview/ee013d4c7ce28adbd3e7182c15beec885f965590",
       "rotated": true
     },
     "bottom": {
@@ -3713,12 +3727,12 @@
       "rotated": true,
       "modalShadowColors": {
         "default": {
-          "color1": "#FF0000",
-          "color2": "#FFFF00"  
+          "color1": "",
+          "color2": ""  
         },
         "hover": {
-          "color1": "#FF5555",
-          "color2": "#FFFF55" 
+          "color1": "",
+          "color2": "" 
         }
       }
     },
@@ -3748,12 +3762,12 @@
       "rotated": true,
       "modalShadowColors": {
         "default": {
-          "color1": "#FF0000",
-          "color2": "#FFFF00"  
+          "color1": "",
+          "color2": ""  
         },
         "hover": {
-          "color1": "#FF5555",
-          "color2": "#FFFF55" 
+          "color1": "",
+          "color2": "" 
         }
     }
   }
