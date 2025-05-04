@@ -31,11 +31,11 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // State
   let state = {
-    fadeInAudioEnabled: localStorage.getItem('fadeInAudioEnabled') !== 'false', 
+    fadeInAudioEnabled: localStorage.getItem('fadeInAudioEnabled') !== 'false',
     preloadAssetsEnabled: localStorage.getItem('preloadAssetsEnabled') === 'true',
     gridSize: localStorage.getItem('gridSize') || '4',
     isMuted: localStorage.getItem('isMuted') === 'true',
-    textGlowEnabled: localStorage.getItem('textGlowEnabled') !== 'false', 
+    textGlowEnabled: localStorage.getItem('textGlowEnabled') !== 'false',
     modalGlowEnabled: localStorage.getItem('modalGlowEnabled') !== 'false',
     tracksData: [],
     currentFilteredTracks: [],
@@ -105,7 +105,7 @@ document.addEventListener('DOMContentLoaded', () => {
       if (!hex) return '0, 0, 0';
       hex = hex.replace(/^#/, '');
       if (hex.length === 3) {
-        hex = hex.split('').map(c => c + c).join('');
+        hex = hex.split('').map((c) => c + c).join('');
       }
       const bigint = parseInt(hex, 16);
       const r = (bigint >> 16) & 255;
@@ -245,13 +245,14 @@ document.addEventListener('DOMContentLoaded', () => {
       tracksToPreload.forEach((track) => {
         if (track.cover) {
           const img = new Image();
-          img.src = track.cover;
+          img.src = `/assets/covers/${track.cover}`;
           img.onload = () => {
             loadedCount++;
             updateProgress();
           };
           img.onerror = () => {
-            console.error(`Failed to preload cover: ${track.cover}`);
+            console.error(`Failed to preload cover: /assets/covers/${track.cover}`);
+            img.src = '/assets/covers/fallback.jpg'; // Fallback image
             loadedCount++;
             updateProgress();
           };
@@ -479,7 +480,7 @@ document.addEventListener('DOMContentLoaded', () => {
           console.log(`Modal glow removed on hover leave for ${track.title}`);
         };
         modalModule.handleTouchStart = (e) => {
-          e.preventDefault(); 
+          e.preventDefault();
           modalContent.style.boxShadow = glowShadow;
           console.log(`Modal glow triggered on touch for ${track.title}`);
         };
@@ -514,7 +515,7 @@ document.addEventListener('DOMContentLoaded', () => {
         videoElement.onloadeddata = () => videoElement.classList.add('loaded');
       }
 
-      elements.modal.querySelector('#modalCover').src = cover;
+      elements.modal.querySelector('#modalCover').src = `/assets/covers/${cover}`;
       elements.modal.querySelector('#modalTitle').textContent = title;
       elements.modal.querySelector('#modalArtist').textContent = artist;
       elements.modal.querySelector('#modalDuration').textContent = `${releaseYear} | ${duration}`;
@@ -550,7 +551,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const youtubeUrl = youtubeLinks?.[instrument];
         item.style.display = youtubeUrl ? 'block' : 'none';
         item.onclick = (event) => {
-          event.preventDefault(); 
+          event.preventDefault();
           if (youtubeUrl) {
             videoModule.openVideoPopup(track, youtubeUrl, instrument);
             elements.videoMenu.style.display = 'none';
@@ -673,7 +674,7 @@ document.addEventListener('DOMContentLoaded', () => {
         elements.videoTrackCover.style.height = '300px';
       }
 
-      elements.videoTrackCover.src = track.cover;
+      elements.videoTrackCover.src = `/assets/covers/${track.cover}`;
       elements.videoTrackTitle.textContent = track.title;
       elements.videoTrackArtist.textContent = track.artist;
       elements.videoTrackDuration.textContent = `${track.releaseYear} | ${track.duration}`;
@@ -792,10 +793,17 @@ document.addEventListener('DOMContentLoaded', () => {
         const loadingSpinner = document.createElement('div');
         loadingSpinner.className = 'loading-spinner';
         const img = new Image();
-        img.src = track.cover;
+        img.src = `/assets/covers/${track.cover}`;
         img.alt = `${track.title} Cover`;
         img.style.display = 'none';
         img.onload = () => {
+          loadingSpinner.remove();
+          img.style.display = '';
+          img.classList.add('loaded');
+        };
+        img.onerror = () => {
+          console.error(`Failed to load cover: /assets/covers/${track.cover}`);
+          img.src = '/assets/covers/fallback.jpg'; // Fallback image
           loadingSpinner.remove();
           img.style.display = '';
           img.classList.add('loaded');
