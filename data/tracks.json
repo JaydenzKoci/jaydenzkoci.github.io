@@ -397,7 +397,7 @@
   "problem": {
     "title": "Maybe You're The Problem",
     "artist": "Ava Max",
-    "releaseYear": 2023,
+    "releaseYear": 2022,
     "cover": "DiamondsandDancefloors.png",
     "bpm": 166,
     "duration": "3m 10s",
@@ -486,6 +486,7 @@
     "spotify": "7a53HqqArd4b9NF4XAmlbI",
     "videoUrl": "kingsandqueens.mp4",
     "videoPosition": 35,
+    "videoZoom": 1.1,
     "complete": "0% Complete",
     "previewUrl": "https://p.scdn.co/mp3-preview/dc90347787fa47daa898d4ffbfff36074d184d64",
     "rotated": true
@@ -632,6 +633,7 @@
     "spotify": "48RrDBpOSSl1aLVCalGl5C",
     "videoUrl": "themonster.mp4",
     "complete": "0% Complete",
+    "videoZoom": 1.1,
     "previewUrl": "https://p.scdn.co/mp3-preview/dd22524a409b15fab0702e1c4306609b3c79a6c4",
     "rotated": true
   },
@@ -1766,10 +1768,11 @@
     "last": {
       "title": "Last Song",
       "artist": "Alan Walker (feat. Faouzia)",
-      "releaseYear": 0,
+      "releaseYear": 2025,
       "cover": "Unsure.png",
-      "bpm": 0,
-      "duration": "0m 00s",
+      "bpm": 141,
+      "duration": "2m 33s",
+      "key": "B Minor",
       "difficulties": {
         "vocals": -1,
         "guitar": -1,
@@ -2161,7 +2164,7 @@
     "flyaway": {
       "title": "flyaway",
       "artist": "BACK-ON",
-      "releaseYear": 2017,
+      "releaseYear": 2011,
       "cover": "flyaway.png",
       "bpm": 186,
       "duration": "3m 50s",
@@ -2290,7 +2293,7 @@
     "million": {
       "title": "Million Dollar Baby",
       "artist": "Ava Max",
-      "releaseYear": 2023,
+      "releaseYear": 2022,
       "cover": "DiamondsandDancefloors.png",
       "bpm": 133,
       "duration": "3m 04s",
@@ -2957,10 +2960,11 @@
     "bottom": {
       "title": "The Bottom",
       "artist": "Gracie Abrams",
-      "releaseYear": 0,
+      "releaseYear": 2021,
       "cover": "TheBottom.png",
-      "bpm": null,
-      "duration": "0m 00s",
+      "bpm": 95,
+      "duration": "3m 00s",
+      "key": "F Major",
       "difficulties": {
         "vocals": -1,
         "guitar": -1,
@@ -2982,10 +2986,11 @@
     "love": {
       "title": "We Found Love",
       "artist": "Rihanna",
-      "releaseYear": 0,
+      "releaseYear": 2011,
       "cover": "WeFoundLove.png",
-      "bpm": null,
-      "duration": "0m 00s",
+      "bpm": 128,
+      "duration": "3m 35s",
+      "key": "C# Major",
       "difficulties": {
         "vocals": -1,
         "guitar": -1,
@@ -3006,10 +3011,11 @@
     "tattoo": {
       "title": "Tattoo",
       "artist": "Ava Max",
-      "releaseYear": 0,
+      "releaseYear": 2020,
       "cover": "HeavenandHell.png",
-      "bpm": null,
-      "duration": "0m 00s",
+      "bpm": 115,
+      "duration": "2m 39s",
+      "key": "F# Major",
       "difficulties": {
         "vocals": -1,
         "guitar": -1,
@@ -3030,10 +3036,11 @@
     "laugh": {
       "title": "Who's Laughing Now",
       "artist": "Ava Max",
-      "releaseYear": 0,
+      "releaseYear": 2020,
       "cover": "HeavenandHell.png",
-      "bpm": null,
-      "duration": "0m 00s",
+      "bpm": 184,
+      "duration": "3m 00s",
+      "key": "G Major",
       "difficulties": {
         "vocals": -1,
         "guitar": -1,
@@ -3055,10 +3062,11 @@
     "sorrylove": {
       "title": "I Love You, I'm Sorry",
       "artist": "Gracie Abrams",
-      "releaseYear": 0,
+      "releaseYear": 2024,
       "cover": "TheSecretOfUs.png",
-      "bpm": null,
-      "duration": "0m 00s",
+      "bpm": 116,
+      "duration": "2m 37s",
+      "key": "B♭ Major",
       "difficulties": {
         "vocals": -1,
         "guitar": -1,
@@ -3080,10 +3088,11 @@
     "risk": {
       "title": "Risk",
       "artist": "Gracie Abrams",
-      "releaseYear": 0,
+      "releaseYear": 2024,
       "cover": "TheSecretOfUs.png",
-      "bpm": null,
-      "duration": "0m 00s",
+      "bpm": 113,
+      "duration": "3m 12s",
+      "key": "E♭ Minor",
       "difficulties": {
         "vocals": -1,
         "guitar": -1,
@@ -3105,10 +3114,11 @@
     "signs": {
       "title": "Signs",
       "artist": "Tate McRae",
-      "releaseYear": 0,
+      "releaseYear": 2025,
       "cover": "SoCloseToWhat.png",
-      "bpm": null,
-      "duration": "0m 00s",
+      "bpm": 112,
+      "duration": "2m 54s",
+      "key": "F# Minor",
       "difficulties": {
         "vocals": -1,
         "guitar": -1,
@@ -3130,10 +3140,11 @@
     "stal": {
       "title": "Nostalgia",
       "artist": "Tate McRae",
-      "releaseYear": 0,
+      "releaseYear": 2025,
       "cover": "SoCloseToWhat.png",
-      "bpm": null,
-      "duration": "0m 00s",
+      "bpm": 173,
+      "duration": "3m 03s",
+      "key": "E Minor",
       "difficulties": {
         "vocals": -1,
         "guitar": -1,
@@ -3155,10 +3166,11 @@
     "hills": {
       "title": "run for the hills",
       "artist": "Tate McRae",
-      "releaseYear": 0,
+      "releaseYear": 2023,
       "cover": "ThinkLater.png",
-      "bpm": null,
-      "duration": "0m 00s",
+      "bpm": 130,
+      "duration": "2m 24s",
+      "key": "A♭ Major",
       "difficulties": {
         "vocals": -1,
         "guitar": -1,
@@ -3176,13 +3188,14 @@
       "previewUrl": "https://p.scdn.co/mp3-preview/0c91e2da7c4ccc1f9c9e7de651f867e7e9805b38",
       "rotated": true
     },
-    "culgary": {
-      "title": "culgary",
+    "calgary": {
+      "title": "calgary",
       "artist": "Tate McRae",
-      "releaseYear": 0,
+      "releaseYear": 2023,
       "cover": "ThinkLater.png",
-      "bpm": null,
-      "duration": "0m 00s",
+      "bpm": 115,
+      "duration": "2m 21s",
+      "key": "A Minor",
       "difficulties": {
         "vocals": -1,
         "guitar": -1,
@@ -3204,10 +3217,11 @@
     "shy": {
       "title": "Don't Be Shy",
       "artist": "Tiesto & Karol G",
-      "releaseYear": 0,
+      "releaseYear": 2021,
       "cover": "1035.png",
-      "bpm": null,
-      "duration": "0m 00s",
+      "bpm": 120,
+      "duration": "2m 21s",
+      "key": "B Minor",
       "difficulties": {
         "vocals": -1,
         "guitar": -1,
@@ -3221,7 +3235,7 @@
     "lastFeatured": "TBA",
     "complete": "0% Complete",
     "videoUrl": "Don'tBeShy.mp4",
-    "videoPosition": "35",
+    "videoPosition": 35,
     "spotify": "0v2Swij0g2VfvSq3c3uaG3",
     "previewUrl": "https://p.scdn.co/mp3-preview/b5b4a420871f198f6526d15d58fa3c90c4a4ad0a",
     "rotated": true
@@ -3229,10 +3243,11 @@
   "bb": {
     "title": "B2b",
     "artist": "Charli xcx",
-    "releaseYear": 0,
+    "releaseYear": 2024,
     "cover": "brat.png",
-    "bpm": null,
-    "duration": "0m 00s",
+    "bpm": 116,
+    "duration": "2m 59s",
+    "key": "C# Major",
     "difficulties": {
       "vocals": -1,
       "guitar": -1,
@@ -3254,10 +3269,11 @@
   "oops": {
     "title": "Oops! I Did It Again",
     "artist": "Britney Spears",
-    "releaseYear": 0,
+    "releaseYear": 2000,
     "cover": "OopsIDidItAgain.png",
-    "bpm": null,
-    "duration": "0m 00s",
+    "bpm": 95,
+    "duration": "3m 31s",
+    "key": "C# Minor",
     "difficulties": {
       "vocals": -1,
       "guitar": -1,
@@ -3278,10 +3294,11 @@
   "dj": {
     "title": "DJ Got Us Fallin' In Love",
     "artist": "USHER",
-    "releaseYear": 0,
+    "releaseYear": 2010,
     "cover": "DJGotUsFallinInLove.png",
-    "bpm": null,
-    "duration": "0m 00s",
+    "bpm": 120,
+    "duration": "3m 41s",
+    "key": "G Minor",
     "difficulties": {
       "vocals": -1,
       "guitar": -1,
@@ -3295,7 +3312,7 @@
     "lastFeatured": "TBA",
     "complete": "0% Complete",
     "videoUrl": "djgotusfallininlove.mp4",
-    "videoPosition": "30",
+    "videoPosition": 30,
     "spotify": "4356Typ82hUiFAynbLYbPn",
     "previewUrl": "https://p.scdn.co/mp3-preview/1619c7342806281d286f0ba4125ff59e80663c56",
     "rotated": true
@@ -3303,10 +3320,11 @@
   "sister": {
     "title": "Hey, Soul Sister",
     "artist": "Train",
-    "releaseYear": 0,
+    "releaseYear": 2010,
     "cover": "HeySoulSister.png",
-    "bpm": null,
-    "duration": "0m 00s",
+    "bpm": 97,
+    "duration": "3m 37s",
+    "key": "C# Minor",
     "difficulties": {
       "vocals": -1,
       "guitar": -1,
@@ -3320,7 +3338,7 @@
     "lastFeatured": "TBA",
     "complete": "0% Complete",
     "videoUrl": "Hey,SoulSister.mp4",
-    "videoPosition": "70",
+    "videoPosition": 70,
     "spotify": "4HlFJV71xXKIGcU3kRyttv",
     "previewUrl": "https://p.scdn.co/mp3-preview/518c823cf0f8b862bed0fa45e34cc63db5ea58e4",
     "rotated": true
@@ -3328,10 +3346,11 @@
   "arcade": {
     "title": "Arcadia",
     "artist": "TheFatRat",
-    "releaseYear": 0,
+    "releaseYear": 2021,
     "cover": "Arcadia.png",
-    "bpm": null,
-    "duration": "0m 00s",
+    "bpm": 105,
+    "duration": "3m 07s",
+    "key": "E Major",
     "difficulties": {
       "vocals": -1,
       "guitar": -1,
@@ -3345,7 +3364,7 @@
     "lastFeatured": "TBA",
     "complete": "0% Complete",
     "videoUrl": "Arcadia.mp4",
-    "videoPosition": "80",
+    "videoPosition": 80,
     "spotify": "08fAn3KEgC7PtgFIJycXTU",
     "previewUrl": "https://p.scdn.co/mp3-preview/b72f55bd80235664122c89f7a9a4ed4de54dba99",
     "rotated": true
@@ -3353,10 +3372,11 @@
   "riot": {
     "title": "Riot In Bloom",
     "artist": "TOEI",
-    "releaseYear": 0,
+    "releaseYear": 2022,
     "cover": "RiotInBloom.png",
-    "bpm": null,
-    "duration": "0m 00s",
+    "bpm": 92,
+    "duration": "4m 09s",
+    "key": "G Major",
     "difficulties": {
       "vocals": -1,
       "guitar": -1,
@@ -3370,7 +3390,7 @@
     "lastFeatured": "TBA",
     "complete": "0% Complete",
     "videoUrl": "riotinbloom.mp4",
-    "videoPosition": "35",
+    "videoPosition": 35,
     "spotify": "1LxSXjagfqZPhYohT4dHJh",
     "previewUrl": "https://p.scdn.co/mp3-preview/d7dbba5b204494913418702b12cd53028a78b516",
     "rotated": true
@@ -3378,10 +3398,11 @@
   "start": {
     "title": "Don't Start Now",
     "artist": "Dua Lipa",
-    "releaseYear": 0,
+    "releaseYear": 2020,
     "cover": "Physical.png",
-    "bpm": null,
-    "duration": "0m 00s",
+    "bpm": 124,
+    "duration": "3m 03s",
+    "key": "B Minor",
     "difficulties": {
       "vocals": -1,
       "guitar": -1,
@@ -3395,7 +3416,7 @@
     "lastFeatured": "TBA",
     "complete": "0% Complete",
     "videoUrl": "dontstartnow.mp4",
-    "videoPosition": "30",
+    "videoPosition": 30,
     "videoZoom": 1.25,
     "spotify": "3PfIrDoz19wz7qK7tYeu62",
     "previewUrl": "https://p.scdn.co/mp3-preview/cfc6684fc467e40bb9c7e6da2ea1b22eeccb211c",
@@ -3404,10 +3425,11 @@
   "girl": {
     "title": "Girl, so confusing",
     "artist": "Charli xcx (feat. Lorde)",
-    "releaseYear": 0,
+    "releaseYear": 2024,
     "cover": "bratremix.png",
-    "bpm": null,
-    "duration": "0m 00s",
+    "bpm": 125,
+    "duration": "3m 26s",
+    "key": "B Minor",
     "difficulties": {
       "vocals": -1,
       "guitar": -1,
@@ -3421,7 +3443,7 @@
     "lastFeatured": "TBA",
     "complete": "0% Complete",
     "videoUrl": "rewind.mp4",
-    "videoPosition": "40",
+    "videoPosition": 40,
     "videoZoom": 1.25,
     "spotify": "7srqyRb5plksW5k65itXDB",
     "previewUrl": "https://p.scdn.co/mp3-preview/ffd0ced326c69928a67d9f053616fdd4cd884e9f",
@@ -3430,10 +3452,11 @@
   "denim": {
     "title": "Denim",
     "artist": "Kylie Cantrall",
-    "releaseYear": 0,
+    "releaseYear": 2025,
     "cover": "Denim.png",
-    "bpm": null,
-    "duration": "0m 00s",
+    "bpm": 114,
+    "duration": "2m 21s",
+    "key": "B♭ Minor",
     "difficulties": {
       "vocals": -1,
       "guitar": -1,
@@ -3447,7 +3470,7 @@
     "lastFeatured": "TBA",
     "complete": "0% Complete",
     "videoUrl": "denim.mp4",
-    "videoPosition": "20",
+    "videoPosition": 20,
     "spotify": "3As0n6VHQxTs0KYk9Ja9pU",
     "previewUrl": "https://p.scdn.co/mp3-preview/2b494dade2b486897acb08ce8d946aaa93eadaeb",
     "rotated": true
@@ -3455,10 +3478,11 @@
     "arms": {
       "title": "Into Your Arms",
       "artist": "Witt Lowry (Feat. Ava Max)",
-      "releaseYear": "0",
+      "releaseYear": 2018,
       "cover": "IntoYourArms.png",
-      "bpm": 0,
-      "duration": "0m 00s",
+      "bpm": 170,
+      "duration": "3m 06s",
+      "key": "E♭ Minor",
       "difficulties": {
         "vocals": -1,
         "guitar": -1,
@@ -3472,7 +3496,7 @@
       "lastFeatured": "TBA",
       "complete": "0% Complete",
       "videoUrl": "IntoYourArms.mp4",
-      "videoPosition": "5",
+      "videoPosition": 5,
       "spotify": "0b11D9D0hMOYCIMN3OKreM",
       "previewUrl": "https://p.scdn.co/mp3-preview/bdb8e47f51b0280c493640f4ef938fbae78ce2f9",
       "rotated": true
@@ -3480,10 +3504,11 @@
     "rules": {
       "title": "Break The Rules",
       "artist": "Charli xcx",
-      "releaseYear": "0",
+      "releaseYear": 2014,
       "cover": "sucker.png",
-      "bpm": 0,
-      "duration": "0 00s",
+      "bpm": 124,
+      "duration": "3m 24s",
+      "key": "C Minor",
       "difficulties": {
         "vocals": -1,
         "guitar": -1,
@@ -3504,10 +3529,11 @@
     "alone": {
       "title": "Better Off (Alone, Pt III)",
       "artist": "Alan Walker",
-      "releaseYear": "0",
+      "releaseYear": 2023,
       "cover": "BetterOff.png",
-      "bpm": 0,
-      "duration": "0m 00s",
+      "bpm": 130,
+      "duration": "2m 32s",
+      "key": "A Minor",
       "difficulties": {
         "vocals": -1,
         "guitar": -1,
@@ -3529,10 +3555,11 @@
     "faded": {
       "title": "Faded",
       "artist": "Alan Walker",
-      "releaseYear": "0",
+      "releaseYear": 2015,
       "cover": "Faded.png",
-      "bpm": 0,
-      "duration": "0m 00s",
+      "bpm": 90,
+      "duration": "3m 33s",
+      "key": "F# Major",
       "difficulties": {
         "vocals": -1,
         "guitar": -1,
@@ -3554,10 +3581,11 @@
     "onewish": {
       "title": "1 Wish",
       "artist": "Ava Max",
-      "releaseYear": "0",
+      "releaseYear": 2024,
       "cover": "1Wish.png",
-      "bpm": 0,
-      "duration": "0m 00s",
+      "bpm": 160,
+      "duration": "2m 47s",
+      "key": "G Major",
       "difficulties": {
         "vocals": -1,
         "guitar": -1,
@@ -3579,10 +3607,11 @@
     "broke": {
       "title": "you broke me first",
       "artist": "Tate McRae",
-      "releaseYear": "0",
+      "releaseYear": 2021,
       "cover": "youbrokemefirst.png",
-      "bpm": 0,
-      "duration": "0m 00s",
+      "bpm": 124,
+      "duration": "2m 50s",
+      "key": "E Major",
       "difficulties": {
         "vocals": -1,
         "guitar": -1,
@@ -3604,10 +3633,11 @@
     "brutal": {
       "title": "brutal",
       "artist": "Olivia Rodrigo",
-      "releaseYear": "0",
+      "releaseYear": 2021,
       "cover": "SOUR.png",
-      "bpm": 0,
-      "duration": "0m 00s",
+      "bpm": 124,
+      "duration": "2m 24s",
+      "key": "E Major",
       "difficulties": {
         "vocals": -1,
         "guitar": -1,
@@ -3629,10 +3659,11 @@
     "mean": {
       "title": "Mean girls",
       "artist": "Charli xcx",
-      "releaseYear": 0,
+      "releaseYear": 2024,
       "cover": "brat.png",
-      "bpm": null,
-      "duration": "0m 00s",
+      "bpm": 140,
+      "duration": "3m 09s",
+      "key": "F# Major",
       "difficulties": {
         "vocals": -1,
         "guitar": -1,
@@ -3654,10 +3685,11 @@
     "omg": {
       "title": "OMG What's Happening",
       "artist": "Ava Max",
-      "releaseYear": "0",
+      "releaseYear": 2020,
       "cover": "HeavenandHell.png",
-      "bpm": 0,
-      "duration": "0m 00s",
+      "bpm": 124,
+      "duration": "3m 00s",
+      "key": "A Minor",
       "difficulties": {
         "vocals": -1,
         "guitar": -1,
@@ -3679,10 +3711,11 @@
     "christmas": {
       "title": "Christmas Without You",
       "artist": "Ava Max",
-      "releaseYear": "0",
+      "releaseYear": 2020,
       "cover": "ChristmasWithoutYou.png",
-      "bpm": 0,
-      "duration": "0m 00s",
+      "bpm": 118,
+      "duration": "2m 49s",
+      "key": "C# Major",
       "difficulties": {
         "vocals": -1,
         "guitar": -1,
@@ -3704,10 +3737,11 @@
     "season": {
       "title": "Training Season",
       "artist": "Dua Lipa",
-      "releaseYear": "0",
+      "releaseYear": 2024,
       "cover": "FutureNostagia.png",
-      "bpm": 0,
-      "duration": "0m 00s",
+      "bpm": 123,
+      "duration": "3m 29s",
+      "key": "F Minor",
       "difficulties": {
         "vocals": -1,
         "guitar": -1,
@@ -3739,10 +3773,11 @@
     "illusion": {
       "title": "Illusion",
       "artist": "Dua Lipa",
-      "releaseYear": "0",
+      "releaseYear": 2024,
       "cover": "FutureNostagia.png",
-      "bpm": 0,
-      "duration": "0m 00s",
+      "bpm": 127,
+      "duration": "3m 08s",
+      "key": "A♭ Minor",
       "difficulties": {
         "vocals": -1,
         "guitar": -1,
