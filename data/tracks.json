@@ -3453,7 +3453,7 @@
     "title": "Denim",
     "artist": "Kylie Cantrall",
     "releaseYear": 2025,
-    "cover": "Denim.png",
+    "cover": "BOY.png",
     "bpm": 114,
     "duration": "2m 21s",
     "key": "B♭ Minor",
@@ -3804,6 +3804,150 @@
           "color1": "",
           "color2": "" 
         }
+    }
+  },
+  "werenotalike": {
+    "title": "we're not alike",
+    "artist": "Tate McRae",
+    "releaseYear": 2023,
+    "cover": "ThinkLater.png",
+    "bpm": 113,
+    "duration": "3m 00s",
+    "key": "A♭ Major",
+    "difficulties": {
+      "vocals": -1,
+      "guitar": -1,
+      "bass": -1,
+      "drums": -1,
+      "plastic-bass": -1,
+      "plastic-drums": -1,
+      "plastic-guitar": -1
+    },
+    "createdAt": "2000-01-01T08:00:00.000Z",
+    "lastFeatured": "TBA",
+    "complete": "0% Complete",
+    "videoUrl": "werenotalike.mp4",
+    "videoPosition": "40",
+    "spotify": "0tFRxPQHvAUMTbWYRJUo8R",
+    "previewUrl": "https://p.scdn.co/mp3-preview/8e292e579ec745ff793bf5c59d3995c542f524c8",
+    "rotated": true,
+    "modalShadowColors": {
+      "default": {
+        "color1": "",
+        "color2": ""  
+      },
+      "hover": {
+        "color1": "",
+        "color2": "" 
+      }
+    }
+  },
+  "superlove": {
+    "title": "SuperLove",
+    "artist": "Charli xcx",
+    "releaseYear": 2013,
+    "cover": "SuperLove.png",
+    "bpm": 120,
+    "duration": "3m 13s",
+    "key": "G Minor",
+    "difficulties": {
+      "vocals": -1,
+      "guitar": -1,
+      "bass": -1,
+      "drums": -1,
+      "plastic-bass": -1,
+      "plastic-drums": -1,
+      "plastic-guitar": -1
+    },
+    "createdAt": "2000-01-01T08:00:00.000Z",
+    "lastFeatured": "TBA",
+    "complete": "0% Complete",
+    "videoUrl": "superlove.mp4",
+    "videoPosition": "20",
+    "spotify": "15KUiWZCdAq458QQR9eygf",
+    "previewUrl": "https://p.scdn.co/mp3-preview/0f182e83c0b057ef541facd4146204d5e7723de0",
+    "rotated": true,
+    "modalShadowColors": {
+      "default": {
+        "color1": "",
+        "color2": ""  
+      },
+      "hover": {
+        "color1": "",
+        "color2": "" 
+      }
+    }
+  },
+  "remix": {
+    "title": "Sympathy is a knife",
+    "artist": "Charli xcx (Feat. Ariana Grande)",
+    "releaseYear": 2024,
+    "cover": "bratremix.png",
+    "bpm": 123,
+    "duration": "2m 34s",
+    "key": "E♭ Major",
+    "difficulties": {
+      "vocals": -1,
+      "guitar": -1,
+      "bass": -1,
+      "drums": -1,
+      "plastic-bass": -1,
+      "plastic-drums": -1,
+      "plastic-guitar": -1
+    },
+    "createdAt": "2000-01-01T08:00:00.000Z",
+    "lastFeatured": "TBA",
+    "complete": "0% Complete",
+    "videoUrl": "remix.mp4",
+    "videoPosition": "38",
+    "spotify": "3nQ24dxqvxZEVwlHTeuLz0",
+    "previewUrl": "https://p.scdn.co/mp3-preview/f3eae7456ed76b695d1af8b2863a8330670d8c17",
+    "rotated": true,
+    "modalShadowColors": {
+      "default": {
+        "color1": "",
+        "color2": ""  
+      },
+      "hover": {
+        "color1": "",
+        "color2": "" 
+      }
+    }
+  },
+  "seeutonight": {
+    "title": "See U Tonight",
+    "artist": "Kylie Cantrall (Feat. ILLIT)",
+    "releaseYear": 2025,
+    "cover": "BOY.png",
+    "bpm": 126,
+    "duration": "2m 10s",
+    "key": "B♭ Minor",
+    "difficulties": {
+      "vocals": -1,
+      "guitar": -1,
+      "bass": -1,
+      "drums": -1,
+      "plastic-bass": -1,
+      "plastic-drums": -1,
+      "plastic-guitar": -1
+    },
+    "createdAt": "2000-01-01T08:00:00.000Z",
+    "lastFeatured": "TBA",
+    "complete": "0% Complete",
+    "videoUrl": "seeutonight.mp4",
+    "videoPosition": "20",
+    "spotify": "1DFLm3LKaIYZwHsfKpwkQM",
+    "previewUrl": "https://p.scdn.co/mp3-preview/e9053dae80ddb8377dd7a7243459bbdb021a6ef2",
+    "rotated": true,
+    "modalShadowColors": {
+      "default": {
+        "color1": "",
+        "color2": ""  
+      },
+      "hover": {
+        "color1": "",
+        "color2": "" 
+      }
     }
   }
 }
