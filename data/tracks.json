@@ -525,7 +525,7 @@
     "bpm": 0,
     "duration": "4m 27s",
     "difficulties": {
-      "vocals": -1,
+      "vocals": 6,
       "guitar": -1,
       "bass": -1,
       "drums": -1,
@@ -534,16 +534,16 @@
       "plastic-guitar": -1
     },
     "createdAt": "2025-04-12T20:31:54.000Z",
-    "lastFeatured": "4/12/2025, 2:54:12 PM",
+    "lastFeatured": "5/09/2025, 2:55:32 AM",
     "spotify": "12cZWGf5ZgLcKubEW9mx5q",
     "videoUrl": "hope.mp4",
     "videoPosition": 30,
     "glowTimes": [27],
     "loading_phrase": "It's believing in yourself when no one else does, it's amazing",
-    "complete": "5% Complete",
+    "complete": "10% Complete",
     "previewUrl": "https://p.scdn.co/mp3-preview/664126639bda259bb7e5bf47989f50f023298575",
-    "rotated": true,
-    "featured": true,
+    "download": "https://github.com/JaydenzKoci/song-projects/raw/refs/heads/main/Songs/NF%20-%20HOPE.zip",
+    "new": true,
     "modalShadowColors": {
       "default": {
         "color1": "#ffffff",

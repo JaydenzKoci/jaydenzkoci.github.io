@@ -1,3 +1,4 @@
+  // fnfestival.co was used as a template. All credit for the base code. I basically just built on top of it.
 document.addEventListener('DOMContentLoaded', () => {
   // DOM Elements
   const elements = {
@@ -1015,7 +1016,7 @@ document.addEventListener('DOMContentLoaded', () => {
     },
   };
 
-  // Countdown
+  // Last Updated Text
   const countdownModule = {
     updateCountdown: () => {
       const now = new Date();
@@ -1037,7 +1038,7 @@ document.addEventListener('DOMContentLoaded', () => {
         state.sawUpdateMessage = false;
         nextUpdate.setUTCDate(nextUpdate.getUTCDate() + 1);
       }
-      elements.countdown.textContent = `Last Updated - 05/08/25`;
+      elements.countdown.textContent = `Last Updated - 05/09/25`;
     },
   };
 
