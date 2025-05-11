@@ -3211,15 +3211,34 @@
         "plastic-drums": -1,
         "plastic-guitar": -1
       },
-      "createdAt": "2000-01-01T08:00:00.000Z",
-      "lastFeatured": "TBA",
+      "createdAt": "2025-05-11T10:07:19.835Z",
+      "lastFeatured": "5/11/2025, 3:07:19 AM",
       "complete": "0% Complete",
       "videoUrl": "culgary.mp4",
       "videoPosition": 55,
+      "loading_phrase": "I'm twenty, but I still feel like fifteen",
+      "glowTimes": [5.7, 7.7, 9.4, 11.4, 14.8, 18.6, 22.8, 26.8],
       "spotify": "01BDK4Skxzh5mqnTbQzWGy",
       "previewUrl": "https://p.scdn.co/mp3-preview/9acafe7b94bea484f7b86b5c11a5a44095b192b6",
-      "rotated": true
+      "rotated": true,
+      "featured": true,
+      "modalShadowColors": {
+      "default": {
+        "color1": "#ffffff",
+        "color2": "#00fafa"
+      },
+      "hover": {
+        "color1": "#75ffff",
+        "color2": "#75ffff"
+      }
     },
+    "youtubeLinks": {
+      "vocals": "",
+      "lead": "",
+      "bass": "",
+      "drums": ""
+    }
+  },
     "shy": {
       "title": "Don't Be Shy",
       "artist": "Tiesto & Karol G",
