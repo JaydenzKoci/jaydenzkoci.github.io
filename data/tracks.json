@@ -534,7 +534,7 @@
       "plastic-guitar": -1
     },
     "createdAt": "2025-04-12T20:31:54.000Z",
-    "lastFeatured": "5/09/2025, 2:55:32 AM",
+    "lastFeatured": "5/9/2025, 2:55:32 AM",
     "spotify": "12cZWGf5ZgLcKubEW9mx5q",
     "videoUrl": "hope.mp4",
     "videoPosition": 30,
@@ -672,23 +672,23 @@
     "key": "C-",
     "difficulties": {
       "vocals": -1,
-      "guitar": -1,
+      "guitar": 3,
       "bass": -1,
       "drums": -1,
       "plastic-bass": -1,
       "plastic-drums": -1,
       "plastic-guitar": -1
     },
-    "createdAt": "2000-01-01T08:00:00.000Z",
-    "lastFeatured": "TBA",
+    "createdAt": "2025-05-09T08:08:19.834Z",
+    "lastFeatured": "5/10/2025, 12:04:43 AM",
     "spotify": "3AzjcOeAmA57TIOr9zF1ZW",
-    "complete": "0% Complete",
+    "complete": "10% Complete",
     "videoUrl": "physical.mp4",
+    "download": "https://github.com/JaydenzKoci/song-projects/raw/refs/heads/main/Songs/Dua%20Lipa%20-%20Physical.zip",
     "videoPosition": 25,
     "glowTimes": [11.1, 24.1],
     "previewUrl": "https://p.scdn.co/mp3-preview/a40862d3e14b3758de55a84a6e06e5dbf87b3d0b",
-    "rotated": true,
-    "featured": true,
+    "new": true,
     "loading_phrase": "Tell me if you're ready",
     "modalShadowColors": {
       "default": {
@@ -702,7 +702,7 @@
     },
     "youtubeLinks": {
       "vocals": "",
-      "lead": "",
+      "lead": "https://youtu.be/DleFVOEY0OQ",
       "bass": "",
       "drums": ""
     }
