@@ -1878,7 +1878,7 @@
       "key": "C# Minor",
       "difficulties": {
         "vocals": -1,
-        "guitar": -1,
+        "guitar": 4,
         "bass": -1,
         "drums": -1,
         "plastic-bass": -1,
@@ -1886,16 +1886,16 @@
         "plastic-guitar": -1
       },
       "createdAt": "2025-04-11T07:21:19.835Z",
-      "lastFeatured": "4/11/2025, 1:59:28 AM",
+      "lastFeatured": "5/11/2025, 2:49:31 AM",
       "spotify": "4Rd5l7mIiV0V35AhxHV1oh",
       "videoUrl": "monody.mp4",
       "videoPosition": 60,
       "glowTimes": [2, 4, 8, 10],
       "loading_phrase": "Holding on, memories never change",
-      "complete": "5% Complete",
+      "complete": "10% Complete",
+      "download": "https://github.com/JaydenzKoci/song-projects/raw/refs/heads/main/Songs/TheFatRat%20-%20Monody.zip",
       "previewUrl": "https://p.scdn.co/mp3-preview/25b902df4aa6f5a95ef5f4a31795b9c13c434816",
-      "rotated": true,
-      "featured": true,
+      "new": true,
       "modalShadowColors": {
         "default": {
           "color1": "#ffffff",
@@ -1905,7 +1905,13 @@
           "color1": "#ffffff",
           "color2": "#ffffff"
         }
-      }
+    },
+    "youtubeLinks": {
+      "vocals": "",
+      "lead": "https://youtu.be/ZsjsmvqfPko",
+      "bass": "",
+      "drums": ""
+    }
     },
     "unity": {
       "title": "Unity",
