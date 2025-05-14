@@ -3204,7 +3204,7 @@
       "key": "A Minor",
       "difficulties": {
         "vocals": -1,
-        "guitar": -1,
+        "guitar": 2,
         "bass": -1,
         "drums": -1,
         "plastic-bass": -1,
@@ -3212,16 +3212,16 @@
         "plastic-guitar": -1
       },
       "createdAt": "2025-05-11T10:07:19.835Z",
-      "lastFeatured": "5/11/2025, 3:07:19 AM",
-      "complete": "0% Complete",
+      "lastFeatured": "5/13/2025, 8:24:19 PM",
+      "complete": "10% Complete",
       "videoUrl": "culgary.mp4",
       "videoPosition": 55,
       "loading_phrase": "I'm twenty, but I still feel like fifteen",
+      "download": "https://github.com/JaydenzKoci/song-projects/raw/refs/heads/main/Songs/Tate%20McRae%20-%20calgary.zip",
       "glowTimes": [5.7, 7.7, 9.4, 11.4, 14.8, 18.6, 22.8, 26.8],
       "spotify": "01BDK4Skxzh5mqnTbQzWGy",
       "previewUrl": "https://p.scdn.co/mp3-preview/9acafe7b94bea484f7b86b5c11a5a44095b192b6",
-      "rotated": true,
-      "featured": true,
+      "new": true,
       "modalShadowColors": {
       "default": {
         "color1": "#ffffff",

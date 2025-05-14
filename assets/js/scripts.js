@@ -1038,7 +1038,7 @@ document.addEventListener('DOMContentLoaded', () => {
         state.sawUpdateMessage = false;
         nextUpdate.setUTCDate(nextUpdate.getUTCDate() + 1);
       }
-      elements.countdown.textContent = `Last Updated - 05/11/25`;
+      elements.countdown.textContent = `Last Updated - 05/13/25`;
     },
   };
 
