@@ -3983,42 +3983,6 @@
       }
     }
   },
-  "seeutonight": {
-    "title": "See U Tonight",
-    "artist": "Kylie Cantrall (Feat. ILLIT)",
-    "releaseYear": 2025,
-    "cover": "BOY.png",
-    "bpm": 126,
-    "duration": "2m 10s",
-    "key": "B♭ Minor",
-    "difficulties": {
-      "vocals": -1,
-      "guitar": -1,
-      "bass": -1,
-      "drums": -1,
-      "plastic-bass": -1,
-      "plastic-drums": -1,
-      "plastic-guitar": -1
-    },
-    "createdAt": "2000-01-01T08:00:00.000Z",
-    "lastFeatured": "TBA",
-    "complete": "0% Complete",
-    "videoUrl": "seeutonight.mp4",
-    "videoPosition": "50",
-    "spotify": "1DFLm3LKaIYZwHsfKpwkQM",
-    "previewUrl": "https://p.scdn.co/mp3-preview/e9053dae80ddb8377dd7a7243459bbdb021a6ef2",
-    "rotated": true,
-    "modalShadowColors": {
-      "default": {
-        "color1": "",
-        "color2": ""  
-      },
-      "hover": {
-        "color1": "",
-        "color2": "" 
-      }
-    }
-  },
   "spaceinvaders": {
     "title": "Space Invaders",
     "artist": "MDK",

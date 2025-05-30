@@ -44,8 +44,8 @@ document.addEventListener('DOMContentLoaded', () => {
     isMuted: localStorage.getItem('isMuted') === 'true',
     textGlowEnabled: localStorage.getItem('textGlowEnabled') !== 'false',
     modalGlowEnabled: localStorage.getItem('modalGlowEnabled') !== 'false',
-    modalInfoEnabled: localStorage.getItem('modalInfoEnabled') === 'true', // Default: false (hidden)
-    modalInfoPosition: localStorage.getItem('modalInfoPosition') || 'bottom-center', // Default: bottom-center
+    modalInfoEnabled: localStorage.getItem('modalInfoEnabled') === 'true', 
+    modalInfoPosition: localStorage.getItem('modalInfoPosition') || 'bottom-center', 
     tracksData: [],
     currentFilteredTracks: [],
     loadedTracks: 0,
@@ -567,20 +567,20 @@ document.addEventListener('DOMContentLoaded', () => {
         infoPopup.style.padding = '10px 20px';
 
         if (state.modalInfoPosition === 'left-side') {
-          infoPopup.style.right = 'calc(50% + 47px)'; // 250px modal half-width + 10px gap
+          infoPopup.style.right = 'calc(50% + 47px)'; 
           infoPopup.style.top = '33%';
           infoPopup.style.transform = 'translateY(-50%)';
           infoPopup.style.textAlign = 'left';
           infoPopup.style.width = '200px';
         } else if (state.modalInfoPosition === 'right-side') {
-          infoPopup.style.left = 'calc(50% + 100px)'; // 250px modal half-width + 10px gap
+          infoPopup.style.left = 'calc(50% + 100px)'; 
           infoPopup.style.top = '48%';
           infoPopup.style.transform = 'translateY(-50%)';
           infoPopup.style.textAlign = 'right';
           infoPopup.style.width = '150px';
         } else {
-          infoPopup.style.width = '200px'; // Expanded width for bottom positions
-          infoPopup.style.padding = '15px 25px'; // More padding for bottom positions
+          infoPopup.style.width = '200px';
+          infoPopup.style.padding = '15px 25px'; 
           if (state.modalInfoPosition === 'bottom-left') {
             infoPopup.style.left = '20px';
             infoPopup.style.right = 'auto';
@@ -591,7 +591,7 @@ document.addEventListener('DOMContentLoaded', () => {
             infoPopup.style.left = 'auto';
             infoPopup.style.bottom = '20px';
             infoPopup.style.textAlign = 'right';
-          } else { // bottom-center
+          } else { 
             infoPopup.style.left = '50%';
             infoPopup.style.right = 'auto';
             infoPopup.style.bottom = '80px';
@@ -601,7 +601,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
       } else {
         infoPopup.style.display = 'none';
-        infoPopup.innerHTML = ''; // Clear text when hidden
+        infoPopup.innerHTML = '';
       }
 
       elements.modal.style.display = 'block';
