@@ -1,4 +1,5 @@
-  // fnfestival.co was used as a template. All credit for the base code. I basically just built on top of it.
+// Music track interface application built on top of fnfestival.co template.
+// All credit to fnfestival.co for the base code; extended with additional features.
 document.addEventListener('DOMContentLoaded', () => {
   // DOM Elements
   const elements = {
@@ -30,6 +31,11 @@ document.addEventListener('DOMContentLoaded', () => {
     countdown: document.getElementById('countdown'),
   };
 
+  // Validate DOM elements
+  Object.keys(elements).forEach((key) => {
+    if (!elements[key]) console.warn(`DOM element ${key} not found`);
+  });
+
   // State
   let state = {
     fadeInAudioEnabled: localStorage.getItem('fadeInAudioEnabled') !== 'false',
@@ -38,6 +44,8 @@ document.addEventListener('DOMContentLoaded', () => {
     isMuted: localStorage.getItem('isMuted') === 'true',
     textGlowEnabled: localStorage.getItem('textGlowEnabled') !== 'false',
     modalGlowEnabled: localStorage.getItem('modalGlowEnabled') !== 'false',
+    modalInfoEnabled: localStorage.getItem('modalInfoEnabled') === 'true', // Default: false (hidden)
+    modalInfoPosition: localStorage.getItem('modalInfoPosition') || 'bottom-center', // Default: bottom-center
     tracksData: [],
     currentFilteredTracks: [],
     loadedTracks: 0,
@@ -92,9 +100,7 @@ document.addEventListener('DOMContentLoaded', () => {
         console.warn(`Invalid duration format: ${duration}`);
         return 0;
       }
-      const minutes = parseInt(match[1], 10) || 0;
-      const seconds = parseInt(match[2], 10) || 0;
-      return minutes * 60 + seconds;
+      return parseInt(match[1], 10) * 60 + parseInt(match[2], 10);
     },
     isValidColor: (color) => {
       if (!color) return false;
@@ -105,18 +111,11 @@ document.addEventListener('DOMContentLoaded', () => {
     hexToRgb: (hex) => {
       if (!hex) return '0, 0, 0';
       hex = hex.replace(/^#/, '');
-      if (hex.length === 3) {
-        hex = hex.split('').map((c) => c + c).join('');
-      }
+      if (hex.length === 3) hex = hex.split('').map((c) => c + c).join('');
       const bigint = parseInt(hex, 16);
-      const r = (bigint >> 16) & 255;
-      const g = (bigint >> 8) & 255;
-      const b = bigint & 255;
-      return `${r}, ${g}, ${b}`;
+      return `${(bigint >> 16) & 255}, ${(bigint >> 8) & 255}, ${bigint & 255}`;
     },
-    rgbToRgba: (rgb, opacity) => {
-      return `rgba(${rgb}, ${opacity})`;
-    },
+    rgbToRgba: (rgb, opacity) => `rgba(${rgb}, ${opacity})`,
   };
 
   // YouTube Player
@@ -165,29 +164,25 @@ document.addEventListener('DOMContentLoaded', () => {
         audio.load();
       }
       if (!state.isMuted && elements.videoPopup.style.display !== 'block') {
-        const playPromise = audio.play();
-        if (playPromise !== undefined) {
-          playPromise
-            .then(() => {
-              console.log('Audio playing:', previewUrl);
-              if (state.fadeInAudioEnabled) {
-                audioModule.fadeInAudio(audio, 0.25, 3000);
-              } else {
-                audio.volume = 0.25;
-              }
-            })
-            .catch((error) => {
-              console.error('Audio playback failed:', error);
-              if (utils.isMobile()) {
-                console.log('Mobile device detected; audio requires user interaction');
-                elements.content.insertAdjacentHTML(
-                  'beforebegin',
-                  '<div class="audio-notice">Tap a track to enable audio playback</div>'
-                );
-                setTimeout(() => document.querySelector('.audio-notice')?.remove(), 3000);
-              }
-            });
-        }
+        audio.play()
+          .then(() => {
+            console.log('Audio playing:', previewUrl);
+            if (state.fadeInAudioEnabled) {
+              audioModule.fadeInAudio(audio, 0.25, 3000);
+            } else {
+              audio.volume = 0.25;
+            }
+          })
+          .catch((error) => {
+            console.error('Audio playback failed:', error);
+            if (utils.isMobile()) {
+              elements.content.insertAdjacentHTML(
+                'beforebegin',
+                '<div class="audio-notice">Tap a track to enable audio playback</div>'
+              );
+              setTimeout(() => document.querySelector('.audio-notice')?.remove(), 3000);
+            }
+          });
       }
     },
     toggleMute: () => {
@@ -198,8 +193,7 @@ document.addEventListener('DOMContentLoaded', () => {
       if (state.isMuted) {
         modalModule.stopGlowInterval();
       } else if (state.currentPreviewUrl && elements.videoPopup.style.display !== 'block') {
-        audio
-          .play()
+        audio.play()
           .then(() => {
             console.log('Audio unmuted:', state.currentPreviewUrl);
             if (state.fadeInAudioEnabled) {
@@ -220,7 +214,8 @@ document.addEventListener('DOMContentLoaded', () => {
         console.log('Preload disabled; skipping');
         return;
       }
-      elements.preloadIndicator?.classList.add('active');
+      if (!elements.preloadIndicator) return;
+      elements.preloadIndicator.classList.add('active');
       const maxPreload = utils.isMobile() ? 50 : 200;
       const tracksToPreload = tracks.slice(0, maxPreload);
       let loadedCount = 0;
@@ -230,17 +225,17 @@ document.addEventListener('DOMContentLoaded', () => {
       );
       if (totalAssets === 0) {
         console.log('No assets to preload');
-        elements.preloadIndicator?.classList.remove('active');
+        elements.preloadIndicator.classList.remove('active');
         return;
       }
       const updateProgress = () => {
         const progressPercent = (loadedCount / totalAssets) * 100;
-        if (elements.preloadProgress) {
+        if (elements.preloadProgress && elements.preloadPercent) {
           elements.preloadProgress.value = progressPercent;
           elements.preloadPercent.textContent = `${Math.round(progressPercent)}%`;
         }
         if (loadedCount >= totalAssets) {
-          elements.preloadIndicator?.classList.remove('active');
+          elements.preloadIndicator.classList.remove('active');
         }
       };
       tracksToPreload.forEach((track) => {
@@ -253,7 +248,7 @@ document.addEventListener('DOMContentLoaded', () => {
           };
           img.onerror = () => {
             console.error(`Failed to preload cover: /assets/covers/${track.cover}`);
-            img.src = '/assets/covers/fallback.jpg'; // Fallback image
+            img.src = '/assets/covers/fallback.jpg';
             loadedCount++;
             updateProgress();
           };
@@ -286,8 +281,7 @@ document.addEventListener('DOMContentLoaded', () => {
   // To-Do List
   const todoModule = {
     fetchTodoList: () =>
-      utils
-        .fetchWithRetry(`data/todoList.json?_=${Date.now()}`)
+      utils.fetchWithRetry(`data/todoList.json?_=${Date.now()}`)
         .then((data) => {
           state.todoList = Array.isArray(data) ? data : [];
           console.log('Loaded to-do list:', state.todoList);
@@ -303,13 +297,15 @@ document.addEventListener('DOMContentLoaded', () => {
   // UI Updates
   const uiModule = {
     updateMuteIcon: () => {
+      if (!elements.muteButton) return;
       const muteIcon = elements.muteButton.querySelector('.mute-icon');
       const unmuteIcon = elements.muteButton.querySelector('.unmute-icon');
       elements.muteButton.setAttribute('aria-pressed', state.isMuted);
-      muteIcon.style.display = state.isMuted ? 'block' : 'none';
-      unmuteIcon.style.display = state.isMuted ? 'none' : 'block';
+      if (muteIcon) muteIcon.style.display = state.isMuted ? 'block' : 'none';
+      if (unmuteIcon) unmuteIcon.style.display = state.isMuted ? 'none' : 'block';
     },
     updateSettingsUI: () => {
+      if (!elements.settingsMenu) return;
       const audioFadeItem = elements.settingsMenu.querySelector('li[data-setting="audio-fade"]');
       if (audioFadeItem) {
         audioFadeItem.textContent = `Fade In Audio: ${state.fadeInAudioEnabled ? 'On' : 'Off'}`;
@@ -337,6 +333,17 @@ document.addEventListener('DOMContentLoaded', () => {
         modalGlowItem.textContent = `Track Glow: ${state.modalGlowEnabled ? 'On' : 'Off'}`;
         modalGlowItem.setAttribute('aria-checked', state.modalGlowEnabled);
       }
+      // Modal Info Show/Hide
+      const modalInfoItem = elements.settingsMenu.querySelector('li[data-setting="modal-info"]');
+      if (modalInfoItem) {
+        modalInfoItem.textContent = `Modal Info: ${state.modalInfoEnabled ? 'Show' : 'Hide'}`;
+        modalInfoItem.setAttribute('aria-checked', state.modalInfoEnabled);
+      }
+      // Modal Info Position Dropdown
+      const modalInfoPositionSelect = elements.settingsMenu.querySelector('select[data-setting="modal-info-position"]');
+      if (modalInfoPositionSelect) {
+        modalInfoPositionSelect.value = state.modalInfoPosition;
+      }
     },
     updateTodoListUI: () => {
       if (!elements.todoList) {
@@ -354,15 +361,14 @@ document.addEventListener('DOMContentLoaded', () => {
         state.todoList.forEach((task) => {
           const li = document.createElement('li');
           li.className = task.completed ? 'completed' : '';
-          li.innerHTML = `<span class="todo-text" aria-label="To-do task: ${task.text}${
-            task.completed ? ', completed' : ''
-          }">${task.text}</span>`;
+          li.innerHTML = `<span class="todo-text" aria-label="To-do task: ${task.text}${task.completed ? ', completed' : ''}">${task.text}</span>`;
           elements.todoList.appendChild(li);
         });
       }
       elements.todoList.classList.remove('todo-list-loading');
     },
     updateDownloadButton: (downloadUrl) => {
+      if (!elements.downloadButton) return;
       state.currentDownloadUrl = downloadUrl || '';
       elements.downloadButton.disabled = !state.currentDownloadUrl.trim();
     },
@@ -381,9 +387,11 @@ document.addEventListener('DOMContentLoaded', () => {
       modalModule.renderModal(track);
     },
     renderModal: (track) => {
-      const { title, artist, releaseYear, cover, duration, complete, difficulties, bpm, createdAt, lastFeatured, previewUrl, download, videoUrl, videoPosition, key, youtubeLinks, loading_phrase, videoZoom, glowTimes, modalShadowColors } = track;
+      if (!elements.modal) return;
+      const { title, artist, releaseYear, cover, duration, complete, difficulties, bpm, createdAt, lastFeatured, previewUrl, download, videoUrl, videoPosition, key, youtubeLinks, loading_phrase, videoZoom, glowTimes, modalShadowColors, spotify } = track;
       const positionPercent = videoPosition ?? 50;
       const modalContent = elements.modal.querySelector('.modal-content');
+      if (!modalContent) return;
 
       modalContent.style.boxShadow = '';
       modalContent.style.transition = 'box-shadow 0.3s ease';
@@ -395,7 +403,7 @@ document.addEventListener('DOMContentLoaded', () => {
       let defaultShadow = '0 0 50px rgba(255, 255, 255, 0.52), 0 0 100px rgba(255, 255, 255, 0.49)';
       let glowShadow = '0 0 60px rgb(255, 255, 255), 0 0 120px rgb(255, 255, 255)';
 
-      if (modalShadowColors && modalShadowColors.default && modalShadowColors.hover) {
+      if (modalShadowColors?.default && modalShadowColors.hover) {
         const { default: defaultColors, hover: hoverColors } = modalShadowColors;
         const isValidDefault = defaultColors.color1 && defaultColors.color2 &&
                               utils.isValidColor(defaultColors.color1) && utils.isValidColor(defaultColors.color2);
@@ -415,14 +423,8 @@ document.addEventListener('DOMContentLoaded', () => {
       }
 
       modalContent.style.boxShadow = defaultShadow;
-
-      if (utils.isMobile()) {
-        modalContent.style.width = '95%';
-        modalContent.style.maxWidth = '400px';
-      } else {
-        modalContent.style.width = '50%';
-        modalContent.style.maxWidth = '500px';
-      }
+      modalContent.style.width = utils.isMobile() ? '95%' : '50%';
+      modalContent.style.maxWidth = utils.isMobile() ? '400px' : '500px';
 
       modalContent.querySelector('.modal-video')?.remove();
       modalContent.classList.remove('no-video');
@@ -439,9 +441,9 @@ document.addEventListener('DOMContentLoaded', () => {
       } else {
         loadingPhraseElement.classList.remove('glow');
       }
-      loadingPhraseElement.innerHTML = `<p><strong></strong> ${loading_phrase || 'Not available'}</p>`;
+      loadingPhraseElement.innerHTML = `<center><strong></strong> ${loading_phrase || 'Not available'}</p>`;
 
-      if (state.textGlowEnabled && glowTimes && Array.isArray(glowTimes) && glowTimes.length > 0 && previewUrl) {
+      if (state.textGlowEnabled && glowTimes?.length && previewUrl) {
         const applyGlowEffect = () => {
           if (!audio.paused && !state.isMuted && elements.videoPopup.style.display !== 'block') {
             const currentTime = audio.currentTime % audio.duration;
@@ -497,9 +499,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
       if (previewUrl) audioModule.playPreview(previewUrl);
 
-      let videoElement;
       if (videoUrl) {
-        videoElement = document.createElement('video');
+        const videoElement = document.createElement('video');
         videoElement.classList.add('modal-video');
         videoElement.autoplay = true;
         videoElement.muted = true;
@@ -516,22 +517,92 @@ document.addEventListener('DOMContentLoaded', () => {
         videoElement.onloadeddata = () => videoElement.classList.add('loaded');
       }
 
-      elements.modal.querySelector('#modalCover').src = `/assets/covers/${cover}`;
-      elements.modal.querySelector('#modalTitle').textContent = title;
-      elements.modal.querySelector('#modalArtist').textContent = artist;
-      elements.modal.querySelector('#modalDuration').textContent = `${releaseYear} | ${duration}`;
-      elements.modal.querySelector('#modalDetails').innerHTML = `
-        <div class="modal-details-row">
-          <div class="modal-dates">
-            <p><strong>Created At:</strong> ${new Date(createdAt).toLocaleString()}</p>
-            <p><strong>Last Updated:</strong> ${lastFeatured || 'Not available'}</p>
+      const modalCover = elements.modal.querySelector('#modalCover');
+      const modalTitle = elements.modal.querySelector('#modalTitle');
+      const modalArtist = elements.modal.querySelector('#modalArtist');
+      const modalDuration = elements.modal.querySelector('#modalDuration');
+      const modalDetails = elements.modal.querySelector('#modalDetails');
+      const modalDifficulties = elements.modal.querySelector('#modalDifficulties');
+
+      if (modalCover) modalCover.src = `/assets/covers/${cover}`;
+      if (modalTitle) modalTitle.textContent = title;
+      if (modalArtist) modalArtist.textContent = artist;
+      if (modalDuration) modalDuration.textContent = `${releaseYear} | ${duration}`;
+      if (modalDetails) {
+        modalDetails.innerHTML = `
+          <div class="modal-details-row">
+            <div class="modal-dates">
+              <p><strong>Created At:</strong> ${new Date(createdAt).toLocaleString()}</p>
+              <p><strong>Last Updated:</strong> ${lastFeatured || 'Not available'}</p>
+            </div>
+            <div class="modal-progress">
+              <p><strong>Progress:</strong> ${complete}</p>
+            </div>
           </div>
-          <div class="modal-progress">
-            <p><strong>Progress:</strong> ${complete}</p>
-          </div>
-        </div>
-      `;
-      trackModule.generateDifficultyBars(difficulties, elements.modal.querySelector('#modalDifficulties'));
+        `;
+      }
+      if (modalDifficulties) trackModule.generateDifficultyBars(difficulties, modalDifficulties);
+
+      // Add info popup
+      let infoPopup = elements.modal.querySelector('.modal-info-popup');
+      if (!infoPopup) {
+        infoPopup = document.createElement('div');
+        infoPopup.classList.add('modal-info-popup');
+        elements.modal.appendChild(infoPopup);
+      }
+
+      if (state.modalInfoEnabled) {
+        infoPopup.innerHTML = `
+          <strong>Key:</strong> ${key || 'Not available'}<br><strong>BPM:</strong> ${bpm ||'Not available'}
+        `;
+        infoPopup.style.display = 'block';
+        infoPopup.style.position = 'absolute';
+        infoPopup.style.left = '';
+        infoPopup.style.right = '';
+        infoPopup.style.bottom = '';
+        infoPopup.style.top = '';
+        infoPopup.style.transform = '';
+        infoPopup.style.textAlign = '';
+        infoPopup.style.width = '';
+        infoPopup.style.padding = '10px 20px';
+
+        if (state.modalInfoPosition === 'left-side') {
+          infoPopup.style.right = 'calc(50% + 47px)'; // 250px modal half-width + 10px gap
+          infoPopup.style.top = '33%';
+          infoPopup.style.transform = 'translateY(-50%)';
+          infoPopup.style.textAlign = 'left';
+          infoPopup.style.width = '200px';
+        } else if (state.modalInfoPosition === 'right-side') {
+          infoPopup.style.left = 'calc(50% + 100px)'; // 250px modal half-width + 10px gap
+          infoPopup.style.top = '48%';
+          infoPopup.style.transform = 'translateY(-50%)';
+          infoPopup.style.textAlign = 'right';
+          infoPopup.style.width = '150px';
+        } else {
+          infoPopup.style.width = '200px'; // Expanded width for bottom positions
+          infoPopup.style.padding = '15px 25px'; // More padding for bottom positions
+          if (state.modalInfoPosition === 'bottom-left') {
+            infoPopup.style.left = '20px';
+            infoPopup.style.right = 'auto';
+            infoPopup.style.bottom = '20px';
+            infoPopup.style.textAlign = 'left';
+          } else if (state.modalInfoPosition === 'bottom-right') {
+            infoPopup.style.right = '20px';
+            infoPopup.style.left = 'auto';
+            infoPopup.style.bottom = '20px';
+            infoPopup.style.textAlign = 'right';
+          } else { // bottom-center
+            infoPopup.style.left = '50%';
+            infoPopup.style.right = 'auto';
+            infoPopup.style.bottom = '80px';
+            infoPopup.style.transform = 'translateX(-50%)';
+            infoPopup.style.textAlign = 'center';
+          }
+        }
+      } else {
+        infoPopup.style.display = 'none';
+        infoPopup.innerHTML = ''; // Clear text when hidden
+      }
 
       elements.modal.style.display = 'block';
       document.body.classList.add('modal-open');
@@ -540,13 +611,15 @@ document.addEventListener('DOMContentLoaded', () => {
 
       const prevButton = elements.modal.querySelector('.modal-prev');
       const nextButton = elements.modal.querySelector('.modal-next');
-      prevButton.style.display = state.currentTrackIndex > 0 ? 'block' : 'none';
-      nextButton.style.display = state.currentTrackIndex < state.currentFilteredTracks.length - 1 ? 'block' : 'none';
+      if (prevButton) prevButton.style.display = state.currentTrackIndex > 0 ? 'block' : 'none';
+      if (nextButton) nextButton.style.display = state.currentTrackIndex < state.currentFilteredTracks.length - 1 ? 'block' : 'none';
 
-      const hasYouTubeLinks = youtubeLinks && Object.values(youtubeLinks).some((url) => url?.trim());
-      elements.videoMenuButton.disabled = !hasYouTubeLinks;
+      if (elements.videoMenuButton) {
+        const hasYouTubeLinks = youtubeLinks && Object.values(youtubeLinks).some((url) => url?.trim());
+        elements.videoMenuButton.disabled = !hasYouTubeLinks;
+      }
 
-      const menuItems = elements.videoMenu.querySelectorAll('li');
+      const menuItems = elements.videoMenu?.querySelectorAll('li') || [];
       menuItems.forEach((item) => {
         const instrument = item.getAttribute('data-instrument');
         const youtubeUrl = youtubeLinks?.[instrument];
@@ -556,12 +629,13 @@ document.addEventListener('DOMContentLoaded', () => {
           if (youtubeUrl) {
             videoModule.openVideoPopup(track, youtubeUrl, instrument);
             elements.videoMenu.style.display = 'none';
-            elements.videoMenuButton.setAttribute('aria-expanded', 'false');
+            elements.videoMenuButton?.setAttribute('aria-expanded', 'false');
           }
         };
       });
     },
     closeModal: () => {
+      if (!elements.modal) return;
       elements.modal.style.display = 'none';
       document.body.classList.remove('modal-open');
       audio.pause();
@@ -601,9 +675,7 @@ document.addEventListener('DOMContentLoaded', () => {
     handleTouchEnd: null,
     startGlowInterval: (applyGlowEffect) => {
       if (!modalModule.glowInterval) {
-        modalModule.glowInterval = setInterval(() => {
-          applyGlowEffect();
-        }, 100);
+        modalModule.glowInterval = setInterval(applyGlowEffect, 100);
       }
     },
     stopGlowInterval: () => {
@@ -611,15 +683,13 @@ document.addEventListener('DOMContentLoaded', () => {
         clearInterval(modalModule.glowInterval);
         modalModule.glowInterval = null;
       }
-      if (modalModule.glowTimeouts) {
-        modalModule.glowTimeouts.forEach(clearTimeout);
-        modalModule.glowTimeouts = [];
-      }
-      const loadingPhraseElement = elements.modal.querySelector('.modal-loading-phrase');
+      modalModule.glowTimeouts.forEach(clearTimeout);
+      modalModule.glowTimeouts = [];
+      const loadingPhraseElement = elements.modal?.querySelector('.modal-loading-phrase');
       if (loadingPhraseElement) {
         loadingPhraseElement.classList.remove('glow');
       }
-      const modalContent = elements.modal.querySelector('.modal-content');
+      const modalContent = elements.modal?.querySelector('.modal-content');
       if (modalContent) {
         modalContent.style.boxShadow = modalContent.style.boxShadow || '0 0 50px rgba(0, 255, 255, 0.3), 0 0 100px rgba(255, 0, 255, 0.2)';
       }
@@ -650,8 +720,9 @@ document.addEventListener('DOMContentLoaded', () => {
         state.currentPreviewUrl = track.previewUrl;
       }
 
-      const videoPopupContent = elements.videoPopup.querySelector('.video-popup-content');
-      const videoSidebar = elements.videoPopup.querySelector('.video-sidebar');
+      const videoPopupContent = elements.videoPopup?.querySelector('.video-popup-content');
+      const videoSidebar = elements.videoPopup?.querySelector('.video-sidebar');
+      if (!videoPopupContent || !elements.videoPopup) return;
 
       if (utils.isMobile()) {
         videoPopupContent.style.flexDirection = 'column';
@@ -661,8 +732,10 @@ document.addEventListener('DOMContentLoaded', () => {
           videoSidebar.style.width = '100%';
           videoSidebar.style.padding = '20px';
         }
-        elements.videoTrackCover.style.width = '100%';
-        elements.videoTrackCover.style.height = 'auto';
+        if (elements.videoTrackCover) {
+          elements.videoTrackCover.style.width = '100%';
+          elements.videoTrackCover.style.height = 'auto';
+        }
       } else {
         videoPopupContent.style.flexDirection = 'row';
         videoPopupContent.style.width = '1280px';
@@ -671,14 +744,16 @@ document.addEventListener('DOMContentLoaded', () => {
           videoSidebar.style.width = '400px';
           videoSidebar.style.padding = '50px';
         }
-        elements.videoTrackCover.style.width = '300px';
-        elements.videoTrackCover.style.height = '300px';
+        if (elements.videoTrackCover) {
+          elements.videoTrackCover.style.width = '300px';
+          elements.videoTrackCover.style.height = '300px';
+        }
       }
 
-      elements.videoTrackCover.src = `/assets/covers/${track.cover}`;
-      elements.videoTrackTitle.textContent = track.title;
-      elements.videoTrackArtist.textContent = track.artist;
-      elements.videoTrackDuration.textContent = `${track.releaseYear} | ${track.duration}`;
+      if (elements.videoTrackCover) elements.videoTrackCover.src = `/assets/covers/${track.cover}`;
+      if (elements.videoTrackTitle) elements.videoTrackTitle.textContent = track.title;
+      if (elements.videoTrackArtist) elements.videoTrackArtist.textContent = track.artist;
+      if (elements.videoTrackDuration) elements.videoTrackDuration.textContent = `${track.releaseYear} | ${track.duration}`;
       videoModule.populateInstrumentList(track, instrument);
 
       if (videoId && player) {
@@ -692,12 +767,13 @@ document.addEventListener('DOMContentLoaded', () => {
         document.body.classList.add('video-popup-open');
       } else {
         console.error('Invalid YouTube URL:', youtubeUrl);
-        elements.videoPopup.querySelector('.video-popup-content').innerHTML = '<p>Invalid YouTube video URL</p>';
-        elements.instrumentList.innerHTML = '';
-        elements.videoTrackCover.src = '';
+        videoPopupContent.innerHTML = '<p>Invalid YouTube video URL</p>';
+        if (elements.instrumentList) elements.instrumentList.innerHTML = '';
+        if (elements.videoTrackCover) elements.videoTrackCover.src = '';
       }
     },
     closeVideoPopup: () => {
+      if (!elements.videoPopup) return;
       elements.videoPopup.style.display = 'none';
       document.body.classList.remove('video-popup-open');
       if (player) {
@@ -708,12 +784,12 @@ document.addEventListener('DOMContentLoaded', () => {
           console.error('Player cleanup failed:', error);
         }
       }
-      elements.youtubeIframe.src = '';
-      elements.instrumentList.innerHTML = '';
-      elements.videoTrackCover.src = '';
-      elements.videoTrackTitle.textContent = '';
-      elements.videoTrackArtist.textContent = '';
-      elements.videoTrackDuration.textContent = '';
+      if (elements.youtubeIframe) elements.youtubeIframe.src = '';
+      if (elements.instrumentList) elements.instrumentList.innerHTML = '';
+      if (elements.videoTrackCover) elements.videoTrackCover.src = '';
+      if (elements.videoTrackTitle) elements.videoTrackTitle.textContent = '';
+      if (elements.videoTrackArtist) elements.videoTrackArtist.textContent = '';
+      if (elements.videoTrackDuration) elements.videoTrackDuration.textContent = '';
       if (state.currentPreviewUrl) {
         state.isMuted = false;
         audio.muted = false;
@@ -724,6 +800,7 @@ document.addEventListener('DOMContentLoaded', () => {
       state.currentTrack = null;
     },
     populateInstrumentList: (track, selectedInstrument) => {
+      if (!elements.instrumentList) return;
       elements.instrumentList.innerHTML = '';
       const instruments = ['vocals', 'lead', 'bass', 'drums'];
 
@@ -761,25 +838,13 @@ document.addEventListener('DOMContentLoaded', () => {
           elements.instrumentList.appendChild(li);
         }
       });
-
-      const initialYoutubeUrl = track.youtubeLinks[selectedInstrument];
-      const initialVideoId = initialYoutubeUrl?.match(/(?:youtu\.be\/|youtube\.com\/(?:watch\?v=|embed\/))([^&?]+)/)?.[1];
-      if (initialVideoId) {
-        if (player) {
-          player.loadVideoById(initialVideoId);
-          player.mute();
-        } else {
-          elements.youtubeIframe.src = `https://www.youtube.com/embed/${initialVideoId}?autoplay=1`;
-        }
-      } else {
-        console.error(`Invalid initial YouTube URL for ${selectedInstrument}: ${initialYoutubeUrl}`);
-      }
     },
   };
 
   // Track Rendering
   const trackModule = {
     renderTracks: (tracks, clearExisting = true) => {
+      if (!elements.content) return;
       if (clearExisting) elements.content.innerHTML = '';
       tracks.forEach((track) => {
         const trackElement = document.createElement('div');
@@ -804,7 +869,7 @@ document.addEventListener('DOMContentLoaded', () => {
         };
         img.onerror = () => {
           console.error(`Failed to load cover: /assets/covers/${track.cover}`);
-          img.src = '/assets/covers/fallback.jpg'; // Fallback image
+          img.src = '/assets/covers/fallback.jpg';
           loadingSpinner.remove();
           img.style.display = '';
           img.classList.add('loaded');
@@ -828,6 +893,7 @@ document.addEventListener('DOMContentLoaded', () => {
       });
     },
     filterTracks: () => {
+      if (!elements.searchInput || !elements.filterSelect || !elements.sortSelect || !elements.trackCount) return;
       const query = elements.searchInput.value.toLowerCase().trim();
       const filterValue = elements.filterSelect.value;
       const sortValue = elements.sortSelect.value;
@@ -898,6 +964,7 @@ document.addEventListener('DOMContentLoaded', () => {
       window.history.replaceState({}, '', url);
     },
     setupInfiniteScroll: (tracks) => {
+      if (!elements.content) return;
       if (intersectionObserver) intersectionObserver.disconnect();
       const sentinel = document.createElement('div');
       sentinel.className = 'sentinel';
@@ -928,10 +995,11 @@ document.addEventListener('DOMContentLoaded', () => {
       intersectionObserver.observe(sentinel);
     },
     generateDifficultyBars: (difficulties, container) => {
+      if (!container) return;
       container.innerHTML = '';
       const maxBars = 7;
       const excludedInstruments = ['plastic-guitar', 'plastic-drums', 'plastic-bass'];
-      Object.entries(difficulties).forEach(([instrument, level]) => {
+      Object.entries(difficulties || {}).forEach(([instrument, level]) => {
         if (!excludedInstruments.includes(instrument)) {
           const difficultyElement = document.createElement('div');
           difficultyElement.classList.add('difficulty');
@@ -970,87 +1038,96 @@ document.addEventListener('DOMContentLoaded', () => {
   // Settings Menu
   const settingsModule = {
     toggleSettingsMenu: () => {
+      if (!elements.settingsMenu || !elements.settingsButton) return;
       const isOpen = elements.settingsMenu.style.display === 'block';
       elements.settingsMenu.style.display = isOpen ? 'none' : 'block';
       elements.settingsButton.setAttribute('aria-expanded', !isOpen);
     },
     handleSettingsMenuClick: () => {
-      elements.settingsMenu.querySelectorAll('li').forEach((item) => {
-        item.onclick = (e) => {
-          const setting = item.getAttribute('data-setting');
-          if (setting === 'audio-fade') {
-            state.fadeInAudioEnabled = !state.fadeInAudioEnabled;
-            localStorage.setItem('fadeInAudioEnabled', state.fadeInAudioEnabled);
+      if (!elements.settingsMenu) return;
+      elements.settingsMenu.addEventListener('click', (e) => {
+        const item = e.target.closest('li[data-setting]');
+        if (!item) return;
+        const setting = item.getAttribute('data-setting');
+        if (setting === 'audio-fade') {
+          state.fadeInAudioEnabled = !state.fadeInAudioEnabled;
+          localStorage.setItem('fadeInAudioEnabled', state.fadeInAudioEnabled);
+          uiModule.updateSettingsUI();
+        } else if (setting === 'grid-size') {
+          const gridSizeSpan = e.target.closest('span[data-grid-size]');
+          if (gridSizeSpan) {
+            state.gridSize = gridSizeSpan.getAttribute('data-grid-size');
+            localStorage.setItem('gridSize', state.gridSize);
             uiModule.updateSettingsUI();
-          } else if (setting === 'grid-size') {
-            const gridSizeSpan = e.target.closest('span[data-grid-size]');
-            if (gridSizeSpan) {
-              state.gridSize = gridSizeSpan.getAttribute('data-grid-size');
-              localStorage.setItem('gridSize', state.gridSize);
-              uiModule.updateSettingsUI();
-            }
-          } else if (setting === 'preload') {
-            state.preloadAssetsEnabled = !state.preloadAssetsEnabled;
-            localStorage.setItem('preloadAssetsEnabled', state.preloadAssetsEnabled);
-            uiModule.updateSettingsUI();
-            if (state.preloadAssetsEnabled) preloadModule.preloadAssets(state.currentFilteredTracks);
-          } else if (setting === 'text-glow') {
-            state.textGlowEnabled = !state.textGlowEnabled;
-            localStorage.setItem('textGlowEnabled', state.textGlowEnabled);
-            uiModule.updateSettingsUI();
-          } else if (setting === 'modal-glow') {
-            state.modalGlowEnabled = !state.modalGlowEnabled;
-            localStorage.setItem('modalGlowEnabled', state.modalGlowEnabled);
-            uiModule.updateSettingsUI();
-          } else if (setting === 'todo') {
-            e.stopPropagation();
-            todoModule.fetchTodoList();
-            return;
-          } else if (setting === 'reset') {
-            localStorage.clear();
-            location.reload();
           }
-          settingsModule.toggleSettingsMenu();
-        };
+        } else if (setting === 'preload') {
+          state.preloadAssetsEnabled = !state.preloadAssetsEnabled;
+          localStorage.setItem('preloadAssetsEnabled', state.preloadAssetsEnabled);
+          uiModule.updateSettingsUI();
+          if (state.preloadAssetsEnabled) preloadModule.preloadAssets(state.currentFilteredTracks);
+        } else if (setting === 'text-glow') {
+          state.textGlowEnabled = !state.textGlowEnabled;
+          localStorage.setItem('textGlowEnabled', state.textGlowEnabled);
+          uiModule.updateSettingsUI();
+        } else if (setting === 'modal-glow') {
+          state.modalGlowEnabled = !state.modalGlowEnabled;
+          localStorage.setItem('modalGlowEnabled', state.modalGlowEnabled);
+          uiModule.updateSettingsUI();
+        } else if (setting === 'modal-info') {
+          state.modalInfoEnabled = !state.modalInfoEnabled;
+          localStorage.setItem('modalInfoEnabled', state.modalInfoEnabled);
+          uiModule.updateSettingsUI();
+          if (elements.modal.style.display === 'block' && state.currentTrackIndex >= 0) {
+            modalModule.renderModal(state.currentFilteredTracks[state.currentTrackIndex]);
+          }
+        } else if (setting === 'todo') {
+          e.stopPropagation();
+          todoModule.fetchTodoList();
+          return;
+        } else if (setting === 'reset') {
+          localStorage.clear();
+          location.reload();
+        }
+        settingsModule.toggleSettingsMenu();
       });
+      
+      // Handle modal info position dropdown change
+      const modalInfoPositionSelect = elements.settingsMenu.querySelector('select[data-setting="modal-info-position"]');
+      if (modalInfoPositionSelect) {
+        modalInfoPositionSelect.addEventListener('change', (e) => {
+          state.modalInfoPosition = e.target.value;
+          localStorage.setItem('modalInfoPosition', state.modalInfoPosition);
+          uiModule.updateSettingsUI();
+          if (elements.modal.style.display === 'block' && state.currentTrackIndex >= 0) {
+            modalModule.renderModal(state.currentFilteredTracks[state.currentTrackIndex]);
+          }
+        });
+      }
     },
   };
 
   // Last Updated Text
   const countdownModule = {
     updateCountdown: () => {
-      const now = new Date();
-      const nextUpdate = new Date();
-      nextUpdate.setUTCHours(0, 0, 0, 0);
-      const updateStart = new Date(nextUpdate);
-      const updateEnd = new Date(nextUpdate);
-      updateEnd.setUTCMinutes(2);
-      if (now >= updateStart && now <= updateEnd) {
-        elements.countdown.textContent = '';
-        state.sawUpdateMessage = true;
-        return;
-      }
-      if (state.sawUpdateMessage && now > updateEnd) {
-        window.location.reload();
-        return;
-      }
-      if (now > updateEnd) {
-        state.sawUpdateMessage = false;
-        nextUpdate.setUTCDate(nextUpdate.getUTCDate() + 1);
-      }
-      elements.countdown.textContent = `Last Updated - 05/17/25`;
+      if (!elements.countdown) return;
+      const lastUpdated = new Date().toLocaleDateString('en-US', { month: '2-digit', day: '2-digit', year: '2-digit' });
+      elements.countdown.textContent = `Last Updated - ${lastUpdated}`;
     },
   };
 
   // Modal Events
   const eventModule = {
     init: () => {
+      if (!elements.modal) return;
       elements.modal.addEventListener('click', (e) => {
         if (e.target === elements.modal) modalModule.closeModal();
       });
-      elements.modal.querySelector('.modal-close').addEventListener('click', modalModule.closeModal);
-      elements.modal.querySelector('.modal-prev').addEventListener('click', () => modalModule.navigateModal(-1));
-      elements.modal.querySelector('.modal-next').addEventListener('click', () => modalModule.navigateModal(1));
+      const modalClose = elements.modal.querySelector('.modal-close');
+      if (modalClose) modalClose.addEventListener('click', modalModule.closeModal);
+      const modalPrev = elements.modal.querySelector('.modal-prev');
+      if (modalPrev) modalPrev.addEventListener('click', () => modalModule.navigateModal(-1));
+      const modalNext = elements.modal.querySelector('.modal-next');
+      if (modalNext) modalNext.addEventListener('click', () => modalModule.navigateModal(1));
       document.addEventListener('keydown', (e) => {
         if (elements.modal.style.display === 'block') {
           switch (e.key) {
@@ -1068,11 +1145,11 @@ document.addEventListener('DOMContentLoaded', () => {
               break;
           }
         }
-        if (elements.settingsMenu.style.display === 'block' && e.key === 'Escape') {
+        if (elements.settingsMenu?.style.display === 'block' && e.key === 'Escape') {
           settingsModule.toggleSettingsMenu();
-          elements.settingsButton.focus();
+          elements.settingsButton?.focus();
         }
-        if (elements.videoPopup.style.display === 'block' && e.key === 'Escape') {
+        if (elements.videoPopup?.style.display === 'block' && e.key === 'Escape') {
           videoModule.closeVideoPopup();
           state.isMuted = false;
           audio.muted = false;
@@ -1080,66 +1157,78 @@ document.addEventListener('DOMContentLoaded', () => {
         }
       });
 
-      elements.logo.addEventListener('click', () => (window.location.href = '/'));
-      elements.searchInput.addEventListener('input', utils.debounce(trackModule.filterTracks, 300));
-      elements.filterSelect.addEventListener('change', trackModule.filterTracks);
-      elements.sortSelect.addEventListener('change', trackModule.filterTracks);
-      elements.muteButton.addEventListener('click', audioModule.toggleMute);
-      elements.downloadButton.addEventListener('click', () => {
-        if (state.currentDownloadUrl) window.location.href = state.currentDownloadUrl;
-      });
-      elements.settingsButton.addEventListener('click', settingsModule.toggleSettingsMenu);
-      elements.settingsButton.addEventListener('keydown', (e) => {
-        if (e.key === 'Enter' || e.key === ' ') {
-          e.preventDefault();
-          settingsModule.toggleSettingsMenu();
-        }
-      });
-      elements.settingsMenu.addEventListener('keydown', (e) => {
-        const items = elements.settingsMenu.querySelectorAll('li');
-        const current = document.activeElement;
-        const index = Array.from(items).indexOf(current);
-        if (e.key === 'ArrowDown') {
-          e.preventDefault();
-          items[(index + 1) % items.length].focus();
-        } else if (e.key === 'ArrowUp') {
-          e.preventDefault();
-          items[(index - 1 + items.length) % items.length].focus();
-        } else if (e.key === 'Escape') {
-          settingsModule.toggleSettingsMenu();
-          elements.settingsButton.focus();
-        }
-      });
-      elements.videoMenuButton.addEventListener('click', () => {
-        const isOpen = elements.videoMenu.style.display === 'block';
-        elements.videoMenu.style.display = isOpen ? 'none' : 'block';
-        elements.videoMenuButton.setAttribute('aria-expanded', !isOpen);
-      });
-      elements.videoPopupClose.addEventListener('click', videoModule.closeVideoPopup);
-      elements.videoPopup.addEventListener('click', (e) => {
-        if (e.target === elements.videoPopup) videoModule.closeVideoPopup();
-      });
-      elements.instrumentList.addEventListener('keydown', (e) => {
-        const items = elements.instrumentList.querySelectorAll('li');
-        const current = document.activeElement;
-        const index = Array.from(items).indexOf(current);
-        if (e.key === 'ArrowDown') {
-          e.preventDefault();
-          items[(index + 1) % items.length].focus();
-        } else if (e.key === 'ArrowUp') {
-          e.preventDefault();
-          items[(index - 1 + items.length) % items.length].focus();
-        } else if (e.key === 'Enter' || e.key === ' ') {
-          e.preventDefault();
-          current.click();
-        }
-      });
+      if (elements.logo) elements.logo.addEventListener('click', () => (window.location.href = '/'));
+      if (elements.searchInput) elements.searchInput.addEventListener('input', utils.debounce(trackModule.filterTracks, 300));
+      if (elements.filterSelect) elements.filterSelect.addEventListener('change', trackModule.filterTracks);
+      if (elements.sortSelect) elements.sortSelect.addEventListener('change', trackModule.filterTracks);
+      if (elements.muteButton) elements.muteButton.addEventListener('click', audioModule.toggleMute);
+      if (elements.downloadButton) {
+        elements.downloadButton.addEventListener('click', () => {
+          if (state.currentDownloadUrl) window.location.href = state.currentDownloadUrl;
+        });
+      }
+      if (elements.settingsButton) {
+        elements.settingsButton.addEventListener('click', settingsModule.toggleSettingsMenu);
+        elements.settingsButton.addEventListener('keydown', (e) => {
+          if (e.key === 'Enter' || e.key === ' ') {
+            e.preventDefault();
+            settingsModule.toggleSettingsMenu();
+          }
+        });
+      }
+      if (elements.settingsMenu) {
+        elements.settingsMenu.addEventListener('keydown', (e) => {
+          const items = elements.settingsMenu.querySelectorAll('li');
+          const current = document.activeElement;
+          const index = Array.from(items).indexOf(current);
+          if (e.key === 'ArrowDown') {
+            e.preventDefault();
+            items[(index + 1) % items.length].focus();
+          } else if (e.key === 'ArrowUp') {
+            e.preventDefault();
+            items[(index - 1 + items.length) % items.length].focus();
+          } else if (e.key === 'Escape') {
+            settingsModule.toggleSettingsMenu();
+            elements.settingsButton?.focus();
+          }
+        });
+      }
+      if (elements.videoMenuButton) {
+        elements.videoMenuButton.addEventListener('click', () => {
+          const isOpen = elements.videoMenu?.style.display === 'block';
+          if (elements.videoMenu) elements.videoMenu.style.display = isOpen ? 'none' : 'block';
+          elements.videoMenuButton.setAttribute('aria-expanded', !isOpen);
+        });
+      }
+      if (elements.videoPopupClose) elements.videoPopupClose.addEventListener('click', videoModule.closeVideoPopup);
+      if (elements.videoPopup) {
+        elements.videoPopup.addEventListener('click', (e) => {
+          if (e.target === elements.videoPopup) videoModule.closeVideoPopup();
+        });
+      }
+      if (elements.instrumentList) {
+        elements.instrumentList.addEventListener('keydown', (e) => {
+          const items = elements.instrumentList.querySelectorAll('li');
+          const current = document.activeElement;
+          const index = Array.from(items).indexOf(current);
+          if (e.key === 'ArrowDown') {
+            e.preventDefault();
+            items[(index + 1) % items.length].focus();
+          } else if (e.key === 'ArrowUp') {
+            e.preventDefault();
+            items[(index - 1 + items.length) % items.length].focus();
+          } else if (e.key === 'Enter' || e.key === ' ') {
+            e.preventDefault();
+            current.click();
+          }
+        });
+      }
       document.addEventListener('click', (e) => {
-        if (!elements.settingsButton.contains(e.target) && !elements.settingsMenu.contains(e.target)) {
+        if (elements.settingsButton && elements.settingsMenu && !elements.settingsButton.contains(e.target) && !elements.settingsMenu.contains(e.target)) {
           elements.settingsMenu.style.display = 'none';
           elements.settingsButton.setAttribute('aria-expanded', 'false');
         }
-        if (!elements.videoMenuButton.contains(e.target) && !elements.videoMenu.contains(e.target)) {
+        if (elements.videoMenuButton && elements.videoMenu && !elements.videoMenuButton.contains(e.target) && !elements.videoMenu.contains(e.target)) {
           elements.videoMenu.style.display = 'none';
           elements.videoMenuButton.setAttribute('aria-expanded', 'false');
         }
@@ -1165,8 +1254,7 @@ document.addEventListener('DOMContentLoaded', () => {
     todoModule.fetchTodoList();
     setInterval(countdownModule.updateCountdown, 1000);
     countdownModule.updateCountdown();
-    utils
-      .fetchWithRetry(`data/tracks.json?_=${Date.now()}`)
+    utils.fetchWithRetry(`data/tracks.json?_=${Date.now()}`)
       .then((data) => {
         state.tracksData = Object.values(data);
         const urlParams = new URLSearchParams(window.location.search);
@@ -1177,7 +1265,7 @@ document.addEventListener('DOMContentLoaded', () => {
       })
       .catch((error) => {
         console.error('Failed to load tracks:', error);
-        elements.content.innerHTML = '<p>Error loading tracks. Please try again later.</p>';
+        if (elements.content) elements.content.innerHTML = '<p>Error loading tracks. Please try again later.</p>';
       });
 
     window.addEventListener('unload', () => {

@@ -1774,14 +1774,156 @@ body.modal-open, body.video-popup-open {
     font-size: 16px;
   }
   
-
   @media (max-width: 768px) {
     ::-webkit-scrollbar {
       width: 0;
     }
   }
   
+/* Modal container for relative positioning */
+#trackModal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
 
+/* Modal content */
+.modal-content {
+  position: relative;
+  background: #1a1a1a;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+/* Modal info popup */
+.modal-info-popup {
+  position: absolute;
+  background: rgba(0, 0, 0, 0.8);
+  color: white;
+  border-radius: 5px;
+  font-size: 14px;
+  z-index: 10;
+  pointer-events: none;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.modal-info-popup.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+.modal-info-popup:not(.active) {
+  opacity: 0;
+  visibility: hidden;
+}
+
+/* Style for settings menu spans */
+#settingsMenu span[data-position] {
+  cursor: pointer;
+  padding: 2px 8px;
+  margin: 0 5px;
+}
+
+#settingsMenu span[data-position].active {
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+/* Mobile adjustments */
+@media (max-width: 768px) {
+  .modal-info-popup {
+    font-size: 12px;
+    padding: 8px 15px !important;
+    width: 120px !important; /* Smaller width for mobile */
+  }
+  .modal-info-popup[data-position="left-side"] {
+    right: calc(100% + 10px); /* Adjust for mobile */
+    width: 100px !important;
+  }
+}
+/* Modal container for relative positioning */
+#trackModal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+/* Modal content */
+.modal-content {
+  position: relative;
+  background: #1a1a1a;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+/* Modal info popup */
+.modal-info-popup {
+  position: absolute;
+  background: rgba(0, 0, 0, 0.8);
+  color: white;
+  border-radius: 5px;
+  font-size: 14px;
+  z-index: 10;
+  pointer-events: none;
+  display: none; /* Hidden by default */
+}
+
+.modal-info-popup[style*="display: block"] {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* Style for settings menu dropdown */
+#settingsMenu select[data-setting="modal-info-position"] {
+  background: #333;
+  color: white;
+  border: 1px solid #555;
+  border-radius: 4px;
+  padding: 5px;
+  margin-left: 10px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+#settingsMenu select[data-setting="modal-info-position"]:focus {
+  outline: none;
+  border-color: #777;
+}
+
+/* Mobile adjustments */
+@media (max-width: 768px) {
+  .modal-info-popup {
+    font-size: 12px;
+    padding: 8px 15px !important;
+    width: 120px !important; /* Smaller width for mobile */
+  }
+  .modal-info-popup[data-position="left-side"],
+  .modal-info-popup[data-position="right-side"] {
+    width: 100px !important;
+  }
+  .modal-info-popup[data-position="left-side"] {
+    right: calc(100% + 10px); /* Adjust for mobile */
+  }
+  .modal-info-popup[data-position="right-side"] {
+    left: calc(100% + 10px); /* Adjust for mobile */
+  }
+  #settingsMenu select[data-setting="modal-info-position"] {
+    width: 100%;
+    margin-top: 5px;
+  }
+}
   @media (max-width: 768px) {
     .modal-loading-phrase.glow {
       animation: none;

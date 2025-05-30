@@ -5,7 +5,7 @@
     "releaseYear": 2024,
     "cover": "Unsure.png",
     "bpm": 130,
-    "key": "F",
+    "key": "E Minor",
     "duration": "2m 49s",
     "difficulties": {
       "vocals": 3,
@@ -51,6 +51,7 @@
     "releaseYear": 2024,
     "cover": "SpotAFake.png",
     "bpm": 143,
+    "key": "E♭ Minor",
     "duration": "2m 48s",
     "difficulties": {
       "vocals": 3,
@@ -94,6 +95,7 @@
     "releaseYear": 2025,
     "cover": "LostYourFaith.png",
     "bpm": 125,
+    "key": "B Minor",
     "duration": "3m 14s",
     "difficulties": {
       "vocals": -1,
@@ -138,6 +140,7 @@
     "releaseYear": 2024,
     "cover": "ForeverYoung.png",
     "bpm": 130,
+    "key": "C Major",
     "duration": "2m 37s",
     "difficulties": {
       "vocals": 2,
@@ -182,6 +185,7 @@
     "releaseYear": 2010,
     "cover": "BreakYourHeart.png",
     "bpm": 122,
+    "key": "E♭ Major",
     "duration": "3m 22s",
     "difficulties": {
       "vocals": 3,
@@ -426,6 +430,7 @@
     "releaseYear": 2020,
     "cover": "HeavenandHell.png",
     "bpm": 116,
+    "key": "A Minor",
     "duration": "2m 55s",
     "difficulties": {
       "vocals": -1,
@@ -522,7 +527,8 @@
     "artist": "NF",
     "releaseYear": 2023,
     "cover": "HOPE.png",
-    "bpm": 0,
+    "bpm": 101,
+    "key": "C Minor",
     "duration": "4m 27s",
     "difficulties": {
       "vocals": 6,
@@ -669,7 +675,7 @@
     "cover": "Physical.png",
     "bpm": 147,
     "duration": "3m 14s",
-    "key": "C-",
+    "key": "C Major",
     "difficulties": {
       "vocals": -1,
       "guitar": 3,
@@ -765,6 +771,7 @@
     "releaseYear": 2023,
     "cover": "ThinkLater.png",
     "bpm": 137,
+    "key": "F Minor",
     "duration": "2m 41s",
     "difficulties": {
       "vocals": 4,
@@ -886,6 +893,7 @@
     "releaseYear": 2024,
     "cover": "Whatever.png",
     "bpm": 108,
+    "key": "E♭ Major",
     "duration": "2m 58s",
     "difficulties": {
       "vocals": -1,
@@ -1186,7 +1194,7 @@
     "releaseYear": 2009,
     "cover": "SexyChick.png",
     "bpm": 130,
-    "key": "B",
+    "key": "B Minor",
     "duration": "3m 14s",
     "difficulties": {
       "vocals": -1,
@@ -3633,7 +3641,7 @@
       "title": "you broke me first",
       "artist": "Tate McRae",
       "releaseYear": 2021,
-      "cover": "youbrokemefirst.png",
+      "cover": "TooYoungToBeSad.png",
       "bpm": 124,
       "duration": "2m 50s",
       "key": "E Major",
@@ -3963,6 +3971,330 @@
     "videoPosition": "50",
     "spotify": "1DFLm3LKaIYZwHsfKpwkQM",
     "previewUrl": "https://p.scdn.co/mp3-preview/e9053dae80ddb8377dd7a7243459bbdb021a6ef2",
+    "rotated": true,
+    "modalShadowColors": {
+      "default": {
+        "color1": "",
+        "color2": ""  
+      },
+      "hover": {
+        "color1": "",
+        "color2": "" 
+      }
+    }
+  },
+  "seeutonight": {
+    "title": "See U Tonight",
+    "artist": "Kylie Cantrall (Feat. ILLIT)",
+    "releaseYear": 2025,
+    "cover": "BOY.png",
+    "bpm": 126,
+    "duration": "2m 10s",
+    "key": "B♭ Minor",
+    "difficulties": {
+      "vocals": -1,
+      "guitar": -1,
+      "bass": -1,
+      "drums": -1,
+      "plastic-bass": -1,
+      "plastic-drums": -1,
+      "plastic-guitar": -1
+    },
+    "createdAt": "2000-01-01T08:00:00.000Z",
+    "lastFeatured": "TBA",
+    "complete": "0% Complete",
+    "videoUrl": "seeutonight.mp4",
+    "videoPosition": "50",
+    "spotify": "1DFLm3LKaIYZwHsfKpwkQM",
+    "previewUrl": "https://p.scdn.co/mp3-preview/e9053dae80ddb8377dd7a7243459bbdb021a6ef2",
+    "rotated": true,
+    "modalShadowColors": {
+      "default": {
+        "color1": "",
+        "color2": ""  
+      },
+      "hover": {
+        "color1": "",
+        "color2": "" 
+      }
+    }
+  },
+  "spaceinvaders": {
+    "title": "Space Invaders",
+    "artist": "MDK",
+    "releaseYear": 2019,
+    "cover": "SpaceInvaders.png",
+    "bpm": 128,
+    "duration": "5m 48s",
+    "key": "F Minor",
+    "difficulties": {
+      "vocals": -1,
+      "guitar": -1,
+      "bass": -1,
+      "drums": -1,
+      "plastic-bass": -1,
+      "plastic-drums": -1,
+      "plastic-guitar": -1
+    },
+    "createdAt": "2000-01-01T08:00:00.000Z",
+    "lastFeatured": "TBA",
+    "complete": "0% Complete",
+    "videoUrl": "spaceinvaders.mp4",
+    "videoPosition": "50",
+    "spotify": "6wegDxG3lFbZdDjvy3Zgyx",
+    "previewUrl": "https://p.scdn.co/mp3-preview/c70534d6e17fd2712efc0e913caa9cee8df1b34c",
+    "rotated": true,
+    "modalShadowColors": {
+      "default": {
+        "color1": "",
+        "color2": ""  
+      },
+      "hover": {
+        "color1": "",
+        "color2": "" 
+      }
+    }
+  },
+  "lifewillchange": {
+    "title": "Life Will Change",
+    "artist": "Lyn",
+    "releaseYear": 2017,
+    "cover": "LifeWillChange.png",
+    "bpm": 132,
+    "duration": "4m 22s",
+    "key": "C Minor",
+    "difficulties": {
+      "vocals": -1,
+      "guitar": -1,
+      "bass": -1,
+      "drums": -1,
+      "plastic-bass": -1,
+      "plastic-drums": -1,
+      "plastic-guitar": -1
+    },
+    "createdAt": "2000-01-01T08:00:00.000Z",
+    "lastFeatured": "TBA",
+    "complete": "0% Complete",
+    "videoUrl": "lifewillchange.mp4",
+    "videoPosition": "50",
+    "spotify": "0LNyWv4RYKbaXIvzk6nMxZ",
+    "previewUrl": "https://p.scdn.co/mp3-preview/e3a8c382dcff876d9934a9bf901bb8c0e3e9a627",
+    "rotated": true,
+    "modalShadowColors": {
+      "default": {
+        "color1": "",
+        "color2": ""  
+      },
+      "hover": {
+        "color1": "",
+        "color2": "" 
+      }
+    }
+  },
+  "lovinmyself": {
+    "title": "Lovin Myself",
+    "artist": "Ava Max",
+    "releaseYear": 2025,
+    "cover": "LovinMyself.png",
+    "bpm": 120,
+    "duration": "2m 56s",
+    "key": "A Major",
+    "difficulties": {
+      "vocals": -1,
+      "guitar": -1,
+      "bass": -1,
+      "drums": -1,
+      "plastic-bass": -1,
+      "plastic-drums": -1,
+      "plastic-guitar": -1
+    },
+    "createdAt": "2000-01-01T08:00:00.000Z",
+    "lastFeatured": "TBA",
+    "complete": "0% Complete",
+    "videoUrl": "lovinmyself.mp4",
+    "videoPosition": "50",
+    "spotify": "2ttIodvY52FYgod5qrcQHN",
+    "previewUrl": "https://p.scdn.co/mp3-preview/d8ee2d0174b4b9895ca7bd2d3dc5ce1404067a57",
+    "rotated": true,
+    "modalShadowColors": {
+      "default": {
+        "color1": "",
+        "color2": ""  
+      },
+      "hover": {
+        "color1": "",
+        "color2": "" 
+      }
+    }
+  },
+  "rubberband": {
+    "title": "rubberband",
+    "artist": "Tate McRae",
+    "releaseYear": 2021,
+    "cover": "TooYoungToBeSad.png",
+    "bpm": 155,
+    "duration": "2m 27s",
+    "key": "B♭ Major",
+    "difficulties": {
+      "vocals": -1,
+      "guitar": -1,
+      "bass": -1,
+      "drums": -1,
+      "plastic-bass": -1,
+      "plastic-drums": -1,
+      "plastic-guitar": -1
+    },
+    "createdAt": "2000-01-01T08:00:00.000Z",
+    "lastFeatured": "TBA",
+    "complete": "0% Complete",
+    "videoUrl": "rubberband.mp4",
+    "videoPosition": "20",
+    "spotify": "2E8IlL26PwtZq7CqAHBBUw",
+    "previewUrl": "https://p.scdn.co/mp3-preview/1f7e0073ff068c0490403b8d2e8b1d4c268ee31c",
+    "rotated": true,
+    "modalShadowColors": {
+      "default": {
+        "color1": "",
+        "color2": ""  
+      },
+      "hover": {
+        "color1": "",
+        "color2": "" 
+      }
+    }
+  },
+  "grave": {
+    "title": "grave",
+    "artist": "Tate McRae",
+    "releaseYear": 2023,
+    "cover": "ThinkLater.png",
+    "bpm": 158,
+    "duration": "3m 13s",
+    "key": "F Major",
+    "difficulties": {
+      "vocals": -1,
+      "guitar": -1,
+      "bass": -1,
+      "drums": -1,
+      "plastic-bass": -1,
+      "plastic-drums": -1,
+      "plastic-guitar": -1
+    },
+    "createdAt": "2000-01-01T08:00:00.000Z",
+    "lastFeatured": "TBA",
+    "complete": "0% Complete",
+    "videoUrl": "grave.mp4",
+    "videoPosition": "50",
+    "spotify": "6jDT7DB6k0psPX0nWNDI1K",
+    "previewUrl": "https://p.scdn.co/mp3-preview/750af250c4e4d25de2e9f0fd0d23e0a5811b2ee9",
+    "rotated": true,
+    "modalShadowColors": {
+      "default": {
+        "color1": "",
+        "color2": ""  
+      },
+      "hover": {
+        "color1": "",
+        "color2": "" 
+      }
+    }
+  },
+  "hands": {
+    "title": "2 hands",
+    "artist": "Tate McRae",
+    "releaseYear": 2025,
+    "cover": "SoCloseToWhat.png",
+    "bpm": 104,
+    "duration": "3m 03s",
+    "key": "C# Major",
+    "difficulties": {
+      "vocals": -1,
+      "guitar": -1,
+      "bass": -1,
+      "drums": -1,
+      "plastic-bass": -1,
+      "plastic-drums": -1,
+      "plastic-guitar": -1
+    },
+    "createdAt": "2000-01-01T08:00:00.000Z",
+    "lastFeatured": "TBA",
+    "complete": "0% Complete",
+    "videoUrl": "2hands.mp4",
+    "videoPosition": "50",
+    "spotify": "0B7tnohfi83RQquo2JRHrL",
+    "previewUrl": "https://p.scdn.co/mp3-preview/0f319369b2a1dbe16840ff31d0e087df20a55beb",
+    "rotated": true,
+    "modalShadowColors": {
+      "default": {
+        "color1": "",
+        "color2": ""  
+      },
+      "hover": {
+        "color1": "",
+        "color2": "" 
+      }
+    }
+  },
+  "purple": {
+    "title": "Purple lace bra",
+    "artist": "Tate McRae",
+    "releaseYear": 2025,
+    "cover": "SoCloseToWhat.png",
+    "bpm": 145,
+    "duration": "3m 11s",
+    "key": "F Minor",
+    "difficulties": {
+      "vocals": -1,
+      "guitar": -1,
+      "bass": -1,
+      "drums": -1,
+      "plastic-bass": -1,
+      "plastic-drums": -1,
+      "plastic-guitar": -1
+    },
+    "createdAt": "2000-01-01T08:00:00.000Z",
+    "lastFeatured": "TBA",
+    "complete": "0% Complete",
+    "videoUrl": "purplelacebra.mp4",
+    "videoPosition": "30",
+    "spotify": "2bqLj0NvdtGbPCl9PdBtP2",
+    "previewUrl": "https://p.scdn.co/mp3-preview/0b82979dd23ee274def09cff7a0fa94e7d09c6b5",
+    "rotated": true,
+    "modalShadowColors": {
+      "default": {
+        "color1": "",
+        "color2": ""  
+      },
+      "hover": {
+        "color1": "",
+        "color2": "" 
+      }
+    }
+  },
+  "watching": {
+    "title": "Just Keep Watching",
+    "artist": "Tate McRae",
+    "releaseYear": 2025,
+    "cover": "JustKeepWatching.png",
+    "bpm": 130,
+    "duration": "2m 23s",
+    "key": "A Minor",
+    "difficulties": {
+      "vocals": -1,
+      "guitar": -1,
+      "bass": -1,
+      "drums": -1,
+      "plastic-bass": -1,
+      "plastic-drums": -1,
+      "plastic-guitar": -1
+    },
+    "createdAt": "2000-01-01T08:00:00.000Z",
+    "lastFeatured": "TBA",
+    "complete": "0% Complete",
+    "videoUrl": "justkeepwatching.mp4",
+    "videoPosition": "30",
+    "spotify": "2yWlGEgEfPot0lv3OAjuG3",
+    "previewUrl": "https://p.scdn.co/mp3-preview/9f2bd9386cb3407de401e794298e2b9429e9722f",
     "rotated": true,
     "modalShadowColors": {
       "default": {
