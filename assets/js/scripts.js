@@ -1111,7 +1111,7 @@ document.addEventListener('DOMContentLoaded', () => {
     updateCountdown: () => {
       if (!elements.countdown) return;
       const lastUpdated = new Date().toLocaleDateString('en-US', { month: '2-digit', day: '2-digit', year: '2-digit' });
-      elements.countdown.textContent = `Last Updated - ${lastUpdated}`;
+      elements.countdown.textContent = `Last Updated - 05/31/25`;
     },
   };
 

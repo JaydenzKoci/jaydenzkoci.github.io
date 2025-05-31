@@ -207,6 +207,13 @@
     "download": "https://github.com/JaydenzKoci/song-projects/raw/refs/heads/main/Songs/Taio%20Cruz%20-%20Break%20Your%20Heart.zip",
     "previewUrl": "https://p.scdn.co/mp3-preview/c6363106816b05ddd83a0467c0e17591ecafcadd",
     "new": true,
+    "featured": true,
+    "youtubeLinks": {
+      "vocals": "",
+      "lead": " https://youtu.be/eDRvtfkE5L0",
+      "bass": "",
+      "drums": ""
+    },
     "modalShadowColors": {
       "default": {
         "color1": "#ffffff",
