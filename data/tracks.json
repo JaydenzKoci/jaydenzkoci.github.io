@@ -4277,5 +4277,113 @@
         "color2": "" 
       }
     }
+  },
+  "goodthing": {
+    "title": "Good Thing",
+    "artist": "i-dle",
+    "releaseYear": 2025,
+    "cover": "GoodThing.png",
+    "bpm": 132,
+    "duration": "2m 34s",
+    "key": "F Minor",
+    "difficulties": {
+      "vocals": -1,
+      "guitar": -1,
+      "bass": -1,
+      "drums": -1,
+      "plastic-bass": -1,
+      "plastic-drums": -1,
+      "plastic-guitar": -1
+    },
+    "createdAt": "2000-01-01T08:00:00.000Z",
+    "lastFeatured": "TBA",
+    "complete": "0% Complete",
+    "videoUrl": "goodthing.mp4",
+    "videoPosition": "75",
+    "spotify": "6d8DgvFxp6lbdfOw9BVkLS",
+    "previewUrl": "https://p.scdn.co/mp3-preview/b591f8fbcbad75a5e1884a0aed11d2a64199ed58",
+    "rotated": true,
+    "modalShadowColors": {
+      "default": {
+        "color1": "",
+        "color2": ""  
+      },
+      "hover": {
+        "color1": "",
+        "color2": "" 
+      }
+    }
+  },
+  "solo": {
+    "title": "Ridin' Solo",
+    "artist": "Jason Derulo",
+    "releaseYear": 2010,
+    "cover": "RidinSolo.png",
+    "bpm": 90,
+    "duration": "3m 36s",
+    "key": "A Major",
+    "difficulties": {
+      "vocals": -1,
+      "guitar": -1,
+      "bass": -1,
+      "drums": -1,
+      "plastic-bass": -1,
+      "plastic-drums": -1,
+      "plastic-guitar": -1
+    },
+    "createdAt": "2000-01-01T08:00:00.000Z",
+    "lastFeatured": "TBA",
+    "complete": "0% Complete",
+    "videoUrl": "ridinsolo.mp4",
+    "videoPosition": "30",
+    "spotify": "6OEolOOk9Gh9bqkdpfIOl0",
+    "previewUrl": "https://p.scdn.co/mp3-preview/11c9df3536cef3c826b018fdf1025d0d5bf2b7fd",
+    "rotated": true,
+    "modalShadowColors": {
+      "default": {
+        "color1": "",
+        "color2": ""  
+      },
+      "hover": {
+        "color1": "",
+        "color2": "" 
+      }
+    }
+  },
+  "upsidedownandinsideout": {
+    "title": "Upside Down & Inside Out",
+    "artist": "OK GO",
+    "releaseYear": 2014,
+    "cover": "UpsideDownandInsideOut.png",
+    "bpm": 93,
+    "duration": "3m 08s",
+    "key": "C Major",
+    "difficulties": {
+      "vocals": -1,
+      "guitar": -1,
+      "bass": -1,
+      "drums": -1,
+      "plastic-bass": -1,
+      "plastic-drums": -1,
+      "plastic-guitar": -1
+    },
+    "createdAt": "2000-01-01T08:00:00.000Z",
+    "lastFeatured": "TBA",
+    "complete": "0% Complete",
+    "videoUrl": "upsidedownandinsideout.mp4",
+    "videoPosition": "30",
+    "spotify": "4yC9w1fGF879SbvZmA2cAp",
+    "previewUrl": "https://p.scdn.co/mp3-preview/bc43d1f5784c0b3e8c57cd0e6601bc1d9d94c83a",
+    "rotated": true,
+    "modalShadowColors": {
+      "default": {
+        "color1": "",
+        "color2": ""  
+      },
+      "hover": {
+        "color1": "",
+        "color2": "" 
+      }
+    }
   }
 }
