@@ -27,7 +27,7 @@
     "videoZoom": 1.1,
     "previewUrl": "https://p.scdn.co/mp3-preview/0fa590f4f9fb1c7d852ede53de59699a219a2d52",
     "download": "https://github.com/JaydenzKoci/song-projects/raw/refs/heads/main/Songs/Alan%20Walker%20-%20Unsure.zip",
-    "new": true,
+    "rotated": true,
     "modalShadowColors": {
       "default": {
         "color1": "#ffffff",
@@ -71,7 +71,7 @@
     "glowTimes": [4.7, 8.2, 18],
     "download": "https://github.com/JaydenzKoci/song-projects/raw/refs/heads/main/Songs/Ava%20Max%20-%20Spot%20a%20Fake.zip",
     "previewUrl": "https://p.scdn.co/mp3-preview/f2fb7a2b1f0a602d0fa21194bdf2780a178c1450",
-    "new": true,
+    "rotated": true,
     "modalShadowColors": {
       "default": {
         "color1": "#ffffff",
@@ -116,7 +116,7 @@
     "glowTimes": [3, 8.9],
     "download": "https://github.com/JaydenzKoci/song-projects/raw/refs/heads/main/Songs/Ava%20Max%20-%20Lost%20Your%20Faith.zip",
     "previewUrl": "https://p.scdn.co/mp3-preview/3564f9445e53690decad7b57d5b6c18f6b712f4a",
-    "new": true,
+    "rotated": true,
     "modalShadowColors": {
       "default": {
         "color1": "#ffffff",
@@ -159,7 +159,7 @@
     "videoPosition": 30,
     "download": "https://github.com/JaydenzKoci/song-projects/raw/refs/heads/main/Songs/David%20Guetta%20-%20Forever%20Young.zip",
     "previewUrl": "https://p.scdn.co/mp3-preview/a47b1ab8552acc16146597026a45aa53806dbd1f",
-    "new": true,
+    "rotated": true,
     "loading_phrase": "Do you really want to live forever?",
     "glowTimes": [0.75, 3.8, 6],
     "youtubeLinks": {
@@ -206,8 +206,7 @@
     "loading_phrase": "I know Karma's gonna get me back for being so cold",
     "download": "https://github.com/JaydenzKoci/song-projects/raw/refs/heads/main/Songs/Taio%20Cruz%20-%20Break%20Your%20Heart.zip",
     "previewUrl": "https://p.scdn.co/mp3-preview/c6363106816b05ddd83a0467c0e17591ecafcadd",
-    "new": true,
-    "featured": true,
+    "rotated": true,
     "youtubeLinks": {
       "vocals": "",
       "lead": " https://youtu.be/eDRvtfkE5L0",
@@ -458,7 +457,7 @@
     "videoPosition": 25,
     "download": "https://github.com/JaydenzKoci/song-projects/raw/refs/heads/main/Songs/Ava%20Max%20-%20My%20Head%20&%20My%20Heart.zip",
     "previewUrl": "https://p.scdn.co/mp3-preview/60f31c477e494d379c3eb8e6ff15d8007d0cbe0b",
-    "new": true,
+    "rotated": true,
     "modalShadowColors": {
       "default": {
         "color1": "#ff0000",
@@ -556,7 +555,7 @@
     "complete": "10% Complete",
     "previewUrl": "https://p.scdn.co/mp3-preview/664126639bda259bb7e5bf47989f50f023298575",
     "download": "https://github.com/JaydenzKoci/song-projects/raw/refs/heads/main/Songs/NF%20-%20HOPE.zip",
-    "new": true,
+    "rotated": true,
     "modalShadowColors": {
       "default": {
         "color1": "#ffffff",
@@ -701,7 +700,7 @@
     "videoPosition": 25,
     "glowTimes": [11.1, 24.1],
     "previewUrl": "https://p.scdn.co/mp3-preview/a40862d3e14b3758de55a84a6e06e5dbf87b3d0b",
-    "new": true,
+    "rotated": true,
     "loading_phrase": "Tell me if you're ready",
     "modalShadowColors": {
       "default": {
@@ -799,7 +798,7 @@
     "glowTimes": [12, 15.6, 17.6, 22.6],
     "download": "https://github.com/JaydenzKoci/song-projects/raw/refs/heads/main/Songs/Tate%20McRae%20-%20exes.zip",
     "previewUrl": "https://p.scdn.co/mp3-preview/9f2e1821dfa9781d4e594b3e85ffc90c4f5cc089",
-    "new": true,
+    "rotated": true,
     "youtubeLinks": {
       "vocals": "https://youtu.be/zMR40P-LgkM",
       "lead": "",
@@ -920,7 +919,7 @@
     "glowTimes": [4],
     "download": "https://github.com/JaydenzKoci/song-projects/raw/refs/heads/main/Songs/Kygo%20-%20Whatever.zip",
     "previewUrl": "https://p.scdn.co/mp3-preview/03bbf447d8f0101cff90c78b3ab0c4757c3bf27b",
-    "new": true,
+    "rotated": true,
     "modalShadowColors": {
       "default": {
         "color1": "#ffffff",
@@ -1221,7 +1220,7 @@
     "glowTimes": [15],
     "download": "https://github.com/JaydenzKoci/song-projects/raw/refs/heads/main/Songs/David%20Guetta%20-%20Sexy%20Chick.zip",
     "previewUrl": "https://p.scdn.co/mp3-preview/857b312ba89079f65a60491247ce2dc5f01ab70b",
-    "new": true,
+    "rotated": true,
     "modalShadowColors": {
       "default": {
         "color1": "#ffffff",
@@ -1632,7 +1631,7 @@
       "glowTimes": [5.5, 11.3, 18],
       "previewUrl": "https://p.scdn.co/mp3-preview/ef40d2697f0281f1fb27a213aac89790a7b4d9d6",
       "download": "https://github.com/JaydenzKoci/song-projects/raw/refs/heads/main/Songs/Alok%20-%20Car%20Keys%20(Ayla).zip",
-      "new": true,
+      "rotated": true,
       "loading_phrase": "If you lose me then, baby, good luck",
       "youtubeLinks": {
         "vocals": "",
@@ -1910,7 +1909,7 @@
       "complete": "10% Complete",
       "download": "https://github.com/JaydenzKoci/song-projects/raw/refs/heads/main/Songs/TheFatRat%20-%20Monody.zip",
       "previewUrl": "https://p.scdn.co/mp3-preview/25b902df4aa6f5a95ef5f4a31795b9c13c434816",
-      "new": true,
+      "rotated": true,
       "modalShadowColors": {
         "default": {
           "color1": "#ffffff",
@@ -2701,7 +2700,7 @@
       "spotify": "5j73CgpZczAjhn5zf4t1FC",
       "previewUrl": "https://p.scdn.co/mp3-preview/d17f02cb04675093545a20e5b3c40bb48bce82e7",
       "loading_phrase": "That's what, that's what girls do",
-      "new": true,
+      "rotated": true,
       "glowTimes": [11],
       "youtubeLinks": {
         "vocals": "",
@@ -3236,7 +3235,7 @@
       "glowTimes": [5.7, 7.7, 9.4, 11.4, 14.8, 18.6, 22.8, 26.8],
       "spotify": "01BDK4Skxzh5mqnTbQzWGy",
       "previewUrl": "https://p.scdn.co/mp3-preview/9acafe7b94bea484f7b86b5c11a5a44095b192b6",
-      "new": true,
+      "rotated": true,
       "modalShadowColors": {
       "default": {
         "color1": "#ffffff",
@@ -4302,6 +4301,7 @@
     "videoPosition": "75",
     "spotify": "6d8DgvFxp6lbdfOw9BVkLS",
     "previewUrl": "https://p.scdn.co/mp3-preview/b591f8fbcbad75a5e1884a0aed11d2a64199ed58",
+    "loading_phrase": "Oh, it's a good thing",
     "rotated": true,
     "modalShadowColors": {
       "default": {
@@ -4338,6 +4338,7 @@
     "videoPosition": "30",
     "spotify": "6OEolOOk9Gh9bqkdpfIOl0",
     "previewUrl": "https://p.scdn.co/mp3-preview/11c9df3536cef3c826b018fdf1025d0d5bf2b7fd",
+    "loading_phrase": "I'm feeling like star",
     "rotated": true,
     "modalShadowColors": {
       "default": {
@@ -4374,6 +4375,7 @@
     "videoPosition": "30",
     "spotify": "4yC9w1fGF879SbvZmA2cAp",
     "previewUrl": "https://p.scdn.co/mp3-preview/bc43d1f5784c0b3e8c57cd0e6601bc1d9d94c83a",
+    "loading_phrase": "Gravity's just a habit",
     "rotated": true,
     "modalShadowColors": {
       "default": {
