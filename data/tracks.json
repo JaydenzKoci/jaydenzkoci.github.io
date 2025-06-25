@@ -248,6 +248,8 @@
     "videoUrl": "1999.mp4",
     "videoPosition": 30,
     "previewUrl": "https://p.scdn.co/mp3-preview/80df2f56d0948b2c6d189de331dea8233582adaa",
+    "loading_phrase": "It was easy back then",
+    "glowTimes": [11, 20.3],
     "rotated": true
   },
   "miles": {
@@ -274,6 +276,8 @@
     "videoUrl": "athousandmiles.mp4",
     "videoPosition": 30,
     "previewUrl": "https://p.scdn.co/mp3-preview/1dab77144140b38cf360a7e770f002335884954f",
+    "loading_phrase": "Do you think time would pass me by?",
+    "glowTimes": [5.7, 12.8],
     "rotated": true
   },
   "fighter": {
@@ -299,6 +303,8 @@
     "spotify": "7lcuUkp4LjPflvzPjemDzw",
     "complete": "0% Complete",
     "previewUrl": "https://p.scdn.co/mp3-preview/090010b7932e2e56b811461db98bf9404d3c200b",
+    "glowTimes": [7.9, 12,7, 17.7],
+    "loading_phrase": "Life is like a runway and you're the designer",
     "rotated": true
   },
   "moment": {
@@ -387,22 +393,25 @@
     "duration": "3m 11s",
     "key": "E Minor",
     "difficulties": {
-      "vocals": -1,
-      "guitar": -1,
-      "bass": -1,
-      "drums": -1,
+      "vocals": 3,
+      "guitar": 4,
+      "bass": 3,
+      "drums": 3,
       "plastic-bass": -1,
       "plastic-drums": -1,
       "plastic-guitar": -1
     },
-    "createdAt": "2000-01-01T08:00:00.000Z",
-    "lastFeatured": "TBA",
+    "createdAt": "2025-06-25T23:42:23.000Z",
+    "lastFeatured": "6/25/2025, 4:42:23 PM",
     "spotify": "1pFuoLQ9iRbPv7aNoHTLYKV8",
     "videoUrl": "sleepwalker.mp4",
     "videoPosition": 30,
-    "complete": "0% Complete",
+    "complete": "80% Complete",
     "previewUrl": "https://p.scdn.co/mp3-preview/06ab382b0c83d1f67ac27cef4132d50089962ee4",
-    "rotated": true
+    "new": true,
+    "featured": true,
+    "loading_phrase": "I'm an obsession, not just a game",
+    "glowTimes": [1.5, 7.1, 13.8, 16.7]
   },
   "problem": {
     "title": "Maybe You're The Problem",
@@ -1034,6 +1043,8 @@
     "videoUrl": "1035.mp4",
     "videoPosition": 30,
     "previewUrl": "https://p.scdn.co/mp3-preview/6e88ed9108e2c0c493903a7d280183d6d6855272",
+    "loading_phrase": "Let 'em drown me",
+    "glowTimes": [6.2, 16.2],
     "rotated": true
   },
   "goodtime": {
