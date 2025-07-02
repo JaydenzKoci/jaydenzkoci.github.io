@@ -4398,5 +4398,42 @@
         "color2": "" 
       }
     }
+  },
+  "wethotamericandream": {
+    "title": "Wet, Hot American Dream",
+    "artist": "Ava Max",
+    "releaseYear": 2025,
+    "cover": "DontClickPlay.png",
+    "bpm": 156,
+    "duration": "2m 57s",
+    "key": "D Minor",
+    "difficulties": {
+      "vocals": -1,
+      "guitar": -1,
+      "bass": -1,
+      "drums": -1,
+      "plastic-bass": -1,
+      "plastic-drums": -1,
+      "plastic-guitar": -1
+    },
+    "createdAt": "2000-01-01T08:00:00.000Z",
+    "lastFeatured": "TBA",
+    "complete": "0% Complete",
+    "videoUrl": "wethotamerican.mp4",
+    "videoPosition": "20",
+    "spotify": "3kTYwlSBqZZ1a5sLCS3SBZ",
+    "previewUrl": "https://p.scdn.co/mp3-preview/b7740285c858476ffa8a55efce527d630bb17964",
+    "loading_phrase": "Feels like the summer, hundred degrees",
+    "rotated": true,
+    "modalShadowColors": {
+      "default": {
+        "color1": "",
+        "color2": ""  
+      },
+      "hover": {
+        "color1": "",
+        "color2": "" 
+      }
+    }
   }
 }
