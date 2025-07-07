@@ -4435,5 +4435,43 @@
         "color2": "" 
       }
     }
+ },
+  "internationallove": {
+	  "title": "International Love",    
+	  "artist": "Pitbull (feat. Chris Brown)",   
+    "releaseYear": 2011,
+    "cover": "PlanetPit.png",
+    "bpm": 120,
+    "duration": "3m 47s",
+    "key": "C Minor",
+    "difficulties": {
+      "vocals": -1,
+      "guitar": -1,
+      "bass": -1,
+      "drums": -1,
+      "plastic-bass": -1,
+      "plastic-drums": -1,
+      "plastic-guitar": -1
+    },
+    "createdAt": "2000-01-01T08:00:00.000Z",
+    "lastFeatured": "TBA",
+    "complete": "0% Complete",
+    "videoUrl": "internationallove.mp4",
+    "videoPosition": "20",
+    "videoZoom": "1.3",
+    "spotify": "62zFEHfAYl5kdHYOivj4BC",
+    "previewUrl": "https://p.scdn.co/mp3-preview/796c030b6336cedd4a816f931c818a5507bf4607",
+    "loading_phrase": "I'll cross the globe when I'm with you",
+    "rotated": true,
+    "modalShadowColors": {
+      "default": {
+        "color1": "",
+        "color2": ""  
+      },
+      "hover": {
+        "color1": "",
+        "color2": "" 
+      }
+    }
   }
 }
