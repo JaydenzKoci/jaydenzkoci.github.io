@@ -52,6 +52,9 @@
     "cover": "SpotAFake.png",
     "bpm": 143,
     "key": "E♭ Minor",
+    "album": "Single",
+    "genre": "Pop",
+    "rating": "Teen",
     "duration": "2m 48s",
     "difficulties": {
       "vocals": 3,
