@@ -26,7 +26,8 @@
     "glowTimes": [9.2, 16.1],
     "videoZoom": 1.1,
     "previewUrl": "https://p.scdn.co/mp3-preview/0fa590f4f9fb1c7d852ede53de59699a219a2d52",
-    "dataUrl": "https://github.com/JaydenzKoci/song-projects/tree/main/WIP%20Songs/Alan%20Walker%20-%20Unsure",
+    "download": "https://github.com/JaydenzKoci/song-projects/tree/main/WIP%20Songs/Alan%20Walker%20-%20Unsure",
+    "charturl": "https://github.com/JaydenzKoci/song-projects/raw/refs/heads/main/MIDI's/Alan%20Walker%20-%20Unsure/V1.mid",
     "rotated": true,
     "modalShadowColors": {
       "default": {
@@ -73,6 +74,7 @@
     "glowTimes": [4.7, 8.2, 18],
     "download": "https://github.com/JaydenzKoci/song-projects/raw/refs/heads/main/Songs/Ava%20Max%20-%20Spot%20a%20Fake.zip",
     "previewUrl": "https://p.scdn.co/mp3-preview/f2fb7a2b1f0a602d0fa21194bdf2780a178c1450",
+    "charturl": "https://github.com/JaydenzKoci/song-projects/raw/refs/heads/main/MIDI's/Ava%20Max%20-%20Spot%20a%20Fake/V1.mid",
     "rotated": true,
     "modalShadowColors": {
       "default": {
@@ -118,6 +120,7 @@
     "glowTimes": [3, 8.9],
     "download": "https://github.com/JaydenzKoci/song-projects/raw/refs/heads/main/Songs/Ava%20Max%20-%20Lost%20Your%20Faith.zip",
     "previewUrl": "https://p.scdn.co/mp3-preview/3564f9445e53690decad7b57d5b6c18f6b712f4a",
+    "charturl": "https://github.com/JaydenzKoci/song-projects/raw/refs/heads/main/MIDI's/Ava%20Max%20-%20Lost%20Your%20Faith/V1.mid",
     "rotated": true,
     "modalShadowColors": {
       "default": {
@@ -161,6 +164,7 @@
     "videoPosition": 30,
     "download": "https://github.com/JaydenzKoci/song-projects/raw/refs/heads/main/Songs/David%20Guetta%20-%20Forever%20Young.zip",
     "previewUrl": "https://p.scdn.co/mp3-preview/a47b1ab8552acc16146597026a45aa53806dbd1f",
+    "charturl": "https://github.com/JaydenzKoci/song-projects/raw/refs/heads/main/MIDI's/David%20Guetta%20-%20Forever%20Young/V1.mid",
     "rotated": true,
     "loading_phrase": "Do you really want to live forever?",
     "glowTimes": [0.75, 3.8, 6],
@@ -208,6 +212,7 @@
     "loading_phrase": "I know Karma's gonna get me back for being so cold",
     "download": "https://github.com/JaydenzKoci/song-projects/raw/refs/heads/main/Songs/Taio%20Cruz%20-%20Break%20Your%20Heart.zip",
     "previewUrl": "https://p.scdn.co/mp3-preview/c6363106816b05ddd83a0467c0e17591ecafcadd",
+    "charturl": "https://github.com/JaydenzKoci/song-projects/raw/refs/heads/main/MIDI's/Taio%20Cruz%20-%20Break%20Your%20Heart/V1.mid",
     "rotated": true,
     "youtubeLinks": {
       "vocals": "",
@@ -468,6 +473,7 @@
     "videoPosition": 25,
     "download": "https://github.com/JaydenzKoci/song-projects/raw/refs/heads/main/Songs/Ava%20Max%20-%20My%20Head%20&%20My%20Heart.zip",
     "previewUrl": "https://p.scdn.co/mp3-preview/60f31c477e494d379c3eb8e6ff15d8007d0cbe0b",
+    "charturl": "https://github.com/JaydenzKoci/song-projects/raw/refs/heads/main/MIDI's/Ava%20Max%20-%20My%20Head%20&%20My%20Heart/V1.mid",
     "rotated": true,
     "modalShadowColors": {
       "default": {
@@ -566,6 +572,7 @@
     "complete": "10% Complete",
     "previewUrl": "https://p.scdn.co/mp3-preview/664126639bda259bb7e5bf47989f50f023298575",
     "download": "https://github.com/JaydenzKoci/song-projects/raw/refs/heads/main/Songs/NF%20-%20HOPE.zip",
+    "charturl": "https://github.com/JaydenzKoci/song-projects/raw/refs/heads/main/MIDI's/NF%20-%20HOPE/V1.mid",
     "rotated": true,
     "modalShadowColors": {
       "default": {
@@ -708,9 +715,10 @@
     "complete": "10% Complete",
     "videoUrl": "physical.mp4",
     "download": "https://github.com/JaydenzKoci/song-projects/raw/refs/heads/main/Songs/Dua%20Lipa%20-%20Physical.zip",
+    "previewUrl": "https://p.scdn.co/mp3-preview/a40862d3e14b3758de55a84a6e06e5dbf87b3d0b",
+    "charturl": "https://github.com/JaydenzKoci/song-projects/raw/refs/heads/main/MIDI's/Dua%20Lipa%20-%20Physical/V1.mid",
     "videoPosition": 25,
     "glowTimes": [11.1, 24.1],
-    "previewUrl": "https://p.scdn.co/mp3-preview/a40862d3e14b3758de55a84a6e06e5dbf87b3d0b",
     "rotated": true,
     "loading_phrase": "Tell me if you're ready",
     "modalShadowColors": {
@@ -809,6 +817,7 @@
     "glowTimes": [12, 15.6, 17.6, 22.6],
     "download": "https://github.com/JaydenzKoci/song-projects/raw/refs/heads/main/Songs/Tate%20McRae%20-%20exes.zip",
     "previewUrl": "https://p.scdn.co/mp3-preview/9f2e1821dfa9781d4e594b3e85ffc90c4f5cc089",
+    "charturl": "https://github.com/JaydenzKoci/song-projects/raw/refs/heads/main/MIDI's/Tate%20McRae%20-%20exes/V1.mid",
     "rotated": true,
     "youtubeLinks": {
       "vocals": "https://youtu.be/zMR40P-LgkM",
@@ -929,6 +938,7 @@
     "loading_phrase": "I'll be here and you stay there",
     "glowTimes": [4],
     "download": "https://github.com/JaydenzKoci/song-projects/raw/refs/heads/main/Songs/Kygo%20-%20Whatever.zip",
+    "charturl": "https://github.com/JaydenzKoci/song-projects/raw/refs/heads/main/MIDI's/Kygo%20-%20Whatever/V1.mid",
     "previewUrl": "https://p.scdn.co/mp3-preview/03bbf447d8f0101cff90c78b3ab0c4757c3bf27b",
     "rotated": true,
     "modalShadowColors": {
@@ -1644,6 +1654,7 @@
       "glowTimes": [5.5, 11.3, 18],
       "previewUrl": "https://p.scdn.co/mp3-preview/ef40d2697f0281f1fb27a213aac89790a7b4d9d6",
       "download": "https://github.com/JaydenzKoci/song-projects/raw/refs/heads/main/Songs/Alok%20-%20Car%20Keys%20(Ayla).zip",
+      "charturl": "https://github.com/JaydenzKoci/song-projects/raw/refs/heads/main/MIDI's/Alok%20-%20Car%20Keys%20(Ayla)/V1.mid",
       "rotated": true,
       "loading_phrase": "If you lose me then, baby, good luck",
       "youtubeLinks": {
@@ -2710,6 +2721,7 @@
       "videoUrl": "whatgirlsdo.mp4",
       "videoPosition": 25,
       "download": "https://github.com/JaydenzKoci/song-projects/raw/refs/heads/main/Songs/Leah%20Kate%20-%20What%20Girls%20Do.zip",
+      "charturl": "https://github.com/JaydenzKoci/song-projects/raw/refs/heads/main/MIDI's/Leah%20Kate%20-%20What%20Girls%20Do/V1.mid",
       "spotify": "5j73CgpZczAjhn5zf4t1FC",
       "previewUrl": "https://p.scdn.co/mp3-preview/d17f02cb04675093545a20e5b3c40bb48bce82e7",
       "loading_phrase": "That's what, that's what girls do",
@@ -3245,6 +3257,7 @@
       "videoPosition": 55,
       "loading_phrase": "I'm twenty, but I still feel like fifteen",
       "download": "https://github.com/JaydenzKoci/song-projects/raw/refs/heads/main/Songs/Tate%20McRae%20-%20calgary.zip",
+      "charturl": "https://github.com/JaydenzKoci/song-projects/raw/refs/heads/main/MIDI's/Tate%20McRae%20-%20calgary/V1.mid",
       "glowTimes": [5.7, 7.7, 9.4, 11.4, 14.8, 18.6, 22.8, 26.8],
       "spotify": "01BDK4Skxzh5mqnTbQzWGy",
       "previewUrl": "https://p.scdn.co/mp3-preview/9acafe7b94bea484f7b86b5c11a5a44095b192b6",
@@ -4026,6 +4039,7 @@
     "videoPosition": "50",
     "spotify": "6wegDxG3lFbZdDjvy3Zgyx",
     "previewUrl": "https://p.scdn.co/mp3-preview/c70534d6e17fd2712efc0e913caa9cee8df1b34c",
+    "charturl": "https://github.com/JaydenzKoci/song-projects/raw/refs/heads/main/MIDI's/MDK%20-%20Space%20Invaders/V1.mid",
     "rotated": true,
     "modalShadowColors": {
       "default": {
