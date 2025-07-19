@@ -403,22 +403,36 @@
       "vocals": 3,
       "guitar": 4,
       "bass": 3,
-      "drums": 3,
-      "plastic-bass": -1,
-      "plastic-drums": -1,
-      "plastic-guitar": -1
+      "drums": 3
     },
     "createdAt": "2025-06-25T23:42:23.000Z",
-    "lastFeatured": "6/25/2025, 4:42:23 PM",
+    "lastFeatured": "7/19/2025, 1:54:23 AM",
     "spotify": "1pFuoLQ9iRbPv7aNoHTLYKV8",
     "videoUrl": "sleepwalker.mp4",
     "videoPosition": 30,
-    "complete": "85% Complete",
+    "complete": "100%",
     "previewUrl": "https://p.scdn.co/mp3-preview/06ab382b0c83d1f67ac27cef4132d50089962ee4",
-    "charturl": "https://github.com/JaydenzKoci/song-projects/raw/refs/heads/main/MIDI's/Ava%20Max%20-%20Sleepwalker/V16.mid",
-    "new": true,
+    "charturl": "https://github.com/JaydenzKoci/song-projects/raw/refs/heads/main/MIDI's/Ava%20Max%20-%20Sleepwalker/V17.mid",
+    "download": "https://raw.githubusercontent.com/JaydenzKoci/song-projects/main/Songs/Ava%20Max%20-%20Sleepwalker.zip",
+    "finish": true,
     "loading_phrase": "I'm an obsession, not just a game",
-    "glowTimes": [1.5, 7.1, 13.8, 16.7]
+    "glowTimes": [1.5, 7.1, 13.8, 16.7],
+    "youtubeLinks": {
+      "vocals": "https://youtu.be/O5suo_BUXJw",
+      "lead": "https://youtu.be/Gi7ZsuYztj8",
+      "bass": "https://youtu.be/fPNw5L3Y3K4",
+      "drums": "https://youtu.be/Q2YMV3BO4Gk"
+    },
+    "modalShadowColors": {
+      "default": {
+        "color1": "#003cff",
+        "color2": "#ffffff"
+      },
+      "hover": {
+        "color1": "#ffffff",
+        "color2": "#003cff"
+      }
+    }
   },
   "problem": {
     "title": "Maybe You're The Problem",
@@ -3615,32 +3629,6 @@
       "videoPosition": "20",
       "spotify": "0SML6wWerD0yI2Xd4OUC1R",
       "previewUrl": "https://p.scdn.co/mp3-preview/cf832964d7ef17933b8064ed10a4c230c506b21a",
-      "rotated": true
-    },
-    "faded": {
-      "title": "Faded",
-      "artist": "Alan Walker",
-      "releaseYear": 2015,
-      "cover": "Faded.png",
-      "bpm": 90,
-      "duration": "3m 33s",
-      "key": "F# Major",
-      "difficulties": {
-        "vocals": -1,
-        "guitar": -1,
-        "bass": -1,
-        "drums": -1,
-        "plastic-bass": -1,
-        "plastic-drums": -1,
-        "plastic-guitar": -1
-      },
-      "createdAt": "2000-01-01T08:00:00.000Z",
-      "lastFeatured": "TBA",
-      "complete": "0% Complete",
-      "videoUrl": "Faded.mp4",
-      "videoPosition": "20",
-      "spotify": "7gHs73wELdeycvS48JfIos",
-      "previewUrl": "https://p.scdn.co/mp3-preview/633dfd35d836f9b62bab2344510e68270e5e3873",
       "rotated": true
     },
     "onewish": {
