@@ -397,7 +397,7 @@
     "releaseYear": 2023,
     "cover": "DiamondsandDancefloors.png",
     "bpm": 126,
-    "duration": "3m 11s",
+    "duration": "3m 14s",
     "key": "E Minor",
     "difficulties": {
       "vocals": 3,
@@ -425,12 +425,12 @@
     },
     "modalShadowColors": {
       "default": {
-        "color1": "#003cff",
+        "color1": "#075e93",
         "color2": "#ffffff"
       },
       "hover": {
         "color1": "#ffffff",
-        "color2": "#003cff"
+        "color2": "#075e93"
       }
     }
   },
