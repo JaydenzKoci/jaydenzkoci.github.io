@@ -4477,48 +4477,5 @@
         "color2": "" 
       }
     }
-  },
-"jetpackjoyridetheme": {
-    "title": "Jetpack Joyride Main Theme",
-    "artist": "Halfbrick",
-    "album": "Jetpack Joyride",
-    "charter": "LysiX",
-    "source": "custom",
-    "releaseYear": 2011,
-    "genre": "Jazz EDM",
-    "ageRating": "Everyone",
-    "is_verified": "true",
-    "is_cover": "false",
-    "cover": "jetpackjoyridetheme.png",
-    "bpm": 123,
-    "duration": "2m 17s",
-    "key": "A♭ Major",
-    "format": "ini",
-    "difficulties": {
-      "vocals": -1,
-      "guitar": 5,
-      "bass": 4,
-      "drums": 5,
-      "plastic-bass": 4,
-      "plastic-drums": 6,
-      "plastic-guitar": 5
-    },
-    "createdAt": "2025-03-16T22:20:17.000Z",
-    "songlink": "https://song.link/s/5TVBHi9mXqELfrGe9BreOG",
-    "previewUrl": "jetpackjoyridetheme.mp3",
-    "download": "https://raw.githubusercontent.com/Encore-Developers/songs/main/Jetpack%20Joyride%20Main%20Theme.zip",
-    "chartUrl": "https://github.com/JaydenzKoci/song-projects/raw/refs/heads/main/MIDI's/test.mid",
-    "preview_time": 50794,
-    "preview_end_time": 75000,
-    "modalShadowColors": {
-      "default": {
-        "color1": "",
-        "color2": ""  
-      },
-      "hover": {
-        "color1": "",
-        "color2": "" 
-      }
-    }
   }
 }
