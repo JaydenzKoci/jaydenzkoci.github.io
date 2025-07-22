@@ -3968,42 +3968,6 @@
       }
     }
   },
-  "seeutonight": {
-    "title": "See U Tonight",
-    "artist": "Kylie Cantrall (Feat. ILLIT)",
-    "releaseYear": 2025,
-    "cover": "BOY.png",
-    "bpm": 126,
-    "duration": "2m 10s",
-    "key": "B♭ Minor",
-    "difficulties": {
-      "vocals": -1,
-      "guitar": -1,
-      "bass": -1,
-      "drums": -1,
-      "plastic-bass": -1,
-      "plastic-drums": -1,
-      "plastic-guitar": -1
-    },
-    "createdAt": "2000-01-01T08:00:00.000Z",
-    "lastFeatured": "TBA",
-    "complete": "0% Complete",
-    "videoUrl": "seeutonight.mp4",
-    "videoPosition": "50",
-    "spotify": "1DFLm3LKaIYZwHsfKpwkQM",
-    "previewUrl": "https://p.scdn.co/mp3-preview/e9053dae80ddb8377dd7a7243459bbdb021a6ef2",
-    "rotated": true,
-    "modalShadowColors": {
-      "default": {
-        "color1": "",
-        "color2": ""  
-      },
-      "hover": {
-        "color1": "",
-        "color2": "" 
-      }
-    }
-  },
   "spaceinvaders": {
     "title": "Space Invaders",
     "artist": "MDK",
@@ -4440,8 +4404,8 @@
         "color2": "" 
       }
     }
- },
-  "internationallove": {
+},
+    "internationallove": {
 	  "title": "International Love",    
 	  "artist": "Pitbull (feat. Chris Brown)",   
     "releaseYear": 2011,
@@ -4467,6 +4431,162 @@
     "spotify": "62zFEHfAYl5kdHYOivj4BC",
     "previewUrl": "https://p.scdn.co/mp3-preview/796c030b6336cedd4a816f931c818a5507bf4607",
     "loading_phrase": "I'll cross the globe when I'm with you",
+    "rotated": true,
+    "modalShadowColors": {
+      "default": {
+        "color1": "",
+        "color2": ""  
+      },
+      "hover": {
+        "color1": "",
+        "color2": "" 
+        }
+    }
+},
+  "takeawaythepain": {
+    "title": "Take Away The Pain",
+    "artist": "Ava Max",
+    "releaseYear": 2013,
+    "cover": "TakeAwayThePain.png",
+    "bpm": 0,
+    "duration": "3m 46s",
+    "key": "???",
+    "difficulties": {
+      "vocals": -1,
+      "guitar": -1,
+      "bass": -1,
+      "drums": -1,
+      "plastic-bass": -1,
+      "plastic-drums": -1,
+      "plastic-guitar": -1
+    },
+    "createdAt": "2000-01-01T08:00:00.000Z",
+    "lastFeatured": "TBA",
+    "complete": "0% Complete",
+    "videoUrl": "takeawaythepain.mp4",
+    "videoPosition": "50",
+    "spotify": "",
+    "previewUrl": "takeawaythepain.mp3",
+    "loading_phrase": "You always take away the pain",
+    "preview_time": "49600",
+    "preview_end_time": "79500",
+    "rotated": true,
+    "modalShadowColors": {
+      "default": {
+        "color1": "",
+        "color2": ""  
+      },
+      "hover": {
+        "color1": "",
+        "color2": "" 
+      }
+    }
+},
+  "slippin": {
+    "title": "Slippin'",
+    "artist": "Ava Max (feat. Gashi)",
+    "releaseYear": 2018,
+    "cover": "Slippin.png",
+    "bpm": 0,
+    "duration": "3m 32s",
+    "key": "???",
+    "difficulties": {
+      "vocals": -1,
+      "guitar": -1,
+      "bass": -1,
+      "drums": -1,
+      "plastic-bass": -1,
+      "plastic-drums": -1,
+      "plastic-guitar": -1
+    },
+    "createdAt": "2000-01-01T08:00:00.000Z",
+    "lastFeatured": "TBA",
+    "complete": "0% Complete",
+    "videoUrl": "slippin.mp4",
+    "videoPosition": "50",
+    "spotify": "",
+    "previewUrl": "slippin.mp3",
+    "loading_phrase": "If you want good karma, why you causin' drama?",
+    "preview_time": "40000",
+    "preview_end_time": "70000",
+    "rotated": true,
+    "modalShadowColors": {
+      "default": {
+        "color1": "",
+        "color2": ""  
+      },
+      "hover": {
+        "color1": "",
+        "color2": "" 
+      }
+    }
+},
+  "middleofabreakdown": {
+    "title": "Middle Of A Breakdown",
+    "artist": "Ava Max",
+    "releaseYear": 2021,
+    "cover": "HeavenandHell.png",
+    "bpm": 0,
+    "duration": "2m 56s",
+    "key": "???",
+    "difficulties": {
+      "vocals": -1,
+      "guitar": -1,
+      "bass": -1,
+      "drums": -1,
+      "plastic-bass": -1,
+      "plastic-drums": -1,
+      "plastic-guitar": -1
+    },
+    "createdAt": "2000-01-01T08:00:00.000Z",
+    "lastFeatured": "TBA",
+    "complete": "0% Complete",
+    "videoUrl": "middleofabreakdown.mp4",
+    "videoPosition": "50",
+    "spotify": "",
+    "previewUrl": "middleofabreakdown.mp3",
+    "loading_phrase": "I got good friends but I never make the time",
+    "preview_time": "32000",
+    "preview_end_time": "62000",
+    "rotated": true,
+    "modalShadowColors": {
+      "default": {
+        "color1": "",
+        "color2": ""  
+      },
+      "hover": {
+        "color1": "",
+        "color2": "" 
+      }
+    }
+},
+  "rawestforest": {
+    "title": "Rawest Forest",
+    "artist": "Kirbopher",
+    "releaseYear": 2007,
+    "cover": "RawestForest.png",
+    "bpm": 0,
+    "duration": "2m 42s",
+    "key": "???",
+    "difficulties": {
+      "vocals": -1,
+      "guitar": -1,
+      "bass": -1,
+      "drums": -1,
+      "plastic-bass": -1,
+      "plastic-drums": -1,
+      "plastic-guitar": -1
+    },
+    "createdAt": "2000-01-01T08:00:00.000Z",
+    "lastFeatured": "TBA",
+    "complete": "0% Complete",
+    "videoUrl": "rawestforest.mp4",
+    "videoPosition": "50",
+    "spotify": "",
+    "previewUrl": "rawestforest.mp3",
+    "loading_phrase": "When I play the game, I get lost in a phase",
+    "preview_time": "15500",
+    "preview_end_time": "45500",
     "rotated": true,
     "modalShadowColors": {
       "default": {

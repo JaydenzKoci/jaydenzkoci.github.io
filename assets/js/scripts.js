@@ -157,32 +157,57 @@ document.addEventListener('DOMContentLoaded', () => {
       };
       state.fadeInRequestId = requestAnimationFrame(step);
     },
-    playPreview: (previewUrl) => {
+    playPreview: (previewUrl, startTime, endTime) => {
+      audio.ontimeupdate = null;
+
+      const playSegment = () => {
+        if (!state.isMuted && elements.videoPopup.style.display !== 'block') {
+          // Set start time before playing
+          if (startTime && audio.currentTime !== startTime / 1000) {
+            audio.currentTime = startTime / 1000;
+          }
+          
+          audio.play()
+            .then(() => {
+              console.log(`Audio playing: ${previewUrl} from ${startTime || 0}ms`);
+              if (state.fadeInAudioEnabled) {
+                audioModule.fadeInAudio(audio, 0.25, 3000);
+              } else {
+                audio.volume = 0.25;
+              }
+            })
+            .catch((error) => {
+              console.error('Audio playback failed:', error);
+              if (utils.isMobile()) {
+                elements.content.insertAdjacentHTML(
+                  'beforebegin',
+                  '<div class="audio-notice">Tap a track to enable audio playback</div>'
+                );
+                setTimeout(() => document.querySelector('.audio-notice')?.remove(), 3000);
+              }
+            });
+        }
+        
+        // Set up end time listener
+        if (endTime) {
+          audio.ontimeupdate = () => {
+            if (audio.currentTime >= endTime / 1000) {
+              audio.pause();
+              audio.ontimeupdate = null; // remove listener once done
+            }
+          };
+        }
+      };
+
       if (audio.src !== previewUrl) {
         audio.src = previewUrl;
         state.currentPreviewUrl = previewUrl;
         audio.load();
-      }
-      if (!state.isMuted && elements.videoPopup.style.display !== 'block') {
-        audio.play()
-          .then(() => {
-            console.log('Audio playing:', previewUrl);
-            if (state.fadeInAudioEnabled) {
-              audioModule.fadeInAudio(audio, 0.25, 3000);
-            } else {
-              audio.volume = 0.25;
-            }
-          })
-          .catch((error) => {
-            console.error('Audio playback failed:', error);
-            if (utils.isMobile()) {
-              elements.content.insertAdjacentHTML(
-                'beforebegin',
-                '<div class="audio-notice">Tap a track to enable audio playback</div>'
-              );
-              setTimeout(() => document.querySelector('.audio-notice')?.remove(), 3000);
-            }
-          });
+        // Wait for the audio to be ready to play before setting currentTime
+        audio.addEventListener('canplay', playSegment, { once: true });
+      } else {
+        // If it's the same src, just play it from the new start time
+        playSegment();
       }
     },
     toggleMute: () => {
@@ -388,7 +413,7 @@ document.addEventListener('DOMContentLoaded', () => {
     },
     renderModal: (track) => {
       if (!elements.modal) return;
-      const { title, artist, releaseYear, cover, duration, complete, difficulties, bpm, createdAt, lastFeatured, previewUrl, download, videoUrl, videoPosition, key, youtubeLinks, loading_phrase, videoZoom, glowTimes, modalShadowColors, spotify } = track;
+      const { title, artist, releaseYear, cover, duration, complete, difficulties, bpm, createdAt, lastFeatured, previewUrl, download, videoUrl, videoPosition, key, youtubeLinks, loading_phrase, videoZoom, glowTimes, modalShadowColors, spotify, preview_time, preview_end_time } = track;
       const positionPercent = videoPosition ?? 50;
       const modalContent = elements.modal.querySelector('.modal-content');
       if (!modalContent) return;
@@ -497,7 +522,15 @@ document.addEventListener('DOMContentLoaded', () => {
         modalContent.addEventListener('touchend', modalModule.handleTouchEnd);
       }
 
-      if (previewUrl) audioModule.playPreview(previewUrl);
+      if (previewUrl) {
+        if (previewUrl.endsWith('.mp3')) {
+          const fileName = previewUrl.split('/').pop();
+          const localPreviewUrl = `assets/audio/${fileName}`;
+          audioModule.playPreview(localPreviewUrl, preview_time, preview_end_time);
+        } else {
+          audioModule.playPreview(previewUrl);
+        }
+      }
 
       if (videoUrl) {
         const videoElement = document.createElement('video');
@@ -883,7 +916,13 @@ document.addEventListener('DOMContentLoaded', () => {
           e.preventDefault();
           modalModule.openModal(track);
           if (utils.isMobile() && track.previewUrl) {
-            audioModule.playPreview(track.previewUrl);
+            if (track.previewUrl.endsWith('.mp3')) {
+                const fileName = track.previewUrl.split('/').pop();
+                const localPreviewUrl = `assets/audio/${fileName}`;
+                audioModule.playPreview(localPreviewUrl, track.preview_time, track.preview_end_time);
+            } else {
+                audioModule.playPreview(track.previewUrl);
+            }
             trackElement.classList.add('mobile-highlight');
             setTimeout(() => trackElement.classList.remove('mobile-highlight'), 300);
           }
@@ -959,7 +998,7 @@ document.addEventListener('DOMContentLoaded', () => {
       else url.searchParams.delete('q');
       if (filterValue !== 'all') url.searchParams.set('filter', filterValue);
       else url.searchParams.delete('filter');
-      if (sortValue !== 'default') url.searchParams.set('sort', sortValue);
+      if (sortValue !== 'default') url.search_params.set('sort', sortValue);
       else url.searchParams.delete('sort');
       window.history.replaceState({}, '', url);
     },
