@@ -7,6 +7,9 @@
     "bpm": 130,
     "key": "E Minor",
     "duration": "2m 49s",
+    "album": "Walkerworld 2.0",
+    "genre": "Electronic",
+    "rating": "Everyone",
     "difficulties": {
       "vocals": 3,
       "guitar": 3,
@@ -103,6 +106,9 @@
     "bpm": 125,
     "key": "B Minor",
     "duration": "3m 14s",
+    "album": "Don't Click Play",
+    "genre": "Pop Rock",
+    "rating": "Everyone",
     "difficulties": {
       "vocals": -1,
       "guitar": 3,
@@ -150,6 +156,9 @@
     "bpm": 130,
     "key": "C Major",
     "duration": "2m 37s",
+    "album": "",
+    "genre": "Electronic",
+    "rating": "Everyone",
     "difficulties": {
       "vocals": 2,
       "guitar": 2,
@@ -197,6 +206,9 @@
     "bpm": 122,
     "key": "E♭ Major",
     "duration": "3m 22s",
+    "album": "Rokstarr",
+    "genre": "Pop",
+    "rating": "Everyone",
     "difficulties": {
       "vocals": 3,
       "guitar": 4,
@@ -405,6 +417,9 @@
     "bpm": 126,
     "duration": "3m 14s",
     "key": "E Minor",
+    "album": "Diamonds & Dancefloors",
+    "genre": "Pop",
+    "rating": "Everyone",
     "difficulties": {
       "vocals": 3,
       "guitar": 4,
@@ -475,6 +490,9 @@
     "bpm": 116,
     "key": "A Minor",
     "duration": "2m 55s",
+    "album": "Heaven & Hell",
+    "genre": "Pop",
+    "rating": "Everyone",
     "difficulties": {
       "vocals": -1,
       "guitar": 4,
@@ -575,6 +593,9 @@
     "bpm": 101,
     "key": "C Minor",
     "duration": "4m 27s",
+    "album": "HOPE",
+    "genre": "Hip-Hop",
+    "rating": "Everyone",
     "difficulties": {
       "vocals": 6,
       "guitar": -1,
@@ -723,6 +744,9 @@
     "bpm": 147,
     "duration": "3m 14s",
     "key": "C Major",
+    "album": "Future Nostalgia",
+    "genre": "Pop",
+    "rating": "Everyone",
     "difficulties": {
       "vocals": -1,
       "guitar": 3,
@@ -822,6 +846,9 @@
     "bpm": 137,
     "key": "F Minor",
     "duration": "2m 41s",
+    "album": "Think Later",
+    "genre": "Pop",
+    "rating": "Teen",
     "difficulties": {
       "vocals": 4,
       "guitar": 4,
@@ -946,6 +973,9 @@
     "bpm": 108,
     "key": "E♭ Major",
     "duration": "2m 58s",
+    "album": "KYGO",
+    "genre": "Electronic",
+    "rating": "Everyone",
     "difficulties": {
       "vocals": -1,
       "guitar": 3,
@@ -1251,6 +1281,9 @@
     "bpm": 130,
     "key": "B Minor",
     "duration": "3m 14s",
+    "album": "One Love",
+    "genre": "Electronic",
+    "rating": "Everyone",
     "difficulties": {
       "vocals": -1,
       "guitar": 3,
@@ -1663,6 +1696,9 @@
       "bpm": 126,
       "duration": "2m 30s",
       "key": "A Minor",
+      "album": "",
+      "genre": "Electronic",
+      "rating": "Everyone",
       "difficulties": {
         "vocals": -1,
         "guitar": 1,
@@ -1942,6 +1978,9 @@
       "bpm": 107,
       "duration": "4m 50s",
       "key": "C# Minor",
+      "album": "",
+      "genre": "Electronic",
+      "rating": "Everyone",
       "difficulties": {
         "vocals": -1,
         "guitar": 4,
@@ -2735,6 +2774,9 @@
       "bpm": 131,
       "duration": "2m 21s",
       "key": "A♭ Major",
+      "album": "",
+      "genre": "Pop",
+      "rating": "Teen",
       "difficulties": {
         "vocals": -1,
         "guitar": 2,
@@ -3271,6 +3313,9 @@
       "bpm": 115,
       "duration": "2m 21s",
       "key": "A Minor",
+      "album": "Think Later",
+      "genre": "Pop",
+      "rating": "Teen",
       "difficulties": {
         "vocals": -1,
         "guitar": 2,
