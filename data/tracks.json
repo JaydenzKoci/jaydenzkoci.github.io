@@ -24,6 +24,7 @@
     "videoPosition": 30,
     "loading_phrase": "I am just a dreamer chasing something more",
     "glowTimes": [9.2, 16.1],
+    "embedColor": "color2",
     "videoZoom": 1.1,
     "previewUrl": "https://p.scdn.co/mp3-preview/0fa590f4f9fb1c7d852ede53de59699a219a2d52",
     "download": "https://github.com/JaydenzKoci/song-projects/tree/main/WIP%20Songs/Alan%20Walker%20-%20Unsure",
