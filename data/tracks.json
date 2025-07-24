@@ -184,7 +184,7 @@
     "rotated": true,
     "loading_phrase": "Do you really want to live forever?",
     "glowTimes": [0.75, 3.8, 6],
-    "currentVersion": 1,
+    "currentVersion": 2,
     "youtubeLinks": {
       "vocals": "https://youtu.be/dcHeHN7pSr4",
       "lead": "https://youtu.be/TadAG7dgEdY",
