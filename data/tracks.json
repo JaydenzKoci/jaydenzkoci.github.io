@@ -261,6 +261,9 @@
     "bpm": 124,
     "duration": "3m 09s",
     "key": "G Major",
+    "album": "Charli",
+    "genre": "Pop",
+    "rating": "Everyone",
     "difficulties": {
       "vocals": -1,
       "guitar": -1,
@@ -289,6 +292,9 @@
     "bpm": 95,
     "duration": "3m 57s",
     "key": "B Major",
+    "album": "Legally Blonde",
+    "genre": "Pop",
+    "rating": "Everyone",
     "difficulties": {
       "vocals": -1,
       "guitar": -1,
@@ -317,6 +323,9 @@
     "bpm": 140,
     "duration": "2m 18s",
     "key": "F# Minor",
+    "album": "Barbie The Album",
+    "genre": "Pop",
+    "rating": "Everyone",
     "difficulties": {
       "vocals": -1,
       "guitar": -1,
@@ -344,6 +353,9 @@
     "bpm": 136,
     "duration": "3m 50s",
     "key": "G Major",
+    "album": "Global Warming",
+    "genre": "Dance Pop",
+    "rating": "Everyone",
     "difficulties": {
       "vocals": -1,
       "guitar": -1,
@@ -359,7 +371,8 @@
     "complete": "0% Complete",
     "videoUrl": "feelthismoment.mp4",
     "previewUrl": "https://p.scdn.co/mp3-preview/deb34682637ed436b1d85841d7ac385541a1225c",
-    "rotated": true
+    "rotated": true,
+    "loading_phrase": "One day when the light is glowin' I'll be in my castle golden"
   },
   "dancing": {
     "title": "Dancing's Done",
@@ -369,6 +382,9 @@
     "bpm": 114,
     "duration": "2m 47s",
     "key": "C# Minor",
+    "album": "Diamonds & Dancefloors",
+    "genre": "Pop",
+    "rating": "Teen",
     "difficulties": {
       "vocals": -1,
       "guitar": -1,
@@ -385,7 +401,8 @@
     "videoPosition": 25,
     "complete": "0% Complete",
     "previewUrl": "https://p.scdn.co/mp3-preview/54d7409522efa6615dc9706ed2c2f75647237a87",
-    "rotated": true
+    "rotated": true,
+    "loading_phrase": "So where we going when the dancing's done?"
   },
   "holdup": {
     "title": "Hold Up (Wait A Minute)",
@@ -395,6 +412,9 @@
     "bpm": 118,
     "duration": "2m 29s",
     "key": "A♭ Minor",
+    "album": "Diamonds & Dancefloors",
+    "genre": "Pop",
+    "rating": "Everyone",
     "difficulties": {
       "vocals": -1,
       "guitar": -1,
@@ -411,7 +431,8 @@
     "videoPosition": 70,
     "complete": "0% Complete",
     "previewUrl": "https://p.scdn.co/mp3-preview/7b4889dd584b4cccfcbab5a0c1e77218830a76c8",
-    "rotated": true
+    "rotated": true,
+    "loading_phrase": "Say she's a friend, no mon amie"
   },
   "tired": {
     "title": "Sleepwalker",
@@ -469,6 +490,9 @@
     "bpm": 166,
     "duration": "3m 10s",
     "key": "A Major",
+    "album": "Diamonds & Dancefloors",
+    "genre": "Pop",
+    "rating": "Everyone",
     "difficulties": {
       "vocals": -1,
       "guitar": -1,
@@ -485,7 +509,8 @@
     "videoPosition": 20,
     "complete": "0% Complete",
     "previewUrl": "https://p.scdn.co/mp3-preview/bf27c9df48f15fed10f27bb33c414d65822ee5f5",
-    "rotated": true
+    "rotated": true,
+    "loading_phrase": "Outta touch, you're not even close"
   },
   "myheadandmyheart": {
     "title": "My Head & My Heart",
@@ -546,6 +571,9 @@
     "bpm": 130,
     "duration": "2m 42s",
     "key": "C# Minor",
+    "album": "Heaven & Hell",
+    "genre": "Pop",
+    "rating": "Everyone",
     "difficulties": {
       "vocals": -1,
       "guitar": -1,
@@ -563,7 +591,8 @@
     "videoZoom": 1.1,
     "complete": "0% Complete",
     "previewUrl": "https://p.scdn.co/mp3-preview/dc90347787fa47daa898d4ffbfff36074d184d64",
-    "rotated": true
+    "rotated": true,
+    "loading_phrase": "We would pop champagne and raise a toast"
   },
   "magic": {
     "title": "Magic",
@@ -573,6 +602,9 @@
     "bpm": 82,
     "duration": "3m 16s",
     "key": "A♭ Minor",
+    "album": "B.o.B Presents: The Adventures of Bobby Ray",
+    "genre": "Hip-Hop",
+    "rating": "Everyone",
     "difficulties": {
       "vocals": -1,
       "guitar": -1,
@@ -589,7 +621,8 @@
     "videoUrl": "magic.mp4",
     "videoPosition": 35,
     "previewUrl": "https://p.scdn.co/mp3-preview/7766c5f7ee8ab1ef6dd8440a17f910a6e236af6a",
-    "rotated": true
+    "rotated": true,
+    "loading_phrase": "Everytime I touch that track it turns into gold"
   },
   "hope": {
     "title": "HOPE",
@@ -650,6 +683,9 @@
     "bpm": 126,
     "duration": "2m 36s",
     "key": "D Minor",
+    "album": "This Is... Icona Pop",
+    "genre": "Electronic",
+    "rating": "Teen",
     "difficulties": {
       "vocals": -1,
       "guitar": -1,
@@ -665,7 +701,8 @@
     "videoUrl": "iloveit.mp4",
     "complete": "0% Complete",
     "previewUrl": "https://p.scdn.co/mp3-preview/429e91c9cdcf45a97960ab87560953e894aac997",
-    "rotated": true
+    "rotated": true,
+    "loading_phrase": "I don't care, I love it"
   },
   "music": {
     "title": "Turn The Music Up",
@@ -675,6 +712,9 @@
     "bpm": 120,
     "duration": "3m 19s",
     "key": "D Major",
+    "album": "Mansion",
+    "genre": "Hip-Hop",
+    "rating": "Everyone",
     "difficulties": {
       "vocals": -1,
       "guitar": -1,
@@ -690,7 +730,8 @@
     "complete": "0% Complete",
     "videoUrl": "turnthemusicup.mp4",
     "previewUrl": "https://p.scdn.co/mp3-preview/6b34c90c2b34f53905201fcf5aabf9cbb7cca659",
-    "rotated": true
+    "rotated": true,
+    "loading_phrase": "You best wipe off that hater look before you make me scream"
   },
   "monster": {
     "title": "The Monster",
@@ -700,6 +741,9 @@
     "bpm": 110,
     "duration": "4m 10s",
     "key": "C# Minor",
+    "album": "The Marshall Mathers LP 2",
+    "genre": "Hip-Hop",
+    "rating": "Teen",
     "difficulties": {
       "vocals": -1,
       "guitar": -1,
@@ -716,7 +760,8 @@
     "complete": "0% Complete",
     "videoZoom": 1.1,
     "previewUrl": "https://p.scdn.co/mp3-preview/dd22524a409b15fab0702e1c4306609b3c79a6c4",
-    "rotated": true
+    "rotated": true,
+    "loading_phrase": "Guess beggars can't be choosey"
   },
   "outcast": {
     "title": "Outcast",
@@ -726,6 +771,9 @@
     "bpm": 130,
     "duration": "5m 26s",
     "key": "D Major",
+    "album": "Perception",
+    "genre": "Hip-Hop",
+    "rating": "Everyone",
     "difficulties": {
       "vocals": -1,
       "guitar": -1,
@@ -741,7 +789,8 @@
     "complete": "0% Complete",
     "videoUrl": "outcast.mp4",
     "previewUrl": "https://p.scdn.co/mp3-preview/42ef02dd488ab4b69b86b226301b835f7de1303f",
-    "rotated": true
+    "rotated": true,
+    "loading_phrase": "I got my own shoes, I ain't tryna fit in yours"
   },
   "physical": {
     "title": "Physical",
@@ -802,6 +851,9 @@
     "bpm": 160,
     "duration": "3m 27s",
     "key": "D Minor",
+    "album": "i used to think i could fly",
+    "genre": "Pop",
+    "rating": "Everyone",
     "difficulties": {
       "vocals": -1,
       "guitar": -1,
@@ -818,7 +870,8 @@
     "videoPosition": 30,
     "complete": "0% Complete",
     "previewUrl": "https://p.scdn.co/mp3-preview/404935a0ab1ae472569566569e893b6bf816a92a",
-    "rotated": true
+    "rotated": true,
+    "loading_phrase": "How could I ever compete with that?"
   },
   "sportscar": {
     "title": "Sports car",
@@ -828,6 +881,9 @@
     "bpm": 107,
     "duration": "2m 45s",
     "key": "B Minor",
+    "album": "So Close To What",
+    "genre": "Pop",
+    "rating": "Teen",
     "difficulties": {
       "vocals": -1,
       "guitar": -1,
@@ -844,7 +900,8 @@
     "videoPosition": 30,
     "complete": "0% Complete",
     "previewUrl": "https://p.scdn.co/mp3-preview/9c5f784449e2a3932c44b90743c513ebf2274bb8",
-    "rotated": true
+    "rotated": true,
+    "loading_phrase": "I think you know what this is"
   },
   "exes": {
     "title": "exes",
@@ -905,6 +962,9 @@
     "bpm": 90,
     "duration": "3m 31s",
     "key": "A Major",
+    "album": "The Papercut Chronicles Part II",
+    "genre": "Pop",
+    "rating": "Everyone",
     "difficulties": {
       "vocals": -1,
       "guitar": -1,
@@ -920,7 +980,8 @@
     "spotify": "0qOnSQQF0yzuPWsXrQ9paz",
     "videoUrl": "stereohearts.mp4",
     "previewUrl": "https://p.scdn.co/mp3-preview/a62b535109dff39bdcc859c6fd2160e927d4b1c9",
-    "rotated": true
+    "rotated": true,
+    "loading_phrase": "It beats for you, so listen close"
   },
   "champion": {
     "title": "The Video Game Champion",
@@ -930,6 +991,8 @@
     "bpm": 125,
     "duration": "4m 15s",
     "key": "F# Major",
+    "genre": "Electronic",
+    "rating": "Everyone",
     "difficulties": {
       "vocals": -1,
       "guitar": -1,
@@ -946,7 +1009,8 @@
     "videoUrl": "thevideogamechampion.mp4",
     "videoPosition": 0,
     "previewUrl": "https://p.scdn.co/mp3-preview/fd90365f9e7dc2058d2aef65fba1f32ab59ae583",
-    "rotated": true
+    "rotated": true,
+    "loading_phrase": "The power is out of control"
   },
   "tonight": {
     "title": "Tonight",
@@ -956,6 +1020,8 @@
     "bpm": 143,
     "duration": "4m 21s",
     "key": "B♭ Minor",
+    "genre": "Hip-Hop",
+    "rating": "Everyone",
     "difficulties": {
       "vocals": -1,
       "guitar": -1,
@@ -972,7 +1038,8 @@
     "videoUrl": "tonight.mp4",
     "videoPosition": 25,
     "previewUrl": "https://p.scdn.co/mp3-preview/ac1923e771faf3c4deb979ffba2e984742fd0102",
-    "rotated": true
+    "rotated": true,
+    "loading_phrase": "Right here, right now. Under the stars"
   },
   "whatever": {
     "title": "Whatever",
@@ -1026,6 +1093,9 @@
     "bpm": 128,
     "duration": "3m 38s",
     "key": "B Minor",
+    "album": "Wreck-It Ralph: Original Motion Picture Soundtrack",
+    "genre": "Pop",
+    "rating": "Everyone",
     "difficulties": {
       "vocals": -1,
       "guitar": -1,
@@ -1042,7 +1112,8 @@
     "videoUrl": "whencaniseeyouagain.mp4",
     "videoPosition": 40,
     "previewUrl": "https://p.scdn.co/mp3-preview/de32e8f58f055ed972826b9b7eed5f9f76235612",
-    "rotated": true
+    "rotated": true,
+    "loading_phrase": "It's just a matter of time before we learn how to fly"
   },
   "knife": {
     "title": "Sympathy is a knife",
@@ -1052,6 +1123,9 @@
     "bpm": 132,
     "duration": "2m 31s",
     "key": "G Minor",
+    "album": "brat",
+    "genre": "Pop",
+    "rating": "Teen",
     "difficulties": {
       "vocals": -1,
       "guitar": -1,
@@ -1069,7 +1143,8 @@
     "videoPosition": 30,
     "videoZoom": 1.5,
     "previewUrl": "https://p.scdn.co/mp3-preview/1a782e33f0c910129167914a89fc7b53edc52264",
-    "rotated": true
+    "rotated": true,
+    "loading_phrase": "I'm embarrassed to have it, but need the sympathy"
   },
   "american": {
     "title": "all-american bitch",
@@ -1079,6 +1154,9 @@
     "bpm": 156,
     "duration": "2m 46s",
     "key": "F# Major",
+    "album": "GUTS",
+    "genre": "Pop",
+    "rating": "Teen",
     "difficulties": {
       "vocals": -1,
       "guitar": -1,
@@ -1095,7 +1173,8 @@
     "videoPosition": 0,
     "complete": "0% Complete",
     "previewUrl": "https://p.scdn.co/mp3-preview/8f97f8f287090ae5bff2615a07dc05d8b3e50bf3",
-    "rotated": true
+    "rotated": true,
+    "loading_phrase": "I pay attention to things that most people ignore"
   },
   "1035": {
     "title": "10:35",
@@ -1105,6 +1184,9 @@
     "bpm": 120,
     "duration": "2m 52s",
     "key": "A♭ Major",
+    "album": "DRIVE",
+    "genre": "Electronic",
+    "rating": "Everyone",
     "difficulties": {
       "vocals": -1,
       "guitar": -1,
@@ -1133,6 +1215,9 @@
     "bpm": 126,
     "duration": "3m 26s",
     "key": "E♭ Major",
+    "album": "The Midsummer Station",
+    "genre": "Pop",
+    "rating": "Everyone",
     "difficulties": {
       "vocals": -1,
       "guitar": -1,
@@ -1149,7 +1234,8 @@
     "videoUrl": "goodtime.mp4",
     "videoPosition": 40,
     "previewUrl": "https://p.scdn.co/mp3-preview/948112ba8bf947a429389e2dd71c990989027a7e",
-    "rotated": true
+    "rotated": true,
+    "loading_phrase": "Cause it's always a good time"
   },
   "goodbye": {
     "title": "Good In Goodbye",
@@ -1159,6 +1245,9 @@
     "bpm": 139,
     "duration": "2m 22s",
     "key": "B Minor",
+    "album": "Life Support",
+    "genre": "Pop",
+    "rating": "Teen",
     "difficulties": {
       "vocals": -1,
       "guitar": -1,
@@ -1176,7 +1265,8 @@
     "videoZoom": 1.1,
     "complete": "0% Complete",
     "previewUrl": "https://p.scdn.co/mp3-preview/6498f9b96b03bccdee0496c309770676c744fe57",
-    "rotated": true
+    "rotated": true,
+    "loading_phrase": "You're killing my vibe. In ways words cannot describe"
   },
   "goodones": {
     "title": "Good Ones",
@@ -1186,6 +1276,9 @@
     "bpm": 129,
     "duration": "2m 17s",
     "key": "G Minor",
+    "album": "CRASH",
+    "genre": "Pop",
+    "rating": "Everyone",
     "difficulties": {
       "vocals": -1,
       "guitar": -1,
@@ -1202,7 +1295,8 @@
     "videoPosition": 30,
     "complete": "0% Complete",
     "previewUrl": "https://p.scdn.co/mp3-preview/afe171188865b9dbfbfa6b9a5e6f30a64ef5226e",
-    "rotated": true
+    "rotated": true,
+    "loading_phrase": "I always let the good ones go"
   },
   "gone": {
     "title": "Since U Been Gone",
@@ -1212,6 +1306,9 @@
     "bpm": 131,
     "duration": "3m 09s",
     "key": "C Major",
+    "album": "Breakaway",
+    "genre": "Electropop",
+    "rating": "Everyone",
     "difficulties": {
       "vocals": -1,
       "guitar": -1,
@@ -1228,7 +1325,8 @@
     "videoUrl": "sinceubeengone.mp4",
     "videoPosition": 15,
     "previewUrl": "https://p.scdn.co/mp3-preview/3010d17f854dad67cb0133a5687d871366d67882",
-    "rotated": true
+    "rotated": true,
+    "loading_phrase": "Guess you never felt that way"
   },
   "whistle": {
     "title": "Whistle",
@@ -1238,6 +1336,9 @@
     "bpm": 104,
     "duration": "3m 45s",
     "key": "C Major",
+    "album": "Wild Ones",
+    "genre": "Hip-Hop",
+    "rating": "Everyone",
     "difficulties": {
       "vocals": -1,
       "guitar": -1,
@@ -1255,7 +1356,8 @@
     "videoPosition": 45,
     "videoZoom": 1.1,
     "previewUrl": "https://p.scdn.co/mp3-preview/ea7012e8d63798a9bd4ec40e566cb81c5955d18f",
-    "rotated": true
+    "rotated": true,
+    "loading_phrase": "I'm bettin you like people"
   },
   "miss": {
     "title": "Miss possessive",
@@ -1265,6 +1367,9 @@
     "bpm": 102,
     "duration": "2m 19s",
     "key": "B Minor",
+    "album": "So Close To What",
+    "genre": "Pop",
+    "rating": "Teen",
     "difficulties": {
       "vocals": -1,
       "guitar": -1,
@@ -1281,7 +1386,8 @@
     "complete": "0% Complete",
     "videoPosition": 30,
     "previewUrl": "https://p.scdn.co/mp3-preview/87700c1b053161dcd2ed4545d1773e2f5c304be0",
-    "rotated": true
+    "rotated": true,
+    "loading_phrase": "Look at the floor or ceilin'"
   },
   "chick": {
     "title": "Sexy Chick",
@@ -1339,6 +1445,9 @@
     "bpm": 130,
     "duration": "2m 44s",
     "key": "B♭ Major",
+    "album": "brat",
+    "genre": "Pop",
+    "rating": "Teen",
     "difficulties": {
       "vocals": -1,
       "guitar": -1,
@@ -1355,7 +1464,8 @@
     "videoPosition": 15,
     "complete": "0% Complete",
     "previewUrl": "https://p.scdn.co/mp3-preview/7faf86e041f0fc977545aadc2b4f852eb5f145d4",
-    "rotated": true
+    "rotated": true,
+    "loading_phrase": "I'm your number one, yeah"
   },
   "ok": {
     "title": "It's ok i'm ok",
@@ -1365,6 +1475,9 @@
     "bpm": 115,
     "duration": "2m 37s",
     "key": "C# Minor",
+    "album": "So Close To What",
+    "genre": "Pop",
+    "rating": "Teen",
     "difficulties": {
       "vocals": -1,
       "guitar": -1,
@@ -1380,7 +1493,8 @@
     "videoUrl": "itsokimok.mp4",
     "complete": "0% Complete",
     "previewUrl": "https://p.scdn.co/mp3-preview/96aa2c1dd971e1c27d3a9c92ceb8393e357a73bd",
-    "rotated": true
+    "rotated": true,
+    "loading_phrase": "I don't want him anyway, girl, take him"
   },
   "gold": {
     "title": "Gold Rush",
@@ -1390,6 +1504,9 @@
     "bpm": 107,
     "duration": "3m 09s",
     "key": "C Major",
+    "album": "Waves",
+    "genre": "Pop",
+    "rating": "Everyone",
     "difficulties": {
       "vocals": -1,
       "guitar": -1,
@@ -1406,7 +1523,8 @@
     "videoPosition": 30,
     "complete": "0% Complete",
     "previewUrl": "https://p.scdn.co/mp3-preview/143b7b2717f2cc10fb3e30cc5cbd3d60dd0abe3e",
-    "rotated": true
+    "rotated": true,
+    "loading_phrase": "The whole world's runnin' round like fools"
   },
   "dance": {
     "title": "Shut Up and Dance",
@@ -1416,6 +1534,9 @@
     "bpm": 128,
     "duration": "3m 19s",
     "key": "C# Major",
+    "album": "TALKING IS HARD",
+    "genre": "Electropop",
+    "rating": "Everyone",
     "difficulties": {
       "vocals": -1,
       "guitar": -1,
@@ -1432,7 +1553,8 @@
     "videoPosition": 10,
     "complete": "0% Complete",
     "previewUrl": "https://p.scdn.co/mp3-preview/4309fadd9a0d573c1fafcca507e024b3bb51266b",
-    "rotated": true
+    "rotated": true,
+    "loading_phrase": "I don't know how it happened"
   },
   "greedy": {
     "title": "greedy",
@@ -1442,6 +1564,9 @@
     "bpm": 111,
     "duration": "2m 12s",
     "key": "C# Minor",
+    "album": "Think Later",
+    "genre": "Pop",
+    "rating": "Everyone",
     "difficulties": {
       "vocals": -1,
       "guitar": -1,
@@ -1458,7 +1583,8 @@
     "videoPosition": 30,
     "complete": "0% Complete",
     "previewUrl": "https://p.scdn.co/mp3-preview/ca7bdcb691fb64a5af8a3253b89356390664fcf1",
-    "rotated": true
+    "rotated": true,
+    "loading_phrase": "Baby, don't get greedy. That shit won't end well"
   },
   "planet": {
     "title": "Planet Of The Bass",
@@ -1468,6 +1594,9 @@
     "bpm": 128,
     "duration": "3m 20s",
     "key": "B♭ Major",
+    "album": "Kyle Gordon Is Great",
+    "genre": "Electronic",
+    "rating": "Teen",
     "difficulties": {
       "vocals": -1,
       "guitar": -1,
@@ -1483,8 +1612,10 @@
     "complete": "0% Complete",
     "videoUrl": "planetofthebass.mp4",
     "videoPosition": 35,
+    "videoZoom": "1.2",
     "previewUrl": "https://p.scdn.co/mp3-preview/cfc21efa41c8301d0b2426aa277155b91706b3ab",
-    "rotated": true
+    "rotated": true,
+    "loading_phrase": "Women are my favorite guy"
   },
   "what": {
     "title": "what would you do?",
@@ -1494,6 +1625,9 @@
     "bpm": 105,
     "duration": "2m 47s",
     "key": "A Major",
+    "album": "i used to think i could fly",
+    "genre": "Pop",
+    "rating": "Teen",
     "difficulties": {
       "vocals": -1,
       "guitar": -1,
@@ -1510,7 +1644,8 @@
     "videoPosition": 25,
     "complete": "0% Complete",
     "previewUrl": "https://p.scdn.co/mp3-preview/675a8b127b64aaf89c7491970155b76c4dfae0c8",
-    "rotated": true
+    "rotated": true,
+    "loading_phrase": "I hope it breaks you in two"
   },
   "mansion": {
     "title": "Mansion",
@@ -1520,6 +1655,9 @@
     "bpm": 151,
     "duration": "5m 23s",
     "key": "B♭ Minor",
+    "album": "Mansion",
+    "genre": "Hip-Hop",
+    "rating": "Everyone",
     "difficulties": {
       "vocals": -1,
       "guitar": -1,
@@ -1536,7 +1674,8 @@
     "videoUrl": "mansion.mp4",
     "videoPosition": 45,
     "previewUrl": "https://p.scdn.co/mp3-preview/eca6e04833215ce19b8ef59c39b38a8c2c481914",
-    "rotated": true
+    "rotated": true,
+    "loading_phrase": "What's reality with all these questions?"
   },
   "real": {
     "title": "Real",
@@ -1546,6 +1685,9 @@
     "bpm": 135,
     "duration": "4m 23s",
     "key": "C# Major",
+    "album": "Therapy Session",
+    "genre": "Hip-Hop",
+    "rating": "Everyone",
     "difficulties": {
       "vocals": -1,
       "guitar": -1,
@@ -1563,7 +1705,8 @@
     "videoPosition": 35,
     "videoZoom": 1.2,
     "previewUrl": "https://p.scdn.co/mp3-preview/92dc1b33bfdc2c927fbc95e53a8742038ddf8998",
-    "rotated": true
+    "rotated": true,
+    "loading_phrase": "I exist in the world that's real different"
   },
   "intro": {
     "title": "Intro",
@@ -1573,6 +1716,9 @@
     "bpm": 113,
     "duration": "3m 19s",
     "key": "C Minor",
+    "album": "Mansion",
+    "genre": "Hip-Hop",
+    "rating": "Everyone",
     "difficulties": {
       "vocals": -1,
       "guitar": -1,
@@ -1590,7 +1736,8 @@
     "videoPosition": 35,
     "videoZoom": 1.2,
     "previewUrl": "https://p.scdn.co/mp3-preview/61c4bb05d7c0eb3af01ec7b2c2699ebd4c5c7bb4",
-    "rotated": true
+    "rotated": true,
+    "loading_phrase": "Music is changing, no way to tame this"
   },
   "introii": {
     "title": "Intro 2",
@@ -1600,6 +1747,9 @@
     "bpm": 140,
     "duration": "3m 16s",
     "key": "C# Major",
+    "album": "Therapy Session",
+    "genre": "Hip-Hop",
+    "rating": "Everyone",
     "difficulties": {
       "vocals": -1,
       "guitar": -1,
@@ -1617,7 +1767,8 @@
     "videoPosition": 35,
     "videoZoom": 1.2,
     "previewUrl": "https://p.scdn.co/mp3-preview/301025a29efea2008eb11438e16a5cb79f43d16e",
-    "rotated": true
+    "rotated": true,
+    "loading_phrase": "I'm back, did anyone miss me?"
   },
   "introiii": {
     "title": "Intro III",
@@ -1627,6 +1778,9 @@
     "bpm": 127,
     "duration": "4m 29s",
     "key": "B♭ Major",
+    "album": "Perception",
+    "genre": "Hip-Hop",
+    "rating": "Everyone",
     "difficulties": {
       "vocals": -1,
       "guitar": -1,
@@ -1644,7 +1798,8 @@
     "videoPosition": 35,
     "videoZoom": 1.2,
     "previewUrl": "https://p.scdn.co/mp3-preview/bf90fcfe66c0843e2e567d4b4dc343727f8d160a",
-    "rotated": true
+    "rotated": true,
+    "loading_phrase": "What's the point of havin' guns if you can't aim?"
   },
   "grow": {
     "title": "When I Grow Up",
