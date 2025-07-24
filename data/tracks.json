@@ -159,7 +159,6 @@
     "bpm": 130,
     "key": "C Major",
     "duration": "2m 37s",
-    "album": "",
     "genre": "Electronic",
     "rating": "Everyone",
     "difficulties": {
@@ -1707,7 +1706,6 @@
       "bpm": 126,
       "duration": "2m 30s",
       "key": "A Minor",
-      "album": "",
       "genre": "Electronic",
       "rating": "Everyone",
       "difficulties": {
@@ -1990,7 +1988,6 @@
       "bpm": 107,
       "duration": "4m 50s",
       "key": "C# Minor",
-      "album": "",
       "genre": "Electronic",
       "rating": "Everyone",
       "difficulties": {
@@ -2786,7 +2783,6 @@
       "bpm": 131,
       "duration": "2m 21s",
       "key": "A♭ Major",
-      "album": "",
       "genre": "Pop",
       "rating": "Teen",
       "difficulties": {
