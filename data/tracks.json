@@ -3171,6 +3171,8 @@
       "bpm": 145,
       "duration": "3m 53s",
       "key": "B♭ Minor",
+      "genre": "Electronic",
+      "rating": "Everyone",
       "difficulties": {
         "vocals": -1,
         "guitar": -1,
@@ -3186,6 +3188,7 @@
       "videoUrl": "xenogenesis.mp4",
       "videoPosition": 20,
       "spotify": "6anGosAX39TdpJGNQH3H9n",
+      "loading_phrase": "Almost The End Of A Decade",
       "previewUrl": "https://p.scdn.co/mp3-preview/1934072807263b169741f1cebc9798354e0d376d",
       "rotated": true
     },
@@ -3197,6 +3200,9 @@
       "bpm": 117,
       "duration": "3m 55s",
       "key": "F Major",
+      "album": "CLOUDS",
+      "genre": "Hip-Hop",
+      "rating": "Everyone",
       "difficulties": {
         "vocals": -1,
         "guitar": -1,
@@ -3212,17 +3218,20 @@
       "videoUrl": "LOST.mp4",
       "videoPosition": 35,
       "spotify": "1PTVGdcYyLFnJKVOkaxQWj",
+      "loading_phrase": "Road is narrow, I'm lookin' down it like a gun's barrel",
       "previewUrl": "https://p.scdn.co/mp3-preview/3d2327e7ac7dd4b9dc79076088c74012a7a2154f",
       "rotated": true
     },
     "data": {
-      "title": "HYPNOTIC DATA",
+      "title": "HYPNOTIC DATA 2.0",
       "artist": "Odetari",
       "releaseYear": 2024,
       "cover": "HypnoticData.png",
       "bpm": 136,
       "duration": "2m 09s",
       "key": "B Minor",
+      "genre": "Electronic",
+      "rating": "Everyone",
       "difficulties": {
         "vocals": -1,
         "guitar": -1,
@@ -3238,6 +3247,7 @@
       "videoUrl": "hypnoticdata.mp4",
       "videoZoom": 1.3,
       "spotify": "1Ll2L0m2QznnoJI9xRN5MP",
+      "loading_phrase": "There's still a lot you gotta learn",
       "previewUrl": "https://p.scdn.co/mp3-preview/00721c1e0c9a6532e42282af3ac01c7de2e8ec60",
       "rotated": true
     },
@@ -3249,6 +3259,9 @@
       "bpm": 118,
       "duration": "2m 24s",
       "key": "C# Major",
+      "album": "Diamonds & Dancefloors",
+      "genre": "Pop",
+      "rating": "Everyone",
       "difficulties": {
         "vocals": -1,
         "guitar": -1,
@@ -3264,6 +3277,7 @@
       "videoUrl": "coldasice.mp4",
       "videoPosition": 10,
       "spotify": "4qP9K48aEcG50hSgmIQVi3",
+      "loading_phrase": "I'm not the type to keep you warm at night",
       "previewUrl": "https://p.scdn.co/mp3-preview/32f75ddf21d4effb0a920044de68e009531dbd04",
       "rotated": true
     },
@@ -3275,6 +3289,9 @@
       "bpm": 120,
       "duration": "2m 37s",
       "key": "D Major",
+      "album": "Diamonds & Dancefloors",
+      "genre": "Pop",
+      "rating": "Everyone",
       "difficulties": {
         "vocals": -1,
         "guitar": -1,
@@ -3290,6 +3307,7 @@
       "videoUrl": "turnoffthelights.mp4",
       "videoPosition": 10,
       "spotify": "3tcv4j4DQYDBaNoHTLYKV8",
+      "loading_phrase": "A paradise that they can't see",
       "previewUrl": "https://p.scdn.co/mp3-preview/f52fd31347af4d1e63d02eda55aa3dd1ca024388",
       "rotated": true
     },
@@ -3301,6 +3319,9 @@
       "bpm": 170,
       "duration": "2m 32s",
       "key": "C# Major",
+      "album": "Diamonds & Dancefloors",
+      "genre": "Pop",
+      "rating": "Everyone",
       "difficulties": {
         "vocals": -1,
         "guitar": -1,
@@ -3316,6 +3337,7 @@
       "videoUrl": "weapons.mp4",
       "videoPosition": "30",
       "spotify": "4QXww31EdLcenZiRqnTZeg",
+      "loading_phrase": "We're nothin' but some stardust and molecules",
       "previewUrl": "https://p.scdn.co/mp3-preview/d6fd5bfe780ec6478d2635b3c75e55ae63741daf",
       "rotated": true
     },
@@ -3327,6 +3349,9 @@
       "bpm": 126,
       "duration": "2m 53s",
       "key": "C# Minor",
+      "album": "Diamonds & Dancefloors",
+      "genre": "Pop",
+      "rating": "Everyone",
       "difficulties": {
         "vocals": -1,
         "guitar": -1,
@@ -3342,6 +3367,7 @@
       "videoUrl": "inthedark.mp4",
       "videoPosition": 10,
       "spotify": "6xd51Blf4S1T98r9iykAER",
+      "loading_phrase": "Why do I always pick the wildest cards?",
       "previewUrl": "https://p.scdn.co/mp3-preview/266cee888fb80ea9282a4f88eb11e0327941e632",
       "rotated": true
     },
@@ -3353,6 +3379,9 @@
       "bpm": 121,
       "duration": "2m 36s",
       "key": "C# Major",
+      "album": "Diamonds & Dancefloors",
+      "genre": "Pop",
+      "rating": "Everyone",
       "difficulties": {
         "vocals": -1,
         "guitar": -1,
@@ -3367,6 +3396,7 @@
       "complete": "0% Complete",
       "videoUrl": "diamondsanddancefloors.mp4",
       "spotify": "4fVxlf4IxJNJl8OmPsQ2C1",
+      "loading_phrase": "It don't feel wrong but don't feel right",
       "previewUrl": "https://p.scdn.co/mp3-preview/5e012b0cc9e95485e8825b661454bd3f4988ff44",
       "rotated": true
     },
@@ -3378,6 +3408,9 @@
       "bpm": 130,
       "duration": "2m 53s",
       "key": "A♭ Major",
+      "album": "Brat and it’s completely different but also still brat",
+      "genre": "Pop",
+      "rating": "Teen",
       "difficulties": {
         "vocals": -1,
         "guitar": -1,
@@ -3392,6 +3425,7 @@
       "complete": "0% Complete",
       "videoUrl": "rewind.mp4",
       "spotify": "7CwWhMGWICOl2ICwbk3QTE",
+      "loading_phrase": "Talk to me in French, talk to me in Spanish",
       "previewUrl": "https://p.scdn.co/mp3-preview/ee013d4c7ce28adbd3e7182c15beec885f965590",
       "rotated": true
     },
@@ -3403,6 +3437,9 @@
       "bpm": 95,
       "duration": "3m 00s",
       "key": "F Major",
+      "album": "This is What It Feels Like",
+      "genre": "Pop",
+      "rating": "Teen",
       "difficulties": {
         "vocals": -1,
         "guitar": -1,
@@ -3418,6 +3455,7 @@
       "videoUrl": "TheBottom.mp4",
       "videoPosition": "30",
       "spotify": "4Sk74gcXTe9dnE1HU5Pn1y",
+      "loading_phrase": "What a painful back and forth",
       "previewUrl": "https://p.scdn.co/mp3-preview/e552a054097e57cd9061d94e9e6e67da53713c70",
       "rotated": true
     },
@@ -3429,6 +3467,9 @@
       "bpm": 128,
       "duration": "3m 35s",
       "key": "C# Major",
+      "album": "Talk That Talk",
+      "genre": "Pop",
+      "rating": "Everyone",
       "difficulties": {
         "vocals": -1,
         "guitar": -1,
@@ -3443,6 +3484,7 @@
       "complete": "0% Complete",
       "videoUrl": "wefoundlove.mp4",
       "spotify": "6qn9YLKt13AGvpq9jfO8py",
+      "loading_phrase": "It's the way I'm feelin', I just can't deny",
       "previewUrl": "https://p.scdn.co/mp3-preview/3067667dfd88c43dbe49d977a03d7158cd02a06b",
       "rotated": true
     },
@@ -3454,6 +3496,9 @@
       "bpm": 115,
       "duration": "2m 39s",
       "key": "F# Major",
+      "album": "Heaven & Hell",
+      "genre": "Pop",
+      "rating": "Everyone",
       "difficulties": {
         "vocals": -1,
         "guitar": -1,
@@ -3468,6 +3513,7 @@
       "complete": "0% Complete",
       "videoUrl": "Tattoo.mp4",
       "spotify": "57jayqtClHRLIQ3mAFjvgZ",
+      "loading_phrase": "A permanent mark that won't fade away",
       "previewUrl": "https://p.scdn.co/mp3-preview/1c013f9d30eeff576db707cea7cb9fb97f79758a",
       "rotated": true
     },
@@ -3479,6 +3525,9 @@
       "bpm": 184,
       "duration": "3m 00s",
       "key": "G Major",
+      "album": "Heaven & Hell",
+      "genre": "Pop",
+      "rating": "Everyone",
       "difficulties": {
         "vocals": -1,
         "guitar": -1,
@@ -3494,6 +3543,7 @@
       "videoUrl": "whoslaughingnow.mp4",
       "videoZoom": 1.2,
       "spotify": "1Pmp486RrLRkaEkE3HFHXP",
+      "loading_phrase": "It's comical, hysterical",
       "previewUrl": "https://p.scdn.co/mp3-preview/6eea8e5de2336c0cf662260d377f4b33044c2add",
       "rotated": true
     },
@@ -3505,6 +3555,9 @@
       "bpm": 116,
       "duration": "2m 37s",
       "key": "B♭ Major",
+      "album": "The Secret Of Us",
+      "genre": "Pop",
+      "rating": "Teen",
       "difficulties": {
         "vocals": -1,
         "guitar": -1,
@@ -3520,33 +3573,8 @@
       "videoUrl": "ILoveYou,I'mSorry.mp4",
       "videoPosition": "22",
       "spotify": "51rfRCiUSvxXlCSCfIztBy",
+      "loading_phrase": "I push my luck, it shows",
       "previewUrl": "https://p.scdn.co/mp3-preview/e769aa637d6edb1bc8ce037a4ed830e9dd54a2d5",
-      "rotated": true
-    },
-    "risk": {
-      "title": "Risk",
-      "artist": "Gracie Abrams",
-      "releaseYear": 2024,
-      "cover": "TheSecretOfUs.png",
-      "bpm": 113,
-      "duration": "3m 12s",
-      "key": "E♭ Minor",
-      "difficulties": {
-        "vocals": -1,
-        "guitar": -1,
-        "bass": -1,
-        "drums": -1,
-        "plastic-bass": -1,
-        "plastic-drums": -1,
-        "plastic-guitar": -1
-      },
-      "createdAt": "2000-01-01T08:00:00.000Z",
-      "lastFeatured": "TBA",
-      "complete": "0% Complete",
-      "videoUrl": "Risk.mp4",
-      "videoPosition": "30",
-      "spotify": "5JiU3gLHz9AvUnrhXgOmos",
-      "previewUrl": "https://p.scdn.co/mp3-preview/f6e8e2943b893ac1575355f15ba0312dd4221f2f",
       "rotated": true
     },
     "signs": {
@@ -3557,6 +3585,9 @@
       "bpm": 112,
       "duration": "2m 54s",
       "key": "F# Minor",
+      "album": "So Close To What",
+      "genre": "Pop",
+      "rating": "Teen",
       "difficulties": {
         "vocals": -1,
         "guitar": -1,
@@ -3572,6 +3603,7 @@
       "videoUrl": "Signs.mp4",
       "videoPosition": 15,
       "spotify": "5Dg1VGthgPfQasqbX5GHDE",
+      "loading_phrase": "I hate you, means I need you more",
       "previewUrl": "https://p.scdn.co/mp3-preview/9a6ea2a6cf3cfe87ef4e8809a521bc7634bb894c",
       "rotated": true
     },
@@ -3583,6 +3615,9 @@
       "bpm": 173,
       "duration": "3m 03s",
       "key": "E Minor",
+      "album": "So Close To What",
+      "genre": "Pop",
+      "rating": "Teen",
       "difficulties": {
         "vocals": -1,
         "guitar": -1,
@@ -3598,6 +3633,7 @@
       "videoUrl": "Nostalgia.mp4",
       "spotify": "3Mk7IafwNuQdFQda1XI5PE",
       "videoPosition": 75,
+      "loading_phrase": "Oh, where does the time go?",
       "previewUrl": "https://p.scdn.co/mp3-preview/569da6ee5cf3560406c3ffa077e7e2d9ab9e96eb",
       "rotated": true
     },
@@ -3609,6 +3645,9 @@
       "bpm": 130,
       "duration": "2m 24s",
       "key": "A♭ Major",
+      "album": "Think Later",
+      "genre": "Pop",
+      "rating": "Teen",
       "difficulties": {
         "vocals": -1,
         "guitar": -1,
@@ -3623,6 +3662,7 @@
       "complete": "0% Complete",
       "videoUrl": "runforthehills.mp4",
       "spotify": "51hyZpbJlIgZIaX3TtMxmu",
+      "loading_phrase": "Straight to the heart, yeah, it cuts me",
       "previewUrl": "https://p.scdn.co/mp3-preview/0c91e2da7c4ccc1f9c9e7de651f867e7e9805b38",
       "rotated": true
     },
@@ -3685,6 +3725,9 @@
       "bpm": 120,
       "duration": "2m 21s",
       "key": "B Minor",
+      "album": "DRIVE",
+      "genre": "Pop",
+      "rating": "Everyone",
       "difficulties": {
         "vocals": -1,
         "guitar": -1,
@@ -3700,6 +3743,7 @@
     "videoUrl": "Don'tBeShy.mp4",
     "videoPosition": 35,
     "spotify": "0v2Swij0g2VfvSq3c3uaG3",
+    "loading_phrase": "People say I'm not gonna change, not gonna change",
     "previewUrl": "https://p.scdn.co/mp3-preview/b5b4a420871f198f6526d15d58fa3c90c4a4ad0a",
     "rotated": true
   },
@@ -3711,6 +3755,9 @@
     "bpm": 116,
     "duration": "2m 59s",
     "key": "C# Major",
+    "album": "brat",
+    "genre": "Pop",
+    "rating": "Teen",
     "difficulties": {
       "vocals": -1,
       "guitar": -1,
@@ -3726,6 +3773,7 @@
     "videoUrl": "sympathyisaknife.mp4",
     "videoZoom": 1.5,
     "spotify": "4wTvw1dBiPXNiHTh0zzpcI",
+    "loading_phrase": "I don't wanna feel feelings",
     "previewUrl": "https://p.scdn.co/mp3-preview/5dc202f078d5351424ca63c2d0751031f1106ba8",
     "rotated": true
   },
@@ -3737,6 +3785,8 @@
     "bpm": 95,
     "duration": "3m 31s",
     "key": "C# Minor",
+    "genre": "Pop",
+    "rating": "Everyone",
     "difficulties": {
       "vocals": -1,
       "guitar": -1,
@@ -3751,6 +3801,7 @@
     "complete": "0% Complete",
     "videoUrl": "OopsIDidItAgain.mp4",
     "spotify": "6naxalmIoLFWR0siv8dnQQ",
+    "loading_phrase": "That is just so typically me",
     "previewUrl": "https://p.scdn.co/mp3-preview/66a5cf0f69b1bb1e8930821881b71756151c5f68",
     "rotated": true
   },
