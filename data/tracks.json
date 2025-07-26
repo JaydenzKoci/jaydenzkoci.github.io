@@ -1020,7 +1020,7 @@
     "bpm": 143,
     "duration": "4m 21s",
     "key": "B♭ Minor",
-    "genre": "Hip-Hop",
+    "genre": "Pop Rock",
     "rating": "Everyone",
     "difficulties": {
       "vocals": -1,
@@ -1809,6 +1809,9 @@
     "bpm": 110,
     "duration": "3m 17s",
     "key": "D Major",
+    "album": "The Search",
+    "genre": "Hip-Hop",
+    "rating": "Everyone",
     "difficulties": {
       "vocals": -1,
       "guitar": -1,
@@ -1824,6 +1827,7 @@
     "videoUrl": "whenigrowup.mp4",
     "videoPosition": 30,
     "complete": "0% Complete",
+    "loading_phrase": "Imma make them notice me, rhymin like it's poetry",
     "previewUrl": "https://p.scdn.co/mp3-preview/7d1204813ea6f3163b5520f84a02615a330d426e",
     "rotated": true
   },
@@ -1835,6 +1839,9 @@
     "bpm": 174,
     "duration": "2m 45s",
     "key": "C Minor",
+    "album": "Heaven & Hell",
+    "genre": "Pop",
+    "rating": "Everyone",
     "difficulties": {
       "vocals": -1,
       "guitar": -1,
@@ -1850,6 +1857,7 @@
     "videoUrl": "takeyoutohell.mp4",
     "videoPosition": 40,
     "complete": "0% Complete",
+    "loading_phrase": "I don't wanna be a diva, so dramatic",
     "previewUrl": "https://p.scdn.co/mp3-preview/12a9e91a07a8812b896504d5d782dab454114194",
     "rotated": true
   },
@@ -1911,6 +1919,9 @@
       "bpm": 148,
       "duration": "3m 00s",
       "key": "F# Major",
+      "album": "So Close To What",
+      "genre": "Pop",
+      "rating": "Teen",
       "difficulties": {
         "vocals": -1,
         "guitar": -1,
@@ -1926,6 +1937,7 @@
       "videoUrl": "revolvingdoor.mp4",
       "videoPosition": 30,
       "complete": "0% Complete",
+      "loading_phrase": "But I keep comin' back like a revolving door",
       "previewUrl": "https://p.scdn.co/mp3-preview/efd77f6c2fbde8140f851e69237f66c1ad7bf152",
       "rotated": true
     },
@@ -1937,6 +1949,9 @@
       "bpm": 89,
       "duration": "2m 48s",
       "key": "C# Major",
+      "album": "brat",
+      "genre": "Pop",
+      "rating": "Everyone",
       "difficulties": {
         "vocals": -1,
         "guitar": -1,
@@ -1951,6 +1966,7 @@
       "spotify": "50GxvQA2KEWNt31EdwIlzY",
       "videoUrl": "rewind.mp4",
       "complete": "0% Complete",
+      "loading_phrase": "Wanna turn back time to a different time",
       "previewUrl": "https://p.scdn.co/mp3-preview/559ebf2f3d0f42be978363adae4c42d603c535d2",
       "rotated": true
     },
@@ -1962,6 +1978,9 @@
       "bpm": 122,
       "duration": "2m 58s",
       "key": "C# Major",
+      "album": "The Smurfs 2",
+      "genre": "Pop",
+      "rating": "Everyone",
       "difficulties": {
         "vocals": -1,
         "guitar": -1,
@@ -1977,6 +1996,7 @@
       "complete": "0% Complete",
       "videoUrl": "liveitup.mp4",
       "videoPosition": 45,
+      "loading_phrase": "Seize the day, and reach for the sky",
       "previewUrl": "https://p.scdn.co/mp3-preview/88f958c9675895415e783f46251b4ce78fb467d3",
       "rotated": true
     },
@@ -1988,6 +2008,9 @@
       "bpm": 113,
       "duration": "3m 42s",
       "key": "E Minor",
+      "album": "Future Nostalgia",
+      "genre": "Pop",
+      "rating": "Everyone",
       "difficulties": {
         "vocals": -1,
         "guitar": -1,
@@ -2003,6 +2026,7 @@
       "videoUrl": "breakmyheart.mp4",
       "videoPosition": 30,
       "complete": "0% Complete",
+      "loading_phrase": "I'm afraid of all the things it could do to me",
       "previewUrl": "https://p.scdn.co/mp3-preview/a0078bbdb4351ec221eb7f330bd01856636601b5",
       "rotated": true
     },
@@ -2014,6 +2038,9 @@
       "bpm": 75,
       "duration": "2m 45s",
       "key": "C Major",
+      "album": "So Close To What",
+      "genre": "Pop",
+      "rating": "Teen",
       "difficulties": {
         "vocals": -1,
         "guitar": -1,
@@ -2029,6 +2056,7 @@
       "videoUrl": "greenlight.mp4",
       "videoPosition": 20,
       "complete": "0% Complete",
+      "loading_phrase": "Stuck up in a rewrite of the same song",
       "previewUrl": "https://p.scdn.co/mp3-preview/9d7e12554cc4380586f77abad1b8a201cc0d1d7d",
       "rotated": true
     },
@@ -2040,6 +2068,9 @@
       "bpm": 141,
       "duration": "2m 33s",
       "key": "B Minor",
+      "album": "Walkerworld 2.0",
+      "genre": "Electronic",
+      "rating": "Everyone",
       "difficulties": {
         "vocals": -1,
         "guitar": -1,
@@ -2054,6 +2085,7 @@
       "spotify": "0wOfbpwLdSLoWAkUYLH8ur",
       "videoUrl": "lastsong.mp4",
       "complete": "0% Complete",
+      "loading_phrase": "Carried by wings of the lies you told",
       "previewUrl": "https://p.scdn.co/mp3-preview/25b2f8584a1c8996a637382aed0310f49801e986",
       "rotated": true
     },
@@ -2065,6 +2097,9 @@
       "bpm": 146,
       "duration": "3m 27s",
       "key": "B Minor",
+      "album": "Missonary",
+      "genre": "Hip-Hop",
+      "rating": "Teen",
       "difficulties": {
         "vocals": -1,
         "guitar": -1,
@@ -2080,6 +2115,7 @@
       "videoUrl": "anotherpartofme.mp4",
       "videoPosition": 30,
       "complete": "0% Complete",
+      "loading_phrase": "Out here livin' armed and dangerous",
       "previewUrl": "https://p.scdn.co/mp3-preview/96f784e4a917aa8a735eba057a3895a5a0875655",
       "rotated": true
     },
@@ -2091,6 +2127,9 @@
       "bpm": 117,
       "duration": "3m 06s",
       "key": "A Minor",
+      "album": "Radical Optimism",
+      "genre": "Pop",
+      "rating": "Everyone",
       "difficulties": {
         "vocals": -1,
         "guitar": -1,
@@ -2106,6 +2145,7 @@
       "videoUrl": "houdini.mp4",
       "videoPosition": 30,
       "complete": "0% Complete",
+      "loading_phrase": "Time is passin' like a solar eclipse",
       "previewUrl": "https://p.scdn.co/mp3-preview/df4af86970ffb1a7042d1d228bcea7b4aabfdba4",
       "rotated": true
     },
@@ -2117,6 +2157,8 @@
       "bpm": 128,
       "duration": "2m 55s",
       "key": "G Minor",
+      "genre": "Dance Pop",
+      "rating": "Everyone",
       "difficulties": {
         "vocals": -1,
         "guitar": -1,
@@ -2132,6 +2174,7 @@
       "videoUrl": "imgood.mp4",
       "videoPosition": 40,
       "complete": "0% Complete",
+      "loading_phrase": "I don't need the finer things in life",
       "previewUrl": "https://p.scdn.co/mp3-preview/ddbc8b31430c9853472af6e597bb92d3c4af88d4",
       "rotated": true
     },
@@ -2191,6 +2234,9 @@
       "bpm": 105,
       "duration": "4m 09s",
       "key": "E Minor",
+      "album": "End of the Decade",
+      "genre": "Electronic",
+      "rating": "Everyone",
       "difficulties": {
         "vocals": -1,
         "guitar": -1,
@@ -2206,6 +2252,7 @@
       "videoUrl": "unity.mp4",
       "videoPosition": 50,
       "complete": "0% Complete",
+      "loading_phrase": "Find our treasure in the light of the sun",
       "previewUrl": "https://p.scdn.co/mp3-preview/00f0330a02e302be04b0989ebd22b24641d7c4ac",
       "rotated": true
     },
@@ -2217,6 +2264,9 @@
       "bpm": 94,
       "duration": "4m 02s",
       "key": "A Minor",
+      "album": "Persona 5 Royal: Original Soundtrack",
+      "genre": "J-Pop",
+      "rating": "Everyone",
       "difficulties": {
         "vocals": -1,
         "guitar": -1,
@@ -2233,6 +2283,7 @@
       "videoPosition": 20,
       "videoZoom": 1.2,
       "complete": "0% Complete",
+      "loading_phrase": "Don't sleep through dreams that can come true",
       "previewUrl": "https://p.scdn.co/mp3-preview/af21fc38c1651961bde204232cadac4e08703b3a",
       "rotated": true
     },
@@ -2244,6 +2295,8 @@
       "bpm": 146,
       "duration": "2m 41s",
       "key": "B Minor",
+      "genre": "Hip-Hop",
+      "rating": "Everyone",
       "difficulties": {
         "vocals": -1,
         "guitar": -1,
@@ -2259,6 +2312,7 @@
       "spotify": "0L47Eu4MJH1J1vIerB7MMc",
       "videoUrl": "thickofit.mp4",
       "videoPosition": 30,
+      "loading_phrase": "From the screen to the ring, to the pen, to the king",
       "previewUrl": "https://p.scdn.co/mp3-preview/75fc8a58cc0b1f2a473c3ea5e350da662d9f62f8",
       "rotated": true
     },
@@ -2270,6 +2324,9 @@
       "bpm": 118,
       "duration": "2m 45s",
       "key": "G Minor",
+      "album": "DRIVE",
+      "genre": "Dance Pop",
+      "rating": "Everyone",
       "difficulties": {
         "vocals": -1,
         "guitar": -1,
@@ -2285,6 +2342,7 @@
       "spotify": "3j11iDncb7ZeDMw7lFucqM",
       "videoUrl": "themotto.mp4",
       "videoPosition": 20,
+      "loading_phrase": "Drop a few bills and pop a few champagne bottles",
       "previewUrl": "https://p.scdn.co/mp3-preview/f1bc601f20aed02799fc5adaf39c664e4ffa5101",
       "rotated": true
     },
@@ -2296,6 +2354,9 @@
       "bpm": 80,
       "duration": "3m 37s",
       "key": "C Minor",
+      "album": "HOPE",
+      "genre": "Hip-Hop",
+      "rating": "Everyone",
       "difficulties": {
         "vocals": -1,
         "guitar": -1,
@@ -2311,6 +2372,7 @@
       "spotify": "3q9PVufz68TRvOao25IMNk",
       "videoUrl": "motto.mp4",
       "videoPosition": 20,
+      "loading_phrase": "You might catch me at the award show",
       "previewUrl": "https://p.scdn.co/mp3-preview/98136bf96c23375c763ffb49f2eb25c51d3e2415",
       "rotated": true
     },
@@ -2322,6 +2384,9 @@
       "bpm": 146,
       "duration": "4m 14s",
       "key": "F Major",
+      "album": "HOPE",
+      "genre": "Hip-Hop",
+      "rating": "Everyone",
       "difficulties": {
         "vocals": -1,
         "guitar": -1,
@@ -2338,6 +2403,7 @@
       "videoUrl": "hopealbum.mp4",
       "videoPosition": 70,
       "videoZoom": 1.8,
+      "loading_phrase": "I wish you the best but, I'm not interested",
       "previewUrl": "https://p.scdn.co/mp3-preview/bdc34ee6c5e5553aafd06fe1b1946a984c918872",
       "rotated": true,
       "youtubeLinks": {
@@ -2365,6 +2431,9 @@
       "bpm": 99,
       "duration": "3m 17s",
       "key": "E Minor",
+      "album": "HOPE",
+      "genre": "Hip-Hop",
+      "rating": "Everyone",
       "difficulties": {
         "vocals": -1,
         "guitar": -1,
@@ -2381,6 +2450,7 @@
       "videoUrl": "hopealbum.mp4",
       "videoPosition": 70,
       "videoZoom": 1.8,
+      "loading_phrase": "Shoot, I always hit the bull's-eye",
       "previewUrl": "https://p.scdn.co/mp3-preview/7f71547d1a4c2567c76cb9614f103dbad22d8462",
       "rotated": true
     },
@@ -2392,6 +2462,9 @@
       "bpm": 130,
       "duration": "3m 30s",
       "key": "B Minor",
+      "album": "HOPE",
+      "genre": "Hip-Hop",
+      "rating": "Everyone",
       "difficulties": {
         "vocals": -1,
         "guitar": -1,
@@ -2408,6 +2481,7 @@
       "videoUrl": "hopealbum.mp4",
       "videoPosition": 70,
       "videoZoom": 1.8,
+      "loading_phrase": "Look at my life, I'm greatful",
       "previewUrl": "https://p.scdn.co/mp3-preview/b2e9fc97cbf25827c75413922fa55ae9266b8a45",
       "rotated": true
     },
@@ -2419,6 +2493,9 @@
       "bpm": 146,
       "duration": "3m 32s",
       "key": "D Major",
+      "album": "CLOUDS",
+      "genre": "Hip-Hop",
+      "rating": "Everyone",
       "difficulties": {
         "vocals": -1,
         "guitar": -1,
@@ -2434,6 +2511,7 @@
       "spotify": "6ziQdexOHyC2gkZ1iNoi1w",
       "videoUrl": "paidmydues.mp4",
       "videoPosition": 30,
+      "loading_phrase": "I spit it with ease, so leave it to me",
       "previewUrl": "https://p.scdn.co/mp3-preview/0aa59954659fa378395903002090237ae70af033",
       "rotated": true
     },
@@ -2445,6 +2523,9 @@
       "bpm": 186,
       "duration": "3m 50s",
       "key": "A Major",
+      "album": "Hello World",
+      "genre": "J-Pop",
+      "rating": "Everyone",
       "difficulties": {
         "vocals": -1,
         "guitar": -1,
@@ -2460,6 +2541,7 @@
       "spotify": "15djS9QeF1Ga4nM7CP3VGI",
       "videoUrl": "flyaway.mp4",
       "videoPosition": 30,
+      "loading_phrase": "It's a beautiful world",
       "previewUrl": "https://p.scdn.co/mp3-preview/4418e7a729ce692fa686ff64696ea15cbe58c0df",
       "rotated": true
     },
@@ -2471,6 +2553,9 @@
       "bpm": 106,
       "duration": "3m 35s",
       "key": "C Major",
+      "album": "Thrill Of The Chase",
+      "genre": "Pop",
+      "rating": "Everyone",
       "difficulties": {
         "vocals": -1,
         "guitar": -1,
@@ -2486,6 +2571,7 @@
       "spotify": "288EJf2Hyv0vFtyYlcP9zN",
       "videoUrl": "dancingfeet.mp4",
       "videoPosition": 30,
+      "loading_phrase": "Tell me, who do I call when I lose my mind?",
       "previewUrl": "https://p.scdn.co/mp3-preview/3ca60f9bb9fa9fe5897a77abe029b5d1dee0ef87",
       "rotated": true
     },
@@ -2497,6 +2583,9 @@
       "bpm": 92,
       "duration": "3m 49s",
       "key": "F# Major",
+      "album": "Travelling Without Moving",
+      "genre": "Pop",
+      "rating": "Everyone",
       "difficulties": {
         "vocals": -1,
         "guitar": -1,
@@ -2511,6 +2600,7 @@
       "complete": "0% Complete",
       "spotify": "4UQDZlZhGUDoYMohwrY28v",
       "videoUrl": "virtualinsanity.mp4",
+      "loading_phrase": "Woah, it's a crazy world we're livin' in",
       "previewUrl": "https://p.scdn.co/mp3-preview/131541b8029b8613ff0ebef49e26aed5bfca795e",
       "rotated": true
     },
@@ -2522,6 +2612,9 @@
       "bpm": 120,
       "duration": "3m 02s",
       "key": "B Minor",
+      "album": "Diamonds & Dancefloors",
+      "genre": "Pop",
+      "rating": "Everyone",
       "difficulties": {
         "vocals": -1,
         "guitar": -1,
@@ -2537,6 +2630,7 @@
       "videoUrl": "ghost.mp4",
       "videoPosition": 30,
       "complete": "0% Complete",
+      "loading_phrase": "Keep havin' visions I can't control",
       "previewUrl": "https://p.scdn.co/mp3-preview/0fe82d6c63ec96687dce03dea050fc6f736ca536",
       "rotated": true
     },
@@ -2548,6 +2642,9 @@
       "bpm": 100,
       "duration": "2m 57s",
       "key": "G Major",
+      "album": "Diamonds & Dancefloors",
+      "genre": "Pop",
+      "rating": "Everyone",
       "difficulties": {
         "vocals": -1,
         "guitar": -1,
@@ -2563,6 +2660,7 @@
       "videoUrl": "lastnightonearth.mp4",
       "videoPosition": 20,
       "complete": "0% Complete",
+      "loading_phrase": "I want a front-row seat for the show, oh yeah",
       "previewUrl": "https://p.scdn.co/mp3-preview/9787e6503d00ad67a833bacf1ddad8e488fdc8da",
       "rotated": true
     },
@@ -2574,6 +2672,9 @@
       "bpm": 133,
       "duration": "3m 04s",
       "key": "D Minor",
+      "album": "Diamonds & Dancefloors",
+      "genre": "Pop",
+      "rating": "Everyone",
       "difficulties": {
         "vocals": -1,
         "guitar": -1,
@@ -2589,6 +2690,7 @@
       "videoUrl": "milliondollarbaby.mp4",
       "complete": "0% Complete",
       "videoZoom": 1.1,
+      "loading_phrase": "And once in a while, I’ll go walkin' in the twilight",
       "previewUrl": "https://p.scdn.co/mp3-preview/251648c230dcc2f3d96524f8f366d177c605f4cb",
       "rotated": true
     },
@@ -2600,6 +2702,9 @@
       "bpm": 174,
       "duration": "1m 58s",
       "key": "C Major",
+      "album": "Barbie The Album",
+      "genre": "Pop",
+      "rating": "Everyone",
       "difficulties": {
         "vocals": -1,
         "guitar": -1,
@@ -2614,6 +2719,7 @@
       "complete": "0% Complete",
       "spotify": "5VxmI3IdgAxWVvUnJoLuY2",
       "videoUrl": "speeddrive.mp4",
+      "loading_phrase": "Jump into the driver's seat and put it into speed drive",
       "previewUrl": "https://p.scdn.co/mp3-preview/bd0a080a87ce594303d57981d921d65e12af6599",
       "rotated": true
     },
@@ -2625,6 +2731,9 @@
       "bpm": 130,
       "duration": "3m 05s",
       "key": "A Major",
+      "album": "GUTS",
+      "genre": "Pop",
+      "rating": "Teen",
       "difficulties": {
         "vocals": -1,
         "guitar": -1,
@@ -2640,6 +2749,7 @@
       "videoUrl": "badidearight.mp4",
       "videoPosition": 10,
       "complete": "0% Complete",
+      "loading_phrase": "But can't two people reconnect?",
       "previewUrl": "https://p.scdn.co/mp3-preview/1aae3e1c8f2e86bd549981e97ebf0fdd994db2bf",
       "rotated": true
     },
@@ -2651,6 +2761,9 @@
       "bpm": 98,
       "duration": "2m 32s",
       "key": "C Minor",
+      "album": "Think Later",
+      "genre": "Pop",
+      "rating": "Teen",
       "difficulties": {
         "vocals": -1,
         "guitar": -1,
@@ -2666,6 +2779,7 @@
       "spotify": "2wIcebwzceIwgonsDICx6P",
       "videoUrl": "guiltyconscience.mp4",
       "videoPosition": 30,
+      "loading_phrase": "Lotta dumb words bet you regret now",
       "previewUrl": "https://p.scdn.co/mp3-preview/b5c6d4ee09ced6d6210185c4bf8460ca3b9cd18f",
       "rotated": true
     },
@@ -2677,6 +2791,9 @@
       "bpm": 88,
       "duration": "2m 33s",
       "key": "C# Major",
+      "album": "i used to think i could fly",
+      "genre": "Pop",
+      "rating": "Teen",
       "difficulties": {
         "vocals": -1,
         "guitar": -1,
@@ -2691,6 +2808,7 @@
       "complete": "0% Complete",
       "spotify": "3RhyHYnYxuGnP8njFlNxHq",
       "videoUrl": "dontcomeback.mp4",
+      "loading_phrase": "When you finally figure out just what you lost",
       "previewUrl": "https://p.scdn.co/mp3-preview/d27e06a151d904faf106e5a6581b828913b744ba",
       "rotated": true
     },
@@ -2702,6 +2820,9 @@
       "bpm": 106,
       "duration": "4m 03s",
       "key": "G Major",
+      "album": "HOPE",
+      "genre": "Hip-Hop",
+      "rating": "Everyone",
       "difficulties": {
         "vocals": -1,
         "guitar": -1,
@@ -2717,6 +2838,7 @@
       "spotify": "3ZEno9fORwMA1HPecdLi0R",
       "videoUrl": "happy.mp4",
       "videoPosition": 25,
+      "loading_phrase": "Livin' in my agony",
       "previewUrl": "https://p.scdn.co/mp3-preview/fc851046b4138b8f5b1c1a5d20c87bcfb9133602",
       "rotated": true
     },
@@ -2728,6 +2850,9 @@
       "bpm": 81,
       "duration": "2m 53s",
       "key": "C Minor",
+      "album": "Think Later",
+      "genre": "Pop",
+      "rating": "Teen",
       "difficulties": {
         "vocals": -1,
         "guitar": -1,
@@ -2743,6 +2868,7 @@
       "spotify": "7Moee27EB8Qc4pNTzB870r",
       "videoUrl": "plasticpalmtrees.mp4",
       "videoPosition": 30,
+      "loading_phrase": "In the mirror, really looked like I was happy",
       "previewUrl": "https://p.scdn.co/mp3-preview/cd3deb56fa0fcad77ace4cbfab8c250cf2e629fc",
       "rotated": true
     },
@@ -2754,6 +2880,9 @@
       "bpm": 120,
       "duration": "2m 51s",
       "key": "A♭ Major",
+      "album": "GUTS (spilled)",
+      "genre": "Pop",
+      "rating": "Teen",
       "difficulties": {
         "vocals": -1,
         "guitar": -1,
@@ -2769,6 +2898,7 @@
       "spotify": "6tNgRQ0K2NYZ0Rb9l9DzL8",
       "videoUrl": "obsessed.mp4",
       "videoPosition": 20,
+      "loading_phrase": "And I know you loved her, and I know I'm butthurt",
       "previewUrl": "https://p.scdn.co/mp3-preview/817bfc8872b3336cf9bcd896667e517d96886385",
       "rotated": true
     },
@@ -2780,6 +2910,9 @@
       "bpm": 73,
       "duration": "2m 42s",
       "key": "B Minor",
+      "album": "So Close To What",
+      "genre": "Pop",
+      "rating": "Teen",
       "difficulties": {
         "vocals": -1,
         "guitar": -1,
@@ -2795,6 +2928,7 @@
       "spotify": "5Y6a6AaahaBi5ljf6hk7dF",
       "videoUrl": "bloodonmyhands.mp4",
       "videoPosition": 15,
+      "loading_phrase": "Got a new man to please, fallin' for you is a damn disease",
       "previewUrl": "https://p.scdn.co/mp3-preview/f14462b3187b11e3b3119873930ebf649768e123",
       "rotated": true
     },
@@ -2806,6 +2940,9 @@
       "bpm": 123,
       "duration": "2m 10s",
       "key": "G Major",
+      "album": "DRIVE",
+      "genre": "Pop",
+      "rating": "Teen",
       "difficulties": {
         "vocals": -1,
         "guitar": -1,
@@ -2822,6 +2959,7 @@
       "videoUrl": "hotinit.mp4",
       "videoPosition": 35,
       "videoZoom": 1.15,
+      "loading_phrase": "I ain't never comin' back for more",
       "previewUrl": "https://p.scdn.co/mp3-preview/e0deb5ab5c14c3fdc54fb8aea726ece21d8229ef",
       "rotated": true
     },
@@ -2829,10 +2967,13 @@
       "title": "How Can I Not Know What I Need Right Now",
       "artist": "Charli xcx",
       "releaseYear": 2022,
-      "cover": "GoodOnes.png",
+      "cover": "CRASHDeluxe.png",
       "bpm": 120,
       "duration": "2m 37s",
       "key": "F# Minor",
+      "album": "DRIVE",
+      "genre": "Pop",
+      "rating": "Teen",
       "difficulties": {
         "vocals": -1,
         "guitar": -1,
@@ -2848,6 +2989,7 @@
       "spotify": "29KYqUjF9Oc9NCxvs7srlP",
       "videoUrl": "wink.mp4",
       "videoPosition": 20,
+      "loading_phrase": "Sunday, Monday, Tuesday, Wednesday, Thursday, Friday, Saturday",
       "previewUrl": "https://p.scdn.co/mp3-preview/5aac31ee07977514f2a769f93165ca0cd2608cb1",
       "rotated": true
     },
@@ -2859,6 +3001,9 @@
       "bpm": 136,
       "duration": "3m 38s",
       "key": "C# Major",
+      "album": "Isle",
+      "genre": "J-Pop",
+      "rating": "Everyone",
       "difficulties": {
         "vocals": -1,
         "guitar": -1,
@@ -2875,6 +3020,7 @@
       "videoUrl": "colors.mp4",
       "videoPosition": 65,
       "videoZoom": 1.33,
+      "loading_phrase": "The moment is always right beside me...",
       "previewUrl": "https://p.scdn.co/mp3-preview/86fce40a7cfba2813ca702a134e45d608d1529b6",
       "rotated": true
     },
@@ -2886,6 +3032,9 @@
       "bpm": 122,
       "duration": "3m 46s",
       "key": "F# Major",
+      "album": "The Secret Of Us",
+      "genre": "Pop",
+      "rating": "Everyone",
       "difficulties": {
         "vocals": -1,
         "guitar": -1,
@@ -2901,6 +3050,7 @@
       "videoUrl": "closetoyou.mp4",
       "videoPosition": 20,
       "spotify": "2bl81llf715VEEbAx03yvB",
+      "loading_phrase": "I don't got a single problem with provocative",
       "previewUrl": "https://p.scdn.co/mp3-preview/4e0bee1c5f912893ed108cb53c3d4a36f1163226",
       "rotated": true
     },
@@ -2912,6 +3062,8 @@
       "bpm": 95,
       "duration": "3m 07s",
       "key": "C# Minor",
+      "genre": "J-Pop",
+      "rating": "Everyone",
       "difficulties": {
         "vocals": -1,
         "guitar": -1,
@@ -2927,6 +3079,7 @@
       "videoUrl": "chemyxstory.mp4",
       "videoPosition": 20,
       "spotify": "2GxSHaoToZY6cXSRuvGRxv",
+      "loading_phrase": "Use your imagination",
       "previewUrl": "https://p.scdn.co/mp3-preview/fe4d6733056b92fa2843372e893bb31495ca5ab0",
       "rotated": true
     },
@@ -2988,6 +3141,9 @@
       "bpm": 118,
       "duration": "3m 04s",
       "key": "A♭ Major",
+      "album": "Shock Value",
+      "genre": "Pop",
+      "rating": "Everyone",
       "difficulties": {
         "vocals": -1,
         "guitar": -1,
@@ -3003,6 +3159,7 @@
       "videoUrl": "apologize.mp4",
       "videoPosition": 50,
       "spotify": "6ucR4KfvsBFWCMVFDvyKKl",
+      "loading_phrase": "It's too late to apologize",
       "previewUrl": "https://p.scdn.co/mp3-preview/644d7ac165346bae267f00077cb69c26b042105c",
       "rotated": true
     },
