@@ -3,7 +3,7 @@
     "title": "Unsure",
     "artist": "Alan Walker & Kylie Cantrall",
     "releaseYear": 2024,
-    "cover": "Unsure.png",
+    "cover": "Walkerworld2.png",
     "bpm": 130,
     "key": "E Minor",
     "duration": "2m 49s",
@@ -85,12 +85,12 @@
     "currentVersion": 1,
     "modalShadowColors": {
       "default": {
-        "color1": "#ffffff",
+        "color1": "#ed8f3f",
         "color2": "#ffffff"
       },
       "hover": {
         "color1": "#ffffff",
-        "color2": "#ffffff"
+        "color2": "#ed8f3f"
       }
     },
     "youtubeLinks": {
@@ -136,12 +136,12 @@
     "currentVersion": 1,
     "modalShadowColors": {
       "default": {
-        "color1": "#ffffff",
+        "color1": "#c1ffff",
         "color2": "#ffffff"
       },
       "hover": {
         "color1": "#ffffff",
-        "color2": "#ffffff"
+        "color2": "#c1ffff"
       }
     },
     "youtubeLinks": {
@@ -172,7 +172,7 @@
     },
     "createdAt": "2024-11-28T04:08:14.835Z",
     "lastFeatured": "7/23/2025, 6:44:25 PM",
-    "complete": "20% Complete",
+    "complete": "30% Complete",
     "spotify": "3bg2qahpZmsg5wV2EMPXIk",
     "videoUrl": "foreveryoung.mp4",
     "videoPosition": 30,
@@ -1003,7 +1003,7 @@
     "title": "Physical",
     "artist": "Dua Lipa",
     "releaseYear": 2020,
-    "cover": "Physical.png",
+    "cover": "FutureNostalgia.png",
     "bpm": 147,
     "duration": "3m 14s",
     "key": "C Major",
@@ -1363,12 +1363,12 @@
     "currentVersion": 1,
     "modalShadowColors": {
       "default": {
-        "color1": "#ffffff",
+        "color1": "#ffc29c",
         "color2": "#bdfff6"
       },
       "hover": {
         "color1": "#bdfff6",
-        "color2": "#ffffff"
+        "color2": "#ffc29c"
       }
     }
   },
@@ -2723,7 +2723,7 @@
       "title": "Break My Heart",
       "artist": "Dua Lipa",
       "releaseYear": 2020,
-      "cover": "Physical.png",
+      "cover": "FutureNostalgia.png",
       "bpm": 113,
       "duration": "3m 42s",
       "key": "E Minor",
@@ -2790,7 +2790,7 @@
       "spotify": "56LQyaXsYWQZ2b7OPLAKEO",
       "videoUrl": "greenlight.mp4",
       "videoPosition": 20,
-      "complete": "0% Complete",
+      "complete": "5% Complete",
       "loading_phrase": "Stuck up in a rewrite of the same song",
       "previewUrl": "https://p.scdn.co/mp3-preview/9d7e12554cc4380586f77abad1b8a201cc0d1d7d",
       "rotated": true,
@@ -2815,7 +2815,7 @@
       "title": "Last Song",
       "artist": "Alan Walker (feat. Faouzia)",
       "releaseYear": 2025,
-      "cover": "Unsure.png",
+      "cover": "Walkerworld2.png",
       "bpm": 141,
       "duration": "2m 33s",
       "key": "B Minor",
@@ -2906,7 +2906,7 @@
       "title": "Houdini",
       "artist": "Dua Lipa",
       "releaseYear": 2023,
-      "cover": "FutureNostagia.png",
+      "cover": "RadicalOptimism.png",
       "bpm": 117,
       "duration": "3m 06s",
       "key": "A Minor",
@@ -5390,12 +5390,15 @@
   },
   "dj": {
     "title": "DJ Got Us Fallin' In Love",
-    "artist": "USHER",
+    "artist": "USHER (feat. Pitbull)",
     "releaseYear": 2010,
     "cover": "DJGotUsFallinInLove.png",
     "bpm": 120,
     "duration": "3m 41s",
     "key": "G Minor",
+    "album": "Raymond v Raymond",
+    "genre": "Pop",
+    "rating": "Everyone",
     "difficulties": {
       "vocals": -1,
       "guitar": -1,
@@ -5411,6 +5414,7 @@
     "videoUrl": "djgotusfallininlove.mp4",
     "videoPosition": 30,
     "spotify": "4356Typ82hUiFAynbLYbPn",
+    "loading_phrase": "So dance, dance like it's the last, last night",
     "previewUrl": "https://p.scdn.co/mp3-preview/1619c7342806281d286f0ba4125ff59e80663c56",
     "rotated": true,
     "modalShadowColors": {
@@ -5438,6 +5442,9 @@
     "bpm": 97,
     "duration": "3m 37s",
     "key": "C# Minor",
+    "album": "Save Me, San Francisco",
+    "genre": "Pop Rock",
+    "rating": "Everyone",
     "difficulties": {
       "vocals": -1,
       "guitar": -1,
@@ -5453,6 +5460,7 @@
     "videoUrl": "Hey,SoulSister.mp4",
     "videoPosition": 70,
     "spotify": "4HlFJV71xXKIGcU3kRyttv",
+    "loading_phrase": "In fact, there's nothing I can't be",
     "previewUrl": "https://p.scdn.co/mp3-preview/518c823cf0f8b862bed0fa45e34cc63db5ea58e4",
     "rotated": true,
     "modalShadowColors": {
@@ -5480,6 +5488,9 @@
     "bpm": 105,
     "duration": "3m 07s",
     "key": "E Major",
+    "album": "Unity",
+    "genre": "Electronic",
+    "rating": "Everyone",
     "difficulties": {
       "vocals": -1,
       "guitar": -1,
@@ -5495,6 +5506,7 @@
     "videoUrl": "Arcadia.mp4",
     "videoPosition": 80,
     "spotify": "08fAn3KEgC7PtgFIJycXTU",
+    "loading_phrase": "Hiding In The Blue",
     "previewUrl": "https://p.scdn.co/mp3-preview/b72f55bd80235664122c89f7a9a4ed4de54dba99",
     "rotated": true,
     "modalShadowColors": {
@@ -5522,6 +5534,8 @@
     "bpm": 92,
     "duration": "4m 09s",
     "key": "G Major",
+    "genre": "J-Pop",
+    "rating": "Everyone",
     "difficulties": {
       "vocals": -1,
       "guitar": -1,
@@ -5537,6 +5551,7 @@
     "videoUrl": "riotinbloom.mp4",
     "videoPosition": 35,
     "spotify": "1LxSXjagfqZPhYohT4dHJh",
+    "loading_phrase": "I'll make it bloom, Riot in bloom",
     "previewUrl": "https://p.scdn.co/mp3-preview/d7dbba5b204494913418702b12cd53028a78b516",
     "rotated": true,
     "modalShadowColors": {
@@ -5560,10 +5575,13 @@
     "title": "Don't Start Now",
     "artist": "Dua Lipa",
     "releaseYear": 2020,
-    "cover": "Physical.png",
+    "cover": "FutureNostalgia.png",
     "bpm": 124,
     "duration": "3m 03s",
     "key": "B Minor",
+    "album": "Future Nostalgia",
+    "genre": "Pop",
+    "rating": "Everyone",
     "difficulties": {
       "vocals": -1,
       "guitar": -1,
@@ -5580,6 +5598,7 @@
     "videoPosition": 30,
     "videoZoom": 1.25,
     "spotify": "3PfIrDoz19wz7qK7tYeu62",
+    "loading_phrase": "Did a full one-eighty, crazy",
     "previewUrl": "https://p.scdn.co/mp3-preview/cfc6684fc467e40bb9c7e6da2ea1b22eeccb211c",
     "rotated": true,
     "modalShadowColors": {
@@ -5607,6 +5626,9 @@
     "bpm": 125,
     "duration": "3m 26s",
     "key": "B Minor",
+    "album": "Brat and it’s completely different but also still brat",
+    "genre": "Pop",
+    "rating": "Teen",
     "difficulties": {
       "vocals": -1,
       "guitar": -1,
@@ -5623,6 +5645,7 @@
     "videoPosition": 40,
     "videoZoom": 1.25,
     "spotify": "7srqyRb5plksW5k65itXDB",
+    "loading_phrase": "And you can't tell what you're feeling",
     "previewUrl": "https://p.scdn.co/mp3-preview/ffd0ced326c69928a67d9f053616fdd4cd884e9f",
     "rotated": true,
     "modalShadowColors": {
@@ -5650,6 +5673,9 @@
     "bpm": 114,
     "duration": "2m 21s",
     "key": "B♭ Minor",
+    "album": "B.O.Y",
+    "genre": "Pop",
+    "rating": "Everyone",
     "difficulties": {
       "vocals": -1,
       "guitar": -1,
@@ -5665,6 +5691,7 @@
     "videoUrl": "denim.mp4",
     "videoPosition": 20,
     "spotify": "3As0n6VHQxTs0KYk9Ja9pU",
+    "loading_phrase": "You probably thinkin' it was made from heaven",
     "previewUrl": "https://p.scdn.co/mp3-preview/2b494dade2b486897acb08ce8d946aaa93eadaeb",
     "rotated": true,
     "modalShadowColors": {
@@ -5692,6 +5719,8 @@
       "bpm": 170,
       "duration": "3m 06s",
       "key": "E♭ Minor",
+      "genre": "Hip-Hop",
+      "rating": "Teen",
       "difficulties": {
         "vocals": -1,
         "guitar": -1,
@@ -5707,6 +5736,7 @@
       "videoUrl": "IntoYourArms.mp4",
       "videoPosition": 5,
       "spotify": "0b11D9D0hMOYCIMN3OKreM",
+      "loading_phrase": "It's crazy what can change in a year",
       "previewUrl": "https://p.scdn.co/mp3-preview/bdb8e47f51b0280c493640f4ef938fbae78ce2f9",
       "rotated": true,
     "modalShadowColors": {
@@ -5734,6 +5764,9 @@
       "bpm": 124,
       "duration": "3m 24s",
       "key": "C Minor",
+      "album": "Sucker",
+      "genre": "Pop",
+      "rating": "Teen",
       "difficulties": {
         "vocals": -1,
         "guitar": -1,
@@ -5748,6 +5781,7 @@
       "complete": "0% Complete",
       "videoUrl": "BreakTheRules.mp4",
       "spotify": "70ebKSMHvkUSg7JXgUz74Q",
+      "loading_phrase": "Never stop, it's how we ride",
       "previewUrl": "https://p.scdn.co/mp3-preview/292af297ef56eea5c4aa7e84beb374f9b3790572",
       "rotated": true,
     "modalShadowColors": {
@@ -5771,10 +5805,13 @@
       "title": "Better Off (Alone, Pt III)",
       "artist": "Alan Walker",
       "releaseYear": 2023,
-      "cover": "BetterOff.png",
+      "cover": "Walkerworld2.png",
       "bpm": 130,
       "duration": "2m 32s",
       "key": "A Minor",
+      "album": "Walkerworld 2.0",
+      "genre": "Pop",
+      "rating": "Everyone",
       "difficulties": {
         "vocals": -1,
         "guitar": -1,
@@ -5790,6 +5827,7 @@
       "videoUrl": "BetterOff(Alone,PtIII).mp4",
       "videoPosition": "20",
       "spotify": "0SML6wWerD0yI2Xd4OUC1R",
+      "loading_phrase": "We're dancing to dancing in the moonlight",
       "previewUrl": "https://p.scdn.co/mp3-preview/cf832964d7ef17933b8064ed10a4c230c506b21a",
       "rotated": true,
     "modalShadowColors": {
@@ -5817,6 +5855,8 @@
       "bpm": 160,
       "duration": "2m 47s",
       "key": "G Major",
+      "genre": "Holiday",
+      "rating": "Everyone",
       "difficulties": {
         "vocals": -1,
         "guitar": -1,
@@ -5832,6 +5872,7 @@
       "videoUrl": "1wish.mp4",
       "videoPosition": "30",
       "spotify": "1knrvScmRb6ZCPPsBzDHcy",
+      "loading_phrase": "Every day could feel like Christmas",
       "previewUrl": "https://p.scdn.co/mp3-preview/8d78c2c3f1071a3a3b2877c09d1d62b0e6d5354f",
       "rotated": true,
     "modalShadowColors": {
@@ -5859,6 +5900,9 @@
       "bpm": 124,
       "duration": "2m 50s",
       "key": "E Major",
+      "album": "TOO YOUNG TO BE SAD",
+      "genre": "Pop",
+      "rating": "Teen",
       "difficulties": {
         "vocals": -1,
         "guitar": -1,
@@ -5874,6 +5918,7 @@
       "videoUrl": "youbrokemefirst.mp4",
       "videoPosition": "70",
       "spotify": "4l0RmWt52FxpVxMNni6i63",
+      "loading_phrase": "What did you think would happen?",
       "previewUrl": "https://p.scdn.co/mp3-preview/58f29d1e29100ef77247a4bf0fa22b2cc3528c3f",
       "rotated": true,
     "modalShadowColors": {
@@ -5901,6 +5946,9 @@
       "bpm": 124,
       "duration": "2m 24s",
       "key": "E Major",
+      "album": "SOUR",
+      "genre": "Pop",
+      "rating": "Teen",
       "difficulties": {
         "vocals": -1,
         "guitar": -1,
@@ -5916,6 +5964,7 @@
       "videoUrl": "brutal.mp4",
       "videoPosition": "40",
       "spotify": "3fZVIxJjV4kXYynsz1G5lr",
+      "loading_phrase": "They say these are the golden years",
       "previewUrl": "https://p.scdn.co/mp3-preview/49c4fbe9e6095e1dd8e1fecd680313862507d793",
       "rotated": true,
     "modalShadowColors": {
@@ -5943,6 +5992,9 @@
       "bpm": 140,
       "duration": "3m 09s",
       "key": "F# Major",
+      "album": "brat",
+      "genre": "Pop",
+      "rating": "Teen",
       "difficulties": {
         "vocals": -1,
         "guitar": -1,
@@ -5958,6 +6010,7 @@
       "videoUrl": "rewind.mp4",
       "videoPosition": "50",
       "spotify": "1qKCO2Tocwg8CbepJ9uDtd",
+      "loading_phrase": "This one's for all my mean girls",
       "previewUrl": "https://p.scdn.co/mp3-preview/20224e86d963a79f56461f92503dd4196d9842fb",
       "rotated": true,
     "modalShadowColors": {
@@ -5985,6 +6038,9 @@
       "bpm": 124,
       "duration": "3m 00s",
       "key": "A Minor",
+      "album": "Heaven & Hell",
+      "genre": "Pop",
+      "rating": "Everyone",
       "difficulties": {
         "vocals": -1,
         "guitar": -1,
@@ -6000,6 +6056,7 @@
       "videoUrl": "OMGWhat'sHappening.mp4",
       "videoPosition": "20",
       "spotify": "11OPriDpmUrTMTji52ta17",
+      "loading_phrase": "Look what you've done to me",
       "previewUrl": "https://p.scdn.co/mp3-preview/8530f3253ccd89b21740c20a1fc64ed95731922a",
       "rotated": true,
     "modalShadowColors": {
@@ -6027,6 +6084,8 @@
       "bpm": 118,
       "duration": "2m 49s",
       "key": "C# Major",
+      "genre": "Holiday",
+      "rating": "Everyone",
       "difficulties": {
         "vocals": -1,
         "guitar": -1,
@@ -6042,6 +6101,7 @@
       "videoUrl": "ChristmasWithoutYou.mp4",
       "videoPosition": "20",
       "spotify": "1QLZKzC2pjP4ySf4ALrNhm",
+      "loading_phrase": "Wherever you go, you light up the room",
       "previewUrl": "https://p.scdn.co/mp3-preview/b4ec58f6d40670ed041d8be4fe5577632a3efe57",
       "rotated": true,
     "modalShadowColors": {
@@ -6065,10 +6125,13 @@
       "title": "Training Season",
       "artist": "Dua Lipa",
       "releaseYear": 2024,
-      "cover": "FutureNostagia.png",
+      "cover": "RadicalOptimism.png",
       "bpm": 123,
       "duration": "3m 29s",
       "key": "F Minor",
+      "album": "Radical Optimism",
+      "genre": "Pop",
+      "rating": "Everyone",
       "difficulties": {
         "vocals": -1,
         "guitar": -1,
@@ -6084,6 +6147,7 @@
       "videoUrl": "TrainingSeason.mp4",
       "videoPosition": "20",
       "spotify": "5b5cPscqVEMChvDqscVw26",
+      "loading_phrase": "Is that a compass in your nature?",
       "previewUrl": "https://p.scdn.co/mp3-preview/5608f578347ae26c20bfebbad47a057eca7b3d5a",
       "rotated": true,
     "modalShadowColors": {
@@ -6107,10 +6171,13 @@
       "title": "Illusion",
       "artist": "Dua Lipa",
       "releaseYear": 2024,
-      "cover": "FutureNostagia.png",
+      "cover": "RadicalOptimism.png",
       "bpm": 127,
       "duration": "3m 08s",
       "key": "A♭ Minor",
+      "album": "Radical Optimism",
+      "genre": "Pop",
+      "rating": "Everyone",
       "difficulties": {
         "vocals": -1,
         "guitar": -1,
@@ -6126,6 +6193,7 @@
       "videoUrl": "Illusion.mp4",
       "videoPosition": "5",
       "spotify": "5q0EXnBYyeCdXD72FzJxH0",
+      "loading_phrase": "Don't know who you think that you're confusin'",
       "previewUrl": "https://p.scdn.co/mp3-preview/6b05342e38bc2061ae57abc45c1a3832bf3d7ac7",
       "rotated": true,
     "modalShadowColors": {
@@ -6153,6 +6221,9 @@
     "bpm": 113,
     "duration": "3m 00s",
     "key": "A♭ Major",
+    "album": "Think Later",
+    "genre": "Pop",
+    "rating": "Teen",
     "difficulties": {
       "vocals": -1,
       "guitar": -1,
@@ -6168,6 +6239,7 @@
     "videoUrl": "werenotalike.mp4",
     "videoPosition": "40",
     "spotify": "0tFRxPQHvAUMTbWYRJUo8R",
+    "loading_phrase": "You know there's nothin' worse",
     "previewUrl": "https://p.scdn.co/mp3-preview/8e292e579ec745ff793bf5c59d3995c542f524c8",
     "rotated": true,
     "modalShadowColors": {
@@ -6195,6 +6267,8 @@
     "bpm": 120,
     "duration": "3m 13s",
     "key": "G Minor",
+    "genre": "Pop",
+    "rating": "Teen",
     "difficulties": {
       "vocals": -1,
       "guitar": -1,
@@ -6210,6 +6284,7 @@
     "videoUrl": "superlove.mp4",
     "videoPosition": "70",
     "spotify": "15KUiWZCdAq458QQR9eygf",
+    "loading_phrase": "I used to think that the power of love was just a song",
     "previewUrl": "https://p.scdn.co/mp3-preview/0f182e83c0b057ef541facd4146204d5e7723de0",
     "rotated": true,
     "modalShadowColors": {
@@ -6237,6 +6312,9 @@
     "bpm": 123,
     "duration": "2m 34s",
     "key": "E♭ Major",
+    "album": "Brat and it’s completely different but also still brat",
+    "genre": "Pop",
+    "rating": "Teen",
     "difficulties": {
       "vocals": -1,
       "guitar": -1,
@@ -6252,6 +6330,7 @@
     "videoUrl": "remix.mp4",
     "videoPosition": "38",
     "spotify": "3nQ24dxqvxZEVwlHTeuLz0",
+    "loading_phrase": "It's a knife when you know they're counting on your mistakes",
     "previewUrl": "https://p.scdn.co/mp3-preview/f3eae7456ed76b695d1af8b2863a8330670d8c17",
     "rotated": true,
     "modalShadowColors": {
@@ -6279,6 +6358,8 @@
     "bpm": 128,
     "duration": "5m 48s",
     "key": "F Minor",
+    "genre": "Electronic",
+    "rating": "Everyone",
     "difficulties": {
       "vocals": -1,
       "guitar": -1,
@@ -6294,6 +6375,7 @@
     "videoUrl": "spaceinvaders.mp4",
     "videoPosition": "50",
     "spotify": "6wegDxG3lFbZdDjvy3Zgyx",
+    "loading_phrase": "Light-speed in 3, 2, 1",
     "previewUrl": "https://p.scdn.co/mp3-preview/c70534d6e17fd2712efc0e913caa9cee8df1b34c",
     "charturl": "https://github.com/JaydenzKoci/song-projects/raw/refs/heads/main/MIDI's/MDK%20-%20Space%20Invaders/V1.mid",
     "rotated": true,
@@ -6323,6 +6405,9 @@
     "bpm": 132,
     "duration": "4m 22s",
     "key": "C Minor",
+    "album": "Persona 5 Original Soundtrack",
+    "genre": "J-Pop",
+    "rating": "Everyone",
     "difficulties": {
       "vocals": -1,
       "guitar": -1,
@@ -6338,6 +6423,7 @@
     "videoUrl": "lifewillchange.mp4",
     "videoPosition": "50",
     "spotify": "0LNyWv4RYKbaXIvzk6nMxZ",
+    "loading_phrase": "Fought it out in the debris",
     "previewUrl": "https://p.scdn.co/mp3-preview/e3a8c382dcff876d9934a9bf901bb8c0e3e9a627",
     "rotated": true,
     "modalShadowColors": {
@@ -6365,6 +6451,9 @@
     "bpm": 120,
     "duration": "2m 56s",
     "key": "A Major",
+    "album": "Don't Click Play",
+    "genre": "Pop",
+    "rating": "Everyone",
     "difficulties": {
       "vocals": -1,
       "guitar": -1,
@@ -6380,6 +6469,7 @@
     "videoUrl": "lovinmyself.mp4",
     "videoPosition": "50",
     "spotify": "2ttIodvY52FYgod5qrcQHN",
+    "loading_phrase": "Like I could build the world around me",
     "previewUrl": "https://p.scdn.co/mp3-preview/d8ee2d0174b4b9895ca7bd2d3dc5ce1404067a57",
     "rotated": true,
     "modalShadowColors": {
@@ -6407,6 +6497,9 @@
     "bpm": 155,
     "duration": "2m 27s",
     "key": "B♭ Major",
+    "album": "TOO YOUNG TO BE SAD",
+    "genre": "Pop",
+    "rating": "Teen",
     "difficulties": {
       "vocals": -1,
       "guitar": -1,
@@ -6422,6 +6515,7 @@
     "videoUrl": "rubberband.mp4",
     "videoPosition": "20",
     "spotify": "2E8IlL26PwtZq7CqAHBBUw",
+    "loading_phrase": "I wasn't ready, can I be honest?",
     "previewUrl": "https://p.scdn.co/mp3-preview/1f7e0073ff068c0490403b8d2e8b1d4c268ee31c",
     "rotated": true,
     "modalShadowColors": {
@@ -6449,6 +6543,9 @@
     "bpm": 158,
     "duration": "3m 13s",
     "key": "F Major",
+    "album": "Think Later",
+    "genre": "Pop",
+    "rating": "Teen",
     "difficulties": {
       "vocals": -1,
       "guitar": -1,
@@ -6464,6 +6561,7 @@
     "videoUrl": "grave.mp4",
     "videoPosition": "50",
     "spotify": "6jDT7DB6k0psPX0nWNDI1K",
+    "loading_phrase": "You can only dig the grave so deep",
     "previewUrl": "https://p.scdn.co/mp3-preview/750af250c4e4d25de2e9f0fd0d23e0a5811b2ee9",
     "rotated": true,
     "modalShadowColors": {
@@ -6491,6 +6589,9 @@
     "bpm": 104,
     "duration": "3m 03s",
     "key": "C# Major",
+    "album": "So Close To What",
+    "genre": "Pop",
+    "rating": "Teen",
     "difficulties": {
       "vocals": -1,
       "guitar": -1,
@@ -6506,6 +6607,7 @@
     "videoUrl": "2hands.mp4",
     "videoPosition": "50",
     "spotify": "0B7tnohfi83RQquo2JRHrL",
+    "loading_phrase": "Like my life needs savin'",
     "previewUrl": "https://p.scdn.co/mp3-preview/0f319369b2a1dbe16840ff31d0e087df20a55beb",
     "rotated": true,
     "modalShadowColors": {
@@ -6533,6 +6635,9 @@
     "bpm": 145,
     "duration": "3m 11s",
     "key": "F Minor",
+    "album": "So Close To What",
+    "genre": "Pop",
+    "rating": "Teen",
     "difficulties": {
       "vocals": -1,
       "guitar": -1,
@@ -6548,6 +6653,7 @@
     "videoUrl": "purplelacebra.mp4",
     "videoPosition": "30",
     "spotify": "2bqLj0NvdtGbPCl9PdBtP2",
+    "loading_phrase": "You only listen when I'm undressed",
     "previewUrl": "https://p.scdn.co/mp3-preview/0b82979dd23ee274def09cff7a0fa94e7d09c6b5",
     "rotated": true,
     "modalShadowColors": {
@@ -6575,6 +6681,8 @@
     "bpm": 130,
     "duration": "2m 23s",
     "key": "A Minor",
+    "genre": "Pop",
+    "rating": "Teen",
     "difficulties": {
       "vocals": -1,
       "guitar": -1,
@@ -6590,6 +6698,7 @@
     "videoUrl": "justkeepwatching.mp4",
     "videoPosition": "30",
     "spotify": "2yWlGEgEfPot0lv3OAjuG3",
+    "loading_phrase": "I'll tell 'em one by one, show 'em one by one",
     "previewUrl": "https://p.scdn.co/mp3-preview/9f2bd9386cb3407de401e794298e2b9429e9722f",
     "rotated": true,
     "modalShadowColors": {
@@ -6617,6 +6726,9 @@
     "bpm": 132,
     "duration": "2m 34s",
     "key": "F Minor",
+    "album": "We are",
+    "genre": "K-Pop",
+    "rating": "Teen",
     "difficulties": {
       "vocals": -1,
       "guitar": -1,
@@ -6660,6 +6772,9 @@
     "bpm": 90,
     "duration": "3m 36s",
     "key": "A Major",
+    "album": "Jason Derulo",
+    "genre": "Pop",
+    "rating": "Everyone",
     "difficulties": {
       "vocals": -1,
       "guitar": -1,
@@ -6703,6 +6818,9 @@
     "bpm": 93,
     "duration": "3m 08s",
     "key": "C Major",
+    "album": "Hungry Ghosts",
+    "genre": "Pop Rock",
+    "rating": "Everyone",
     "difficulties": {
       "vocals": -1,
       "guitar": -1,
@@ -6746,6 +6864,9 @@
     "bpm": 156,
     "duration": "2m 57s",
     "key": "D Minor",
+    "album": "Don't Click Play",
+    "genre": "Pop",
+    "rating": "Teen",
     "difficulties": {
       "vocals": -1,
       "guitar": -1,
@@ -6789,6 +6910,9 @@
     "bpm": 120,
     "duration": "3m 47s",
     "key": "C Minor",
+    "album": "Planet Pit",
+    "genre": "Pop",
+    "rating": "Everyone",
     "difficulties": {
       "vocals": -1,
       "guitar": -1,
@@ -6833,6 +6957,8 @@
     "bpm": 0,
     "duration": "3m 46s",
     "key": "???",
+    "genre": "Electropop",
+    "rating": "Everyone",
     "difficulties": {
       "vocals": -1,
       "guitar": -1,
@@ -6878,6 +7004,8 @@
     "bpm": 0,
     "duration": "3m 32s",
     "key": "???",
+    "genre": "Pop",
+    "rating": "Everyone",
     "difficulties": {
       "vocals": -1,
       "guitar": -1,
@@ -6923,6 +7051,9 @@
     "bpm": 0,
     "duration": "2m 56s",
     "key": "???",
+    "album": "Heaven & Hell (Scrapped)",
+    "genre": "Pop",
+    "rating": "Teen",
     "difficulties": {
       "vocals": -1,
       "guitar": -1,
@@ -6968,6 +7099,8 @@
     "bpm": 0,
     "duration": "2m 42s",
     "key": "???",
+    "genre": "Pop",
+    "rating": "Teen",
     "difficulties": {
       "vocals": -1,
       "guitar": -1,
