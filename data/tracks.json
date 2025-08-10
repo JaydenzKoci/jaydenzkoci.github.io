@@ -7091,7 +7091,7 @@
       "drums": ""
     }
   },
-  "rawestforest": {
+    "rawestforest": {
     "title": "Rawest Forest",
     "artist": "Kirbopher",
     "releaseYear": 2007,
@@ -7120,6 +7120,146 @@
     "loading_phrase": "When I play the game, I get lost in a phase",
     "preview_time": "15500",
     "preview_end_time": "45500",
+    "rotated": true,
+    "modalShadowColors": {
+      "default": {
+        "color1": "",
+        "color2": ""
+      },
+      "hover": {
+        "color1": "",
+        "color2": ""
+      }
+    },
+    "youtubeLinks": {
+      "vocals": "",
+      "lead": "",
+      "bass": "",
+      "drums": ""
+    }
+  },
+  "thedissappearanceofhatsunemiku": {
+    "title": "The Disappearance of Hatsune Miku",
+    "artist": "cosMo (feat. Hatsune Miku)",
+    "releaseYear": 2009,
+    "cover": "Miku.png",
+    "bpm": 120,
+    "duration": "4m 48s",
+    "key": "A♭ Major",
+    "album": "The Disappearance of Hatsune Miku",
+    "genre": "Game",
+    "rating": "Everyone",
+    "difficulties": {
+      "vocals": -1,
+      "guitar": -1,
+      "bass": -1,
+      "drums": -1,
+      "plastic-bass": -1,
+      "plastic-drums": -1,
+      "plastic-guitar": -1
+    },
+    "createdAt": "2000-01-01T08:00:00.000Z",
+    "lastFeatured": "TBA",
+    "complete": "0% Complete",
+    "videoUrl": "miku.mp4",
+    "videoPosition": "50",
+    "spotify": "",
+    "previewUrl": "miku.mp3",
+    "loading_phrase": "Singing used to be so much fun",
+    "preview_time": "106044",
+    "preview_end_time": "136044",
+    "rotated": true,
+    "modalShadowColors": {
+      "default": {
+        "color1": "",
+        "color2": ""
+      },
+      "hover": {
+        "color1": "",
+        "color2": ""
+      }
+    },
+    "youtubeLinks": {
+      "vocals": "",
+      "lead": "",
+      "bass": "",
+      "drums": ""
+    }
+  },
+  "staydone": {
+    "title": "stay done",
+    "artist": "Tate McRae",
+    "releaseYear": 2023,
+    "cover": "ThinkLater.png",
+    "bpm": 106,
+    "duration": "2m 51s",
+    "key": "E Major",
+    "album": "Think Later",
+    "genre": "Pop",
+    "rating": "Teen",
+    "difficulties": {
+      "vocals": -1,
+      "guitar": -1,
+      "bass": -1,
+      "drums": -1,
+      "plastic-bass": -1,
+      "plastic-drums": -1,
+      "plastic-guitar": -1
+    },
+    "createdAt": "2000-01-01T08:00:00.000Z",
+    "lastFeatured": "TBA",
+    "complete": "0% Complete",
+    "videoUrl": "staydone.mp4",
+    "videoPosition": "50",
+    "spotify": "2zScQCfO2BKtR0Yk8dtELN",
+    "previewUrl": "https://p.scdn.co/mp3-preview/433790f6094e5d2ec66350f7ccddf04fea073a7d",
+    "loading_phrase": "We're best friends and enemies",
+    "rotated": true,
+    "modalShadowColors": {
+      "default": {
+        "color1": "",
+        "color2": ""
+      },
+      "hover": {
+        "color1": "",
+        "color2": ""
+      }
+    },
+    "youtubeLinks": {
+      "vocals": "",
+      "lead": "",
+      "bass": "",
+      "drums": ""
+    }
+  },
+  "hereitgoesagain": {
+    "title": "Here It Goes Again",
+    "artist": "OK GO",
+    "releaseYear": 2006,
+    "cover": "HereItGoesAgain.png",
+    "bpm": 146,
+    "duration": "3m 00s",
+    "key": "C Major",
+    "album": "Oh No",
+    "genre": "Pop Rock",
+    "rating": "Everyone",
+    "difficulties": {
+      "vocals": -1,
+      "guitar": -1,
+      "bass": -1,
+      "drums": -1,
+      "plastic-bass": -1,
+      "plastic-drums": -1,
+      "plastic-guitar": -1
+    },
+    "createdAt": "2000-01-01T08:00:00.000Z",
+    "lastFeatured": "TBA",
+    "complete": "0% Complete",
+    "videoUrl": "hereitgoesagain.mp4",
+    "videoPosition": "0",
+    "spotify": "7lTPz2jkTwnL5Vjudt7roy",
+    "previewUrl": "https://p.scdn.co/mp3-preview/746669ebeee48a9686cec16eeafcf823a125a8f3",
+    "loading_phrase": "I should have known",
     "rotated": true,
     "modalShadowColors": {
       "default": {
