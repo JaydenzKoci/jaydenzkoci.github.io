@@ -7277,5 +7277,373 @@
       "bass": "",
       "drums": ""
     }
+  },
+  "dontclickplay": {
+    "title": "Don't Click Play",
+    "artist": "Ava Max",
+    "releaseYear": 2025,
+    "cover": "DontClickPlay.png",
+    "bpm": 124,
+    "duration": "2m 28s",
+    "key": "G Minor",
+    "album": "Don't Click Play",
+    "genre": "Pop",
+    "rating": "Everyone",
+    "difficulties": {
+      "vocals": -1,
+      "guitar": -1,
+      "bass": -1,
+      "drums": -1,
+      "plastic-bass": -1,
+      "plastic-drums": -1,
+      "plastic-guitar": -1
+    },
+    "createdAt": "2000-01-01T08:00:00.000Z",
+    "lastFeatured": "TBA",
+    "complete": "0% Complete",
+    "videoUrl": "dontclickplay.mp4",
+    "videoPosition": "50",
+    "spotify": "",
+    "previewUrl": "",
+    "loading_phrase": "",
+    "rotated": true,
+    "modalShadowColors": {
+      "default": {
+        "color1": "",
+        "color2": ""
+      },
+      "hover": {
+        "color1": "",
+        "color2": ""
+      }
+    },
+    "youtubeLinks": {
+      "vocals": "",
+      "lead": "",
+      "bass": "",
+      "drums": ""
+    }
+  },
+  "suckstobemyex": {
+    "title": "Sucks To Be My Ex",
+    "artist": "Ava Max",
+    "releaseYear": 2025,
+    "cover": "DontClickPlay.png",
+    "bpm": 120,
+    "duration": "3m 23s",
+    "key": "A♭ Major",
+    "album": "Don't Click Play",
+    "genre": "Pop",
+    "rating": "Everyone",
+    "difficulties": {
+      "vocals": -1,
+      "guitar": -1,
+      "bass": -1,
+      "drums": -1,
+      "plastic-bass": -1,
+      "plastic-drums": -1,
+      "plastic-guitar": -1
+    },
+    "createdAt": "2000-01-01T08:00:00.000Z",
+    "lastFeatured": "TBA",
+    "complete": "0% Complete",
+    "videoUrl": "dontclickplay.mp4",
+    "videoPosition": "50",
+    "spotify": "",
+    "previewUrl": "",
+    "loading_phrase": "",
+    "rotated": true,
+    "modalShadowColors": {
+      "default": {
+        "color1": "",
+        "color2": ""
+      },
+      "hover": {
+        "color1": "",
+        "color2": ""
+      }
+    },
+    "youtubeLinks": {
+      "vocals": "",
+      "lead": "",
+      "bass": "",
+      "drums": ""
+    }
+  },
+  "fightforme": {
+    "title": "Fight For Me",
+    "artist": "Ava Max",
+    "releaseYear": 2025,
+    "cover": "DontClickPlay.png",
+    "bpm": 110,
+    "duration": "2m 35s",
+    "key": "C Minor",
+    "album": "Don't Click Play",
+    "genre": "Pop",
+    "rating": "Everyone",
+    "difficulties": {
+      "vocals": -1,
+      "guitar": -1,
+      "bass": -1,
+      "drums": -1,
+      "plastic-bass": -1,
+      "plastic-drums": -1,
+      "plastic-guitar": -1
+    },
+    "createdAt": "2000-01-01T08:00:00.000Z",
+    "lastFeatured": "TBA",
+    "complete": "0% Complete",
+    "videoUrl": "dontclickplay.mp4",
+    "videoPosition": "50",
+    "spotify": "",
+    "previewUrl": "",
+    "loading_phrase": "",
+    "rotated": true,
+    "modalShadowColors": {
+      "default": {
+        "color1": "",
+        "color2": ""
+      },
+      "hover": {
+        "color1": "",
+        "color2": ""
+      }
+    },
+    "youtubeLinks": {
+      "vocals": "",
+      "lead": "",
+      "bass": "",
+      "drums": ""
+    }
+  },
+  "catchmybreath": {
+    "title": "Catch My Breath",
+    "artist": "Ava Max",
+    "releaseYear": 2025,
+    "cover": "DontClickPlay.png",
+    "bpm": 147,
+    "duration": "3m 11s",
+    "key": "D Minor",
+    "album": "Don't Click Play",
+    "genre": "Pop",
+    "rating": "Everyone",
+    "difficulties": {
+      "vocals": -1,
+      "guitar": -1,
+      "bass": -1,
+      "drums": -1,
+      "plastic-bass": -1,
+      "plastic-drums": -1,
+      "plastic-guitar": -1
+    },
+    "createdAt": "2000-01-01T08:00:00.000Z",
+    "lastFeatured": "TBA",
+    "complete": "0% Complete",
+    "videoUrl": "dontclickplay.mp4",
+    "videoPosition": "50",
+    "spotify": "",
+    "previewUrl": "",
+    "loading_phrase": "",
+    "rotated": true,
+    "modalShadowColors": {
+      "default": {
+        "color1": "",
+        "color2": ""
+      },
+      "hover": {
+        "color1": "",
+        "color2": ""
+      }
+    },
+    "youtubeLinks": {
+      "vocals": "",
+      "lead": "",
+      "bass": "",
+      "drums": ""
+    }
+  },
+  "skininthegame": {
+    "title": "Skin in the Game",
+    "artist": "Ava Max",
+    "releaseYear": 2025,
+    "cover": "DontClickPlay.png",
+    "bpm": 110,
+    "duration": "2m 49s",
+    "key": "C# Major",
+    "album": "Don't Click Play",
+    "genre": "Pop",
+    "rating": "Teen",
+    "difficulties": {
+      "vocals": -1,
+      "guitar": -1,
+      "bass": -1,
+      "drums": -1,
+      "plastic-bass": -1,
+      "plastic-drums": -1,
+      "plastic-guitar": -1
+    },
+    "createdAt": "2000-01-01T08:00:00.000Z",
+    "lastFeatured": "TBA",
+    "complete": "0% Complete",
+    "videoUrl": "dontclickplay.mp4",
+    "videoPosition": "50",
+    "spotify": "",
+    "previewUrl": "",
+    "loading_phrase": "",
+    "rotated": true,
+    "modalShadowColors": {
+      "default": {
+        "color1": "",
+        "color2": ""
+      },
+      "hover": {
+        "color1": "",
+        "color2": ""
+      }
+    },
+    "youtubeLinks": {
+      "vocals": "",
+      "lead": "",
+      "bass": "",
+      "drums": ""
+    }
+  },
+  "worldssmallestviolin": {
+    "title": "World's Smallest Violin",
+    "artist": "Ava Max",
+    "releaseYear": 2025,
+    "cover": "DontClickPlay.png",
+    "bpm": 121,
+    "duration": "2m 28s",
+    "key": "F Minor",
+    "album": "Don't Click Play",
+    "genre": "Pop",
+    "rating": "Everyone",
+    "difficulties": {
+      "vocals": -1,
+      "guitar": -1,
+      "bass": -1,
+      "drums": -1,
+      "plastic-bass": -1,
+      "plastic-drums": -1,
+      "plastic-guitar": -1
+    },
+    "createdAt": "2000-01-01T08:00:00.000Z",
+    "lastFeatured": "TBA",
+    "complete": "0% Complete",
+    "videoUrl": "dontclickplay.mp4",
+    "videoPosition": "50",
+    "spotify": "",
+    "previewUrl": "",
+    "loading_phrase": "",
+    "rotated": true,
+    "modalShadowColors": {
+      "default": {
+        "color1": "",
+        "color2": ""
+      },
+      "hover": {
+        "color1": "",
+        "color2": ""
+      }
+    },
+    "youtubeLinks": {
+      "vocals": "",
+      "lead": "",
+      "bass": "",
+      "drums": ""
+    }
+  },
+  "howcanidance": {
+    "title": "How Can I Dance",
+    "artist": "Ava Max",
+    "releaseYear": 2025,
+    "cover": "DontClickPlay.png",
+    "bpm": 125,
+    "duration": "2m 26s",
+    "key": "G Major",
+    "album": "Don't Click Play",
+    "genre": "Pop",
+    "rating": "Everyone",
+    "difficulties": {
+      "vocals": -1,
+      "guitar": -1,
+      "bass": -1,
+      "drums": -1,
+      "plastic-bass": -1,
+      "plastic-drums": -1,
+      "plastic-guitar": -1
+    },
+    "createdAt": "2000-01-01T08:00:00.000Z",
+    "lastFeatured": "TBA",
+    "complete": "0% Complete",
+    "videoUrl": "dontclickplay.mp4",
+    "videoPosition": "50",
+    "spotify": "",
+    "previewUrl": "",
+    "loading_phrase": "",
+    "rotated": true,
+    "modalShadowColors": {
+      "default": {
+        "color1": "",
+        "color2": ""
+      },
+      "hover": {
+        "color1": "",
+        "color2": ""
+      }
+    },
+    "youtubeLinks": {
+      "vocals": "",
+      "lead": "",
+      "bass": "",
+      "drums": ""
+    }
+  },
+  "knowsomebody": {
+    "title": "Know Somebody",
+    "artist": "Ava Max",
+    "releaseYear": 2025,
+    "cover": "DontClickPlay.png",
+    "bpm": 119,
+    "duration": "3m 25s",
+    "key": "D Major",
+    "album": "Don't Click Play",
+    "genre": "Pop",
+    "rating": "Everyone",
+    "difficulties": {
+      "vocals": -1,
+      "guitar": -1,
+      "bass": -1,
+      "drums": -1,
+      "plastic-bass": -1,
+      "plastic-drums": -1,
+      "plastic-guitar": -1
+    },
+    "createdAt": "2000-01-01T08:00:00.000Z",
+    "lastFeatured": "TBA",
+    "complete": "0% Complete",
+    "videoUrl": "dontclickplay.mp4",
+    "videoPosition": "50",
+    "spotify": "",
+    "previewUrl": "",
+    "loading_phrase": "",
+    "rotated": true,
+    "modalShadowColors": {
+      "default": {
+        "color1": "",
+        "color2": ""
+      },
+      "hover": {
+        "color1": "",
+        "color2": ""
+      }
+    },
+    "youtubeLinks": {
+      "vocals": "",
+      "lead": "",
+      "bass": "",
+      "drums": ""
+    }
   }
 }
