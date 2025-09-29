@@ -7645,5 +7645,340 @@
       "bass": "",
       "drums": ""
     }
+  },
+  "wantthattoo": {
+    "title": "want that too",
+    "artist": "Tate McRae",
+    "releaseYear": 2023,
+    "cover": "ThinkLater.png",
+    "bpm": 173,
+    "duration": "3m 25s",
+    "key": "C# Major",
+    "album": "Think Later",
+    "genre": "Pop",
+    "rating": "Teen",
+    "difficulties": {
+      "vocals": -1,
+      "guitar": -1,
+      "bass": -1,
+      "drums": -1,
+      "plastic-bass": -1,
+      "plastic-drums": -1,
+      "plastic-guitar": -1
+    },
+    "createdAt": "2000-01-01T08:00:00.000Z",
+    "lastFeatured": "TBA",
+    "complete": "0% Complete",
+    "videoUrl": "wantthattoo.mp4",
+    "videoPosition": "50",
+    "spotify": "5BLxf0dPOTKMFFgUEp8M6T",
+    "previewUrl": "wantthattoo.mp3",
+    "preview_time": "24350",
+    "preview_end_time": "64350",
+    "loading_phrase": "Keep saying one day I'll regret it",
+    "rotated": true,
+    "modalShadowColors": {
+      "default": {
+        "color1": "",
+        "color2": ""
+      },
+      "hover": {
+        "color1": "",
+        "color2": ""
+      }
+    },
+    "youtubeLinks": {
+      "vocals": "",
+      "lead": "",
+      "bass": "",
+      "drums": ""
+    }
+  },
+  "party4u": {
+    "title": "party 4 u",
+    "artist": "Charli xcx",
+    "releaseYear": 2020,
+    "cover": "party4u.png",
+    "bpm": 79,
+    "duration": "4m 57s",
+    "key": "C# Major",
+    "album": "how i'm feeling now",
+    "genre": "Pop",
+    "rating": "Everyone",
+    "difficulties": {
+      "vocals": -1,
+      "guitar": -1,
+      "bass": -1,
+      "drums": -1,
+      "plastic-bass": -1,
+      "plastic-drums": -1,
+      "plastic-guitar": -1
+    },
+    "createdAt": "2000-01-01T08:00:00.000Z",
+    "lastFeatured": "TBA",
+    "complete": "0% Complete",
+    "videoUrl": "party4u.mp4",
+    "videoPosition": "50",
+    "spotify": "2RdEC8Ff83WkX7kDVCHseE",
+    "previewUrl": "party4u.mp3",
+    "preview_time": "0",
+    "preview_end_time": "22000",
+    "loading_phrase": "I'm about to party on you",
+    "rotated": true,
+    "modalShadowColors": {
+      "default": {
+        "color1": "",
+        "color2": ""
+      },
+      "hover": {
+        "color1": "",
+        "color2": ""
+      }
+    },
+    "youtubeLinks": {
+      "vocals": "",
+      "lead": "",
+      "bass": "",
+      "drums": ""
+    }
+  },
+  "vroomvroom": {
+    "title": "Vroom Vroom",
+    "artist": "Charli xcx",
+    "releaseYear": 2016,
+    "cover": "vroomvroom.png",
+    "bpm": 151,
+    "duration": "3m 13s",
+    "key": "B Major",
+    "genre": "Pop",
+    "rating": "Everyone",
+    "difficulties": {
+      "vocals": -1,
+      "guitar": -1,
+      "bass": -1,
+      "drums": -1,
+      "plastic-bass": -1,
+      "plastic-drums": -1,
+      "plastic-guitar": -1
+    },
+    "createdAt": "2000-01-01T08:00:00.000Z",
+    "lastFeatured": "TBA",
+    "complete": "0% Complete",
+    "videoUrl": "vroomvroom.mp4",
+    "videoPosition": "50",
+    "videoZoom": "1.1",
+    "spotify": "5hyq3LBlCfjRQAFkdQwe8o",
+    "previewUrl": "vroomvroom.mp3",
+    "preview_time": "24000",
+    "preview_end_time": "44000",
+    "loading_phrase": "Let's ride",
+    "rotated": true,
+    "modalShadowColors": {
+      "default": {
+        "color1": "",
+        "color2": ""
+      },
+      "hover": {
+        "color1": "",
+        "color2": ""
+      }
+    },
+    "youtubeLinks": {
+      "vocals": "",
+      "lead": "",
+      "bass": "",
+      "drums": ""
+    }
+  },
+  "boys": {
+    "title": "Boys",
+    "artist": "Charli xcx",
+    "releaseYear": 2027,
+    "cover": "boys.png",
+    "bpm": 140,
+    "duration": "2m 43s",
+    "key": "D Major",
+    "genre": "Pop",
+    "rating": "Everyone",
+    "difficulties": {
+      "vocals": -1,
+      "guitar": -1,
+      "bass": -1,
+      "drums": -1,
+      "plastic-bass": -1,
+      "plastic-drums": -1,
+      "plastic-guitar": -1
+    },
+    "createdAt": "2000-01-01T08:00:00.000Z",
+    "lastFeatured": "TBA",
+    "complete": "0% Complete",
+    "videoUrl": "boys.mp4",
+    "videoPosition": "50",
+    "spotify": "5o4yGlG0PfeVUa6ClIyOxq",
+    "previewUrl": "boys.mp3",
+    "loading_phrase": "Flyin' from L.A. all the way to Puerto Rico",
+    "preview_time": "34000",
+    "preview_end_time": "64000",
+    "rotated": true,
+    "modalShadowColors": {
+      "default": {
+        "color1": "",
+        "color2": ""
+      },
+      "hover": {
+        "color1": "",
+        "color2": ""
+      }
+    },
+    "youtubeLinks": {
+      "vocals": "",
+      "lead": "",
+      "bass": "",
+      "drums": ""
+    }
+  },
+    "yesbaby": {
+    "title": "yes baby",
+    "artist": "Madison Beer",
+    "releaseYear": 2025,
+    "cover": "yesbaby.png",
+    "bpm": 134,
+    "duration": "2m 55s",
+    "key": "G Major",
+    "genre": "Pop",
+    "rating": "Everyone",
+    "difficulties": {
+      "vocals": -1,
+      "guitar": -1,
+      "bass": -1,
+      "drums": -1,
+      "plastic-bass": -1,
+      "plastic-drums": -1,
+      "plastic-guitar": -1
+    },
+    "createdAt": "2000-01-01T08:00:00.000Z",
+    "lastFeatured": "TBA",
+    "complete": "0% Complete",
+    "videoUrl": "yesbaby.mp4",
+    "videoPosition": "50",
+    "spotify": "2Nh1wIvPLDk4wK356m0nQA",
+    "previewUrl": "yesbaby.mp3",
+    "loading_phrase": "Something in the way you're watching me",
+    "preview_time": "34000",
+    "preview_end_time": "64000",
+    "rotated": true,
+    "modalShadowColors": {
+      "default": {
+        "color1": "",
+        "color2": ""
+      },
+      "hover": {
+        "color1": "",
+        "color2": ""
+      }
+    },
+    "youtubeLinks": {
+      "vocals": "",
+      "lead": "",
+      "bass": "",
+      "drums": ""
+    }
+  },
+  "ithinkaboutitallthetime": {
+    "title": "i think about it all the time",
+    "artist": "Charli xcx",
+    "releaseYear": 2024,
+    "cover": "brat.png",
+    "bpm": 122,
+    "duration": "2m 16s",
+    "key": "C Major",
+    "album": "brat",
+    "genre": "Pop",
+    "rating": "Everyone",
+    "difficulties": {
+      "vocals": -1,
+      "guitar": -1,
+      "bass": -1,
+      "drums": -1,
+      "plastic-bass": -1,
+      "plastic-drums": -1,
+      "plastic-guitar": -1
+    },
+    "createdAt": "2000-01-01T08:00:00.000Z",
+    "lastFeatured": "TBA",
+    "complete": "0% Complete",
+    "videoUrl": "rewind.mp4",
+    "videoZoom": "1.2",
+    "videoPosition": "50",
+    "spotify": "3OaFGqHUyxGVkOcSILw8Kx",
+    "previewUrl": "ithinkaboutitallthetime.mp3",
+    "loading_phrase": "It’s almost too hard to believe",
+    "preview_time": "34000",
+    "preview_end_time": "64000",
+    "rotated": true,
+    "modalShadowColors": {
+      "default": {
+        "color1": "",
+        "color2": ""
+      },
+      "hover": {
+        "color1": "",
+        "color2": ""
+      }
+    },
+    "youtubeLinks": {
+      "vocals": "",
+      "lead": "",
+      "bass": "",
+      "drums": ""
+    }
+  },
+  "titfortat": {
+    "title": "TIT FOR TAT",
+    "artist": "Tate McRae",
+    "releaseYear": 2025,
+    "cover": "titfortat.png",
+    "bpm": 84,
+    "duration": "2m 56s",
+    "key": "G Minor",
+    "album": "how i'm feeling now",
+    "genre": "Pop",
+    "rating": "Everyone",
+    "difficulties": {
+      "vocals": -1,
+      "guitar": -1,
+      "bass": -1,
+      "drums": -1,
+      "plastic-bass": -1,
+      "plastic-drums": -1,
+      "plastic-guitar": -1
+    },
+    "createdAt": "2000-01-01T08:00:00.000Z",
+    "lastFeatured": "TBA",
+    "complete": "0% Complete",
+    "videoUrl": "titfortat.mp4",
+    "videoPosition": "50",
+    "spotify": "04a44cx2PJthIbN2aLMXhl",
+    "previewUrl": "titfortat.mp3",
+    "preview_time": "34000",
+    "preview_end_time": "64000",
+    "loading_phrase": "Made it through thе ending",
+    "rotated": true,
+    "modalShadowColors": {
+      "default": {
+        "color1": "",
+        "color2": ""
+      },
+      "hover": {
+        "color1": "",
+        "color2": ""
+      }
+    },
+    "youtubeLinks": {
+      "vocals": "",
+      "lead": "",
+      "bass": "",
+      "drums": ""
+    }
   }
 }
