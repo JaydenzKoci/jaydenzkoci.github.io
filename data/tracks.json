@@ -7884,7 +7884,6 @@
       "drums": ""
     }
   },
-  {
     "untitledchordsthing": {
     "title": "Untitled Chords Thing",
     "format": "json",
@@ -7925,8 +7924,7 @@
         "color1": "",
         "color2": "" 
       }
-    }
-  },    
+    },
   "ithinkaboutitallthetime": {
     "title": "i think about it all the time",
     "artist": "Charli xcx",
@@ -8024,4 +8022,5 @@
       "drums": ""
     }
   }
+}
 }
