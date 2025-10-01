@@ -7884,47 +7884,6 @@
       "drums": ""
     }
   },
-    "untitledchordsthing": {
-    "title": "Untitled Chords Thing",
-    "format": "json",
-    "currentVersion": 1,
-    "music_start_time": 3059,
-    "artist": "Synthfox Soundworks",
-    "charter": "Narrik Synthfox",
-    "genre": "Electronic",
-    "releaseYear": 2024,
-    "has_stems": "true",
-    "cover": "blank-cover.png",
-    "source": "encore",
-    "loading_phrase": "Woah it's an encore in here!",
-    "key": "B Minor",
-    "bpm": 150,
-    "duration": "1m 53s",
-    "ageRating": "Family Friendly",
-    "is_verified": "true",
-    "is_cover": "false",
-    "difficulties": {
-      "vocals": 3,
-      "keys": 4,
-      "bass": 3,
-      "drums": 4
-    },
-    "filesize": "7.29MB",
-    "createdAt": "2024-02-29T20:43:39.000Z",
-    "previewUrl": "untitledchordsthing.mp3",
-    "download": "https://github.com/Encore-Developers/Encore/releases",
-    "preview_time": 16000,
-    "preview_end_time": 41060,
-    "modalShadowColors": {
-      "default": {
-        "color1": "",
-        "color2": ""  
-      },
-      "hover": {
-        "color1": "",
-        "color2": "" 
-      }
-    },
   "ithinkaboutitallthetime": {
     "title": "i think about it all the time",
     "artist": "Charli xcx",
@@ -8021,6 +7980,47 @@
       "bass": "",
       "drums": ""
     }
+  },
+    "untitledchordsthing": {
+    "title": "Untitled Chords Thing",
+    "format": "json",
+    "currentVersion": 1,
+    "music_start_time": 3059,
+    "artist": "Synthfox Soundworks",
+    "charter": "Narrik Synthfox",
+    "genre": "Electronic",
+    "releaseYear": 2024,
+    "has_stems": "true",
+    "cover": "blank-cover.png",
+    "source": "encore",
+    "loading_phrase": "Woah it's an encore in here!",
+    "key": "B Minor",
+    "bpm": 150,
+    "duration": "1m 53s",
+    "ageRating": "Family Friendly",
+    "is_verified": "true",
+    "is_cover": "false",
+    "difficulties": {
+      "vocals": 3,
+      "keys": 4,
+      "bass": 3,
+      "drums": 4
+    },
+    "filesize": "7.29MB",
+    "createdAt": "2024-02-29T20:43:39.000Z",
+    "previewUrl": "untitledchordsthing.mp3",
+    "download": "https://github.com/Encore-Developers/Encore/releases",
+    "preview_time": 16000,
+    "preview_end_time": 41060,
+    "modalShadowColors": {
+      "default": {
+        "color1": "",
+        "color2": ""  
+      },
+      "hover": {
+        "color1": "",
+        "color2": "" 
+      }
+    }
   }
-}
 }
