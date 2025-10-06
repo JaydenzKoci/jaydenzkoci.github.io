@@ -7941,7 +7941,6 @@
     "bpm": 84,
     "duration": "2m 56s",
     "key": "G Minor",
-    "album": "how i'm feeling now",
     "genre": "Pop",
     "rating": "Everyone",
     "difficulties": {
@@ -7963,6 +7962,194 @@
     "preview_time": "34000",
     "preview_end_time": "64000",
     "loading_phrase": "Made it through thе ending",
+    "rotated": true,
+    "modalShadowColors": {
+      "default": {
+        "color1": "",
+        "color2": ""
+      },
+      "hover": {
+        "color1": "",
+        "color2": ""
+      }
+    },
+    "youtubeLinks": {
+      "vocals": "",
+      "lead": "",
+      "bass": "",
+      "drums": ""
+    }
+  },
+  "drivingweather": {
+    "title": "Driving Weather",
+    "artist": "NERIAH",
+    "releaseYear": 2024,
+    "cover": "drivingweather.png",
+    "bpm": 120,
+    "duration": "2m 42s",
+    "key": "C# Major",
+    "genre": "Pop",
+    "rating": "Everyone",
+    "difficulties": {
+      "vocals": -1,
+      "guitar": -1,
+      "bass": -1,
+      "drums": -1,
+      "plastic-bass": -1,
+      "plastic-drums": -1,
+      "plastic-guitar": -1
+    },
+    "createdAt": "2000-01-01T08:00:00.000Z",
+    "lastFeatured": "TBA",
+    "complete": "0% Complete",
+    "videoUrl": "drivingweather.mp4",
+    "videoPosition": "50",
+    "spotify": "2P34EtGlMnvfzSnJ0lczso",
+    "previewUrl": "drivingweather.mp3",
+    "preview_time": "93000",
+    "preview_end_time": "118000",
+    "loading_phrase": "Headed for the crash",
+    "rotated": true,
+    "modalShadowColors": {
+      "default": {
+        "color1": "",
+        "color2": ""
+      },
+      "hover": {
+        "color1": "",
+        "color2": ""
+      }
+    },
+    "youtubeLinks": {
+      "vocals": "",
+      "lead": "",
+      "bass": "",
+      "drums": ""
+    }
+},
+  "likeido": {
+    "title": "like i do",
+    "artist": "Tate McRae",
+    "releaseYear": 2025,
+    "cover": "SoCloseToWhat.png",
+    "bpm": 96,
+    "duration": "3m 02s",
+    "key": "C# Minor",
+    "genre": "Pop",
+    "rating": "Teen",
+    "difficulties": {
+      "vocals": -1,
+      "guitar": -1,
+      "bass": -1,
+      "drums": -1,
+      "plastic-bass": -1,
+      "plastic-drums": -1,
+      "plastic-guitar": -1
+    },
+    "createdAt": "2000-01-01T08:00:00.000Z",
+    "lastFeatured": "TBA",
+    "complete": "0% Complete",
+    "videoUrl": "likeido.mp4",
+    "videoPosition": "50",
+    "spotify": "6jp9WjJtKF0Fgks0Y9Kkni",
+    "previewUrl": "likeido.mp3",
+    "preview_time": "34000",
+    "preview_end_time": "64000",
+    "loading_phrase": "You just wanna do what I do",
+    "rotated": true,
+    "modalShadowColors": {
+      "default": {
+        "color1": "",
+        "color2": ""
+      },
+      "hover": {
+        "color1": "",
+        "color2": ""
+      }
+    },
+    "youtubeLinks": {
+      "vocals": "",
+      "lead": "",
+      "bass": "",
+      "drums": ""
+    }
+},
+  "uhoh": {
+    "title": "uh oh",
+    "artist": "Tate McRae",
+    "releaseYear": 2022,
+    "cover": "uhoh.png",
+    "bpm": 174,
+    "duration": "2m 50s",
+    "key": "A# Minor",
+    "genre": "Pop",
+    "rating": "Teen",
+    "difficulties": {
+      "vocals": -1,
+      "guitar": -1,
+      "bass": -1,
+      "drums": -1,
+      "plastic-bass": -1,
+      "plastic-drums": -1,
+      "plastic-guitar": -1
+    },
+    "createdAt": "2000-01-01T08:00:00.000Z",
+    "lastFeatured": "TBA",
+    "complete": "0% Complete",
+    "videoUrl": "uhoh.mp4",
+    "videoPosition": "50",
+    "spotify": "6qmvAJSUfVGMubvI2awW7p",
+    "previewUrl": "uhoh.mp3",
+    "preview_time": "44000",
+    "preview_end_time": "74000",
+    "loading_phrase": "Uh-oh, I couldn't help myself",
+    "rotated": true,
+    "modalShadowColors": {
+      "default": {
+        "color1": "",
+        "color2": ""
+      },
+      "hover": {
+        "color1": "",
+        "color2": ""
+      }
+    },
+    "youtubeLinks": {
+      "vocals": "",
+      "lead": "",
+      "bass": "",
+      "drums": ""
+    }
+},
+  "meansicare": {
+    "title": "Means I care",
+    "artist": "Tate McRae",
+    "releaseYear": 2025,
+    "cover": "SoCloseToWhat.png",
+    "bpm": 194,
+    "duration": "2m 56s",
+    "key": "A♭ major",
+    "genre": "Pop",
+    "rating": "Teen",
+    "difficulties": {
+      "vocals": -1,
+      "guitar": -1,
+      "bass": -1,
+      "drums": -1,
+      "plastic-bass": -1,
+      "plastic-drums": -1,
+      "plastic-guitar": -1
+    },
+    "createdAt": "2000-01-01T08:00:00.000Z",
+    "lastFeatured": "TBA",
+    "complete": "0% Complete",
+    "videoUrl": "meansicare.mp4",
+    "videoPosition": "50",
+    "spotify": "6vyiGZsNWMMc3WTNaMeJ9F",
+    "previewUrl": "meansicare.mp3",
+    "preview_time": "34000",
+    "preview_end_time": "64000",
+    "loading_phrase": "Must mean that it's going somewhere",
     "rotated": true,
     "modalShadowColors": {
       "default": {
