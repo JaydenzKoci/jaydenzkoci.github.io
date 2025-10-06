@@ -8035,6 +8035,7 @@
     "bpm": 96,
     "duration": "3m 02s",
     "key": "C# Minor",
+    "album": "So Close To What",
     "genre": "Pop",
     "rating": "Teen",
     "difficulties": {
@@ -8128,7 +8129,8 @@
     "cover": "SoCloseToWhat.png",
     "bpm": 194,
     "duration": "2m 56s",
-    "key": "A♭ major",
+    "key": "A♭ Major",
+    "album": "So Close To What",
     "genre": "Pop",
     "rating": "Teen",
     "difficulties": {
