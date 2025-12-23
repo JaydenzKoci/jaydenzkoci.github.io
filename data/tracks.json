@@ -5859,22 +5859,23 @@
       "rating": "Everyone",
       "difficulties": {
         "vocals": -1,
-        "guitar": -1,
+        "guitar": 4,
         "bass": -1,
         "drums": -1,
         "plastic-bass": -1,
         "plastic-drums": -1,
         "plastic-guitar": -1
       },
-      "createdAt": "2000-01-01T08:00:00.000Z",
-      "lastFeatured": "TBA",
+      "createdAt": "2025-12-23T02:29:43.000Z",
+      "lastFeatured": "12/22/2025, 6:29:43 PM",
       "complete": "0% Complete",
       "videoUrl": "1wish.mp4",
       "videoPosition": "30",
       "spotify": "1knrvScmRb6ZCPPsBzDHcy",
       "loading_phrase": "Every day could feel like Christmas",
       "previewUrl": "https://p.scdn.co/mp3-preview/8d78c2c3f1071a3a3b2877c09d1d62b0e6d5354f",
-      "rotated": true,
+      "featured": true,
+      "new": true,
     "modalShadowColors": {
       "default": {
         "color1": "",
