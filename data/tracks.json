@@ -1655,7 +1655,7 @@
     "title": "Good Ones",
     "artist": "Charli xcx",
     "releaseYear": 2022,
-    "cover": "GoodOnes.png",
+    "cover": "Crash.png",
     "bpm": 129,
     "duration": "2m 17s",
     "key": "G Minor",
@@ -4172,7 +4172,7 @@
       "spotify": "29KYqUjF9Oc9NCxvs7srlP",
       "videoUrl": "wink.mp4",
       "videoPosition": 20,
-      "loading_phrase": "Sunday, Monday, Tuesday, Wednesday, Thursday, Friday, Saturday",
+      "loading_phrase": "Pulled apart my feelings so raw ",
       "previewUrl": "https://p.scdn.co/mp3-preview/5aac31ee07977514f2a769f93165ca0cd2608cb1",
       "rotated": true,
     "modalShadowColors": {
@@ -8586,6 +8586,150 @@
     "preview_time": "33000",
     "preview_end_time": "64000",
     "loading_phrase": "I shouldn't feel like a prisoner",
+    "rotated": true,
+    "modalShadowColors": {
+      "default": {
+        "color1": "",
+        "color2": ""
+      },
+      "hover": {
+        "color1": "",
+        "color2": ""
+      }
+    },
+    "youtubeLinks": {
+      "vocals": "",
+      "lead": "",
+      "bass": "",
+      "drums": ""
+    }
+},
+  "crash": {
+    "title": "Crash",
+    "artist": "Charli xcx",
+    "releaseYear": 2022,
+    "cover": "Crash.png",
+    "bpm": 112,
+    "duration": "2m 10s",
+    "key": "G Major",
+    "album": "CRASH",
+    "genre": "Pop",
+    "rating": "Everyone",
+    "difficulties": {
+      "vocals": -1,
+      "guitar": -1,
+      "bass": -1,
+      "drums": -1,
+      "plastic-bass": -1,
+      "plastic-drums": -1,
+      "plastic-guitar": -1
+    },
+    "createdAt": "2000-01-01T08:00:00.000Z",
+    "lastFeatured": "TBA",
+    "complete": "0% Complete",
+    "videoUrl": "crash.mp4",
+    "videoPosition": "60",
+    "spotify": "6pSGolbfux1G7aSSJP0OQU",
+    "previewUrl": "crash.mp3",
+    "preview_time": "33000",
+    "preview_end_time": "64000",
+    "loading_phrase": "I'm high voltage, self-destructive",
+    "rotated": true,
+    "modalShadowColors": {
+      "default": {
+        "color1": "",
+        "color2": ""
+      },
+      "hover": {
+        "color1": "",
+        "color2": ""
+      }
+    },
+    "youtubeLinks": {
+      "vocals": "",
+      "lead": "",
+      "bass": "",
+      "drums": ""
+    }
+},
+  "usedtoknowme": {
+    "title": "Used To Know Me",
+    "artist": "Charli xcx",
+    "releaseYear": 2022,
+    "cover": "Crash.png",
+    "bpm": 118,
+    "duration": "2m 26s",
+    "key": "C# Major",
+    "album": "CRASH",
+    "genre": "Pop",
+    "rating": "Everyone",
+    "difficulties": {
+      "vocals": -1,
+      "guitar": -1,
+      "bass": -1,
+      "drums": -1,
+      "plastic-bass": -1,
+      "plastic-drums": -1,
+      "plastic-guitar": -1
+    },
+    "createdAt": "2000-01-01T08:00:00.000Z",
+    "lastFeatured": "TBA",
+    "complete": "0% Complete",
+    "videoUrl": "crash.mp4",
+    "videoPosition": "60",
+    "spotify": "5dry5tz8yLcLuOJ3l6ZEQd",
+    "previewUrl": "crash.mp3",
+    "preview_time": "33000",
+    "preview_end_time": "64000",
+    "loading_phrase": "I'm like a flower blooming since I left you behind",
+    "rotated": true,
+    "modalShadowColors": {
+      "default": {
+        "color1": "",
+        "color2": ""
+      },
+      "hover": {
+        "color1": "",
+        "color2": ""
+      }
+    },
+    "youtubeLinks": {
+      "vocals": "",
+      "lead": "",
+      "bass": "",
+      "drums": ""
+    }
+},
+  "deviltrigger": {
+    "title": "Devil Trigger",
+    "artist": "Casey Edwards",
+    "releaseYear": 2019,
+    "cover": "DevilTrigger.png",
+    "bpm": 160,
+    "duration": "6m 45s",
+    "key": "F# Major",
+    "album": "DEVIL MAY CRY 5 Original Soundtrack",
+    "genre": "Rock",
+    "rating": "Everyone",
+    "difficulties": {
+      "vocals": -1,
+      "guitar": -1,
+      "bass": -1,
+      "drums": -1,
+      "plastic-bass": -1,
+      "plastic-drums": -1,
+      "plastic-guitar": -1
+    },
+    "createdAt": "2000-01-01T08:00:00.000Z",
+    "lastFeatured": "TBA",
+    "complete": "0% Complete",
+    "videoUrl": "deviltrigger.mp4",
+    "videoPosition": "60",
+    "spotify": "5luCaDrc2ttzEjNp4ivaW0",
+    "previewUrl": "deviltrigger.mp3",
+    "preview_time": "33000",
+    "preview_end_time": "64000",
+    "loading_phrase": "All of these thoughts runnin' through my head",
     "rotated": true,
     "modalShadowColors": {
       "default": {
