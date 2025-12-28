@@ -7938,7 +7938,7 @@
     "title": "TIT FOR TAT",
     "artist": "Tate McRae",
     "releaseYear": 2025,
-    "cover": "titfortat.png",
+    "cover": "SoCloseToWhatDeluxe.png",
     "bpm": 84,
     "duration": "2m 56s",
     "key": "G Minor",
@@ -8297,6 +8297,294 @@
     "preview_time": "33000",
     "preview_end_time": "64000",
     "loading_phrase": "I don't think you're ready for the takedown",
+    "rotated": true,
+    "modalShadowColors": {
+      "default": {
+        "color1": "",
+        "color2": ""
+      },
+      "hover": {
+        "color1": "",
+        "color2": ""
+      }
+    },
+    "youtubeLinks": {
+      "vocals": "",
+      "lead": "",
+      "bass": "",
+      "drums": ""
+    }
+},
+  "horseshoe": {
+    "title": "HORSESHOE",
+    "artist": "Tate McRae",
+    "releaseYear": 2025,
+    "cover": "SoCloseToWhatDeluxe.png",
+    "bpm": 175,
+    "duration": "3m 01s",
+    "key": "B Minor",
+    "album": "SO CLOSE TO WHAT??? (deluxe)",
+    "genre": "Pop",
+    "rating": "Teen",
+    "difficulties": {
+      "vocals": -1,
+      "guitar": -1,
+      "bass": -1,
+      "drums": -1,
+      "plastic-bass": -1,
+      "plastic-drums": -1,
+      "plastic-guitar": -1
+    },
+    "createdAt": "2000-01-01T08:00:00.000Z",
+    "lastFeatured": "TBA",
+    "complete": "0% Complete",
+    "videoUrl": "soclosetowhatdeluxe.mp4",
+    "videoPosition": "0",
+    "spotify": "3unY0p45pcQVnABntzlX8B",
+    "previewUrl": "horseshoe.mp3",
+    "preview_time": "33000",
+    "preview_end_time": "64000",
+    "loading_phrase": "But where should all my sadness go?",
+    "rotated": true,
+    "modalShadowColors": {
+      "default": {
+        "color1": "",
+        "color2": ""
+      },
+      "hover": {
+        "color1": "",
+        "color2": ""
+      }
+    },
+    "youtubeLinks": {
+      "vocals": "",
+      "lead": "",
+      "bass": "",
+      "drums": ""
+    }
+},
+  "nobodysgirl": {
+    "title": "NOBODY'S GIRL",
+    "artist": "Tate McRae",
+    "releaseYear": 2025,
+    "cover": "SoCloseToWhatDeluxe.png",
+    "bpm": 110,
+    "duration": "2m 48s",
+    "key": "B Minor",
+    "album": "SO CLOSE TO WHAT??? (deluxe)",
+    "genre": "Pop",
+    "rating": "Teen",
+    "difficulties": {
+      "vocals": -1,
+      "guitar": -1,
+      "bass": -1,
+      "drums": -1,
+      "plastic-bass": -1,
+      "plastic-drums": -1,
+      "plastic-guitar": -1
+    },
+    "createdAt": "2000-01-01T08:00:00.000Z",
+    "lastFeatured": "TBA",
+    "complete": "0% Complete",
+    "videoUrl": "soclosetowhatdeluxe.mp4",
+    "videoPosition": "0",
+    "spotify": "2oPCpj9ezVq5D6IJNAGkL2",
+    "previewUrl": "nobodysgirl.mp3",
+    "preview_time": "33000",
+    "preview_end_time": "64000",
+    "loading_phrase": "Got my career on my mind",
+    "rotated": true,
+    "modalShadowColors": {
+      "default": {
+        "color1": "",
+        "color2": ""
+      },
+      "hover": {
+        "color1": "",
+        "color2": ""
+      }
+    },
+    "youtubeLinks": {
+      "vocals": "",
+      "lead": "",
+      "bass": "",
+      "drums": ""
+    }
+},
+  "tryingonshoes": {
+    "title": "TRYING ON SHOES",
+    "artist": "Tate McRae",
+    "releaseYear": 2025,
+    "cover": "SoCloseToWhatDeluxe.png",
+    "bpm": 138,
+    "duration": "3m 01s",
+    "key": "B♭ Major",
+    "album": "SO CLOSE TO WHAT??? (deluxe)",
+    "genre": "Pop",
+    "rating": "Teen",
+    "difficulties": {
+      "vocals": -1,
+      "guitar": -1,
+      "bass": -1,
+      "drums": -1,
+      "plastic-bass": -1,
+      "plastic-drums": -1,
+      "plastic-guitar": -1
+    },
+    "createdAt": "2000-01-01T08:00:00.000Z",
+    "lastFeatured": "TBA",
+    "complete": "0% Complete",
+    "videoUrl": "soclosetowhatdeluxe.mp4",
+    "videoPosition": "0",
+    "spotify": "7AxXJXqJOMRqkgZxvG3r6E",
+    "previewUrl": "tryingonshoes.mp3",
+    "preview_time": "33000",
+    "preview_end_time": "64000",
+    "loading_phrase": "Favorite blue, take a pretty picture",
+    "rotated": true,
+    "modalShadowColors": {
+      "default": {
+        "color1": "",
+        "color2": ""
+      },
+      "hover": {
+        "color1": "",
+        "color2": ""
+      }
+    },
+    "youtubeLinks": {
+      "vocals": "",
+      "lead": "",
+      "bass": "",
+      "drums": ""
+    }
+},
+  "fear": {
+    "title": "FEAR",
+    "artist": "NF",
+    "releaseYear": 2025,
+    "cover": "FEAR.png",
+    "bpm": 190,
+    "duration": "4m 28s",
+    "key": "G Major",
+    "album": "FEAR",
+    "genre": "Hip-Hop",
+    "rating": "Everyone",
+    "difficulties": {
+      "vocals": -1,
+      "guitar": -1,
+      "bass": -1,
+      "drums": -1,
+      "plastic-bass": -1,
+      "plastic-drums": -1,
+      "plastic-guitar": -1
+    },
+    "createdAt": "2000-01-01T08:00:00.000Z",
+    "lastFeatured": "TBA",
+    "complete": "0% Complete",
+    "videoUrl": "fear.mp4",
+    "videoPosition": "60",
+    "spotify": "3HfKlhohNNTLIv2t9uvmzz",
+    "previewUrl": "fear.mp3",
+    "preview_time": "33000",
+    "preview_end_time": "64000",
+    "loading_phrase": "Hello darkness, my old friend (hello)",
+    "rotated": true,
+    "modalShadowColors": {
+      "default": {
+        "color1": "",
+        "color2": ""
+      },
+      "hover": {
+        "color1": "",
+        "color2": ""
+      }
+    },
+    "youtubeLinks": {
+      "vocals": "",
+      "lead": "",
+      "bass": "",
+      "drums": ""
+    }
+},
+  "washedup": {
+    "title": "WASHED UP",
+    "artist": "NF",
+    "releaseYear": 2025,
+    "cover": "FEAR.png",
+    "bpm": 125,
+    "duration": "3m 19s",
+    "key": "C# Major",
+    "album": "FEAR",
+    "genre": "Hip-Hop",
+    "rating": "Everyone",
+    "difficulties": {
+      "vocals": -1,
+      "guitar": -1,
+      "bass": -1,
+      "drums": -1,
+      "plastic-bass": -1,
+      "plastic-drums": -1,
+      "plastic-guitar": -1
+    },
+    "createdAt": "2000-01-01T08:00:00.000Z",
+    "lastFeatured": "TBA",
+    "complete": "0% Complete",
+    "videoUrl": "fear.mp4",
+    "videoPosition": "60",
+    "spotify": "2LE8UVsGRVyCY2UNpRPVcC",
+    "previewUrl": "washedup.mp3",
+    "preview_time": "33000",
+    "preview_end_time": "64000",
+    "loading_phrase": "Am I on the brink of somethin' great",
+    "rotated": true,
+    "modalShadowColors": {
+      "default": {
+        "color1": "",
+        "color2": ""
+      },
+      "hover": {
+        "color1": "",
+        "color2": ""
+      }
+    },
+    "youtubeLinks": {
+      "vocals": "",
+      "lead": "",
+      "bass": "",
+      "drums": ""
+    }
+},
+  "chainsoflove": {
+    "title": "Chains of Love",
+    "artist": "Charli xcx",
+    "releaseYear": 2025,
+    "cover": "ChainsOfLove.png",
+    "bpm": 69,
+    "duration": "2m 50s",
+    "key": "F Major",
+    "album": "Wuthering Heights",
+    "genre": "Pop",
+    "rating": "Everyone",
+    "difficulties": {
+      "vocals": -1,
+      "guitar": -1,
+      "bass": -1,
+      "drums": -1,
+      "plastic-bass": -1,
+      "plastic-drums": -1,
+      "plastic-guitar": -1
+    },
+    "createdAt": "2000-01-01T08:00:00.000Z",
+    "lastFeatured": "TBA",
+    "complete": "0% Complete",
+    "videoUrl": "chainsoflove.mp4",
+    "videoPosition": "60",
+    "spotify": "6pSGolbfux1G7aSSJP0OQU",
+    "previewUrl": "chainoflove.mp3",
+    "preview_time": "33000",
+    "preview_end_time": "64000",
+    "loading_phrase": "I shouldn't feel like a prisoner",
     "rotated": true,
     "modalShadowColors": {
       "default": {
