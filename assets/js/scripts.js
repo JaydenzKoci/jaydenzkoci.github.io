@@ -1150,7 +1150,7 @@ document.addEventListener('DOMContentLoaded', () => {
     updateCountdown: () => {
       if (!elements.countdown) return;
       const lastUpdated = new Date().toLocaleDateString('en-US', { month: '2-digit', day: '2-digit', year: '2-digit' });
-      elements.countdown.textContent = `Last Updated - 12/22/25`;
+      elements.countdown.textContent = `Last Updated - 12/28/25`;
     },
   };
 
