@@ -1054,7 +1054,7 @@
     "title": "she's all i wanna be",
     "artist": "Tate McRae",
     "releaseYear": 2022,
-    "cover": "ShesAll.png",
+    "cover": "iusedtothinkicouldfly.png",
     "bpm": 160,
     "duration": "3m 27s",
     "key": "D Minor",
@@ -2164,7 +2164,7 @@
     "title": "what would you do?",
     "artist": "Tate McRae",
     "releaseYear": 2022,
-    "cover": "ShesAll.png",
+    "cover": "iusedtothinkicouldfly.png",
     "bpm": 105,
     "duration": "2m 47s",
     "key": "A Major",
@@ -3874,7 +3874,7 @@
       "title": "don't come back",
       "artist": "Tate McRae",
       "releaseYear": 2022,
-      "cover": "ShesAll.png",
+      "cover": "iusedtothinkicouldfly.png",
       "bpm": 88,
       "duration": "2m 33s",
       "key": "C# Major",
@@ -4518,12 +4518,12 @@
     }
   },
     "data": {
-      "title": "HYPNOTIC DATA 2.0",
+      "title": "HYPNOTIC DATA",
       "artist": "Odetari",
       "releaseYear": 2024,
       "cover": "HypnoticData.png",
       "bpm": 136,
-      "duration": "2m 09s",
+      "duration": "2m 11s",
       "key": "B Minor",
       "genre": "Electronic",
       "rating": "Everyone",
@@ -8342,8 +8342,8 @@
     "videoPosition": "0",
     "spotify": "3unY0p45pcQVnABntzlX8B",
     "previewUrl": "horseshoe.mp3",
-    "preview_time": "33000",
-    "preview_end_time": "64000",
+    "preview_time": "11000",
+    "preview_end_time": "44000",
     "loading_phrase": "But where should all my sadness go?",
     "rotated": true,
     "modalShadowColors": {
@@ -8390,8 +8390,8 @@
     "videoPosition": "0",
     "spotify": "2oPCpj9ezVq5D6IJNAGkL2",
     "previewUrl": "nobodysgirl.mp3",
-    "preview_time": "33000",
-    "preview_end_time": "64000",
+    "preview_time": "36000",
+    "preview_end_time": "74000",
     "loading_phrase": "Got my career on my mind",
     "note": "ADD AUDIO FILES FROM OTHER PC",
     "rotated": true,
@@ -8439,8 +8439,8 @@
     "videoPosition": "0",
     "spotify": "7AxXJXqJOMRqkgZxvG3r6E",
     "previewUrl": "tryingonshoes.mp3",
-    "preview_time": "33000",
-    "preview_end_time": "64000",
+    "preview_time": "40000",
+    "preview_end_time": "70000",
     "loading_phrase": "Favorite blue, take a pretty picture",
     "rotated": true,
     "modalShadowColors": {
@@ -8484,11 +8484,12 @@
     "lastFeatured": "TBA",
     "complete": "0% Complete",
     "videoUrl": "fear.mp4",
+    "videoZoom": "1.1",
     "videoPosition": "60",
     "spotify": "3HfKlhohNNTLIv2t9uvmzz",
     "previewUrl": "fear.mp3",
-    "preview_time": "33000",
-    "preview_end_time": "64000",
+    "preview_time": "220000",
+    "preview_end_time": "250000",
     "loading_phrase": "Hello darkness, my old friend (hello)",
     "rotated": true,
     "modalShadowColors": {
@@ -8533,10 +8534,11 @@
     "complete": "0% Complete",
     "videoUrl": "fear.mp4",
     "videoPosition": "60",
+    "videoZoom": "1.1",
     "spotify": "2LE8UVsGRVyCY2UNpRPVcC",
     "previewUrl": "washedup.mp3",
-    "preview_time": "33000",
-    "preview_end_time": "64000",
+    "preview_time": "133000",
+    "preview_end_time": "164000",
     "loading_phrase": "Am I on the brink of somethin' great",
     "rotated": true,
     "modalShadowColors": {
@@ -8582,9 +8584,9 @@
     "videoUrl": "chainsoflove.mp4",
     "videoPosition": "60",
     "spotify": "6pSGolbfux1G7aSSJP0OQU",
-    "previewUrl": "chainoflove.mp3",
-    "preview_time": "33000",
-    "preview_end_time": "64000",
+    "previewUrl": "chainsoflove.mp3",
+    "preview_time": "42000",
+    "preview_end_time": "83000",
     "loading_phrase": "I shouldn't feel like a prisoner",
     "rotated": true,
     "modalShadowColors": {
@@ -8631,7 +8633,7 @@
     "videoPosition": "60",
     "spotify": "6pSGolbfux1G7aSSJP0OQU",
     "previewUrl": "crash.mp3",
-    "preview_time": "33000",
+    "preview_time": "34000",
     "preview_end_time": "64000",
     "loading_phrase": "I'm high voltage, self-destructive",
     "rotated": true,
@@ -8678,9 +8680,9 @@
     "videoUrl": "crash.mp4",
     "videoPosition": "60",
     "spotify": "5dry5tz8yLcLuOJ3l6ZEQd",
-    "previewUrl": "crash.mp3",
-    "preview_time": "33000",
-    "preview_end_time": "64000",
+    "previewUrl": "usedtoknowme.mp3",
+    "preview_time": "40900",
+    "preview_end_time": "70900",
     "loading_phrase": "I'm like a flower blooming since I left you behind",
     "rotated": true,
     "modalShadowColors": {
@@ -8727,9 +8729,297 @@
     "videoPosition": "60",
     "spotify": "5luCaDrc2ttzEjNp4ivaW0",
     "previewUrl": "deviltrigger.mp3",
+    "preview_time": "157000",
+    "preview_end_time": "180000",
+    "loading_phrase": "All of these thoughts runnin' through my head",
+    "rotated": true,
+    "modalShadowColors": {
+      "default": {
+        "color1": "",
+        "color2": ""
+      },
+      "hover": {
+        "color1": "",
+        "color2": ""
+      }
+    },
+    "youtubeLinks": {
+      "vocals": "",
+      "lead": "",
+      "bass": "",
+      "drums": ""
+    }
+},
+  "crazy": {
+    "title": "CRAZY",
+    "artist": "LE SSERAFIM",
+    "releaseYear": 2024,
+    "cover": "CRAZY.png",
+    "bpm": 130,
+    "duration": "2m 45s",
+    "key": "B Minor",
+    "album": "CRAZY",
+    "genre": "K-Pop",
+    "rating": "Everyone",
+    "difficulties": {
+      "vocals": -1,
+      "guitar": -1,
+      "bass": -1,
+      "drums": -1,
+      "plastic-bass": -1,
+      "plastic-drums": -1,
+      "plastic-guitar": -1
+    },
+    "createdAt": "2000-01-01T08:00:00.000Z",
+    "lastFeatured": "TBA",
+    "complete": "0% Complete",
+    "videoUrl": "crazy.mp4",
+    "videoPosition": "40",
+    "spotify": "3AoEQRuFf8zVXWqSLo2UOi",
+    "previewUrl": "CRAZY.mp3",
+    "preview_time": "63000",
+    "preview_end_time": "100000",
+    "loading_phrase": "Higher on the voltage, we jump in",
+    "rotated": true,
+    "modalShadowColors": {
+      "default": {
+        "color1": "",
+        "color2": ""
+      },
+      "hover": {
+        "color1": "",
+        "color2": ""
+      }
+    },
+    "youtubeLinks": {
+      "vocals": "",
+      "lead": "",
+      "bass": "",
+      "drums": ""
+    }
+},
+  "howbaddoyouwantme": {
+    "title": "How Bad Do U Want Me",
+    "artist": "Lady Gaga",
+    "releaseYear": 2025,
+    "cover": "MAYHEM.png",
+    "bpm": 188,
+    "duration": "3m 59s",
+    "key": "A♭ Major",
+    "album": "MAYHEM",
+    "genre": "Pop",
+    "rating": "Teen",
+    "difficulties": {
+      "vocals": -1,
+      "guitar": -1,
+      "bass": -1,
+      "drums": -1,
+      "plastic-bass": -1,
+      "plastic-drums": -1,
+      "plastic-guitar": -1
+    },
+    "createdAt": "2000-01-01T08:00:00.000Z",
+    "lastFeatured": "TBA",
+    "complete": "0% Complete",
+    "videoUrl": "howbaddouwantme.mp4",
+    "videoPosition": "0",
+    "spotify": "2rvd6akG8qEtBNUvQpN7iY",
+    "previewUrl": "howbaddouwantme.mp3",
     "preview_time": "33000",
     "preview_end_time": "64000",
-    "loading_phrase": "All of these thoughts runnin' through my head",
+    "loading_phrase": "She's on your mind, like, all the time",
+    "rotated": true,
+    "modalShadowColors": {
+      "default": {
+        "color1": "",
+        "color2": ""
+      },
+      "hover": {
+        "color1": "",
+        "color2": ""
+      }
+    },
+    "youtubeLinks": {
+      "vocals": "",
+      "lead": "",
+      "bass": "",
+      "drums": ""
+    }
+},
+  "bloodonwhitesatin": {
+    "title": "Blood On White Satin",
+    "artist": "Skye Riley, Naomi Scott",
+    "releaseYear": 2024,
+    "cover": "Smile2.png",
+    "bpm": 125,
+    "duration": "2m 42s",
+    "key": "F# Major",
+    "album": "Smile 2 (Soundtrack)",
+    "genre": "Pop",
+    "rating": "Teen",
+    "difficulties": {
+      "vocals": -1,
+      "guitar": -1,
+      "bass": -1,
+      "drums": -1,
+      "plastic-bass": -1,
+      "plastic-drums": -1,
+      "plastic-guitar": -1
+    },
+    "createdAt": "2000-01-01T08:00:00.000Z",
+    "lastFeatured": "TBA",
+    "complete": "0% Complete",
+    "videoUrl": "bloodonwhitesatin.mp4",
+    "videoPosition": "60",
+    "spotify": "5FYMrB6VaNPUEcQCXJmKBe",
+    "previewUrl": "bloodonwhitesatin.mp3",
+    "preview_time": "33000",
+    "preview_end_time": "64000",
+    "loading_phrase": "Might be a tragedy (oh)",
+    "rotated": true,
+    "modalShadowColors": {
+      "default": {
+        "color1": "",
+        "color2": ""
+      },
+      "hover": {
+        "color1": "",
+        "color2": ""
+      }
+    },
+    "youtubeLinks": {
+      "vocals": "",
+      "lead": "",
+      "bass": "",
+      "drums": ""
+    }
+},
+  "slowdance": {
+    "title": "Slow Dance",
+    "artist": "AJ Mitchell, Ava Max",
+    "releaseYear": 2019,
+    "cover": "SlowDance.png",
+    "bpm": 128,
+    "duration": "2m 59s",
+    "key": "C# Major",
+    "genre": "Pop",
+    "rating": "Everyone",
+    "difficulties": {
+      "vocals": -1,
+      "guitar": -1,
+      "bass": -1,
+      "drums": -1,
+      "plastic-bass": -1,
+      "plastic-drums": -1,
+      "plastic-guitar": -1
+    },
+    "createdAt": "2000-01-01T08:00:00.000Z",
+    "lastFeatured": "TBA",
+    "complete": "0% Complete",
+    "videoUrl": "slowdance.mp4",
+    "videoPosition": "60",
+    "videoZoom": "1.3",
+    "spotify": "5FNS5Vj69AhRGJWjhrAd01",
+    "previewUrl": "slowdance.mp3",
+    "preview_time": "33000",
+    "preview_end_time": "64000",
+    "loading_phrase": "No more talking, I don't know what you wanna do with that",
+    "rotated": true,
+    "modalShadowColors": {
+      "default": {
+        "color1": "",
+        "color2": ""
+      },
+      "hover": {
+        "color1": "",
+        "color2": ""
+      }
+    },
+    "youtubeLinks": {
+      "vocals": "",
+      "lead": "",
+      "bass": "",
+      "drums": ""
+    }
+},
+  "gnarly": {
+    "title": "Gnarly",
+    "artist": "KATSEYE",
+    "releaseYear": 2025,
+    "cover": "BeautifulChaos.png",
+    "bpm": 135,
+    "duration": "2m 17s",
+    "key": "C Minor",
+    "album": "BEAUTIFUL CHAOS",
+    "genre": "K-Pop",
+    "rating": "Teen",
+    "difficulties": {
+      "vocals": -1,
+      "guitar": -1,
+      "bass": -1,
+      "drums": -1,
+      "plastic-bass": -1,
+      "plastic-drums": -1,
+      "plastic-guitar": -1
+    },
+    "createdAt": "2000-01-01T08:00:00.000Z",
+    "lastFeatured": "TBA",
+    "complete": "0% Complete",
+    "videoUrl": "gnarly.mp4",
+    "videoPosition": "60",
+    "spotify": "794MnAJvd8c84vWQxdFLAN",
+    "previewUrl": "gnarly.mp3",
+    "preview_time": "45000",
+    "preview_end_time": "74000",
+    "loading_phrase": "Oh my God, this song's so lit, congratulations",
+    "rotated": true,
+    "modalShadowColors": {
+      "default": {
+        "color1": "",
+        "color2": ""
+      },
+      "hover": {
+        "color1": "",
+        "color2": ""
+      }
+    },
+    "youtubeLinks": {
+      "vocals": "",
+      "lead": "",
+      "bass": "",
+      "drums": ""
+    }
+},
+  "boyx": {
+    "title": "boy x",
+    "artist": "Tate McRae",
+    "releaseYear": 2022,
+    "cover": "iusedtothinkicouldfly.png",
+    "bpm": 145,
+    "duration": "3m 46s",
+    "key": "E♭ Major",
+    "album": "i used to think i could fly",
+    "genre": "Pop",
+    "rating": "Teen",
+    "difficulties": {
+      "vocals": -1,
+      "guitar": -1,
+      "bass": -1,
+      "drums": -1,
+      "plastic-bass": -1,
+      "plastic-drums": -1,
+      "plastic-guitar": -1
+    },
+    "createdAt": "2000-01-01T08:00:00.000Z",
+    "lastFeatured": "TBA",
+    "complete": "0% Complete",
+    "videoUrl": "boyx.mp4",
+    "videoPosition": "30",
+    "spotify": "4UbItCyP9q7MvuVogbDCgC",
+    "previewUrl": "boyx.mp3",
+    "preview_time": "33000",
+    "preview_end_time": "64000",
+    "loading_phrase": "A hundred songs, a couple months in",
     "rotated": true,
     "modalShadowColors": {
       "default": {
