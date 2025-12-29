@@ -252,9 +252,9 @@
       }
     }
   },
-  "niney": {
+  "nineteenninetynine": {
     "title": "1999",
-    "artist": "Charli xcx",
+    "artist": "Charli xcx (feat. Troye Sivan)",
     "releaseYear": 2018,
     "cover": "1999.png",
     "bpm": 124,
@@ -9016,10 +9016,297 @@
     "videoPosition": "30",
     "spotify": "4UbItCyP9q7MvuVogbDCgC",
     "previewUrl": "boyx.mp3",
-    "preview_time": "33000",
-    "preview_end_time": "64000",
+    "preview_time": "63000",
+    "preview_end_time": "94000",
     "loading_phrase": "A hundred songs, a couple months in",
     "rotated": true,
+    "modalShadowColors": {
+      "default": {
+        "color1": "",
+        "color2": ""
+      },
+      "hover": {
+        "color1": "",
+        "color2": ""
+      }
+    },
+    "youtubeLinks": {
+      "vocals": "",
+      "lead": "",
+      "bass": "",
+      "drums": ""
+    }
+},
+    "donteverleaveme": {
+      "title": "DON'T EVER LEAVE ME",
+      "artist": "Faouzia",
+      "releaseYear": 2025,
+      "cover": "DontEverLeaveMe.png",
+      "bpm": 98,
+      "duration": "3m 54s",
+      "key": "G Minor",
+      "album": "FILM NOIR",
+      "genre": "Pop",
+      "rating": "Everyone",
+      "difficulties": {
+        "vocals": -1,
+        "guitar": -1,
+        "bass": -1,
+        "drums": -1,
+        "plastic-bass": -1,
+        "plastic-drums": -1,
+        "plastic-guitar": -1
+      },
+      "createdAt": "2000-01-01T08:00:00.000Z",
+      "lastFeatured": "TBA",
+      "complete": "0% Complete",
+      "spotify": "3DFMhkPf89BV5z0HhUYa6r",
+      "videoUrl": "donteverleaveme.mp4",
+      "videoPosition": 20,
+      "loading_phrase": "I see myself so clearly in the darkest night",
+      "previewUrl": "donteverleaveme.mp3",
+      "preview_time": "43000",
+      "preview_end_time": "73000",
+      "rotated": true,
+    "modalShadowColors": {
+      "default": {
+        "color1": "",
+        "color2": ""
+      },
+      "hover": {
+        "color1": "",
+        "color2": ""
+      }
+    },
+    "youtubeLinks": {
+      "vocals": "",
+      "lead": "",
+      "bass": "",
+      "drums": ""
+    }
+},
+    "oneofyourgirls": {
+      "title": "One Of Your Girls",
+      "artist": "Troye Sivan",
+      "releaseYear": 2023,
+      "cover": "SomethingToGiveEachOther.png",
+      "bpm": 93,
+      "duration": "3m 01s",
+      "key": "B Minor",
+      "album": "Something To Give Each Other",
+      "genre": "Pop",
+      "rating": "Everyone",
+      "difficulties": {
+        "vocals": -1,
+        "guitar": -1,
+        "bass": -1,
+        "drums": -1,
+        "plastic-bass": -1,
+        "plastic-drums": -1,
+        "plastic-guitar": -1
+      },
+      "createdAt": "2000-01-01T08:00:00.000Z",
+      "lastFeatured": "TBA",
+      "complete": "0% Complete",
+      "spotify": "5Eh1nj7IjV9lwpcKAkidyY",
+      "videoUrl": "oneofyourgirls.mp4",
+      "videoPosition": 20,
+      "loading_phrase": "Face card, no cash, no credit",
+      "previewUrl": "oneofyourgirls.mp3",
+      "preview_time": "51000",
+      "preview_end_time": "81000",
+      "rotated": true,
+    "modalShadowColors": {
+      "default": {
+        "color1": "",
+        "color2": ""
+      },
+      "hover": {
+        "color1": "",
+        "color2": ""
+      }
+    },
+    "youtubeLinks": {
+      "vocals": "",
+      "lead": "",
+      "bass": "",
+      "drums": ""
+    }
+},
+    "rush": {
+      "title": "Rush",
+      "artist": "Troye Sivan",
+      "releaseYear": 2023,
+      "cover": "SomethingToGiveEachOther.png",
+      "bpm": 126,
+      "duration": "2m 36s",
+      "key": "A# Minor",
+      "album": "Something To Give Each Other",
+      "genre": "Pop",
+      "rating": "Teen",
+      "difficulties": {
+        "vocals": -1,
+        "guitar": -1,
+        "bass": -1,
+        "drums": -1,
+        "plastic-bass": -1,
+        "plastic-drums": -1,
+        "plastic-guitar": -1
+      },
+      "createdAt": "2000-01-01T08:00:00.000Z",
+      "lastFeatured": "TBA",
+      "complete": "0% Complete",
+      "spotify": "4ZnkygoWLzcGbQYCm3lkae",
+      "videoUrl": "rush.mp4",
+      "videoPosition": 20,
+      "loading_phrase": "Trust the simulation, don't you let it break",
+      "previewUrl": "rush.mp3",
+      "preview_time": "53300",
+      "preview_end_time": "83300",
+      "rotated": true,
+    "modalShadowColors": {
+      "default": {
+        "color1": "",
+        "color2": ""
+      },
+      "hover": {
+        "color1": "",
+        "color2": ""
+      }
+    },
+    "youtubeLinks": {
+      "vocals": "",
+      "lead": "",
+      "bass": "",
+      "drums": ""
+    }
+},
+    "you": {
+      "title": "You",
+      "artist": "Regard, Troye Sivan, Tate McRae",
+      "releaseYear": 2021,
+      "cover": "You.png",
+      "bpm": 106,
+      "duration": "3m 53s",
+      "key": "C Major",
+      "genre": "Pop",
+      "rating": "Everyone",
+      "difficulties": {
+        "vocals": -1,
+        "guitar": -1,
+        "bass": -1,
+        "drums": -1,
+        "plastic-bass": -1,
+        "plastic-drums": -1,
+        "plastic-guitar": -1
+      },
+      "createdAt": "2000-01-01T08:00:00.000Z",
+      "lastFeatured": "TBA",
+      "complete": "0% Complete",
+      "spotify": "2cc8Sw1OnCuA5bV8nqWqpE",
+      "videoUrl": "you.mp4",
+      "videoPosition": 20,
+      "loading_phrase": "How could you ever leave me without a chance to try?",
+      "previewUrl": "you.mp3",
+      "preview_time": "51000",
+      "preview_end_time": "81000",
+      "rotated": true,
+    "modalShadowColors": {
+      "default": {
+        "color1": "",
+        "color2": ""
+      },
+      "hover": {
+        "color1": "",
+        "color2": ""
+      }
+    },
+    "youtubeLinks": {
+      "vocals": "",
+      "lead": "",
+      "bass": "",
+      "drums": ""
+    }
+},
+    "torn": {
+      "title": "Torn",
+      "artist": "Ava Max",
+      "releaseYear": 2020,
+      "cover": "HeavenandHell.png",
+      "bpm": 125,
+      "duration": "3m 18s",
+      "key": "D Minor",
+      "album": "Heaven & Hell",
+      "genre": "Pop",
+      "rating": "Everyone",
+      "difficulties": {
+        "vocals": -1,
+        "guitar": -1,
+        "bass": -1,
+        "drums": -1,
+        "plastic-bass": -1,
+        "plastic-drums": -1,
+        "plastic-guitar": -1
+      },
+      "createdAt": "2000-01-01T08:00:00.000Z",
+      "lastFeatured": "TBA",
+      "complete": "0% Complete",
+      "spotify": "6SpVp6ttad3XJOsjKBZwaq",
+      "videoUrl": "torn.mp4",
+      "videoPosition": 20,
+      "loading_phrase": "You show me love and give me war",
+      "previewUrl": "torn.mp3",
+      "preview_time": "35000",
+      "preview_end_time": "65000",
+      "rotated": true,
+    "modalShadowColors": {
+      "default": {
+        "color1": "",
+        "color2": ""
+      },
+      "hover": {
+        "color1": "",
+        "color2": ""
+      }
+    },
+    "youtubeLinks": {
+      "vocals": "",
+      "lead": "",
+      "bass": "",
+      "drums": ""
+    }
+},
+    "sorryifihurtyou": {
+      "title": "Sorry if I Hurt You",
+      "artist": "Charli xcx",
+      "releaseYear": 2022,
+      "cover": "CRASHDeluxe.png",
+      "bpm": 128,
+      "duration": "2m 41s",
+      "key": "B Minor",
+      "album": "CRASH (Deluxe)",
+      "genre": "Pop",
+      "rating": "Everyone",
+      "difficulties": {
+        "vocals": -1,
+        "guitar": -1,
+        "bass": -1,
+        "drums": -1,
+        "plastic-bass": -1,
+        "plastic-drums": -1,
+        "plastic-guitar": -1
+      },
+      "createdAt": "2000-01-01T08:00:00.000Z",
+      "lastFeatured": "TBA",
+      "complete": "0% Complete",
+      "spotify": "2qbgcxEMIZgyHAySxxHywc",
+      "videoUrl": "crash.mp4",
+      "videoPosition": 50,
+      "loading_phrase": "Now it seems so crystal clear",
+      "previewUrl": "sorryifihurtyou.mp3",
+      "preview_time": "42000",
+      "preview_end_time": "76000",
+      "rotated": true,
     "modalShadowColors": {
       "default": {
         "color1": "",
